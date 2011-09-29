@@ -164,9 +164,24 @@ Figure \ref{3c-profile} shows the parameters that describes that describe the ge
 
 \subsubsection{Blazed Condition for Triangular Gratings}
 \label{blazeAngle}
-          - blazing: align specular reflection
-          
-          	- MATH: derive blaze condition
+The triangular profile in Figure \ref{3c-profile} (b) is much more than an accidental artifact of mechanical ruling.  It turns out that this shape is optimal for concentrating as much energy as possible into a single order, and therefore boosting the grating efficiency in that order.  Intuitively, we might imagine that to increase efficiency, we should line up the direction of classical ``reflection'' off the majority of the grating surface with the direction of the diffracted ray.  Still thinking classically, we might also want to minimize shadowing in the corners of the grooves. 
+
+The ideal blazed grating meets both of these criteria.  By carefully choosing a blaze angle $\theta_b$ we can -- at least at the wavelength of interest -- line up the specular reflection from the angled surface with the diffraction direction in order $n$.  Using the law of reflection from geometric optics ($\theta_{\mathrm{incident}} = \theta_{\mathrm{reflected}}$), we can easily\footnote{Setting up a ruling engine to correctly and accurately engrave this angle is another story...} derive the optimized condition for a blazed grating.  From the reflection geometry in Figure \ref{3d}: 
+\begin{eqnarray}
+\theta_2 - \theta_b &=& \theta_{2,n} + \theta_b \\
+\theta_{2,n} - \theta_{2} &=& -2 \theta_b
+\end{eqnarray}
+Applying a trigonometric identity to the grating equation (\ref{gratingEquation}):
+\begin{eqnarray}
+n\lambda / d &=& \sin\theta_{2,n} - \sin\theta_{2} \\
+\frac{n\lambda}{2d} &=& \cos \left( \frac{\theta_{2,n} + \theta_{2}}{2} \right) \sin \left( \frac{\theta_{2,n} - \theta_{2}}{2} \right) \\
+\frac{n\lambda}{2d} &=& \cos \left( \frac{\theta_{2,n} + \theta_{2}}{2} \right) \sin \left( -\theta_b \right) \\
+\end{eqnarray}
+or
+\begin{eqnarray}
+\theta_b = -\arcsin \left(   \frac{n \lambda}{2d \, \cos \left( \frac{\theta_{2,n} + \theta_{2}}{2} \right)}     \right)
+\end{eqnarray}
+
 	
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
