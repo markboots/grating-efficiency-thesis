@@ -1,0 +1,183 @@
+Type 	Density(/um)(VLS1:2:3) 	IncludedAngle(deg) 	toOrder 	eV 	Material 	Coating 	CoatThickness(um) 	Depth(um) 	ValleyWidth(um) 	BlazeAngle(deg) 	AntiBlazeAngle(deg) 	  	InsideOrder1 	InsideOrder2 	InsideOrder3
+
+Blazed 	1.2(0:0:0) 		176 		 0 		100 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0598276 	0.00467807 	0.000362873
+Blazed 	1.2(0:0:0) 		176 		 0 		105 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.064643 	0.00460085 	0.000278701
+Blazed 	1.2(0:0:0) 		176 		 0 		110 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.069115 	0.00443653 	0.000197614
+Blazed 	1.2(0:0:0) 		176 		 0 		115 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0733856 	0.00422361 	0.000129044
+Blazed 	1.2(0:0:0) 		176 		 0 		120 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0775215 	0.00397093 	7.52894E-05
+Blazed 	1.2(0:0:0) 		176 		 0 		125 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0815545 	0.00368957 	3.92918E-05
+Blazed 	1.2(0:0:0) 		176 		 0 		130 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0857355 	0.00339447 	2.23722E-05
+Blazed 	1.2(0:0:0) 		176 		 0 		135 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0893142 	0.00302781 	2.99855E-05
+Blazed 	1.2(0:0:0) 		176 		 0 		140 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0919881 	0.0026339 	6.36929E-05
+Blazed 	1.2(0:0:0) 		176 		 0 		145 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0941305 	0.00223071 	0.000121297
+Blazed 	1.2(0:0:0) 		176 		 0 		150 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0953442 	0.00184079 	0.00019256
+Blazed 	1.2(0:0:0) 		176 		 0 		155 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0961552 	0.00148941 	0.000267726
+Blazed 	1.2(0:0:0) 		176 		 0 		160 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0957563 	0.00117114 	0.00033343
+Blazed 	1.2(0:0:0) 		176 		 0 		165 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0945774 	0.000926134 	0.00037828
+Blazed 	1.2(0:0:0) 		176 		 0 		170 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0925602 	0.000746645 	0.00040549
+Blazed 	1.2(0:0:0) 		176 		 0 		175 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0894769 	0.000647527 	0.000408458
+Blazed 	1.2(0:0:0) 		176 		 0 		180 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0865764 	0.000600291 	0.000403235
+Blazed 	1.2(0:0:0) 		176 		 0 		185 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0839211 	0.000577219 	0.000394698
+Blazed 	1.2(0:0:0) 		176 		 0 		190 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0816776 	0.000563156 	0.00038542
+Blazed 	1.2(0:0:0) 		176 		 0 		195 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0799414 	0.000549294 	0.000377277
+Blazed 	1.2(0:0:0) 		176 		 0 		200 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0789604 	0.000530258 	0.000373301
+Blazed 	1.2(0:0:0) 		176 		 0 		205 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0786268 	0.000505622 	0.000374614
+Blazed 	1.2(0:0:0) 		176 		 0 		210 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0788636 	0.000476446 	0.000381043
+Blazed 	1.2(0:0:0) 		176 		 0 		215 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0800436 	0.000441678 	0.000397959
+Blazed 	1.2(0:0:0) 		176 		 0 		220 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0813321 	0.000408932 	0.000420811
+Blazed 	1.2(0:0:0) 		176 		 0 		225 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0826091 	0.000378814 	0.000445466
+Blazed 	1.2(0:0:0) 		176 		 0 		230 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0841469 	0.000350703 	0.00047522
+Blazed 	1.2(0:0:0) 		176 		 0 		235 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0859744 	0.000326484 	0.000511615
+Blazed 	1.2(0:0:0) 		176 		 0 		240 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0878097 	0.000308976 	0.000551648
+Blazed 	1.2(0:0:0) 		176 		 0 		245 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0896508 	0.000297964 	0.000594565
+Blazed 	1.2(0:0:0) 		176 		 0 		250 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0916832 	0.000293982 	0.000643029
+Blazed 	1.2(0:0:0) 		176 		 0 		255 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0938204 	0.000300213 	0.000696479
+Blazed 	1.2(0:0:0) 		176 		 0 		260 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0958692 	0.000316981 	0.000751591
+Blazed 	1.2(0:0:0) 		176 		 0 		265 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.0979414 	0.00034415 	0.000809723
+Blazed 	1.2(0:0:0) 		176 		 0 		270 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.100127 	0.000383042 	0.000872407
+Blazed 	1.2(0:0:0) 		176 		 0 		275 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.10251 	0.000437237 	0.000941244
+Blazed 	1.2(0:0:0) 		176 		 0 		280 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.104816 	0.000508327 	0.001011
+Blazed 	1.2(0:0:0) 		176 		 0 		285 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.106876 	0.000592825 	0.0010779
+Blazed 	1.2(0:0:0) 		176 		 0 		290 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.108839 	0.000690759 	0.00114432
+Blazed 	1.2(0:0:0) 		176 		 0 		295 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.110764 	0.000803054 	0.00121115
+Blazed 	1.2(0:0:0) 		176 		 0 		300 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.112676 	0.000930519 	0.00127868
+Blazed 	1.2(0:0:0) 		176 		 0 		305 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.114602 	0.00107421 	0.00134731
+Blazed 	1.2(0:0:0) 		176 		 0 		310 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.116605 	0.00123634 	0.00141823
+Blazed 	1.2(0:0:0) 		176 		 0 		315 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.118587 	0.00141818 	0.00148839
+Blazed 	1.2(0:0:0) 		176 		 0 		320 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.120463 	0.00161606 	0.00155603
+Blazed 	1.2(0:0:0) 		176 		 0 		325 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.122267 	0.00182997 	0.00162183
+Blazed 	1.2(0:0:0) 		176 		 0 		330 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.124049 	0.00206147 	0.00168667
+Blazed 	1.2(0:0:0) 		176 		 0 		335 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.125823 	0.00231143 	0.00175072
+Blazed 	1.2(0:0:0) 		176 		 0 		340 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.127609 	0.00258106 	0.00181425
+Blazed 	1.2(0:0:0) 		176 		 0 		345 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.129435 	0.00287223 	0.00187774
+Blazed 	1.2(0:0:0) 		176 		 0 		350 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.131403 	0.00319075 	0.00194342
+Blazed 	1.2(0:0:0) 		176 		 0 		355 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.133354 	0.00353389 	0.00200559
+Blazed 	1.2(0:0:0) 		176 		 0 		360 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.135165 	0.00389478 	0.00206096
+Blazed 	1.2(0:0:0) 		176 		 0 		365 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.136842 	0.00426976 	0.00211105
+Blazed 	1.2(0:0:0) 		176 		 0 		370 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.138422 	0.00465999 	0.00215659
+Blazed 	1.2(0:0:0) 		176 		 0 		375 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.139945 	0.0050672 	0.00219849
+Blazed 	1.2(0:0:0) 		176 		 0 		380 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.14143 	0.00549237 	0.00223706
+Blazed 	1.2(0:0:0) 		176 		 0 		385 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.142887 	0.00593625 	0.00227242
+Blazed 	1.2(0:0:0) 		176 		 0 		390 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.144328 	0.00639974 	0.00230476
+Blazed 	1.2(0:0:0) 		176 		 0 		395 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.145773 	0.00688452 	0.00233443
+Blazed 	1.2(0:0:0) 		176 		 0 		400 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.147272 	0.00739545 	0.00236264
+Blazed 	1.2(0:0:0) 		176 		 0 		405 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.148797 	0.00793294 	0.00238651
+Blazed 	1.2(0:0:0) 		176 		 0 		410 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.150227 	0.00848462 	0.00240411
+Blazed 	1.2(0:0:0) 		176 		 0 		415 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.151544 	0.00904715 	0.00241552
+Blazed 	1.2(0:0:0) 		176 		 0 		420 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.152751 	0.00961868 	0.00242138
+Blazed 	1.2(0:0:0) 		176 		 0 		425 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.153895 	0.0102029 	0.00242303
+Blazed 	1.2(0:0:0) 		176 		 0 		430 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.154993 	0.0108014 	0.00242065
+Blazed 	1.2(0:0:0) 		176 		 0 		435 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.156048 	0.0114138 	0.00241437
+Blazed 	1.2(0:0:0) 		176 		 0 		440 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.157067 	0.0120404 	0.00240456
+Blazed 	1.2(0:0:0) 		176 		 0 		445 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.158081 	0.012685 	0.00239191
+Blazed 	1.2(0:0:0) 		176 		 0 		450 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.159083 	0.0133469 	0.00237583
+Blazed 	1.2(0:0:0) 		176 		 0 		455 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.160078 	0.0140266 	0.00235627
+Blazed 	1.2(0:0:0) 		176 		 0 		460 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.16098 	0.0147111 	0.00233183
+Blazed 	1.2(0:0:0) 		176 		 0 		465 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.161824 	0.0154043 	0.00230363
+Blazed 	1.2(0:0:0) 		176 		 0 		470 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.162609 	0.0161048 	0.00227196
+Blazed 	1.2(0:0:0) 		176 		 0 		475 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.163341 	0.0168129 	0.00223751
+Blazed 	1.2(0:0:0) 		176 		 0 		480 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.164033 	0.0175298 	0.00220018
+Blazed 	1.2(0:0:0) 		176 		 0 		485 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.164683 	0.0182547 	0.00216026
+Blazed 	1.2(0:0:0) 		176 		 0 		490 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.165298 	0.0189879 	0.00211826
+Blazed 	1.2(0:0:0) 		176 		 0 		495 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.165877 	0.0197287 	0.00207395
+Blazed 	1.2(0:0:0) 		176 		 0 		500 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.166424 	0.0204772 	0.00202782
+Blazed 	1.2(0:0:0) 		176 		 0 		505 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.166948 	0.021235 	0.00198014
+Blazed 	1.2(0:0:0) 		176 		 0 		510 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.167443 	0.0219998 	0.00193072
+Blazed 	1.2(0:0:0) 		176 		 0 		515 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.167916 	0.0227728 	0.00188009
+Blazed 	1.2(0:0:0) 		176 		 0 		520 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.168353 	0.0235505 	0.00182805
+Blazed 	1.2(0:0:0) 		176 		 0 		525 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.168755 	0.0243323 	0.00177491
+Blazed 	1.2(0:0:0) 		176 		 0 		530 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.169129 	0.0251193 	0.00172111
+Blazed 	1.2(0:0:0) 		176 		 0 		535 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.16947 	0.0259096 	0.00166648
+Blazed 	1.2(0:0:0) 		176 		 0 		540 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.169791 	0.0267062 	0.00161173
+Blazed 	1.2(0:0:0) 		176 		 0 		545 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.170083 	0.0275058 	0.00155659
+Blazed 	1.2(0:0:0) 		176 		 0 		550 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.170354 	0.0283103 	0.0015015
+Blazed 	1.2(0:0:0) 		176 		 0 		555 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.170606 	0.0291195 	0.00144658
+Blazed 	1.2(0:0:0) 		176 		 0 		560 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.170835 	0.0299319 	0.00139192
+Blazed 	1.2(0:0:0) 		176 		 0 		565 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.171067 	0.0307547 	0.00133794
+Blazed 	1.2(0:0:0) 		176 		 0 		570 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.171278 	0.0315796 	0.00128445
+Blazed 	1.2(0:0:0) 		176 		 0 		575 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.171468 	0.0324074 	0.00123179
+Blazed 	1.2(0:0:0) 		176 		 0 		580 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.17163 	0.0332338 	0.00117997
+Blazed 	1.2(0:0:0) 		176 		 0 		585 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.171768 	0.0340619 	0.00112948
+Blazed 	1.2(0:0:0) 		176 		 0 		590 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.17188 	0.0348889 	0.00108024
+Blazed 	1.2(0:0:0) 		176 		 0 		595 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.171977 	0.0357184 	0.00103262
+Blazed 	1.2(0:0:0) 		176 		 0 		600 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172053 	0.0365476 	0.000986637
+Blazed 	1.2(0:0:0) 		176 		 0 		605 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172116 	0.0373793 	0.000942539
+Blazed 	1.2(0:0:0) 		176 		 0 		610 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172163 	0.0382115 	0.000900419
+Blazed 	1.2(0:0:0) 		176 		 0 		615 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.1722 	0.0390465 	0.000860456
+Blazed 	1.2(0:0:0) 		176 		 0 		620 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172226 	0.0398832 	0.000822769
+Blazed 	1.2(0:0:0) 		176 		 0 		625 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172246 	0.0407234 	0.000787505
+Blazed 	1.2(0:0:0) 		176 		 0 		630 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172262 	0.0415674 	0.000754789
+Blazed 	1.2(0:0:0) 		176 		 0 		635 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172279 	0.0424177 	0.000724745
+Blazed 	1.2(0:0:0) 		176 		 0 		640 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.17231 	0.0432779 	0.000697493
+Blazed 	1.2(0:0:0) 		176 		 0 		645 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172369 	0.0441554 	0.000673123
+Blazed 	1.2(0:0:0) 		176 		 0 		650 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.17246 	0.045047 	0.000651892
+Blazed 	1.2(0:0:0) 		176 		 0 		655 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172631 	0.0459702 	0.000634019
+Blazed 	1.2(0:0:0) 		176 		 0 		660 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172772 	0.0468837 	0.000619801
+Blazed 	1.2(0:0:0) 		176 		 0 		665 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172853 	0.0477714 	0.00060957
+Blazed 	1.2(0:0:0) 		176 		 0 		670 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172908 	0.0486493 	0.000603336
+Blazed 	1.2(0:0:0) 		176 		 0 		675 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172852 	0.0494856 	0.000601025
+Blazed 	1.2(0:0:0) 		176 		 0 		680 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172781 	0.0503134 	0.000602957
+Blazed 	1.2(0:0:0) 		176 		 0 		685 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172662 	0.0511251 	0.000608823
+Blazed 	1.2(0:0:0) 		176 		 0 		690 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172525 	0.0519263 	0.000619092
+Blazed 	1.2(0:0:0) 		176 		 0 		695 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172357 	0.0527154 	0.000633476
+Blazed 	1.2(0:0:0) 		176 		 0 		700 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.172167 	0.0534925 	0.000652292
+Blazed 	1.2(0:0:0) 		176 		 0 		705 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.171954 	0.0542588 	0.000675436
+Blazed 	1.2(0:0:0) 		176 		 0 		710 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.171719 	0.0550134 	0.00070296
+Blazed 	1.2(0:0:0) 		176 		 0 		715 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.171465 	0.0557551 	0.000735046
+Blazed 	1.2(0:0:0) 		176 		 0 		720 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.171183 	0.0564841 	0.000771364
+Blazed 	1.2(0:0:0) 		176 		 0 		725 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.170886 	0.0571984 	0.000812453
+Blazed 	1.2(0:0:0) 		176 		 0 		730 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.17057 	0.0579079 	0.000857524
+Blazed 	1.2(0:0:0) 		176 		 0 		735 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.170239 	0.0586026 	0.000907322
+Blazed 	1.2(0:0:0) 		176 		 0 		740 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.169901 	0.0592924 	0.000961538
+Blazed 	1.2(0:0:0) 		176 		 0 		745 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.169554 	0.0599738 	0.0010203
+Blazed 	1.2(0:0:0) 		176 		 0 		750 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.169197 	0.0606429 	0.00108372
+Blazed 	1.2(0:0:0) 		176 		 0 		755 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.168835 	0.0613102 	0.00115146
+Blazed 	1.2(0:0:0) 		176 		 0 		760 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.168461 	0.061961 	0.00122399
+Blazed 	1.2(0:0:0) 		176 		 0 		765 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.168085 	0.0626115 	0.00130085
+Blazed 	1.2(0:0:0) 		176 		 0 		770 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.167701 	0.0632496 	0.00138236
+Blazed 	1.2(0:0:0) 		176 		 0 		775 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.16731 	0.063878 	0.00146845
+Blazed 	1.2(0:0:0) 		176 		 0 		780 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.166919 	0.0645049 	0.00155895
+Blazed 	1.2(0:0:0) 		176 		 0 		785 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.166516 	0.0651145 	0.00165414
+Blazed 	1.2(0:0:0) 		176 		 0 		790 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.16616 	0.0657526 	0.00175445
+Blazed 	1.2(0:0:0) 		176 		 0 		795 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.165805 	0.0663843 	0.00185965
+Blazed 	1.2(0:0:0) 		176 		 0 		800 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.165451 	0.0670049 	0.00196989
+Blazed 	1.2(0:0:0) 		176 		 0 		805 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.165115 	0.0676218 	0.00208562
+Blazed 	1.2(0:0:0) 		176 		 0 		810 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.164773 	0.0682225 	0.00220614
+Blazed 	1.2(0:0:0) 		176 		 0 		815 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.164397 	0.0687995 	0.0023302
+Blazed 	1.2(0:0:0) 		176 		 0 		820 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.164001 	0.069356 	0.00245828
+Blazed 	1.2(0:0:0) 		176 		 0 		825 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.163599 	0.0698955 	0.00259072
+Blazed 	1.2(0:0:0) 		176 		 0 		830 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.163184 	0.0704286 	0.00272681
+Blazed 	1.2(0:0:0) 		176 		 0 		835 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.162764 	0.0709433 	0.00286711
+Blazed 	1.2(0:0:0) 		176 		 0 		840 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.16234 	0.071448 	0.00301142
+Blazed 	1.2(0:0:0) 		176 		 0 		845 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.161913 	0.0719466 	0.00315962
+Blazed 	1.2(0:0:0) 		176 		 0 		850 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.161481 	0.0724265 	0.00331176
+Blazed 	1.2(0:0:0) 		176 		 0 		855 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.16105 	0.0729049 	0.00346781
+Blazed 	1.2(0:0:0) 		176 		 0 		860 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.160618 	0.0733724 	0.00362767
+Blazed 	1.2(0:0:0) 		176 		 0 		865 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.160182 	0.073821 	0.00379118
+Blazed 	1.2(0:0:0) 		176 		 0 		870 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.159835 	0.0743389 	0.00396311
+Blazed 	1.2(0:0:0) 		176 		 0 		875 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.159493 	0.0748456 	0.00413937
+Blazed 	1.2(0:0:0) 		176 		 0 		880 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.159156 	0.0753373 	0.00431993
+Blazed 	1.2(0:0:0) 		176 		 0 		885 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.158862 	0.0758203 	0.00450657
+Blazed 	1.2(0:0:0) 		176 		 0 		890 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.158571 	0.0762868 	0.00469709
+Blazed 	1.2(0:0:0) 		176 		 0 		895 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.158256 	0.0767229 	0.00488964
+Blazed 	1.2(0:0:0) 		176 		 0 		900 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.15788 	0.0771091 	0.00508153
+Blazed 	1.2(0:0:0) 		176 		 0 		905 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.157507 	0.0774764 	0.00527634 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		910 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.157123 	0.0778248 	0.00547316 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		915 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.156721 	0.078154 	0.00567143 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		920 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.156323 	0.0784635 	0.00587197 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		925 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.15592 	0.0787592 	0.00607434 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		930 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.155509 	0.0790419 	0.00627834 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		935 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.155103 	0.0793047 	0.00648404 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		940 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.1547 	0.0795619 	0.00669195 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		945 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.1543 	0.0798146 	0.00690204 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		950 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.153907 	0.0800478 	0.00711339 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		955 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.153529 	0.080276 	0.00732724 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		960 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.153169 	0.0805026 	0.00754388 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		965 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.152817 	0.0807102 	0.00776141 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		970 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.152466 	0.0809008 	0.00797932 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		975 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.152108 	0.0810758 	0.00819722 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		980 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.151761 	0.0812318 	0.0084153 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		985 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.151415 	0.0813707 	0.00863306 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		990 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.151051 	0.0814967 	0.00884978 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		995 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.150698 	0.0816039 	0.00906593 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		1000 	SiO2.idx 	Au.idx 			0.1 	na 	na 	1.25 	90 	  	0.150356 	0.081694 	0.00928136 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD

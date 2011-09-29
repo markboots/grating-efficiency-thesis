@@ -1,0 +1,20 @@
+Revisions to theory section:
+
+1) - "In TE polarization, equations (3.15 --> 3.10, 3.11, and 3.15) are decoupled into"
+
+
+2) Above (3.26): show that wave equation becomes common for both TE and TM polarization: del^2 u + k^2 u = 0
+(u = Ez for TE,  u = Hz for TM)
+
+3) Page 15: Where does the /d factor come from in K?
+
+4)  Be more clear on defining \alpha_0.  (Page 15)
+
+5) Page 18: add transmitted wave equation.
+
+6) Show diffracted equation reduces to reflection for n=0; transmitted equation reduces to Snell's law of refraction for n=0.
+
+8) Page 18 conclusion: "diverts light into a set of rays at discrete angles -- ie: a set of plane waves propagating away at specific angles"
+
+9) "Down and dirty inside the grooves of the grating". In more specific terms, we'll need to determine the electric (TE) or magnetic (TM) field within the boundary conditions created by the grating surface and the incident field.
+

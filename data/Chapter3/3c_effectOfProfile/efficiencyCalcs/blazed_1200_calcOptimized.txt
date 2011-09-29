@@ -1,0 +1,183 @@
+Type 	Density(/um)(VLS1:2:3) 	IncludedAngle(deg) 	toOrder 	eV 	Material 	Coating 	CoatThickness(um) 	Depth(um) 	ValleyWidth(um) 	BlazeAngle(deg) 	AntiBlazeAngle(deg) 	  	InsideOrder0 	InsideOrder1 	InsideOrder2 	InsideOrder3
+
+Blazed 	1.2(0:0:0) 		176 		 0 		100 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.811307 	0.0989009 	0.00164495 	0.000183793
+Blazed 	1.2(0:0:0) 		176 		 0 		105 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.805402 	0.104906 	0.00126914 	0.000323281
+Blazed 	1.2(0:0:0) 		176 		 0 		110 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.79932 	0.110626 	0.000918148 	0.000499108
+Blazed 	1.2(0:0:0) 		176 		 0 		115 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.792934 	0.115907 	0.000605124 	0.000705622
+Blazed 	1.2(0:0:0) 		176 		 0 		120 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.785948 	0.120501 	0.000344524 	0.000932387
+Blazed 	1.2(0:0:0) 		176 		 0 		125 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.777214 	0.123685 	0.000151629 	0.00115509
+Blazed 	1.2(0:0:0) 		176 		 0 		130 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.765187 	0.125242 	4.83256E-05 	0.00133567
+Blazed 	1.2(0:0:0) 		176 		 0 		135 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.75219 	0.126045 	2.98766E-05 	0.00148074
+Blazed 	1.2(0:0:0) 		176 		 0 		140 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.738541 	0.126296 	8.81398E-05 	0.00158841
+Blazed 	1.2(0:0:0) 		176 		 0 		145 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.722784 	0.125255 	0.000211789 	0.00163644
+Blazed 	1.2(0:0:0) 		176 		 0 		150 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.705659 	0.123638 	0.000378574 	0.00164717
+Blazed 	1.2(0:0:0) 		176 		 0 		155 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.686773 	0.121341 	0.00056675 	0.00162688
+Blazed 	1.2(0:0:0) 		176 		 0 		160 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.6675 	0.119119 	0.000762507 	0.00160433
+Blazed 	1.2(0:0:0) 		176 		 0 		165 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.647197 	0.116707 	0.000952672 	0.00157657
+Blazed 	1.2(0:0:0) 		176 		 0 		170 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.627339 	0.114949 	0.00113959 	0.00156897
+Blazed 	1.2(0:0:0) 		176 		 0 		175 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.609004 	0.114017 	0.00133959 	0.00158439
+Blazed 	1.2(0:0:0) 		176 		 0 		180 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.592083 	0.11363 	0.00156046 	0.00161382
+Blazed 	1.2(0:0:0) 		176 		 0 		185 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.576403 	0.113775 	0.00180653 	0.00165766
+Blazed 	1.2(0:0:0) 		176 		 0 		190 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.563048 	0.114781 	0.00210172 	0.00172321
+Blazed 	1.2(0:0:0) 		176 		 0 		195 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.550917 	0.115834 	0.00243664 	0.00178492
+Blazed 	1.2(0:0:0) 		176 		 0 		200 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.538888 	0.116747 	0.00279512 	0.00184081
+Blazed 	1.2(0:0:0) 		176 		 0 		205 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.527027 	0.117605 	0.00317867 	0.00189363
+Blazed 	1.2(0:0:0) 		176 		 0 		210 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.515492 	0.118619 	0.00359548 	0.00195108
+Blazed 	1.2(0:0:0) 		176 		 0 		215 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.505133 	0.120064 	0.00407088 	0.00201835
+Blazed 	1.2(0:0:0) 		176 		 0 		220 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.496178 	0.121982 	0.00461958 	0.00209463
+Blazed 	1.2(0:0:0) 		176 		 0 		225 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.488231 	0.124066 	0.00523255 	0.00216803
+Blazed 	1.2(0:0:0) 		176 		 0 		230 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.480695 	0.126168 	0.00589899 	0.00223619
+Blazed 	1.2(0:0:0) 		176 		 0 		235 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.473921 	0.128513 	0.00664051 	0.00230505
+Blazed 	1.2(0:0:0) 		176 		 0 		240 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.468839 	0.13142 	0.00749929 	0.00237712
+Blazed 	1.2(0:0:0) 		176 		 0 		245 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.463615 	0.133771 	0.00837362 	0.00241738
+Blazed 	1.2(0:0:0) 		176 		 0 		250 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.45807 	0.13585 	0.00927578 	0.00244254
+Blazed 	1.2(0:0:0) 		176 		 0 		255 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.452624 	0.137875 	0.0102273 	0.00245799
+Blazed 	1.2(0:0:0) 		176 		 0 		260 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.447625 	0.13991 	0.0112376 	0.00246131
+Blazed 	1.2(0:0:0) 		176 		 0 		265 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.442394 	0.141607 	0.0122574 	0.00244546
+Blazed 	1.2(0:0:0) 		176 		 0 		270 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.436926 	0.143057 	0.0132908 	0.00241613
+Blazed 	1.2(0:0:0) 		176 		 0 		275 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.431379 	0.144347 	0.0143454 	0.0023759
+Blazed 	1.2(0:0:0) 		176 		 0 		280 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.425731 	0.145473 	0.0154164 	0.00232569
+Blazed 	1.2(0:0:0) 		176 		 0 		285 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.42008 	0.146514 	0.0165139 	0.0022683
+Blazed 	1.2(0:0:0) 		176 		 0 		290 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.414521 	0.147507 	0.017643 	0.00220429
+Blazed 	1.2(0:0:0) 		176 		 0 		295 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.409046 	0.148441 	0.0188 	0.00213364
+Blazed 	1.2(0:0:0) 		176 		 0 		300 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.403649 	0.149311 	0.0199827 	0.00205691
+Blazed 	1.2(0:0:0) 		176 		 0 		305 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.3983 	0.15011 	0.0211874 	0.00197475
+Blazed 	1.2(0:0:0) 		176 		 0 		310 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.393052 	0.150875 	0.022421 	0.00188835
+Blazed 	1.2(0:0:0) 		176 		 0 		315 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.387916 	0.151606 	0.0236822 	0.00179802
+Blazed 	1.2(0:0:0) 		176 		 0 		320 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.38288 	0.152297 	0.0249686 	0.00170432
+Blazed 	1.2(0:0:0) 		176 		 0 		325 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.377939 	0.152949 	0.0262789 	0.00160795
+Blazed 	1.2(0:0:0) 		176 		 0 		330 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.373094 	0.153566 	0.0276136 	0.00150966
+Blazed 	1.2(0:0:0) 		176 		 0 		335 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.368352 	0.154156 	0.0289732 	0.00141018
+Blazed 	1.2(0:0:0) 		176 		 0 		340 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.363713 	0.154719 	0.0303569 	0.00131017
+Blazed 	1.2(0:0:0) 		176 		 0 		345 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.359175 	0.155259 	0.0317647 	0.00121038
+Blazed 	1.2(0:0:0) 		176 		 0 		350 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.354742 	0.15578 	0.0331975 	0.00111156
+Blazed 	1.2(0:0:0) 		176 		 0 		355 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.350418 	0.156287 	0.0346559 	0.00101444
+Blazed 	1.2(0:0:0) 		176 		 0 		360 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.346206 	0.156786 	0.036141 	0.000919779
+Blazed 	1.2(0:0:0) 		176 		 0 		365 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.342109 	0.157282 	0.0376547 	0.000828327
+Blazed 	1.2(0:0:0) 		176 		 0 		370 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.338134 	0.157785 	0.0391996 	0.000740848
+Blazed 	1.2(0:0:0) 		176 		 0 		375 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.334308 	0.158321 	0.0407864 	0.000658102
+Blazed 	1.2(0:0:0) 		176 		 0 		380 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.330667 	0.15892 	0.0424274 	0.000580784
+Blazed 	1.2(0:0:0) 		176 		 0 		385 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.327306 	0.159639 	0.0441436 	0.000509479
+Blazed 	1.2(0:0:0) 		176 		 0 		390 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.324261 	0.160491 	0.045942 	0.000445023
+Blazed 	1.2(0:0:0) 		176 		 0 		395 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.32154 	0.161449 	0.0478096 	0.000388583
+Blazed 	1.2(0:0:0) 		176 		 0 		400 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.319174 	0.16242 	0.0496903 	0.000342026
+Blazed 	1.2(0:0:0) 		176 		 0 		405 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.316585 	0.163067 	0.0514495 	0.000307727
+Blazed 	1.2(0:0:0) 		176 		 0 		410 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.313873 	0.163537 	0.053151 	0.00028629
+Blazed 	1.2(0:0:0) 		176 		 0 		415 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.311075 	0.16387 	0.0548078 	0.00027838
+Blazed 	1.2(0:0:0) 		176 		 0 		420 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.308222 	0.164092 	0.0564281 	0.000284604
+Blazed 	1.2(0:0:0) 		176 		 0 		425 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.305312 	0.164212 	0.0580133 	0.000305417
+Blazed 	1.2(0:0:0) 		176 		 0 		430 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.302406 	0.164267 	0.0595757 	0.00034143
+Blazed 	1.2(0:0:0) 		176 		 0 		435 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.299508 	0.164263 	0.061115 	0.000393151
+Blazed 	1.2(0:0:0) 		176 		 0 		440 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.296607 	0.164198 	0.0626301 	0.000460886
+Blazed 	1.2(0:0:0) 		176 		 0 		445 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.293755 	0.164115 	0.064141 	0.000545218
+Blazed 	1.2(0:0:0) 		176 		 0 		450 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.290952 	0.163998 	0.0656329 	0.00064678
+Blazed 	1.2(0:0:0) 		176 		 0 		455 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.288191 	0.163834 	0.0670967 	0.000765938
+Blazed 	1.2(0:0:0) 		176 		 0 		460 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.285432 	0.163605 	0.0685215 	0.000902535
+Blazed 	1.2(0:0:0) 		176 		 0 		465 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.282693 	0.163318 	0.0699075 	0.0010568
+Blazed 	1.2(0:0:0) 		176 		 0 		470 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.279963 	0.162969 	0.0712493 	0.0012286
+Blazed 	1.2(0:0:0) 		176 		 0 		475 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.277187 	0.162538 	0.072539 	0.00141694
+Blazed 	1.2(0:0:0) 		176 		 0 		480 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.274433 	0.162058 	0.0737883 	0.0016225
+Blazed 	1.2(0:0:0) 		176 		 0 		485 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.271687 	0.161525 	0.0749936 	0.00184483
+Blazed 	1.2(0:0:0) 		176 		 0 		490 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.268911 	0.160922 	0.0761455 	0.00208285
+Blazed 	1.2(0:0:0) 		176 		 0 		495 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.266153 	0.160268 	0.0772483 	0.00233686
+Blazed 	1.2(0:0:0) 		176 		 0 		500 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.263377 	0.159547 	0.0782926 	0.00260552
+Blazed 	1.2(0:0:0) 		176 		 0 		505 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.260561 	0.158739 	0.0792615 	0.00288729
+Blazed 	1.2(0:0:0) 		176 		 0 		510 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.257734 	0.157855 	0.0801566 	0.00318169
+Blazed 	1.2(0:0:0) 		176 		 0 		515 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.254636 	0.156713 	0.0808639 	0.00347855
+Blazed 	1.2(0:0:0) 		176 		 0 		520 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.25141 	0.155459 	0.081483 	0.00378166
+Blazed 	1.2(0:0:0) 		176 		 0 		525 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.247992 	0.154066 	0.0820031 	0.0040878
+Blazed 	1.2(0:0:0) 		176 		 0 		530 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.244305 	0.152613 	0.082528 	0.00439907
+Blazed 	1.2(0:0:0) 		176 		 0 		535 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.240568 	0.151142 	0.0830402 	0.00471886
+Blazed 	1.2(0:0:0) 		176 		 0 		540 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.237143 	0.150085 	0.0838962 	0.00507669
+Blazed 	1.2(0:0:0) 		176 		 0 		545 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.233932 	0.149179 	0.0848553 	0.00546027
+Blazed 	1.2(0:0:0) 		176 		 0 		550 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.231123 	0.148619 	0.0860762 	0.00588749
+Blazed 	1.2(0:0:0) 		176 		 0 		555 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.228859 	0.148344 	0.0874493 	0.00635783
+Blazed 	1.2(0:0:0) 		176 		 0 		560 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.227016 	0.148289 	0.0889429 	0.0068695
+Blazed 	1.2(0:0:0) 		176 		 0 		565 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.225343 	0.148232 	0.0903858 	0.00740397
+Blazed 	1.2(0:0:0) 		176 		 0 		570 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.223757 	0.148175 	0.09181 	0.00796205
+Blazed 	1.2(0:0:0) 		176 		 0 		575 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.22212 	0.147927 	0.0930281 	0.00852031
+Blazed 	1.2(0:0:0) 		176 		 0 		580 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.220522 	0.147661 	0.0942134 	0.00909653
+Blazed 	1.2(0:0:0) 		176 		 0 		585 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.218854 	0.147289 	0.0952968 	0.00967933
+Blazed 	1.2(0:0:0) 		176 		 0 		590 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.217211 	0.146892 	0.0963405 	0.0102768
+Blazed 	1.2(0:0:0) 		176 		 0 		595 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.215524 	0.146419 	0.0973033 	0.010881
+Blazed 	1.2(0:0:0) 		176 		 0 		600 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.213854 	0.145922 	0.0982275 	0.0114976
+Blazed 	1.2(0:0:0) 		176 		 0 		605 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.212164 	0.14538 	0.0990988 	0.0121231
+Blazed 	1.2(0:0:0) 		176 		 0 		610 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.210493 	0.144821 	0.0999368 	0.0127601
+Blazed 	1.2(0:0:0) 		176 		 0 		615 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.208821 	0.144237 	0.100738 	0.0134069
+Blazed 	1.2(0:0:0) 		176 		 0 		620 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.207182 	0.143654 	0.10152 	0.0140669
+Blazed 	1.2(0:0:0) 		176 		 0 		625 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.205567 	0.14307 	0.102287 	0.0147398
+Blazed 	1.2(0:0:0) 		176 		 0 		630 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.20401 	0.142497 	0.103038 	0.015426
+Blazed 	1.2(0:0:0) 		176 		 0 		635 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.202513 	0.141938 	0.103778 	0.0161258
+Blazed 	1.2(0:0:0) 		176 		 0 		640 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.201074 	0.141384 	0.104489 	0.0168355
+Blazed 	1.2(0:0:0) 		176 		 0 		645 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.199694 	0.140833 	0.105173 	0.0175543
+Blazed 	1.2(0:0:0) 		176 		 0 		650 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.198336 	0.140256 	0.105798 	0.018274
+Blazed 	1.2(0:0:0) 		176 		 0 		655 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.196969 	0.139621 	0.106337 	0.0189857
+Blazed 	1.2(0:0:0) 		176 		 0 		660 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.195621 	0.138967 	0.106826 	0.0196969
+Blazed 	1.2(0:0:0) 		176 		 0 		665 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.194214 	0.138238 	0.107223 	0.0203946
+Blazed 	1.2(0:0:0) 		176 		 0 		670 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.192839 	0.1375 	0.107579 	0.021091
+Blazed 	1.2(0:0:0) 		176 		 0 		675 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.191343 	0.136666 	0.107838 	0.0217684
+Blazed 	1.2(0:0:0) 		176 		 0 		680 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.189899 	0.135836 	0.108061 	0.0224431
+Blazed 	1.2(0:0:0) 		176 		 0 		685 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.18837 	0.134953 	0.108235 	0.0231096
+Blazed 	1.2(0:0:0) 		176 		 0 		690 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.186884 	0.13407 	0.108371 	0.0237708
+Blazed 	1.2(0:0:0) 		176 		 0 		695 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.185345 	0.133149 	0.10846 	0.0244223
+Blazed 	1.2(0:0:0) 		176 		 0 		700 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.183818 	0.132216 	0.108508 	0.0250654
+Blazed 	1.2(0:0:0) 		176 		 0 		705 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.182238 	0.131249 	0.108517 	0.0256993
+Blazed 	1.2(0:0:0) 		176 		 0 		710 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.180608 	0.130251 	0.108485 	0.0263232
+Blazed 	1.2(0:0:0) 		176 		 0 		715 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.179 	0.129263 	0.108443 	0.026946
+Blazed 	1.2(0:0:0) 		176 		 0 		720 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.17738 	0.128304 	0.108444 	0.027587
+Blazed 	1.2(0:0:0) 		176 		 0 		725 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.175794 	0.127346 	0.108411 	0.0282184
+Blazed 	1.2(0:0:0) 		176 		 0 		730 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.174251 	0.126443 	0.108434 	0.0288738
+Blazed 	1.2(0:0:0) 		176 		 0 		735 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.172742 	0.125545 	0.10843 	0.0295222
+Blazed 	1.2(0:0:0) 		176 		 0 		740 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.171266 	0.124675 	0.108444 	0.0301803
+Blazed 	1.2(0:0:0) 		176 		 0 		745 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.169822 	0.123825 	0.10846 	0.0308425
+Blazed 	1.2(0:0:0) 		176 		 0 		750 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.168415 	0.12299 	0.108468 	0.0315042
+Blazed 	1.2(0:0:0) 		176 		 0 		755 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.167052 	0.122204 	0.108524 	0.0321889
+Blazed 	1.2(0:0:0) 		176 		 0 		760 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.165722 	0.121422 	0.108553 	0.0328655
+Blazed 	1.2(0:0:0) 		176 		 0 		765 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.164498 	0.120728 	0.108667 	0.033581
+Blazed 	1.2(0:0:0) 		176 		 0 		770 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.163329 	0.120063 	0.108786 	0.034303
+Blazed 	1.2(0:0:0) 		176 		 0 		775 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.16226 	0.119446 	0.10892 	0.035034
+Blazed 	1.2(0:0:0) 		176 		 0 		780 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.161363 	0.118926 	0.109107 	0.0357914
+Blazed 	1.2(0:0:0) 		176 		 0 		785 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.160509 	0.118417 	0.109276 	0.0365444
+Blazed 	1.2(0:0:0) 		176 		 0 		790 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.159706 	0.117887 	0.109352 	0.0372553
+Blazed 	1.2(0:0:0) 		176 		 0 		795 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.158952 	0.117364 	0.109393 	0.0379506
+Blazed 	1.2(0:0:0) 		176 		 0 		800 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.158203 	0.116829 	0.109394 	0.0386271
+Blazed 	1.2(0:0:0) 		176 		 0 		805 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.157393 	0.116243 	0.109319 	0.0392676
+Blazed 	1.2(0:0:0) 		176 		 0 		810 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.156629 	0.115672 	0.109224 	0.0398959
+Blazed 	1.2(0:0:0) 		176 		 0 		815 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.155827 	0.115074 	0.109088 	0.0405023
+Blazed 	1.2(0:0:0) 		176 		 0 		820 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.155033 	0.114474 	0.108921 	0.0410906
+Blazed 	1.2(0:0:0) 		176 		 0 		825 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.154275 	0.113885 	0.108734 	0.0416639
+Blazed 	1.2(0:0:0) 		176 		 0 		830 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.153461 	0.11327 	0.108516 	0.0422188
+Blazed 	1.2(0:0:0) 		176 		 0 		835 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.152688 	0.11267 	0.108278 	0.0427574
+Blazed 	1.2(0:0:0) 		176 		 0 		840 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.151918 	0.112072 	0.10802 	0.0432803
+Blazed 	1.2(0:0:0) 		176 		 0 		845 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.151134 	0.111468 	0.107744 	0.0437876
+Blazed 	1.2(0:0:0) 		176 		 0 		850 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.150389 	0.110881 	0.107449 	0.044277
+Blazed 	1.2(0:0:0) 		176 		 0 		855 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.149622 	0.110287 	0.107139 	0.0447522
+Blazed 	1.2(0:0:0) 		176 		 0 		860 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.148864 	0.1097 	0.106813 	0.0452104
+Blazed 	1.2(0:0:0) 		176 		 0 		865 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.148144 	0.10913 	0.10647 	0.0456493 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		870 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.147375 	0.108545 	0.106113 	0.0460736 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		875 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.146635 	0.107974 	0.105741 	0.0464782 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		880 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.145915 	0.107416 	0.105356 	0.0468635 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		885 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.145149 	0.106846 	0.104962 	0.0472361 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		890 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.144414 	0.106293 	0.104555 	0.0475875 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		895 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.143684 	0.105748 	0.10414 	0.0479216 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		900 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.142923 	0.105199 	0.103722 	0.0482441 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		905 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.14219 	0.104667 	0.103293 	0.0485448 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		910 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.141452 	0.104143 	0.102863 	0.0488318 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		915 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.140694 	0.10362 	0.102436 	0.0491091 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		920 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.139962 	0.103115 	0.102 	0.0493644 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		925 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.13923 	0.10262 	0.101566 	0.0496063 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		930 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.138497 	0.102135 	0.101136 	0.0498362 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		935 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.137787 	0.101667 	0.100701 	0.0500438 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		940 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.137061 	0.101203 	0.100266 	0.0502366 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		945 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.136317 	0.100739 	0.0998335 	0.0504154 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		950 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.135594 	0.100293 	0.0993981 	0.0505718 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		955 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.134854 	0.0998488 	0.0989654 	0.0507131 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		960 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.134091 	0.0994031 	0.098537 	0.050841 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		965 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.133345 	0.0989745 	0.0981086 	0.0509467 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		970 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.132586 	0.0985498 	0.097686 	0.051038 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		975 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.131794 	0.0981186 	0.0972727 	0.0511207 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		980 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.131017 	0.0977033 	0.096862 	0.0511818 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		985 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.130237 	0.0972965 	0.0964591 	0.0512274 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		990 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.129419 	0.0968806 	0.0960719 	0.0512713 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		995 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.128613 	0.0964792 	0.0956899 	0.0512946 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD
+Blazed 	1.2(0:0:0) 		176 		 0 		1000 	SiO2.idx 	Pt.idx 			0.1 	na 	na 	1.67 	60 	  	0.127816 	0.0960909 	0.0953152 	0.051299 	Error:  WARNING,KNI IS TOO LARGE,IT MUST BE LESS THAN NMAXD

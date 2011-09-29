@@ -1,0 +1,12 @@
+ File:heg_center.000, Sigma =       1.22047
+ File:heg_edge.000, Sigma =       1.64526
+ File:hreg_center.000, Sigma =       1.93768
+ File:hreg_edge.000, Sigma =       2.70470
+ File:hrmeg_center.000, Sigma =       2.08073
+ File:hrmeg_edge.000, Sigma =       1.75523
+ File:imp_center.000, Sigma =       1.60198
+ File:imp_edge.000, Sigma =       1.22011
+ File:leg1200_center.000, Sigma =       2.42541
+ File:leg1200_edge.000, Sigma =       2.60728
+ File:leg600_center.000, Sigma =       2.55779
+ File:leg600_edge.000, Sigma =       2.43118

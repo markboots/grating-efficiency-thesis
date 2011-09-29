@@ -1,0 +1,60 @@
+Optimizing GRoove DEpth:
+Original grating Efficiency:
+
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.006 	na 	na 	na  	0.591743 	0.0429475 	0.0034354 	0.000200597
+
+
+
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.005 	na 	na 	na  	0.611897 	0.0315446 	0.00175612 	7.11915E-5
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.007 	na 	na 	na  	0.569163 	0.0546895 	0.00593818 	0.00047212
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.008 	na 	na 	na  	0.544704 	0.066117 	0.00934538 	0.000970914
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.009 	na 	na 	na  	0.518945 	0.0766174 	0.0136505 	0.00179589
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.01 	na 	na 	na  	0.492479 	0.085658 	0.0187477 	0.00304703
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.011 	na 	na 	na  	0.465889 	0.0928191 	0.0244324 	0.00480837
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.012 	na 	na 	na  	0.439731 	0.097818 	0.0304143 	0.00712902
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.013 	na 	na 	na  	0.414515 	0.100522 	0.0363424 	0.0100056
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.014 	na 	na 	na  	0.390687 	0.100952 	0.041839 	0.0133694
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.015 	na 	na 	na  	0.368616 	0.0992693 	0.0465386 	0.0170817
+
+
+Optimized Groove depth:Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.014 	na 	na 	na  	0.390687 	0.100952 	0.041839 	0.0133694
+
+
+
+Optimizing GRoove DEpth:
+Original grating Efficiency:
+
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.014 	na 	na 	na  	0.390687 	0.100952 	0.041839 	0.0133694
+
+
+
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.0135 	na 	na 	na  	0.402403 	0.101014 	0.0391682 	0.0116336
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.013 	na 	na 	na  	0.414515 	0.100522 	0.0363424 	0.0100056
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.014 	na 	na 	na  	0.390687 	0.100952 	0.041839 	0.0133694
+
+
+Optimized Groove depth:Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.0135 	na 	na 	na  	0.402403 	0.101014 	0.0391682 	0.0116336
+
+
+
+
+// Done with K = 0 [auto]; N = 21  (previous were all N=31. Converges to same result within 3 sig figs.)
+
+Optimizing GRoove DEpth:
+Original grating Efficiency:
+
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.0135 	na 	na 	na  	0.402369 	0.10099 	0.0391468 	0.0116211
+
+
+
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.0134 	na 	na 	na  	0.404762 	0.100937 	0.0385932 	0.0112868
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.0136 	na 	na 	na  	0.399993 	0.101021 	0.0396942 	0.0119597
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.0137 	na 	na 	na  	0.397633 	0.10103 	0.0402351 	0.0123025
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.0138 	na 	na 	na  	0.395289 	0.101016 	0.0407689 	0.0126492
+
+
+Optimized Groove depth:
+
+Sinusoidal 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	0.0137 	na 	na 	na  	0.397633 	0.10103 	0.0402351 	0.0123025
+
+

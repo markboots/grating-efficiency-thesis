@@ -1,0 +1,36 @@
+Optimizing GRoove DEpth:
+Original grating Efficiency:
+
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.002 	na 	na 	na  	0.619496 	0.00444079 	0.000195174 	9.21196E-6
+
+
+
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0015 	na 	na 	na  	0.627007 	0.00267384 	6.68124E-5 	1.78951E-6
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0025 	na 	na 	na  	0.610378 	0.00635651 	0.000430248 	3.13824E-5
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.003 	na 	na 	na  	0.600011 	0.00822258 	0.000786486 	8.14953E-5
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0035 	na 	na 	na  	0.58879 	0.00985984 	0.00125324 	0.000173887
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.004 	na 	na 	na  	0.577116 	0.0111305 	0.00179303 	0.00031869
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0045 	na 	na 	na  	0.565373 	0.0119531 	0.00234727 	0.000516096
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.005 	na 	na 	na  	0.553906 	0.0123086 	0.00284829 	0.000752749
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0055 	na 	na 	na  	0.542994 	0.0122354 	0.00323429 	0.00100233
+
+
+Optimized Groove depth:Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.005 	na 	na 	na  	0.553906 	0.0123086 	0.00284829 	0.000752749
+
+
+
+Optimizing GRoove DEpth:
+Original grating Efficiency:
+
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.005 	na 	na 	na  	0.553906 	0.0123086 	0.00284829 	0.000752749
+
+
+
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0049 	na 	na 	na  	0.556163 	0.0122737 	0.00275552 	0.000703386
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0051 	na 	na 	na  	0.551671 	0.0123261 	0.00293639 	0.000802656
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0052 	na 	na 	na  	0.549461 	0.0123269 	0.00301941 	0.000852845
+Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0053 	na 	na 	na  	0.547277 	0.0123116 	0.00309696 	0.000903042
+
+
+Optimized Groove depth:Sinusoidal 	7.8(0:0:0) 	176 	0 	680 	SiO2.idx 	Pt.idx 	0.02 	0.0052 	na 	na 	na  	0.549461 	0.0123269 	0.00301941 	0.000852845
+

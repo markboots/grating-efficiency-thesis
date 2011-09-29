@@ -1,0 +1,43 @@
+#!/usr/bin/perl -- -*-perl-*-
+#
+#       Generate a script file for a grating with sample angle fixed
+#
+use Math::Trig;
+$hc = 1239.84186;
+
+$out = 'script1.txt';
+
+$sample = 2;		# Sample angle
+$m = +1;		# Diffraction order
+$d = 1e6/1187.819;  	# d-spacing in nm
+
+$min = 2.27;
+$max = 2.81;
+$steps = 150;
+
+# $mono = 'NaN';
+$tilt = 'NaN';
+$azim = 'NaN';
+$x = 'NaN';
+$y = 'NaN';
+$z = 'NaN';
+$axis = 'n';
+$start = 'NaN';
+$stop = 'NaN';
+$n = 'NaN';
+
+open(F,">$out") || die "Can't open $out";
+$header="Mono\tSample\tTilt\tAzimuth\tDetector\tX\tY\tZ\tAxis\tStart\tStop\tN";
+print F "$header\n";
+
+foreach $i (0 .. $steps) {
+  $value = $min+($max-$min)*$i/$steps;
+  print "$value\n";
+  $mono = sprintf("%.3f",$value);
+  $lambda = $mono;
+  $detector = $sample+180./pi*acos(cos($sample*pi/180.)-$m*$lambda/$d);
+  $det = sprintf("%.3f",$detector);
+  print F "$mono\t$sample\t$tilt\t$azim\t$det\t$x\t$y\t$z\t$axis\t$start\t$stop\t$n\n";
+}
+close(F);
+

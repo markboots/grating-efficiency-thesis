@@ -1,0 +1,291 @@
+\chapter{Implementation of Theory: What people and I did to implement the theory using computers}
+
+Introduction: yadda yadda yadda (TODO)
+\section{Methods}
+\subsection{Rigorous Coupled Wave method: GSolver}
+TODO
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3a_RCWA/3a.pdf} 
+   \caption{The RCW method approximates every real grating as a stack of rectangular gratings, where the boundary conditions are easy to solve and the problem can be reduced to algebraic methods.}
+   \label{3a}
+\end{figure}
+
+\subsection{Differential method: Gradif by Michel Neviere}
+TODO
+
+
+\section{Improving the usability and efficiency of calculation methods}
+The Canadian Light Source purchased the Gradif code from Professor Neviere and made it available for this project.  However, there were two challenges involved in applying the code:
+\begin{enumerate}
+\item The code itself is an iteration on old Fortran program that provides no user interface.  Instead, to calculate an efficiency data point for a grating at just one energy, approximately 30 numbers must be entered into a blank screen, with no prompts, in the correct order.  These numbers define the grating geometry, the coating/layer thicknesses, the incidence conditions, the integration parameters, and also the complex refractive indices of the layers and the substrate.\footnote{These last two values will change as a function of photon energy, since the refractive index varies with wavelength, so we need to look them up for each data point.}  As a result, using this program requires a time-consuming and error-prone process.
+\item In the event of an error made during the data entry process, one of many grating parameters could end up outside the narrow region of convergence where the code is able to  numerically integrate a solution successfully.  When this happens, the program runs forever in an infinite loop, with no feedback that the calculation has failed.  This region of convergence is not well established, so even when data entry errors are avoided, it's possible for a user to specify a valid grating that is -- for example -- too deep to be calculated.  Without user feedback, it's impossible to know if the calculation is still running successfully, or if it has failed into this infinite loop.
+\end{enumerate}
+To beat these two challenges, we built a web-based graphical interface, and carefully modified the Fortran source code to detect convergence failures.
+\subsection{Visual interface to the Gradif code}
+Figure \ref{3b} shows a screenshot of the graphical user interface (GUI) that we built to help us perform efficiency calculations quickly and efficiently.  The interface serves as a wrapper to generate input for the Gradif code, manages running a set of calculations, and extracts the results.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_1.pdf} \\
+%\vspace*{0.25in}
+   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_2.pdf}
+   \caption{This web application provides a graphical user interface for calculating grating efficiencies. Forms prompt users for the grating parameters...}
+   \label{3b}
+\end{figure}
+
+The interface was implemented as a web-based application, so it can be used from anywhere through a browser, without having to distribute the Gradif code or install anything on a person's individual computer.  Users describe the grating parameters and application scenario through a form that prompts them for the necessary information based on the type of grating (Figure \ref{3b}).  The results automatically generate a plot, and users can also download data tables of their calculations.  These tables are also archived so they can be retrieved later.
+
+It supports the following features:
+\begin{itemize}
+\item \textbf{Grating Types}\\
+The interface supports rectangular, blazed, trapezoidal, and sinusoidal grating profiles; it prompts for the geometry parameters that are required in each case.
+
+\item \textbf{Order and Polarization}\\
+Users can configure which inside and outside orders should be calculated, as well as specify the polarization of the incident light: TE, TM, or natural light (un-polarized).
+
+\item \textbf{VLS Gratings}\\
+To model variable line space gratings, the interface accepts the VLS parameters in conventional notation (linear, quadratic, and cubic corrections) and uses these to calculate the groove density and corresponding efficiency at a user-determined number of points along the grating surface; the overall efficiency is taken as an average of these.
+
+\item \textbf{Efficiency plots as a function of wavelength}\\
+The simplest way to use the interface generates a plot of the efficiency in the desired orders as a function of wavelength, holding all the other parameters constant (Figure \ref{3b_3}).  This is the most typical use-case for testing how a grating would perform in a beamline.
+
+\begin{figure}[p] %  figure placement: here, top, bottom, or page
+   \centering
+   \vspace*{-.5in}
+   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_3.pdf} \\
+%\vspace*{0.25in}
+   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_4.pdf}
+   \caption{This web application provides a graphical user interface for calculating grating efficiencies. The results are plotted, and users can download a text-based table for further analysis.}
+   \label{3b_3}
+\end{figure}
+
+\item \textbf{Complex scans over arbitrary grating parameters}\\
+The interface also offers flexibility to test arbitrary relationships along incidence angle, energy, geometry, and other parameters. This feature is most efficiently used in conjunction with a spreadsheet or other data analysis program to fill in the grating parameters and interpret the data tables that are produced.
+
+\item \textbf{Database of Optical Materials and Refractive Index}\\
+We also developed a database of common grating substrate and coating materials, so that the interface can automatically look up their complex refractive index as a function of photon energy.  This information was calculated using the semi-empirical Henke data tables of the x-ray atomic form factor (TODO ref).  The current library is valid from 30eV to 10~000eV, but is known to have limited accuracy in the immediate neighborhood of absorption edges.
+
+\item \textbf{Mirror Reflectivity}\\
+As an additional tool for beamline designers, we implemented the ability to calculate the reflectivity of a simple mirror using any of the materials in the refractive index database.  Mirror reflectivities are computed as a function of incidence angle and photon energy using the complex Fresnel equations (TODO ref Modern Optics), and are subject to the same options for polarization.
+
+\item \textbf{Control of Numerical Precision}\\
+An `Options' page (Figure \ref{3b_5}) allows users to configure the numerical precision used in the calculations.  The two critical factors are the number of integration steps used in the numerical integration of the particular solutions for the $A_n^{(m)}$ and $B_n^{(m)}$ coefficients at each layer, and the number of Fourier coefficients $N$ used before the sum is truncated.  The defaults we chose ($N=31$; 401 integration steps) have been found to produce accurate results reasonably quickly across the entire soft x-ray range, as long as the coating thickness is less than 0.5um.   However, prudent designers should still do convergence tests for any high-stakes results, by repeating the calculations and comparing against efficiencies computed using larger values.  This technique can also be used to find the minimum number of Fourier coefficients that are required before the results start to disagree.  (This can helpful to optimize the computation speed before running a large number of calculations on similar gratings at similar wavelengths.)
+\end{itemize}
+
+\begin{figure}[p] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_5.pdf}
+   \caption{This `Options' page configures the numerical precision of the calculations, the diffraction orders of interest, and the polarization of the incident light.  It also sets some other house-keeping options for where users want to store their data.}
+   \label{3b_5}
+\end{figure}
+
+\subsection{Detecting convergence failures}
+The Fortran code that makes up the Gradif program was written using a 1970's-era programming approach, including prodigious use of global variables and GOTO statements.  (These two features are now heavily discouraged in modern programming methedologies.)  As a result, the code is hard to trace, but we were able to insert a counter to detect when a numerical integration fails to converge after multiple attempts.  This allows the calculation to exit with an error message, rather than run indefinitely.
+
+\subsection{Open Source, Open Access, and Future Work}
+Since we released the user interface under an `open-source' license, it can be upgraded or enhanced by anyone with an interest in the beamline design community.  Julian Miller, a summer student in the metrology department at the CLS, recently created an updated version of the interface to support multi-threaded calculations and add more options for incidence configurations.  To the original `constant incidence angle' mode, he added a `constant included angle' mode, used in many monochromators, which tilts the grating as a function of photon energy to maintain a constant angle between the incident and outgoing beam in the desired order.  Since every grating efficiency calculation (at a single energy) is independent, they can be run in parallel; this takes advantage of modern multi-core processors, and dramatically speeds up the creation of a user's plot or data set.  In the future, this could be extended even further to spread calculations over a cluster of computers, or on distributed hardware in a `cloud computing' network.
+
+Because the user interface runs as a web application, it can be (and has been) accessed by beamline designers from all over the world.  As one example, it was used by Professor Coryn Hague to improve the design of a new beamline for the SOLEIL synchrotron (TODO find ref).  The calculations can be requested and retrieved by anyone from anywhere, but they all run on a single server computer at the University of Saskatchewan.  Unfortunately, the Gradif code itself is not open source, and while we are licensed to run it on this machine, recent communications from Professor Neviere indicate that he is unhappy with this level of open access to results produced using his Gradif engine.  As a result, we have temporarily disabled public access.
+
+In the future, we plan to completely re-implement the core engine for calculating efficiencies, according to the theory outlined in this thesis.  This will allow us to optimize the the computation speed by employing per-calculation multi-threading and a modern high-performance programming language.  This will also allow us to distribute a completely open version of the whole system, un-encumbered by licensing issues.  Finally, we plan to combine this with Julian's work and other upgrades to the usability of the web interface.
+
+\section{General trends and factors affecting efficiency}
+With these tools in-hand, we move on to the next question: What can we learn from them about the efficiency of gratings, especially those used in the soft x-ray regime?
+
+This section looks at the theoretical effects caused by changes to grating parameters: groove profile, shape (depth, duty cycle, blaze angle, etc.), line density, coating material, coating thickness, and incidence angle.  We can think of the grating efficiency as a scalar function of this many-dimensional parameter space, but it's impossible to capture its complexity in a simple analytical equation.  None the less, the results of this section should give beamline designers an understanding of trends along each dimensions within this space, and how to apply these trends to the optimization of gratings.
+
+We attempt to isolate the effects of each parameter as much as possible.  However, many parameters are linked together so that they cannot be made independent.  For example, as we show in Section \ref{blazeAngle}, gratings with triangular profiles have an optimal \emph{blaze angle} which aligns the outgoing diffraction order with the specular reflection for maximum efficiency.  For this type of grating, changing only the groove density will change the outgoing diffraction angle, and therefore change the optimal blaze angle.  Simply plotting the efficiency as a function of groove density while holding all other parameters constant would confuse the blaze effect with the density effect; instead, we correct for this by adjusting the angle to keep the grating ``on-blaze'' as we vary the groove density in Figure \ref{3e}.
+
+\subsection{Grating Profile: Groove Shape}
+
+As we showed in Chapter 3, any kind of periodic groove structure will have a diffraction effect, regardless of the nature of the groove shape.  However, the diffraction efficiency -- and particularly, the efficiency in a desired order -- depends substantially on the groove shape.  
+
+Five common groove profiles are shown in Figure \ref{3c-profile}: a classic rectangular profile, a triangular profile (also known as a ``sawtooth'' or ``blazed'' pattern), a trapezoidal profile, a sinusoidal profile, and an approximated triangular profile.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3c_effectOfProfile/3c_profiles.pdf}
+   \caption{5 common groove profiles and their geometry parameters.  The rectangular profile (a) and triangular profile (b) are idealized versions of those produced by mechanical ruling.  The trapezoidal profile (c) is usually produced accidentally while trying to rule a rectangular profile with an imperfect ruling tip.  The sinusoidal profile (d) is the natural shape produced by holographic ruling; the result can be ion-etched to approximate a triangular profile (e).}
+   \label{3c-profile}
+\end{figure}
+
+\subsubsection{Grating Manufacturing Techniques}
+These types of profiles emerged largely as a consequence of grating manufacturing techniques.  Henry Rowland invented a method for machining long, precise screws (TODO ref), and this enabled him to create a ``ruling engine'' (Figure \ref{3c-rowlandEngine}) for mechanically scratching fine parallel lines into a layer of metal on a substrate material.  His version was much more accurate than previous machines because it self-compensated for systematic errors in the screw pitch, and his efficient production of high-quality gratings ``revolutionized spectroscopy'' (TODO http://www.aip.org/history/gap/Rowland/Rowland.html).  Today, there are several extremely precise ruling engines around the world, using diamond tips and interferometric position feedback to mechanically engrave groove densities approaching 3~000 lines/mm.\footnote{The Michelson ruling engine at the Newport Corporation can rule up to an astonishing 10~800 lines/mm.}
+
+The rectangular and triangular profiles in Figure \ref{3c-profile} are a consequence of the shape of mechanical ruling tips.  The trapezoidal profile is often produced accidentally when attempting to rule a rectangular profile with a non-ideal tip, as was the case for the gratings shown in Figures \ref{3j-3} and \ref{3j-4}.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.8\textwidth]{Chapter3/3c_effectOfProfile/rowlandRulingEngine.jpg}
+   \caption{Henry Rowland's ruling engine, mechanically engraving a grating under the operation of his instrument maker Theodore Schneider.  Photographed at Johns Hopkins University, Baltimore.  \textbf{Image credit: }\textsc{Emilio Segre Visual Archives/American Institute Of Physics/Science Photo Library} (TODO ref http://www.sciencephoto.com/media/150151/enlarge)}
+   \label{3c-rowlandEngine}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.8\textwidth]{Chapter3/3c_effectOfProfile/mitBRulingEngine.jpg}
+   \caption{The MIT `B' ruling engine, now owned and operated by Richardson Gratings (a division of the Newport Corporation).  It can rule gratings up to 420 mm wide, with grooves up to 320 mm long.  The maximum groove density is 1500 lines/mm.  Equipped with a servo system for advancing the grating carriage and interferometric feedback using frequency-stabilized lasers, it is the most accurate ruling engine in the world.  To control for thermal expansion of the engine, the room temperature is controlled to 0.005$\deg$C; the system even compensates for changes in room air pressure since a change of just 2.5 mm of mercury will affect the refractive index of air (and therefore the interferometer wavelength) by one part per million.  The entire engine is suspended from springs to dampen vibrations between 3Hz to 60Hz, which could otherwise be transmitted to the diamond tip.  \textbf{Image credit: }\textsc{Diffraction Grating Handbook} (TODO REF).}
+   \label{3c-mitBEngine}
+\end{figure}
+
+The setup and operation of mechanical ruling engines is a long, elite, and painstaking process; for gory details, see (TODO REF http://gratings.newport.com/information/handbook/chapter3.asp) by the Newport Corporation, which operates three ruling engines.  To reduce the cost of ruled gratings, often a ``master grating'' is ruled mechanically and then used to create a mould for replicating other gratings; the groove shape is transferred using a thin layer of liquid resin which is hardened while in contact with the master grating surface (Figure \ref{3c-replication}).\footnote{The gratings used for the REIXS spectrometer were all master gratings. They were ruled directly into a smooth gold coating on top of a quartz grating blank, and then top-coated with an evaporated platinum or nickel surface.}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=1]{Chapter3/3c_effectOfProfile/3c_replica.pdf}
+   \caption{Master gratings can be replicated using a resin which hardens while in contact with the master (or subsequently, a submaster replicated from the first master).  First, a parting agent (2) is applied to the surface of the master; it must be thin and uniform otherwise it will affect the profile.  A metallic (aluminum or gold) coating about 1um thick is then applied above the parting agent; this coating will eventually end up as the top surface of the replicated grating, and is called the \emph{transfer coating} (3).  Finally, the replica blank (5) is cemented from above using a resin ($\sim$10um thick) that hardens under UV exposure or over time (4).  Once the resin is cured, the gratings are separated at the parting agent layer, leaving the hardened resin in the shape of the grooves, with the metal coating adhered to the top.  This will produce a mirror image of the master grating; to create a perfect replica, this first replica needs to be replicated again.  \textbf{Image credit: }\textsc{Diffraction Grating Handbook} (TODO REF).}
+   \label{3c-replication}
+\end{figure}
+
+A more recent technique was invented in the late 1960s for manufacturing gratings faster and with more repeatability.  It uses two sources of coherent light to project a  holographic interference pattern of regular standing waves onto a grating master.  The grating master consists of a photoresist material that is either strengthened or weakened by exposure to light.  After the master has been exposed to the interference pattern for a sufficient time, it is bathed in a developer chemical, which washes away either the exposed or unexposed parts, leaving behind a sinusoidal relief pattern that corresponds to the original intensity of light (TODO REF  S. Lindau, "The groove profile formation of holographic gratings," Opt. Acta 29, 1371-1381 (1982).).
+
+The last groove profile shown in Figure TODO represents an attempt to turn holographically-ruled sinusoidal gratings into triangular gratings using ion etching to partially eat away the groove surface while holding the finished photoresist master at an angle to the ion beam (TODO REF http://www.tandfonline.com/doi/abs/10.1080/713819374).  Another technique for pseudo-blazed holographic gratings is known as Sheridon's Method (TODO REF N. K. Sheridon, "Production of blazed holograms," Appl. Phys. Lett. 12, 316-318 (1968).), which uses a transparent photoresist, exposed to the intersection of a coherent light source with its reflected self (Figure \ref{3c-sheridon}).  Because the master is inclined relative to the interference pattern, the intensity profile is asymmetric and produces a lopsided sinusoidal shape.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=1]{Chapter3/3c_effectOfProfile/sheridonRecordingMethod.png}
+   \caption{The Sheridon technique for recording pseudo-blazed holographic gratings uses a single light beam reflected back on itself to make a regular interference pattern of standing waves.  The master substrate consists of a \emph{transparent} photoresist material which is hardened or weakened by exposure to the light.  By placing the substrate at an angle $\theta$ to the light path, the light and dark fringes are stretched out parallel to the grating surface; additionally, the angled incidence creates a lopsided sinusoidal intensity pattern that mimics blazed gratings. \textbf{Image credit: }\textsc{Diffraction Grating Handbook} (TODO REF).}
+   \label{3c-sheridon}
+\end{figure}
+
+
+\subsubsection{Profile Geometry}
+Figure \ref{3c-profile} shows the parameters that describes that describe the geometry of each profile.  In addition to the groove spacing $d$, rectangular gratings are characterized by a groove depth $h$ (or duty cycle) and a groove width $a$.  Ruled triangular gratings are described by their blaze angle $\theta_b$; ideally the opposite angle (or ``anti-blaze angle'' $\theta_{ab}$) would be 90$\deg$ but often it ends up closer to 60$\deg$ or even 30$\deg$.  Trapezoidal gratings are described by a groove depth $h$, a groove width $a$, and their blaze and anti-blaze angles $\theta_b$ and $\theta_{ab}$.  Sinusoidal gratings are fully described by just their groove depth $h$, and an assumption of a sinusoidal variation $y(x) = y_0 + \frac{h}{2}\, \sin(2\pi \,x / d)$.
+
+     
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3c_effectOfProfile/3c_3.pdf} 
+   \caption{0th order, 1st order, and 2nd order efficiency of three different groove profiles, all optimized for use at 400eV.  The blazed grating is superior in both 1st and 2nd order.  All gratings: 1200 lines/mm, Platinum coating.  Blazed: 1.46$\deg$ angle, 60$\deg$ anti-blaze angle.  Sinusoidal: 13.7nm groove depth.  Laminar (rectangular): 9.6nm groove depth, 50\% duty cycle. }
+   \label{3c-plot}
+\end{figure}
+
+\subsubsection{Blazed Condition for Triangular Gratings}
+\label{blazeAngle}
+          - blazing: align specular reflection
+          
+          	- MATH: derive blaze condition
+	
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=1]{Chapter3/3d_blazing/3d.pdf} 
+   \caption{In the blazed condition, the desired order diffraction angle -- in this case, 1st order -- is aligned with the direction of specular reflection off the groove surfaces.}
+   \label{3d}
+\end{figure}
+
+	- groove density...
+	
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3e_effectOfGrooveDensity/3e.pdf} 
+   \caption{Increasing the groove density always decreases the diffraction efficiency -- at least for useful orders ($n \neq 0$).  In these plots, we've tried to control for inter-related factors: For the blazed grating in (a), the blaze angle has been adjusted with the groove density to maintain the on-blaze condition.  In (b), the sinusoidal grating depth was optimized at 1200 lines/mm, and then the depth-to-period ratio was maintained across changes to the groove density.}
+   \label{3e}
+\end{figure}
+
+TODO: eff as function of eV plots for multiple groove densities.  See if blazing effect becomes less pronounced at higher groove densities.
+
+
+     - coating:
+     	- dielectric (glass) gratings covered in metal... essentially thick metal coating. 
+	
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3f_coatingThickness/3f.pdf} 
+   \caption{In the soft Xray, grazing incidence regime, metal-coated dielectric gratings are indistinguishable from pure metal gratings\ldots as long as the coating is thicker than $\approx$ 10nm.  These calculations show Pt coatings of varying thickness over an $SiO_2$ substrate, as well as an infinitely thick pure Pt grating.  (Blazed grating, 1200 lines/mm, 1.46 $\deg$ blaze angle, 88 $\deg$ incidence.}
+   \label{3f}
+\end{figure}
+
+           - DATA 3g: comparative coatings: Au, Pt, Ni, NiO2, etc.
+           
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3g_coatingMaterial/3g_reflectivity.pdf} 
+   \caption{The reflectivity of a pure mirror at grazing incidence (88 $\deg$), as a function of photon energy.  Lighter elements like Carbon and Nickel have high peak reflectivity, but have strong absorption features.  Heavier metals, particularly those within the platinum group, have excellent reflectivity over the soft Xray region of interest.  Up to 200eV, Gold has a higher reflectivity than Pt and Ir. }
+   \label{3g}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3g_coatingMaterial/3g_multiview.pdf} 
+   \caption{A comparison of the mirror reflectivity, 0th order, and 1st order efficiency for different coating materials, as a function of photon energy.  (Gratings: Sinusoidal profile, 88 $\deg$ incidence angle, 1200 lines/mm, 13.7nm groove depth)  Note that the 1st order efficiency has energy-dependent features that aren't visible in the simple reflectivity.}
+   \label{3g-2}
+\end{figure}
+           
+           Ir: standard coating with some manufacturers. Better reflect than Pt.  More corrosion resistant/stable.   (Pt: forms Pt islands when exposed to EUV light.  Means what? See gratings, slits, and mirrors book.)
+           
+     - energy
+          - DATA 3h: Compare effects of just changing reflectivity (mirror condition) with effects in diffraction
+          
+          
+     - incidence angle
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3i_incidenceAngle/3i_variousGratings.pdf} 
+   \caption{The effect of incidence angle on diffraction efficiency for various grating profiles.  While the 0th order efficiency/reflectivity always increases as the incident light becomes more grazing, there is an optimal incidence angle below 90 $\deg$ for higher-order light.  The critical angle for total external reflection in Platinum is TODO degrees; clearly both the 0th-order and 1st-order efficiency drop off significantly below this angle. }
+   \label{3i}
+\end{figure}
+
+	- critical angle: TER
+	
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3i_incidenceAngle/3i_blazeChanges2.pdf} 
+   \caption{While the blaze angle can always be used to tune a grating for a required incidence angle, there is still a particular \emph{optimal} incidence angle that -- when combined with a corresponding optimized blaze angle -- would produce the highest achievable efficiency.  This optimal angle doesn't seem to depend on the material, but only on the groove density and energy.  (Gratings: 1200 lines/mm, coatings and blaze angles as indicated.)}
+   \label{3i-2}
+\end{figure}
+
+TODO: test with groove density. Does it depend on difffraction eqn?
+	
+	- Observation: blaze angle and groove depth can be used to optimize efficiency for a constrained incidence angle.  However, while 0-order reflectivity increases with grazing incidence, there IS an optimal incidence angle (usually between 87 and 88 degrees), which does not depend on the grating material, and depends somewhat on the incident energy (increases with energy).  
+	
+	Practical application: This optimal incidence angle provided the starting point for the incidence angles used in the REIXS spectrometer, and explains why the lower-energy gratings (LEG, IMP) use lower (more normal) incidence angles than the high-energy gratings.
+	TODO if time: determine way to calculate optimal incidence angle.  Is this just a TE or TM effect? NO... te and tm behave the same.
+	
+	
+Highlighted conclusions:
+	- blazed is idea for narrow energy range and constant incidence angle.  In case of spectrometer, definitely the right choice.  For mono... No constant incidence angle.  Still better than sinusoidal if not?  Find out.
+	
+
+	Applications to beamline design:
+\begin{itemize}
+\item Optimal incidence angle
+\item blazed: show whether better than sinusoidal for CII monochromator
+\end{itemize}
+
+\section{Validation: comparison to practical results}
+ REF:  reference from summer 2005]
+ 
+ TODO: reference. details of grating in captions.
+ 
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3j_comparisonWithExperimental/3j_blazed.pdf} 
+   \caption{Comparison of grating efficiency calculations to diffractometer measurements.  Blazed grating, 1440 lines/mm, 2.2 $\deg$ blaze angle, 12.8 $\deg$ anti-blaze angle. Incidence: 160 $\deg$ constant included angle to the 1st inside order.}
+   \label{3j-1}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3j_comparisonWithExperimental/3j_laminar.pdf} 
+   \caption{Comparison of grating efficiency calculations to diffractometer measurements.  Rectangular grating, 600 lines/mm, 22.2 nm depth, 0.833 um valley width.  Incidence: 167 $\deg$ constant included angle to the 1st inside order.}
+   \label{3j-2}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3j_comparisonWithExperimental/3j_trap300.pdf} 
+   \caption{Comparison of grating efficiency calculations to diffractometer measurements.  Trapezoidal grating, 300 lines/mm, 57 $\deg$ side angles, 49.3 nm depth, 2.46 um valley width.  Incidence: 167 $\deg$ constant included angle to the 1st inside order.}
+   \label{3j-3}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3j_comparisonWithExperimental/3j_trap390.pdf} 
+   \caption{Comparison of grating efficiency calculations to diffractometer measurements.  Trapezoidal grating, 390 lines/mm, 57 $\deg$ side angles, 54 nm depth, 1.39 um valley width.  Incidence: 160 $\deg$ constant included angle to the 1st inside order.}
+   \label{3j-4}
+\end{figure}
+
+ [compare with GSolver results?]

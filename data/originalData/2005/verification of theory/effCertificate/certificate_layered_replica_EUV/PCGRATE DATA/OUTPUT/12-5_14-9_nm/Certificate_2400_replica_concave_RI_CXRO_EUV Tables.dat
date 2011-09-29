@@ -1,0 +1,56 @@
+1
+TableBegin
+Table 0
+Columns = 25
+Column 0 -> CID = 8138801
+Column 1 -> CID = 10538800
+Column 2 -> CID = 10538802
+Column 3 -> CID = 10538804
+Column 4 -> CID = 10538806
+Column 5 -> CID = 10538808
+Column 6 -> CID = 1053880a
+Column 7 -> CID = 1853880c
+Column 8 -> CID = 1853880e
+Column 9 -> CID = 18538810
+Column 10 -> CID = 1853865e
+Column 11 -> CID = 1853866a
+Column 12 -> CID = 1853866c
+Column 13 -> CID = 1853875e
+Column 14 -> CID = 1853876a
+Column 15 -> CID = 1853876c
+Column 16 -> CID = 1853885e
+Column 17 -> CID = 1853886a
+Column 18 -> CID = 1853886c
+Column 19 -> CID = 1853895e
+Column 20 -> CID = 1853896a
+Column 21 -> CID = 1853896c
+Column 22 -> CID = 18538a5e
+Column 23 -> CID = 18538a6a
+Column 24 -> CID = 18538a6c
+Rows = 25
+Row 0 -> RID = 0,9
+Row 1 -> RID = 1,9
+Row 2 -> RID = 2,9
+Row 3 -> RID = 3,9
+Row 4 -> RID = 4,9
+Row 5 -> RID = 5,9
+Row 6 -> RID = 6,9
+Row 7 -> RID = 7,9
+Row 8 -> RID = 8,9
+Row 9 -> RID = 9,9
+Row 10 -> RID = a,9
+Row 11 -> RID = b,9
+Row 12 -> RID = c,9
+Row 13 -> RID = d,9
+Row 14 -> RID = e,9
+Row 15 -> RID = f,9
+Row 16 -> RID = 10,9
+Row 17 -> RID = 11,9
+Row 18 -> RID = 12,9
+Row 19 -> RID = 13,9
+Row 20 -> RID = 14,9
+Row 21 -> RID = 15,9
+Row 22 -> RID = 16,9
+Row 23 -> RID = 17,9
+Row 24 -> RID = 18,9
+TableEnd

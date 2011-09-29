@@ -1,0 +1,34 @@
+Optimizing GRoove DEpth:
+Original grating Efficiency:
+
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.005 	na 	na 	na  	0.79636 	0.0134953 	0.00121681 	9.0107E-5
+
+
+
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.004 	na 	na 	na  	0.808927 	0.00970929 	0.000569397 	2.69038E-5
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.006 	na 	na 	na  	0.782794 	0.0168292 	0.00213943 	0.000228886
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.007 	na 	na 	na  	0.769059 	0.0193135 	0.00325169 	0.000474611
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.008 	na 	na 	na  	0.755918 	0.0207246 	0.00439811 	0.000838537
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.009 	na 	na 	na  	0.743989 	0.0210403 	0.00539284 	0.00129637
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.01 	na 	na 	na  	0.733684 	0.0204251 	0.00607302 	0.00178431
+
+
+Optimized Groove depth:Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.009 	na 	na 	na  	0.743989 	0.0210403 	0.00539284 	0.00129637
+
+
+Optimizing GRoove DEpth:
+Original grating Efficiency:
+
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.009 	na 	na 	na  	0.743989 	0.0210403 	0.00539284 	0.00129637
+
+
+
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.0089 	na 	na 	na  	0.745113 	0.0210546 	0.00530527 	0.0012479
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.0088 	na 	na 	na  	0.746254 	0.0210593 	0.00521462 	0.00119984
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.0087 	na 	na 	na  	0.747411 	0.021054 	0.00512106 	0.00115226
+Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.0089 	na 	na 	na  	0.745113 	0.0210546 	0.00530527 	0.0012479
+
+
+Optimized Groove depth:Sinusoidal 	5.4(0:0:0) 	176 	0 	280 	SiO2.idx 	Ni.idx 	0.02 	0.0088 	na 	na 	na  	0.746254 	0.0210593 	0.00521462 	0.00119984
+
+
