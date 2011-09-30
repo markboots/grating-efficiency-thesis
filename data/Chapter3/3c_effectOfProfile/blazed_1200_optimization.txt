@@ -31,3 +31,32 @@ Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	na 	na 	1.47 	60  	0.353
 
 
 Optimized Blaze angle:Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.1 	na 	na 	1.46 	60  	0.355245 	0.167923 	0.0261811 	0.00199827
+
+
+
+
+
+
+
+
+Simple calculation with analytical eqn for optimal blaze angle would suggest theta_b = 2.12 degrees (400 eV, 1200 lines/mm).  Not so:
+
+Optimizing Blaze Angle:
+Original grating Efficiency:
+
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	2.12 	60  	0.261864 	0.128047 	0.0898686 	0.0119678
+
+
+
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	2.02 	60  	0.272502 	0.136834 	0.0839064 	0.00673181
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	1.92 	60  	0.28423 	0.14528 	0.0759519 	0.00304448
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	1.82 	60  	0.297154 	0.153018 	0.0662927 	0.000953136
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	1.72 	60  	0.31138 	0.159616 	0.0554032 	0.000270477
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	1.62 	60  	0.327007 	0.164596 	0.043923 	0.000608002
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	1.52 	60  	0.344125 	0.16745 	0.0326039 	0.00145957
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	1.42 	60  	0.362811 	0.167683 	0.0222242 	0.00232026
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	1.32 	60  	0.383113 	0.164861 	0.0134793 	0.0028085
+Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	1.52 	60  	0.344125 	0.16745 	0.0326039 	0.00145957
+
+
+Optimized Blaze angle:Blazed 	1.2(0:0:0) 	176 	0 	400 	SiO2.idx 	Pt.idx 	0.05 	na 	na 	1.42 	60  	0.362811 	0.167683 	0.0222242 	0.00232026

@@ -98,9 +98,9 @@ This section looks at the theoretical effects caused by changes to grating param
 
 We attempt to isolate the effects of each parameter as much as possible.  However, many parameters are linked together so that they cannot be made independent.  For example, as we show in Section \ref{blazeAngle}, gratings with triangular profiles have an optimal \emph{blaze angle} which aligns the outgoing diffraction order with the specular reflection for maximum efficiency.  For this type of grating, changing only the groove density will change the outgoing diffraction angle, and therefore change the optimal blaze angle.  Simply plotting the efficiency as a function of groove density while holding all other parameters constant would confuse the blaze effect with the density effect; instead, we correct for this by adjusting the angle to keep the grating ``on-blaze'' as we vary the groove density in Figure \ref{3e}.
 
-\subsection{Grating Profile: Groove Shape}
+\subsection{Effect of Grating Profile: Groove Shape}
 
-As we showed in Chapter 3, any kind of periodic groove structure will have a diffraction effect, regardless of the nature of the groove shape.  However, the diffraction efficiency -- and particularly, the efficiency in a desired order -- depends substantially on the groove shape.  
+As we showed in Chapter 3, any kind of periodic groove structure will have a diffraction effect, regardless of the nature of the groove shape.  However, the grating efficiency -- particularly in the order the experimenter wants to usue -- depends substantially on the groove shape.  
 
 Five common groove profiles are shown in Figure \ref{3c-profile}: a classic rectangular profile, a triangular profile (also known as a ``sawtooth'' or ``blazed'' pattern), a trapezoidal profile, a sinusoidal profile, and an approximated triangular profile.
 
@@ -154,20 +154,13 @@ The last groove profile shown in Figure TODO represents an attempt to turn holog
 \subsubsection{Profile Geometry}
 Figure \ref{3c-profile} shows the parameters that describes that describe the geometry of each profile.  In addition to the groove spacing $d$, rectangular gratings are characterized by a groove depth $h$ (or duty cycle) and a groove width $a$.  Ruled triangular gratings are described by their blaze angle $\theta_b$; ideally the opposite angle (or ``anti-blaze angle'' $\theta_{ab}$) would be 90$\deg$ but often it ends up closer to 60$\deg$ or even 30$\deg$.  Trapezoidal gratings are described by a groove depth $h$, a groove width $a$, and their blaze and anti-blaze angles $\theta_b$ and $\theta_{ab}$.  Sinusoidal gratings are fully described by just their groove depth $h$, and an assumption of a sinusoidal variation $y(x) = y_0 + \frac{h}{2}\, \sin(2\pi \,x / d)$.
 
-     
-\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[scale=0.8]{Chapter3/3c_effectOfProfile/3c_3.pdf} 
-   \caption{0th order, 1st order, and 2nd order efficiency of three different groove profiles, all optimized for use at 400eV.  The blazed grating is superior in both 1st and 2nd order.  All gratings: 1200 lines/mm, Platinum coating.  Blazed: 1.46$\deg$ angle, 60$\deg$ anti-blaze angle.  Sinusoidal: 13.7nm groove depth.  Laminar (rectangular): 9.6nm groove depth, 50\% duty cycle. }
-   \label{3c-plot}
-\end{figure}
-
-\subsubsection{Blazed Condition for Triangular Gratings}
+\subsubsection{Blazed Optimization for Triangular Gratings}
 \label{blazeAngle}
-The triangular profile in Figure \ref{3c-profile} (b) is much more than an accidental artifact of mechanical ruling.  It turns out that this shape is optimal for concentrating as much energy as possible into a single order, and therefore boosting the grating efficiency in that order.  Intuitively, we might imagine that to increase efficiency, we should line up the direction of classical ``reflection'' off the majority of the grating surface with the direction of the diffracted ray.  Still thinking classically, we might also want to minimize shadowing in the corners of the grooves. 
+The triangular profile in Figure \ref{3c-profile} (b) is much more than an accidental artifact of mechanical ruling.  This shape is optimal for concentrating as much energy as possible into a single order, and therefore boosting the grating efficiency in that order.  Intuitively, we might imagine that to increase efficiency, we should line up the direction of classical ``reflection'' off the majority of the grating surface with the direction of the diffracted ray.  Still thinking classically, we might also want to minimize shadowing in the corners of the grooves. 
 
-The ideal blazed grating meets both of these criteria.  By carefully choosing a blaze angle $\theta_b$ we can -- at least at the wavelength of interest -- line up the specular reflection from the angled surface with the diffraction direction in order $n$.  Using the law of reflection from geometric optics ($\theta_{\mathrm{incident}} = \theta_{\mathrm{reflected}}$), we can easily\footnote{Setting up a ruling engine to correctly and accurately engrave this angle is another story...} derive the optimized condition for a blazed grating.  From the reflection geometry in Figure \ref{3d}: 
+The ideal blazed grating meets both of these criteria.  By carefully choosing a blaze angle $\theta_b$ we can -- at least at one wavelength of interest -- line up the specular reflection of the angled surface with the diffraction direction in order $n$.  Using the law of reflection from geometric optics ($\theta_{\mathrm{incident}} = \theta_{\mathrm{reflected}}$), we can easily\footnote{Setting up a ruling engine to correctly and accurately engrave this angle is another story...} derive the optimized condition for a blazed grating.  From the geometry in Figure \ref{3d}, where $N^\prime$ is normal to the angled surface: 
 \begin{eqnarray}
+\theta_{\mathrm{incident}} &=& \theta_{\mathrm{reflected}} \\
 \theta_2 - \theta_b &=& \theta_{2,n} + \theta_b \\
 \theta_{2,n} - \theta_{2} &=& -2 \theta_b
 \end{eqnarray}
@@ -182,7 +175,6 @@ or
 \theta_b = -\arcsin \left(   \frac{n \lambda}{2d \, \cos \left( \frac{\theta_{2,n} + \theta_{2}}{2} \right)}     \right)
 \end{eqnarray}
 
-	
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=1]{Chapter3/3d_blazing/3d.pdf} 
@@ -190,7 +182,26 @@ or
    \label{3d}
 \end{figure}
 
-	- groove density...
+Textbooks and resources on beamline design universally provide this derivation and formula for the optimal blaze angle $\theta_b$ (TODO ref: CXRO x-ray data book, diffraction grating handbook, gratings slits and mirrors).  We've discovered that this intuitive argument is only an approximation for what happens in the full electromagnetic picture; the actual ideal blaze angle is significantly lower.  For a 1200 line/mm grating used at an incidence angle of 88 degrees with 400eV photons in the first inside order ($n=-1$) (Figure \ref{3c}), the formula would recommend a blaze angle of 2.12$\deg$.  We used this as the starting point to conduct a software optimization using efficiency calculations, and were able to increase the 1st order efficiency from 12.8\% to 16.8\% (an increase of 31\%!) by reducing the blaze angle from 2.12$\deg$ to 1.46$\deg$.  This illustrates two points: (a) that the rigorous electromagnetic solution is more complex than this simple argument based on specular reflection, and (b) that the efficiency can be extremely sensitive to small ($\sim0.1\deg$) changes in blaze angle.  Therefore, the efficiency calculation software has been essential for proper optimization of our design work in Chapter 5.
+
+Because the blaze angle depends on the $n \lambda$ term in the grating equation, a grating optimized for a wavelength $x$ in 1st order will also be optimized for a wavelength $x/2$ in 2nd order (or, in terms of energy, optimization for $x$ eV in 1st order would imply optimization for $2x$ eV in 2nd order).  We can confirm this for the blazed grating in Figure \ref{3c-plot}, where the 1st-order efficiency peak occurs at 450eV, and the 2nd order efficiency peak occurs near 900eV.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3c_effectOfProfile/3c_3.pdf} 
+   \caption{0th order, 1st order, and 2nd order efficiency of three different groove profiles, all optimized for use at 400eV.  The blazed grating is superior in both 1st and 2nd order.  All gratings: 1200 lines/mm, Platinum coating.  Blazed: 1.46$\deg$ angle, 60$\deg$ anti-blaze angle.  Sinusoidal: 13.7nm groove depth.  Laminar (rectangular): 9.6nm groove depth, 50\% duty cycle. }
+   \label{3c-plot}
+\end{figure}
+
+\subsubsection{Efficiency Comparison of Common Profiles}
+For comparison, Figure \ref{3c-plot} shows the 0th order, 1st order, and 2nd order efficiency for three common grating profiles: blazed, sinusoidal, and rectangular (commonly referred to as \emph{laminar}).  All three gratings have a groove density of 1200 lines/mm, are shown at an incidence angle of 88 degrees, and have had their geometry optimized for maximum efficiency in 1st-order with 400eV photons.  (The coating is platinum, and the substrate is quartz [SiO$_2$].)  The blazed grating was optimized by adjusting the blaze angle; the sinusoidal grating by adjusting the groove depth, and the rectangular grating by adjusting the groove depth and assuming a duty cycle of 50\%.
+
+The blazed profile is substantially superior to both the sinusoidal and laminar alternatives.  In first order, even though the efficiency curve inherently peaks near the design energy of 400eV, the performance is better across the entire range from 100eV to 1000eV (and beyond).  The blaze effect causes this curve to be shifted up in energy by a factor of 2 in 2nd order, so that again the blazed grating out-performs the other profiles, but only above 500eV.  The sinusoidal grating has relatively flat efficiency across the energy range, even though it still shows the energy-dependence of its optimization for 400eV.   We've chosen a platinum coating for these demonstrations since its reflectivity is relatively constant across the energy range; see Figure \ref{3g-2}.  The small universal dip in efficiency at 180eV is due to a drop in the Pt reflectivity here.)
+
+TODO: compare 2.12 deg blaze (calculated? verify) and 600 line/mm and 1800 line/mm to see effect of groove density on blazing.
+
+\subsection{Effect of Groove Density}
+lskdfjlskdfj alsdkfjslkdj sldkfjdslkjf
 	
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -267,7 +278,10 @@ Highlighted conclusions:
 	Applications to beamline design:
 \begin{itemize}
 \item Optimal incidence angle
-\item blazed: show whether better than sinusoidal for CII monochromator
+\item always blazed: (show whether better than sinusoidal for CII monochromator)
+\item consider 3rd order rather than increasing groove density (manuf. limit) --> next chapter.
+\item blaze angle accuracy is critical; must optimize rather than use textbook formula
+\item groove density naturally stretches out the width of blaze angle efficiency peak. 2000 lines/mm: spans most of 100-1000eV range.   600 lines/mm: sharply peaked; more gratings would be required to keep on-blaze.
 \end{itemize}
 
 \section{Validation: comparison to practical results}
