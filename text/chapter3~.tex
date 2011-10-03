@@ -39,13 +39,13 @@ The interface was implemented as a web-based application, so it can be used from
 
 It supports the following features:
 \begin{itemize}
-\item \textbf{Grating Types}\\
+\item \textbf{Grating types}\\
 The interface supports rectangular, blazed, trapezoidal, and sinusoidal grating profiles; it prompts for the geometry parameters that are required in each case.
 
-\item \textbf{Order and Polarization}\\
+\item \textbf{Order and polarization}\\
 Users can configure which inside and outside orders should be calculated, as well as specify the polarization of the incident light: TE, TM, or natural light (un-polarized).
 
-\item \textbf{VLS Gratings}\\
+\item \textbf{VLS gratings}\\
 To model variable line space gratings, the interface accepts the VLS parameters in conventional notation (linear, quadratic, and cubic corrections) and uses these to calculate the groove density and corresponding efficiency at a user-determined number of points along the grating surface; the overall efficiency is taken as an average of these.
 
 \item \textbf{Efficiency plots as a function of wavelength}\\
@@ -64,13 +64,13 @@ The simplest way to use the interface generates a plot of the efficiency in the 
 \item \textbf{Complex scans over arbitrary grating parameters}\\
 The interface also offers flexibility to test arbitrary relationships along incidence angle, energy, geometry, and other parameters. This feature is most efficiently used in conjunction with a spreadsheet or other data analysis program to fill in the grating parameters and interpret the data tables that are produced.
 
-\item \textbf{Database of Optical Materials and Refractive Index}\\
+\item \textbf{Database of optical materials and refractive index}\\
 We also developed a database of common grating substrate and coating materials, so that the interface can automatically look up their complex refractive index as a function of photon energy.  This information was calculated using the semi-empirical Henke data tables of the x-ray atomic form factor (TODO ref).  The current library is valid from 30eV to 10~000eV, but is known to have limited accuracy in the immediate neighborhood of absorption edges.
 
-\item \textbf{Mirror Reflectivity}\\
+\item \textbf{Mirror reflectivity}\\
 As an additional tool for beamline designers, we implemented the ability to calculate the reflectivity of a simple mirror using any of the materials in the refractive index database.  Mirror reflectivities are computed as a function of incidence angle and photon energy using the complex Fresnel equations (TODO ref Modern Optics), and are subject to the same options for polarization.
 
-\item \textbf{Control of Numerical Precision}\\
+\item \textbf{Control of numerical precision}\\
 An `Options' page (Figure \ref{3b_5}) allows users to configure the numerical precision used in the calculations.  The two critical factors are the number of integration steps used in the numerical integration of the particular solutions for the $A_n^{(m)}$ and $B_n^{(m)}$ coefficients at each layer, and the number of Fourier coefficients $N$ used before the sum is truncated.  The defaults we chose ($N=31$; 401 integration steps) have been found to produce accurate results reasonably quickly across the entire soft x-ray range, as long as the coating thickness is less than 0.5um.   However, prudent designers should still do convergence tests for any high-stakes results, by repeating the calculations and comparing against efficiencies computed using larger values.  This technique can also be used to find the minimum number of Fourier coefficients that are required before the results start to disagree.  (This can helpful to optimize the computation speed before running a large number of calculations on similar gratings at similar wavelengths.)
 \end{itemize}
 
@@ -84,7 +84,7 @@ An `Options' page (Figure \ref{3b_5}) allows users to configure the numerical pr
 \subsection{Detecting convergence failures}
 The Fortran code that makes up the Gradif program was written using a 1970's-era programming approach, including prodigious use of global variables and GOTO statements.  (These two features are now heavily discouraged in modern programming methedologies.)  As a result, the code is hard to trace, but we were able to insert a counter to detect when a numerical integration fails to converge after multiple attempts.  This allows the calculation to exit with an error message, rather than run indefinitely.
 
-\subsection{Open Source, Open Access, and Future Work}
+\subsection{Open source, open access, and future work}
 Since we released the user interface under an `open-source' license, it can be upgraded or enhanced by anyone with an interest in the beamline design community.  Julian Miller, a summer student in the metrology department at the CLS, recently created an updated version of the interface to support multi-threaded calculations and add more options for incidence configurations.  To the original `constant incidence angle' mode, he added a `constant included angle' mode, used in many monochromators, which tilts the grating as a function of photon energy to maintain a constant angle between the incident and outgoing beam in the desired order.  Since every grating efficiency calculation (at a single energy) is independent, they can be run in parallel; this takes advantage of modern multi-core processors, and dramatically speeds up the creation of a user's plot or data set.  In the future, this could be extended even further to spread calculations over a cluster of computers, or on distributed hardware in a `cloud computing' network.
 
 Because the user interface runs as a web application, it can be (and has been) accessed by beamline designers from all over the world.  As one example, it was used by Professor Coryn Hague to improve the design of a new beamline for the SOLEIL synchrotron (TODO find ref).  The calculations can be requested and retrieved by anyone from anywhere, but they all run on a single server computer at the University of Saskatchewan.  Unfortunately, the Gradif code itself is not open source, and while we are licensed to run it on this machine, recent communications from Professor Neviere indicate that he is unhappy with this level of open access to results produced using his Gradif engine.  As a result, we have temporarily disabled public access.
@@ -94,11 +94,12 @@ In the future, we plan to completely re-implement the core engine for calculatin
 \section{General trends and factors affecting efficiency}
 With these tools in-hand, we move on to the next question: What can we learn from them about the efficiency of gratings, especially those used in the soft x-ray regime?
 
-This section looks at the theoretical effects caused by changes to grating parameters: groove profile, shape (depth, duty cycle, blaze angle, etc.), line density, coating material, coating thickness, and incidence angle.  We can think of the grating efficiency as a scalar function of this many-dimensional parameter space, but it's impossible to capture its complexity in a simple analytical equation.  None the less, the results of this section should give beamline designers an understanding of trends along each dimensions within this space, and how to apply these trends to the optimization of gratings.
+This section looks at the theoretical effects caused by changes to grating parameters: groove profile, shape (depth, duty cycle, blaze angle, etc.), line density, coating material, coating thickness, and incidence angle.  We can think of the grating efficiency as a scalar function of this many-dimensional parameter space, but it's impossible to capture its complexity in a simple analytical equation.  None the less, the results of this section should give beamline designers an understanding of trends along each dimension within this space, and how to apply these trends to the optimization of gratings.
 
 We attempt to isolate the effects of each parameter as much as possible.  However, many parameters are linked together so that they cannot be made independent.  For example, as we show in Section \ref{blazeAngle}, gratings with triangular profiles have an optimal \emph{blaze angle} which aligns the outgoing diffraction order with the specular reflection for maximum efficiency.  For this type of grating, changing only the groove density will change the outgoing diffraction angle, and therefore change the optimal blaze angle.  Simply plotting the efficiency as a function of groove density while holding all other parameters constant would confuse the blaze effect with the density effect; instead, we correct for this by adjusting the angle to keep the grating ``on-blaze'' as we vary the groove density in Figure \ref{3e}.
 
-\subsection{Effect of Grating Profile: Groove Shape}
+All of the calculations in this chapter were computed with the differential method, using the software interface described in the previous section.  Unless otherwise noted, results are shown for randomly polarized (natural) light, which is an average of the TM and TE efficiency; at grazing incidence, we did not find substantial differences between the two polarization cases.  When we refer to 1st and 2nd order efficiencies without further clarification, the inside orders ($n<0$) are assumed.\footnote{At grazing incidence, the outside orders are usually suppressed completely, since they would end up inside the grating. In the Rayleigh expansion (Equation \ref{rayleighExp2}), they end up as evanescent (decaying) rather than propagating orders.}
+\subsection{Effect of grating profile: groove shape}
 
 As we showed in Chapter 3, any kind of periodic groove structure will have a diffraction effect, regardless of the nature of the groove shape.  However, the grating efficiency -- particularly in the order the experimenter wants to usue -- depends substantially on the groove shape.  
 
@@ -111,8 +112,8 @@ Five common groove profiles are shown in Figure \ref{3c-profile}: a classic rect
    \label{3c-profile}
 \end{figure}
 
-\subsubsection{Grating Manufacturing Techniques}
-These types of profiles emerged largely as a consequence of grating manufacturing techniques.  Henry Rowland invented a method for machining long, precise screws (TODO ref), and this enabled him to create a ``ruling engine'' (Figure \ref{3c-rowlandEngine}) for mechanically scratching fine parallel lines into a layer of metal on a substrate material.  His version was much more accurate than previous machines because it self-compensated for systematic errors in the screw pitch, and his efficient production of high-quality gratings ``revolutionized spectroscopy'' (TODO http://www.aip.org/history/gap/Rowland/Rowland.html).  Today, there are several extremely precise ruling engines around the world, using diamond tips and interferometric position feedback to mechanically engrave groove densities approaching 3~000 lines/mm.\footnote{The Michelson ruling engine at the Newport Corporation can rule up to an astonishing 10~800 lines/mm.}
+\subsubsection{Note on grating manufacturing techniques}
+These types of profiles emerged largely as a consequence of grating manufacturing techniques.  Henry Rowland invented a method for machining long, precise screws (TODO ref), and this enabled him to create a ``ruling engine'' (Figure \ref{3c-rowlandEngine}) for mechanically scratching fine parallel lines into a layer of metal on a substrate material.  His version was much more accurate than previous machines because it self-compensated for systematic errors in the screw pitch, and his efficient production of high-quality gratings ``revolutionized spectroscopy'' (TODO http://www.aip.org/history/gap/Rowland/Rowland.html).  Today, there are several extremely precise ruling engines around the world, using diamond tips and interferometric position feedback to mechanically engrave groove densities approaching 3~000 lines/mm.\footnote{The Michelson ruling engine, now owned by the Newport Corporation, can rule up to an astonishing 10~800 lines/mm.}
 
 The rectangular and triangular profiles in Figure \ref{3c-profile} are a consequence of the shape of mechanical ruling tips.  The trapezoidal profile is often produced accidentally when attempting to rule a rectangular profile with a non-ideal tip, as was the case for the gratings shown in Figures \ref{3j-3} and \ref{3j-4}.
 
@@ -130,12 +131,12 @@ The rectangular and triangular profiles in Figure \ref{3c-profile} are a consequ
    \label{3c-mitBEngine}
 \end{figure}
 
-The setup and operation of mechanical ruling engines is a long, elite, and painstaking process; for gory details, see (TODO REF http://gratings.newport.com/information/handbook/chapter3.asp) by the Newport Corporation, which operates three ruling engines.  To reduce the cost of ruled gratings, often a ``master grating'' is ruled mechanically and then used to create a mould for replicating other gratings; the groove shape is transferred using a thin layer of liquid resin which is hardened while in contact with the master grating surface (Figure \ref{3c-replication}).\footnote{The gratings used for the REIXS spectrometer were all master gratings. They were ruled directly into a smooth gold coating on top of a quartz grating blank, and then top-coated with an evaporated platinum or nickel surface.}
+The setup and operation of mechanical ruling engines is a long, elite, and painstaking process; for gory details, see (TODO REF http://gratings.newport.com/information/handbook/chapter3.asp) by the Newport Corporation, which operates three ruling engines within its Richardson Grating Lab.  To reduce the cost of ruled gratings, often a ``master grating'' is ruled mechanically and then used to create a mould for replicating other gratings; the groove shape is transferred using a thin layer of liquid resin which is hardened while in contact with the master grating surface (Figure \ref{3c-replication}).\footnote{The gratings used for the REIXS spectrometer were all master gratings. They were ruled directly into a smooth gold coating on top of a quartz grating blank, and then top-coated with an evaporated platinum or nickel surface.}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter3/3c_effectOfProfile/3c_replica.pdf}
-   \caption{Master gratings can be replicated using a resin which hardens while in contact with the master (or subsequently, a submaster replicated from the first master).  First, a parting agent (2) is applied to the surface of the master; it must be thin and uniform otherwise it will affect the profile.  A metallic (aluminum or gold) coating about 1um thick is then applied above the parting agent; this coating will eventually end up as the top surface of the replicated grating, and is called the \emph{transfer coating} (3).  Finally, the replica blank (5) is cemented from above using a resin ($\sim$10um thick) that hardens under UV exposure or over time (4).  Once the resin is cured, the gratings are separated at the parting agent layer, leaving the hardened resin in the shape of the grooves, with the metal coating adhered to the top.  This will produce a mirror image of the master grating; to create a perfect replica, this first replica needs to be replicated again.  \textbf{Image credit: }\textsc{Diffraction Grating Handbook} (TODO REF).}
+   \caption{Master gratings can be replicated using a resin which hardens while in contact with the master (or subsequently, a submaster replicated from the first master).  First, a parting agent (2) is applied to the surface of the master; it must be thin and uniform otherwise it will affect the profile.  A metallic (aluminum or gold) coating about 1um thick is then applied above the parting agent; this coating will eventually end up as the top surface of the replicated grating, and is called the \emph{transfer coating} (3).  Finally, the replica blank (5) is cemented from above using a resin ($\sim$10um thick) that hardens under UV exposure or over time (4).  Once the resin is cured, the gratings are separated at the parting agent layer, leaving the hardened resin in the shape of the grooves, with the metal coating adhered to the top.  This will produce a mirror image of the master grating; to create a perfect replica, this first replica needs to be replicated again.}
    \label{3c-replication}
 \end{figure}
 
@@ -151,10 +152,10 @@ The last groove profile shown in Figure TODO represents an attempt to turn holog
 \end{figure}
 
 
-\subsubsection{Profile Geometry}
+\subsubsection{Profile geometry}
 Figure \ref{3c-profile} shows the parameters that describes that describe the geometry of each profile.  In addition to the groove spacing $d$, rectangular gratings are characterized by a groove depth $h$ (or duty cycle) and a groove width $a$.  Ruled triangular gratings are described by their blaze angle $\theta_b$; ideally the opposite angle (or ``anti-blaze angle'' $\theta_{ab}$) would be 90$\deg$ but often it ends up closer to 60$\deg$ or even 30$\deg$.  Trapezoidal gratings are described by a groove depth $h$, a groove width $a$, and their blaze and anti-blaze angles $\theta_b$ and $\theta_{ab}$.  Sinusoidal gratings are fully described by just their groove depth $h$, and an assumption of a sinusoidal variation $y(x) = y_0 + \frac{h}{2}\, \sin(2\pi \,x / d)$.
 
-\subsubsection{Blazed Optimization for Triangular Gratings}
+\subsubsection{Blazed optimization for triangular gratings}
 \label{blazeAngle}
 The triangular profile in Figure \ref{3c-profile} (b) is much more than an accidental artifact of mechanical ruling.  This shape is optimal for concentrating as much energy as possible into a single order, and therefore boosting the grating efficiency in that order.  Intuitively, we might imagine that to increase efficiency, we should line up the direction of classical ``reflection'' off the majority of the grating surface with the direction of the diffracted ray.  Still thinking classically, we might also want to minimize shadowing in the corners of the grooves. 
 
@@ -194,12 +195,12 @@ Because the blaze angle depends on the $n \lambda$ term in the grating equation,
    \label{3c-plot}
 \end{figure}
 
-\subsubsection{Efficiency Comparison of Common Profiles}
+\subsubsection{Efficiency comparison of common profiles}
 For comparison, Figure \ref{3c-plot} shows the 0th order, 1st order, and 2nd order efficiency for three common grating profiles: blazed, sinusoidal, and rectangular (commonly referred to as \emph{laminar}).  All three gratings have a groove density of 1200 lines/mm, are shown at an incidence angle of 88 degrees, and have had their geometry optimized for maximum efficiency in 1st-order with 400eV photons.  (The coating is platinum, and the substrate is quartz [SiO$_2$].)  The blazed grating was optimized by adjusting the blaze angle; the sinusoidal grating by adjusting the groove depth, and the rectangular grating by adjusting the groove depth and assuming a duty cycle of 50\%.
 
 The blazed profile is substantially superior to both the sinusoidal and laminar alternatives.  In first order, even though the efficiency curve peaks near the design energy of 400eV, the performance is better across the entire range from 100eV to 1000eV (and beyond).  The blaze effect causes this curve to be shifted up in energy by a factor of 2 in 2nd order, so that again the blazed grating out-performs the other profiles, but only above 500eV.  The sinusoidal grating has relatively flat efficiency across the energy range, even though it still shows the energy-dependence of its optimization for 400eV.   (We've chosen a platinum coating for these demonstrations since its reflectivity is relatively constant across the energy range; see Figure \ref{3g-2}.  The small universal dip in efficiency at 180eV is due to a drop in the Pt reflectivity here.)
 
-\subsection{Effect of Groove Density}
+\subsection{Effect of groove density}
 Because the groove density directly affects the angular dispersion, using a higher-density grating is the most direct path to designing a higher-resolution instrument (Section \ref{resolutionGoals}).  Unfortunately, Figure \ref{3e} shows that increasing the groove density universally decreases the grating efficiency in all orders except the 0th order, even when the remaining parameters are adjusted to keep the grating optimized.  This turns out to be true, not only in this example for two grating profiles, but as a general principle.  Intuitively, we can argue that as the groove density approaches infinite, the grating will look more and more like a flat mirror -- with microstructure becoming smaller and smaller.  Therefore, it makes sense that the amount of light in the 0th-order specular reflection will increase at the expense of the diffracted orders.
 
 Figure \ref{3e-2} explores the groove density effect in more detail, with an efficiency spectrum for a series of blazed gratings from 300 lines/mm to 2700 lines/mm, all optimized for 400eV at 88$\deg$ incidence.  (TODO: Comment on width of blazing peak? Does blazing become less pronounced at higher groove densities?)
@@ -213,7 +214,7 @@ TODO generate 3e-2. (3e-2.xls for data)
    \label{3e}
 \end{figure}
 
-\subsection{Effect of Coating Thickness}
+\subsection{Effect of coating thickness}
 Gratings intended for use in soft x-ray instruments are manufactured on precision-ground  blanks, usually consisting of fused quartz (SiO2) or other amorphous glasses.  The insulating (dielectric) blank is coated in a layer of metal, where the smoothness of the surface is absolutely critical.  Often gold is used as a first coating, since it can be applied with very low roughness, and because it provides a soft layer in which to rule the grooves.  If another type of coating is required (such as nickel and platinum, in our case), these coatings are applied on top of the gold after ruling.
 
 The required thickness of the coating is another question that can be answered by efficiency calculations.   Thin coatings can be applied more smoothly than thick ones (TODO ref Gratings Slits and Mirrors), so the question is: how thick must a coating be for a given photon energy and incidence angle, so that photons are fully reflected or absorbed before reaching the substrate interface?  If the coating is too thin, the absorption characteristics of the glass oxide substrate will start to show up in the efficiency spectrum.
@@ -258,7 +259,7 @@ Not shown in these plots, silicon also has a very high reflectivity up to its L$
 The energy-dependence (or wavelength-dependence) of grating efficiency has been shown in many of the previous plots, where we've displayed the efficiency as a function of photon energy.  However, it's impossible to completely isolate this relationship because the photon energy is inherently coupled to the grating efficiency in multiple ways.  For starters, the complex refractive indexes of the coating and substrate vary as a function of energy.  However, the photon energy also determines the angle of the outgoing diffraction orders, which can be seen in both the Rayleigh expansion for the total field, and in the simplified grating equation (Equation \ref{gratingEquation}).  Therefore, optimizations for geometry parameters that depend on angle -- like the blaze angle and groove depth -- are inherently coupled to the photon energy.  The plots in Figure \ref{3e-2} highlight this by showing the difference between the energy-dependent reflectivity of a plain flat mirror, versus the more complicated diffraction efficiency.
 
 \subsection{Effect of incidence angle}
-In the soft x-ray regime, the real part of the refractive index for most metals is less than unity.  This means that the phase velocity for light in the material is actually \emph{faster} than the speed of light in a vacuum.\footnote{The non-zero imaginary part of the refractive index ensures that the transmitted wave decays and is absorbed, therefore Einstein's speed limit is not violated.}  As mentioned in Section \ref{TER-intro}, we can exploit this lucky phenomenon to increase the reflectivity of gratings and mirrors by using them at grazing incidence to create a \emph{``total external reflection''}.
+In the soft x-ray regime, the real part of the refractive index for metals is less than unity.  This means that the phase velocity for light in the material is actually \emph{faster} than the speed of light in a vacuum.\footnote{The non-zero imaginary part of the refractive index ensures that the transmitted wave decays and is absorbed, therefore Einstein's speed limit is not violated.}  As mentioned in Section \ref{TER-intro}, we can exploit this lucky phenomenon to increase the reflectivity of gratings and mirrors by using them at grazing incidence, to create what is sometimes referred to non-rigourously as \emph{``total external reflection''}.
 
 Total internal reflection (TIR) happens in conventional materials when a light ray travels from a slower optical medium (refractive index $n_1$) toward a faster optical medium (refractive index $n_2 < n_1$).  Snell's law of refraction would relate the angles of the incident ($\theta_1$) and transmitted ($\theta_2$) waves:
 \begin{eqnarray}
@@ -274,15 +275,15 @@ This will happen for all incident angles $\theta_1$ beyond a critical angle:
 \theta_{\mathrm{critical}} &=& \arcsin \left( \frac{n_2}{n_1} \right)
 \end{eqnarray}
 
-The same situation happens when light from the (slower) vacuum is incident on the (faster) medium of the grating.  Here the vacuum refractive index is $n_1=1$, and the real part of the grating refractive index (which gives the propagation velocity) is $\tilde {n}_2<1$.  (For example, at 410 eV, the real part of the refractive index of gold is $\tilde{n}_2 = 0.99425$.)  We can therefore calculate the critical angle for \emph{total external reflection}; for incident angles larger than this, there should be no transmitted wave into the grating:
+In the case of soft x-ray mirrors and gratings, if we make a \emph{very large approximation} and ignore the imaginary component of the mirror's refractive index, the same situation happens when light from the (slower) vacuum is incident on the (faster) medium of the mirror.\footnote{This assumption is necessary because Snell's law in the form $n_1 \sin \theta_1 = n_2 \sin \theta_2$ only make sense for real $n$.  If $n_1$ and $\theta_1$ were real, but the mirror's $n_2$ was complex, this would require a complex ``angle'' $\theta_2$, which would have no easy physical interpretation.}  Here the vacuum refractive index is $n_1=1$, and the mirror refractive index is ${n}_2<1$.  (For example, at 410 eV, the real part of the refractive index of platinum is $\tilde{n} = 0.99321$.)  We can therefore calculate the critical angle for \emph{total external reflection}; for incident angles larger than this, there should be no transmitted wave into the mirror:
 \begin{eqnarray}
 \theta_{\mathrm{critical}} &=& \arcsin \left( \tilde n \right)
 \end{eqnarray}
-(where $\tilde n$ is the real part of the coating's complex refractive index.)  Critical angles for the coatings in Figure \ref{3g-2} at 410eV are given in Table \ref{3i-2}.
+(where $\tilde n$ is the real part of the mirror's complex refractive index.)  Critical angles for the coatings in Figure \ref{3g-2} at 410 eV are given in Table \ref{3i-2}.
 
 \begin{table}[htbp]
    \centering
-   \caption{Critical incidence angles for ``total external reflection'' at 410 eV for the grating coatings shown in Figure \ref{3g-2}.}
+   \caption{Critical incidence angles for ``total external reflection'' at 410 eV for the mirror and grating coatings shown in Figure \ref{3g-2}.}
    \begin{tabular}{@{} r c @{}} % Column formatting, @{} suppresses leading/trailing space
       \hline
         Material    & $\theta_{\mathrm{critical}}$ for TER ($\deg$)\\
@@ -294,7 +295,20 @@ Gold (Au)& 83.85\\Platinum (Pt)& 83.32\\Iridium (Ir)& 83.10\\
    \label{3i-2}
 \end{table}
 
-The concept of TER is just another intuitive approximation for what happens in the full electromagnetic picture, but Figure \ref{3i} does confirm that the grating efficiencies in the 0th, 1st, and 2nd inside orders are indeed extremely low below platinum's critical incidence angle of 83.3$\deg$.  This figure shows the effect of incidence angle on efficiency for several different geometry profiles.  We might expect that as the incidence angle becomes more and more grazing, the efficiency should increase continuously\ldots and that is certainly true for the $n=0$ order.  However, this turns out to be not true for the remaining orders; \emph{there is actually an optimal incidence angle below $90\deg$ where efficiency is maximized}.  At first glance, it might seem like this is an accidental side-effect of the blazed optimization; since the optimal blaze angle depends on the incidence angle, it might have been possible that all the gratings in Figure \ref{3j} had their geometry optimized for a sub-$90\deg$ incidence angle.  However, by exploring the effect of incidence angle on efficiency over a range of blaze angles, Figure \ref{3j-2} dispels this idea; it shows that for $n\neq 0$ orders, there is indeed an optimal incidence angle, which depends only on the groove density and the energy.
+Because we ignored the imaginary component ($i \beta$) of the full refractive index ($n = \tilde n + i \beta$), the concept of TER is just an approximation for what happens in the rigorous electromagnetic picture.  The imaginary component represents absorption of the electromagnetic wave within the material, and as a result, no soft x-ray mirrors are ever totally reflecting -- Figure \ref{reflectionVsAngle} shows that a reflectivity of 1 only occurs at complete grazing incidence (90$\deg$).  For those that are interested, (TODO REF modern optics) gives a rigorous derivation of reflection and transmission at interfaces with absorbing materials: the reflection coefficients for TE and TM polarization, off a material with complex refractive index $n$ at incidence angle $\theta$, are known as the \emph{complex Fresnel equations}:
+\begin{eqnarray}
+\cos \phi &\equiv& \sqrt{1 - \frac{\sin^2 \theta}{n^2} } \\
+r_{TE} &=&     \frac{\cos \theta - n \cos \phi}     {\cos \theta + n \cos \phi} \\
+r_{TM} &=&    \frac{-n \cos \theta + \cos \phi}              {n \cos \theta + \cos \phi}
+\end{eqnarray}
+In general, the reflection coefficients $r_{TE}$ and $r_{TM}$ are also complex, so they give both the amplitude and phase shift of the reflected electric field vector.  The reflectivity $R$ is given by the squared magnitude of the reflection coefficient:
+\begin{eqnarray}
+R_{TE} &=& | r_{TE} | ^2 =  r_{TE} \cdot r_{TE}^\ast \\
+R_{TM} &=& | r_{TM} | ^2 = r_{TM} \cdot r_{TM}^\ast
+\end{eqnarray}
+These are plotted in Figure \ref{reflectionVsAngle} as a function of incidence angle for a perfect platinum mirror at 410 eV.
+
+Moving from mirrors to gratings, Figure \ref{3i} shows the effect of incidence angle on diffraction efficiency for several different geometry profiles.  Even though TER is a crude approximation, this figure does confirm that the grating efficiencies in the 0th, 1st, and 2nd orders are indeed extremely low below platinum's ``critical incidence angle'' of 83.3$\deg$.    In comparison with the mirror plot in Figure \ref{reflectionVsAngle}, we might expect that as the incidence angle becomes more and more grazing, the efficiency should increase continuously\ldots and that is certainly the case for the $n=0$ order.  However, this turns out to be not true for the remaining orders; \emph{there is actually an optimal incidence angle below $90\deg$ where efficiency is maximized}.  At first glance, it might seem like this is an accidental side-effect of the blazed optimization; since the optimal blaze angle depends on the incidence angle, it might have been possible that all the gratings in Figure \ref{3i} had their geometry optimized for a sub-$90\deg$ incidence angle.  However, by exploring the effect of incidence angle on efficiency over a range of blaze angles, Figure \ref{3i-2} dispels this idea; it shows that for $n\neq 0$ orders, there is indeed an optimal incidence angle, which depends only on the groove density and the energy.
 
 Figure \ref{3j-2} contains a take-away message for instrument designers: if an arbitrary incidence angle is required for some external reason, the blaze angle can be adjusted to optimize for that incidence. However, in the absence of constraints, there does exist a unique optimal incidence angle (and corresponding blaze angle), typically between $87\deg$ and $88\deg$, where the efficiency reaches an absolute maximum.
 
