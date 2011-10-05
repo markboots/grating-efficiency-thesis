@@ -113,6 +113,7 @@ Five common groove profiles are shown in Figure \ref{3c-profile}: a classic rect
 \end{figure}
 
 \subsubsection{Note on grating manufacturing techniques}
+\label{gratingManufacturing}
 These types of profiles emerged largely as a consequence of grating manufacturing techniques.  Henry Rowland invented a method for machining long, precise screws (TODO ref), and this enabled him to create a ``ruling engine'' (Figure \ref{3c-rowlandEngine}) for mechanically scratching fine parallel lines into a layer of metal on a substrate material.  His version was much more accurate than previous machines because it self-compensated for systematic errors in the screw pitch, and his efficient production of high-quality gratings ``revolutionized spectroscopy'' (TODO http://www.aip.org/history/gap/Rowland/Rowland.html).  Today, there are several extremely precise ruling engines around the world, using diamond tips and interferometric position feedback to mechanically engrave groove densities approaching 3~000 lines/mm.\footnote{The Michelson ruling engine, now owned by the Newport Corporation, can rule up to an astonishing 10~800 lines/mm.}
 
 The rectangular and triangular profiles in Figure \ref{3c-profile} are a consequence of the shape of mechanical ruling tips.  The trapezoidal profile is often produced accidentally when attempting to rule a rectangular profile with a non-ideal tip, as was the case for the gratings shown in Figures \ref{3j-3} and \ref{3j-4}.
@@ -203,15 +204,20 @@ The blazed profile is substantially superior to both the sinusoidal and laminar 
 \subsection{Effect of groove density}
 Because the groove density directly affects the angular dispersion, using a higher-density grating is the most direct path to designing a higher-resolution instrument (Section \ref{resolutionGoals}).  Unfortunately, Figure \ref{3e} shows that increasing the groove density universally decreases the grating efficiency in all orders except the 0th order, even when the remaining parameters are adjusted to keep the grating optimized.  This turns out to be true, not only in this example for two grating profiles, but as a general principle.  Intuitively, we can argue that as the groove density approaches infinite, the grating will look more and more like a flat mirror -- with microstructure becoming smaller and smaller.  Therefore, it makes sense that the amount of light in the 0th-order specular reflection will increase at the expense of the diffracted orders.
 
-Figure \ref{3e-2} explores the groove density effect in more detail, with an efficiency spectrum for a series of blazed gratings from 300 lines/mm to 2700 lines/mm, all optimized for 400eV at 88$\deg$ incidence.  (TODO: Comment on width of blazing peak? Does blazing become less pronounced at higher groove densities?)
-
-TODO generate 3e-2. (3e-2.xls for data)
+Figure \ref{3e-2} explores the groove density effect in more detail, with an efficiency spectrum for a series of blazed gratings from 300 lines/mm to 2700 lines/mm, all optimized for 400eV at 88$\deg$ incidence.  It confirms that as the groove density increases, the 0th order efficiency increases, and the $n\neq0$ order efficiencies decrease.  However, one fortunate outcome is that as the groove density increases, the width of the efficiency peak caused by the blazing optimization becomes wider; therefore, higher groove-density blazed gratings can be used optimally over a wider energy range than low-density gratings.
 	
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter3/3e_effectOfGrooveDensity/3e.pdf} 
    \caption{Increasing the groove density always decreases the diffraction efficiency -- at least for all the useful orders ($n \neq 0$).  In these plots, we've tried to control for inter-related factors: For the blazed grating in (a), the blaze angle has been adjusted with the groove density (using Equation \ref{blazeAngleEqn}) to maintain the on-blaze condition.  In (b), the sinusoidal grating depth was optimized at 1200 lines/mm, and then the depth-to-period ratio was maintained across changes to the groove density.}
    \label{3e}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3e_effectOfGrooveDensity/3e-2.pdf} 
+   \caption{0th order, 1st order, and 2nd order efficiency as a function of energy, for a range of groove densities from 300 to 2700 lines/mm.  All gratings are triangular, platinum-coated, with an optimal blaze angle dependent on the groove density according to Equation \ref{blazeAngleEqn}.  (Blaze angles are shown in the legend.)  As the groove density increases, the maximum achievable efficiency drops, but the bandwidth of the blaze-optimization peak becomes wider.}
+   \label{3e-2}
 \end{figure}
 
 \subsection{Effect of coating thickness}
@@ -238,7 +244,7 @@ To help in selecting materials, Figures \ref{3g} and \ref{3g-2} show several pos
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter3/3g_coatingMaterial/3g_reflectivity.pdf} 
-   \caption{The reflectivity of a pure mirror at grazing incidence (88$\deg$), as a function of photon energy.  Lighter elements like carbon and nickel have the highest peak reflectivity, but have strong absorption features.  Heavier metals, particularly those within the platinum group, have reasonable reflectivity over the entire soft x-ray region of interest.  Up to 200eV, Gold has a higher reflectivity than Pt and Ir. }
+   \caption{The reflectivity of a pure mirror at grazing incidence (88$\deg$), as a function of photon energy.  Lighter elements like carbon and nickel have the highest peak reflectivity, but have strong absorption features.  Heavier metals, particularly those within the platinum group, have reasonable reflectivity over the entire soft x-ray region of interest.  Up to 200 eV, gold has a higher reflectivity than Pt and Ir. }
    \label{3g}
 \end{figure}
 
@@ -281,19 +287,29 @@ In the case of soft x-ray mirrors and gratings, if we make a \emph{very large ap
 \end{eqnarray}
 (where $\tilde n$ is the real part of the mirror's complex refractive index.)  Critical angles for the coatings in Figure \ref{3g-2} at 410 eV are given in Table \ref{3i-2}.
 
-\begin{table}[htbp]
+\begin{table}[p]
    \centering
    \caption{Critical incidence angles for ``total external reflection'' at 410 eV for the mirror and grating coatings shown in Figure \ref{3g-2}.}
    \begin{tabular}{@{} r c @{}} % Column formatting, @{} suppresses leading/trailing space
       \hline
         Material    & $\theta_{\mathrm{critical}}$ for TER ($\deg$)\\
       \hline \hline
-Carbon (C) & 85.92\\Nickel (Ni) & 83.20\\
-Gold (Au)& 83.85\\Platinum (Pt)& 83.32\\Iridium (Ir)& 83.10\\
+Carbon (C) & 85.92\\
+Nickel (Ni) & 83.20\\
+Gold (Au)& 83.85\\
+Platinum (Pt)& 83.32\\
+Iridium (Ir)& 83.10\\
       \hline
    \end{tabular}
    \label{3i-2}
 \end{table}
+
+\begin{figure}[p] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3i_incidenceAngle/reflectivityVsAngle.pdf} 
+   \caption{The reflectivity of a perfect platinum mirror as a function of incidence angle at 410 eV, calculated using the complex refractive index and the complex Fresnel equations.  The ``total external reflection'' approximation suggests a critical angle of 83.3$\deg$ for total reflection, but due to absorption within the material, the reflectivity only reaches 1 at complete grazing incidence (90$\deg$).  There is no substantial difference between TE and TM polarization.}
+   \label{reflectionVsAngle}
+\end{figure}
 
 Because we ignored the imaginary component ($i \beta$) of the full refractive index ($n = \tilde n + i \beta$), the concept of TER is just an approximation for what happens in the rigorous electromagnetic picture.  The imaginary component represents absorption of the electromagnetic wave within the material, and as a result, no soft x-ray mirrors are ever totally reflecting -- Figure \ref{reflectionVsAngle} shows that a reflectivity of 1 only occurs at complete grazing incidence (90$\deg$).  For those that are interested, (TODO REF modern optics) gives a rigorous derivation of reflection and transmission at interfaces with absorbing materials: the reflection coefficients for TE and TM polarization, off a material with complex refractive index $n$ at incidence angle $\theta$, are known as the \emph{complex Fresnel equations}:
 \begin{eqnarray}
@@ -322,7 +338,7 @@ Figure \ref{3i-2} contains a take-away message for instrument designers: if an a
 	
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter3/3i_incidenceAngle/3i_blazeChanges2.pdf} 
+   \includegraphics[scale=0.8]{Chapter3/3i_incidenceAngle/3i_blazeChanges_solidColors.pdf} 
    \caption{While the blaze angle can always be used to tune a grating for a required incidence angle, there is still a particular \emph{optimal} incidence angle that -- when combined with a corresponding optimized blaze angle -- would produce the highest achievable efficiency.  This optimal angle doesn't seem to depend on the material, but only on the groove density and energy.  (Gratings: all 1200 lines/mm; coatings, blaze angles, and energies as indicated.)}
    \label{3i-2}
 \end{figure}
@@ -353,9 +369,26 @@ The published literature on soft x-ray gratings does not contain many measuremen
 
 Figures \ref{3j-1} through \ref{3j-4} show the experimental measurements from (TODO REF), combined with our own calculations of the grating efficiency.  Table \ref{3j-table} provides the geometry parameters, derived from the manufacturer's measurements.
 
+\begin{table}[htbp]
+   \centering
+   \caption{Geometry parameters and incidence configuration for the gratings in Figures \ref{3j-1} to \ref{3j-4}.  The geometry measurements were taken at the center of the grating; accurate characterization of these gratings after ruling made them ideal for comparing with theoretical calculations. CII stands for ``constant included angle'' -- a mounting configuration which maintains a constant angle between the incident direction and 1st order.}
+   \begin{tabular}{@{} r c c l @{}} % Column formatting, @{} suppresses leading/trailing space
+      \hline
+        Profile    &  Density (lines/mm)& Geometry Parameters & CII ($\deg$)\\
+      \hline \hline
+Blazed & 1440 & Blaze angle: 2.2$\deg$, anti-blaze: 12.8$\deg$ & 160 \\
+Rectangular & 600 & Depth: 22.2 nm, valley width: 1.12 um & 167 \\
+Trapezoidal & 300 & Depth: 49.3 nm, valley width: 2.46 um, side angle: 57$\deg$ & 167\\
+Trapezoidal & 390 & Depth: 54.0 nm, valley width: 1.39 um, side angle: 57$\deg$ & 160\\
+\hline
+   \end{tabular}
+   \label{3j-table}
+\end{table}
+
 \subsubsection{Note on incidence angle}
 Unlike the constant incidence angle efficiency curves we've been using up to this point, these gratings were designed for use in constant-included-angle monochromators, where the deviation angle $(\theta_2 + \theta_{2,n})$ between the incident beam and the useful order $n$ is held constant.  Therefore, these plots show the efficiency as a function of energy, with an incidence angle that also varies according to this constraint as a function of energy along the $x$-axis.
 
+\subsubsection{Comparison to theory}
 Of particular interest are the 1st and 2nd order results for the blazed grating in Figure \ref{3j-1}, since we settled on blazed gratings for the design in Chapter 5.  The agreement in the shape and amplitude of the efficiency spectra is very good; we can expect that the real-world efficiency would be slightly lower than predicted due to surface roughness and other effects described in Section \ref{realWorldEffects}.  The agreement for the laminar profile in Figure \ref{3j-2} is also very good.  Figures \ref{3j-3} and \ref{3j-4} show a tendency for the calculated results on the trapezoidal gratings to be shifted toward lower energies with respect to the measurements, although the shift is less than 20 eV.  Overall, the close agreement between the theoretical and measured efficiencies shown here gives us a high degree of confidence in applying the grating software to optimize real-world beamlines.
  
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
@@ -368,7 +401,7 @@ Of particular interest are the 1st and 2nd order results for the blazed grating 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter3/3j_comparisonWithExperimental/3j_laminar.pdf} 
-   \caption{Comparison of grating efficiency calculations to diffractometer measurements.  Rectangular grating, 600 lines/mm, 22.2 nm depth, 0.833 um valley width.  Incidence: 167$\deg$ constant included angle to the 1st inside order.}
+   \caption{Comparison of grating efficiency calculations to diffractometer measurements.  Rectangular grating, 600 lines/mm, 22.2 nm depth, 1.12 um valley width.  Incidence: 167$\deg$ constant included angle to the 1st inside order.}
    \label{3j-2}
 \end{figure}
 

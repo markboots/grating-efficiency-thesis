@@ -1,61 +1,139 @@
-\chapter{Design: How David and I applied these tools to make the REIXS optical design}
-
+\chapter{Design: How David and I applied these tools to make the REIXS spectrometer optical design}
 \section{Application to spectrometer design}
-\subsection{Design Goals: (simultaneously)}
-          - Highest resolution: "Resolution, ∆Eres, is a measure of smallest amount by which two energies can differ and still be distinguished (or re- solved) by a given spectrometer."
-          - Fast experiments (high efficiency)
-          - Reference: Stated goals from David's thesis
-\subsection{Comparative examples}
-          - High-res beamline at SLS; 
-          - BL8 (workhorse); 
-          - commercial XES350
-          
-FIGURE 4a: comparison of resolution, REF david's thesis
+Up to this point, we've covered the theoretical formulation of grating efficiency, introduced a software tool for efficient calculations, and used this tool to understand how various parameters and conditions affect a grating's performance.  We've also validated the calculation results by comparing with efficiency measurements on a set of  real-world gratings.
 
+In this chapter, we describe how we applied these results to the design of the soft x-ray emission spectrometer for the REIXS beamline at the Canadian Light Source.
+
+\subsection{Design goals}
+The REIXS beamline at the CLS is intended to facilitate a high-throughput user science program in the field of material science.  Academic users will apply for beamtime on their own projects through a peer-reviewed proposal process, and will be awarded shifts on the beamline based on the comparative scientific merit of their proposal.  These shifts will typically range from as short as eight hours, to as long as a week.  (A fraction of the total beamtime will be set aside for industrial clients, who purchase beamtime or analytical services from the facility.)
+
+From the point of view of the beamline designers, the intention of supporting a general user program led to some high-level goals.  We wanted to ensure that the spectrometer would have ``general-purpose'' characteristics, making it applicable for a wide variety of emission experiments.  Efficiency was extremely important, in order to minimize the time required for individual scans, maximize the total user throughput of the beamline, and make the spectrometer useful for dilute samples.  At the same time, we wanted to push the resolving power of the machine to be competitive with the highest-resolution spectrometers currently in existence.  (If we could somehow exceed world-record resolution without sacrificing these other goals, there could even be a possibility of discovering new science.)
+
+The design goals were also influenced by the current focus of the material science research group in the Physics Department at the University of Saskatchewan, with interests in organic biomaterials (DNA and peptides), organic semiconductor and photonic materials, and transition metal oxides.
+
+The performance of the spectrometer was to be derived from the following key strengths:(TODO ref David's thesis)
+\begin{enumerate}
+\item Superior optimization of the design to specific spectral windows of interest, for   analysis of materials containing
+\begin{itemize}
+\item silicon (Si L $\beta$ emission edge, 92 eV), 
+\item carbon (C K $\alpha_1$ emission edge, 277 eV), 
+\item nitrogen (N K $\alpha_1$ emission edge, 392 eV) and 
+\item oxygen (O K $\alpha_1$ emission edge, 525 eV), 
+\end{itemize}
+while maintaining acceptable performance for 
+\begin{itemize}
+\item soft x-ray transitions in transition metals (L $\alpha,\beta$ and M $\alpha,\beta$ edges, 600 eV - 1100 eV);
+\end{itemize}
+\item A focus on best achievable performance, instead of a compact, mechanically simple or low-budget design;\item A mechanical design allowing for superior alignment and calibration;\item An optical design based on careful, knowledgeable balancing of the tension between efficiency and resolution
+\end{enumerate}
+The final key strength was achieved through extensive teamwork with David Muir, who used ray tracing techniques to quantify and optimize the resolution of our design.  His full analysis of spectrometer focussing and resolving power is published in his M.Sc. thesis; some relevant areas of overlap are summarized briefly in this chapter, but for full details we would refer interested readers to (TODO ref).
+
+The design was constrained by the maximum mechanical length of the spectrometer (the physical space available on the beamline floor was limited to 3m at the time), and the endstation budget of approximately \$1 million.
+\subsection{Comparative examples}
+Before starting work on the REIXS spectrometer, we examined the designs of existing spectrometers at facilities around the world.  (Given that we had never designed a soft x-ray spectrometer before, this was a natural starting point, and one that would ensure that -- for lack of original ideas -- we would design a machine at least as good as any other in existence.)
+
+We analyzed a variety of machines covering a spectrum of design goals, from mechanical compactness and simplicity of grating/detector motion, to maximum resolution.  It turned out to be difficult to accurately compare the stated resolution of the different machines, due to differences in the resolving power criterion and variability in the spatial resolution of their detectors.  David resolved this by modelling the optical layout and conducting ray-trace simulations for each one.  To decouple the detector performance -- which affects the final resolution but isn't related to the optical design -- from the pure optical performance, we used a standardized detector with a spatial resolution of 20 um.  
+
+Figure \ref{4a} shows this normalized comparison of spectrometer resolution.  For machines offering a choice of gratings, the plot shows the performance attainable by each grating.  Among these machines are the SXF spectrometer from Beamline 8.0.1 at the Advanced Light Source (Figure \ref{1d}); another Rowland circle spectrometer, the commercially-available Gammadata XES350 (TODO REF); and several recent variable line spacing (VLS) designs (TODO REF).  Unfortunately, we weren't able to compare the efficiency for these designs, because the exact grating groove parameters are rarely known or published.
+          
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=7in]{Chapter4/4a_resolution/4a.pdf} 
-   \caption{Resolving power performance comparison of existing spectrometer designs, calculated with all detectors having a 20 ?m pixel size. The legend specifies the spectrometer and grating choice (size and/or line density).  [Source: David Muir M.Sc. thesis.]}
+   \caption{Resolving power performance comparison of existing spectrometer designs, calculated with all detectors having a 20 um pixel size. The legend specifies the spectrometer and grating choice (size and/or line density).  Image from (TODO REF: David Muir M.Sc. thesis.)}
    \label{4a}
 \end{figure}
 
 \section{Design Process}
-- Iterative design process with David: jointly address factors affecting resolution
+The first step in the design process was to choose the focussing configuration of the spectrometer.  Based on our comparison of existing designs, we selected the Rowland circle configuration for the reasons in Section \ref{rowlandVsVLS}.
 
-describe overlapping factors...
+To determine the number of grating choices to offer, we started by assuming one grating optimized for each emission line of interest: Si (92 eV), C (277 eV), N (392 eV), O (525 eV), and the transition metal range (600 - 1100 eV) optimized for Fe (725 eV).  Eventually, after completing the subsequent steps in the design process, we found that we could merge the medium energy gratings (277, 392 eV) and high energy gratings (525, 725 eV), since there was considerable overlap in their performance.  This allowed us to add a fourth grating, intended to cover a large energy range with extremely high efficiency, for studying dilute samples; we called this one the ``impurity'' (IMP) grating.  Later, we added two more gratings, intended to offer impressively high resolution, in the medium energy (HRMEG) and high energy (HRHEG) range; these 3rd order gratings are described in Section \ref{3rdOrderDesign}.
 
-TABLE 4b: Factor, effect on resolution, effect on efficiency
+\begin{table}[h]
+   \centering
+   \caption{Gratings chosen for the REIXS spectrometer, with their target energies used for optimization, and the final energy ranges they would be able to cover.}
+   {\small
+ \begin{tabular}{@{} c c c@{}} % Column formatting, @{} suppresses leading/trailing space
+      \hline
+        Grating    & Optimization Energy & Energy Range (eV)\\
+      \hline \hline
+      &&[1st order]\\
+Low Energy Grating (LEG) & 92 eV (Si) & 30 - 300 \\
+Impurity Grating (IMP) & \emph{400 eV (N)} & 75 - 750 \\
+Medium Energy Grating (MEG) & 400 eV (N) & 250+ \\
+High Energy Grating (HEG) & 725 eV (Fe) & 400+\\
+&&\\
+ & &[3rd order]\\
+High Res Medium Energy Grating (HRMEG) & 400 eV (N) & 285+\\
+High Res High Energy Grating (HRHEG) & 725 eV (Fe) & 525+\\
+      \hline
+   \end{tabular}
+   }
+   \label{gratings-table}
+\end{table}
 
+The next step was to determine the grating parameters (line density, profile) and the optical geometry (incidence angle, distances, grating radii, etc.), subject to the focussing constraints, to reach our target resolution and efficiency.  Table \ref{4b} describes all of the overlapping parameters in a Rowland circle spectrometer that affect resolution, geometric efficiency, and/or grating efficiency; almost universally, increases in one goal result in decreases in the others.
+
+Because of the inherent tension between resolution and efficiency, attempts to establish the parameters for the gratings prompted a carefully-choreographed, swashbuckling duel between the Forces For Efficiency and the United Resolutionary Front.  This battle became an iterative process, inherently involving a degree of trial-and-error and continuous refinement.  In retrospect, the design process we would recommend for future designs is summarized in Figure \ref{4c}.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=1]{Chapter4/4c_process/4c.pdf} 
-   \caption{Approximation of the process used to design the optics of the REIXS spectrometer.  [Source: David Muir M.Sc. thesis.]}
+   \includegraphics[scale=0.6]{Chapter4/4c_process/4c_mine.pdf} 
+   \caption{Approximation of the process used to design the optics of the REIXS spectrometer.}
    \label{4c}
 \end{figure}
 
 \subsection{Justification of Design choices:}
+\subsubsection{Rowland circle vs. VLS design} 
+\label{rowlandVsVLS}
+We mentioned in Chapter 2 that spectrometer optics must focus as well as disperse light.  Some of the designs we surveyed achieved this using VLS gratings, while others employed spherical gratings in the ``Rowland circle'' configuration.  Fortunately, this provided us with a good basis for comparison.
+
+According to (TODO REF david's thesis), the main advantage of VLS gratings is to control the shape of the focal curve -- the path in space that needs to be travelled by the detector to keep the spectrometer focussed as a function of energy.  A flat focal curve simplifies the mechanical design, since the detector then only needs to move along one axis.  As Figure \ref{vlsCurves} shows, the VLS correction also shortens the focal curve, so that to handle the same energy range, a spectrometer can be made more compact.  Unfortunately, a compact focal curve places the detector closer to the grating and inherently reduces the resolution -- as a result, all of the VLS designs we surveyed required very high spatial resolution detectors to maintain just average resolution (TODO REF Table 3.3).
+
+The VLS technique can also be used to minimize aberrations (astigmatism, coma, etc.), but these can only be fully corrected at a single energy; for a general-purpose spectrometer, this isn't helpful.\footnote{After completing our Rowland circle design, an external consultant attempted to optimize it by adding VLS terms to correct aberrations.  While this worked well at the optimization point of 200 eV, the detector image became heavily defocussed just 50 eV away (TODO REF, Figure 5.1).} Using VLS corrections also removes the flexibility to operate the spectrometer in higher orders: since the formulas for the correction terms depend on the diffraction order, VLS spectrometers behave erratically outside of their design order.
+
+Figure \ref{vlsImage} compares the detector image of three adjacent energy lines, for a comparable VLS and Rowland circle spectrometer.  While requiring a longer focal curve and more complicated detector motion, the Rowland design offers far higher resolution for the same nominal groove density; it would take a large increase in efficiency-robbing line density for the VLS design to keep up with it.  Therefore, since we weren't constrained by physical size\footnote{beyond the 3 meter limit of the beamline space}, we selected a Rowland circle optical layout -- similar to the ALS Beamline 8.0.1 SXF spectrometer, as the basis for our design.
+
+\begin{figure}[p] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=1.0]{Chapter4/4z_vls/focalCurves_David2_17.pdf} 
+   \caption{The focal curve is the path in space the detector needs to move along to maintain focussing as a function of energy.  This plot shows the effect of the $b_2$ VLS correction term: with a $b_2$ of 0, the focal curve is the same as the Rowland circle focal curve.  A specific $b_2$ value of -12 (highlighted in red) straightens the focal curve, which could simplify the detector mechanics, but also shortens the focal distance and reduces the resolution at the detector.  Image from (TODO REF Figure 2.17)}
+   \label{vlsCurves}
+\end{figure}
+
+\begin{figure}[p] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=1.0]{Chapter4/4z_vls/detectorImage_David2_18.pdf} 
+   \caption{Variable line space (VLS) corrections reduce aberrations that cause curvature, as seen in these ray-traced detector images of three adjacent emission lines.  However, the increase in resolution due to better focussing isn't able to make up for reduced dispersion across the surface of the detector, as compared to the Rowland circle alternative. Image from (TODO REF Figure 2.18)}
+   \label{vlsImage}
+\end{figure}
+
+\subsubsection{Choice of profile: blazed vs. rectangular / sinusoidal}
+Back in Chapter 2, we saw that optimally blazed gratings have almost double the efficiency of sinusoidal gratings, and even more than that of rectangular gratings (Figure \ref{3c-plot}).  Since the ideal blaze angle is energy-dependent, we saw that this optimization comes at the cost of having an efficiency peak centred on the target energy, and comparably lower efficiency outside the peak.  However, for high groove densities and high optimization energies, the peaks are wide enough to span the entire soft x-ray range.  For low groove densities and low optimization energies -- as would be the situation for the LEG -- the peak bandwidth is smaller, but still easily covers the design energy range of this grating.
+
+For each grating, we selected blaze angles corresponding to the target energies in Table \ref{gratings-table}, according to Equation \ref{blazeAngleEqn}.  We then used the efficiency software to further optimize the blaze angle at this energy, using the analytical $\theta_b$ as a starting point.  We then calculated the efficiency curves for these profiles, as well as for optimized sinusoidal and rectangular alternatives, and confirmed that the blazed profile was indeed the clear winner for all the gratings.  (For some of the gratings, we tweaked the blaze angle at the end of the design process, since we were willing to accept a small reduction in efficiency at the target energy, in exchange for higher overall efficiency integrated across the whole energy range.)
+        
 \subsubsection{Ruled vs holographic gratings}
-- manufacturing errors
-- holo: can't get true blaze profile... can reduce from sinusoidal using ion etching
+Section \ref{gratingManufacturing} gave an overview of mechanical ruling and holographic grating manufacturing techniques.  To make a pragmatic decision between these two options, we needed to consider the impacts of real-world manufacturing issues.  Common errors which happen during ruling and holographic manufacturing are shown in Figure \ref{4d}.
+
+Mechanical ruling engines are designed to be precision machines, but they must be carefully set up and operated to avoid errors.  Achieving the specified blaze angle -- critical to efficiency -- must be accomplished during setup by aligning the diamond tip, ruling a test section of the grating, analyzing the resultant blaze angle with a microscope, adjusting the tip, and tediously repeating this process.  Without sufficient quality control, the blaze angle can end up high or low by a few tenths of a degree, which could completely eliminate the blazing advantage.
+
+Another concern is whether the grooves end up uniform, and the groove geometry maintained, across the entire grating.  This is essential to both the efficiency and the resolution.  If the ruling process creates errors that vary periodically over a series of grooves, this will insert additional periodic structure into the grating and create ``ghosts'' in the final spectrum: an additional diffraction pattern superimposed over the desired one, with intensity peaks again given by the grating equation, but at a different period.  Errors with a period on the same order as the groove spacing create ``Lyman ghosts'', which end up far from the spectral lines.  Errors with periodicities on the order of millimetres create ``Rowland ghosts'', which appear close to and symmetric around the desired spectral lines.
+
+One additional flaw that can occur with ruled gratings happens when the diamond tip fails to penetrate far enough into the metal surface to create the desired profile, resulting in something that looks like Figure \ref{4d} (e).  The profile can also be corrupted by irregularities in the diamond tip, or by bits that break off or are picked up during the ruling process.  (One common manufacturing error is for the tip to pick up a shard of metal, and carry it with it for several thousand trips across the grating; this creates an inefficient stripe across an otherwise acceptable grating.)  Finally, for maximum efficiency, the anti-blaze angle should be as close to 90$\deg$ as possible, but in most cases the shape of the ruling tip forces it to be below 30$\deg$.  (The blazed grating in Figure \ref{3j-1} had an anti-blaze angle of $12.8\deg$.)  According to the theoretical calculations in Figure \ref{3k}, the anti-blaze angle doesn't start to seriously affect the efficiency until it goes below $\sim$4 times the blaze angle, ie: 5$\deg$ for a blaze angle of 1.5$\deg$.
+
+Holographic gratings overcome many of these disadvantages.  They aren't susceptible to ghosting, since their grooves are all formed simultaneously, with a period as regular as the wavelengths of an electromagnetic wave.\footnote{However, modern interferometrically-controlled ruling engines can inscribe grooves with such precision that they have also virtually eliminated ghosting.}  They can also be ruled faster and more inexpensively -- mechanical ruling can take weeks for one grating -- so that flaws can be corrected by trial-and-error.  Despite these advantages, holographic gratings  have their own manufacturing challenges.  In some cases, variation in the sinusoidal groove depth happens because the intensity of the interference pattern changes across the width of the grating.  Traditionally, holographic techniques also haven't been able to produce groove densities as high as mechanical ruling engines.  The most significant drawback to holographic gratings, however, is their inability to create a true blazed profile, even when using ion etching or the Sheridon method (Figure \ref{4d} (b) ).  For this reason alone, we chose mechanical ruling for all six of the spectrometer gratings.
+
+In future work, it would be helpful to characterize the typical groove shape of real-world ion-etched holographic gratings, and update the grating efficiency software to support this additional profile; this could allow for more informed decision making when choosing to use or reject holographic ruling.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter4/4d_rulingFlaws/4d.pdf} 
-   \caption{Common errors in the manufacture of ruled and holographic gratings.  Holographic exposure creates a sinusoidal profile; subsequent ion-etching (b) can only approximate a triangular profile.  Ruled gratings can suffer from blaze angle errors (c), or errors due to the shape and/or depth of the diamond tip (e).  If the ruling engine introduces periodic errors in the groove position, this additional structure (d) creates additional diffraction peaks (ghosts).}
+   \caption{Common errors in the manufacture of ruled and holographic gratings.  Holographic exposure creates a sinusoidal profile; subsequent ion-etching (b) can only approximate a triangular profile.  Ruled gratings can suffer from blaze angle errors (c), or errors due to the shape and/or depth of the diamond tip (e).  If the ruling engine introduces periodic errors in the groove position, this additional structure (d) superimposes additional diffraction patterns (ghosts).}
    \label{4d}
 \end{figure}
 
-
-FIGURE 4d: common ruling errors (ideal grating; blaze angle off; ion-etched blaze; ruled blaze with large apex; ghosting)
-
-- ruled: susceptible to "ghosting" from higher-order structure; lower upper limit on groove density; difficult and long to manufacture with precision ruling engine.  Still not true sawtooth with 90degree top corner.
-\subsubsection{Rowland vs. VLS design} 
-just reference david's thesis
-               - VLS: flat focal curve, minimize aberrations, compact design… but lose spatial resolution for the same grating density.Examples require extremely high-res CCD detectors just to maintain average resolution.  Also: aberrations can only be fully corrected around a single energy.  Also, lose flexibility to operate in higher orders for more resolution, since the VLS optimizations depend on the order, and behave erratically outside of that. [cite: Table 3.3]  Figure 5.1
-\subsubsection{blazed vs. trapezoidal/sinusoidal}
-          - Not using dielectric multi-layer gratings (reason: tuned for excellence at single energy…)
 \section{High-resolution (3rd order) design}
+\label{3rdOrderDesign}
 \subsection{Options for reaching extreme resolution:}
           - increase groove dens... manufacturing limit; serious drop in efficiency.
           - long detector distance (increased radius)... reduction in geometrical efficiency due to longer source-grating. [alternative: proposed design that alex reviewed: uses collecting mirror]
@@ -94,7 +172,7 @@ just reference david's thesis
      - DATA 4f: plot reflectivities over range for: Au, C, Ni, Pt, Ir, Ag, etc… [use DATA 3g]
      - Choices within regions of interest
 
-\section{Optimization}
+\section{Optimization and Tolerancing}
  simple hill-climbing [with constraints]
 \section{Summary of Final Design}
 	-  Key performance parameters
