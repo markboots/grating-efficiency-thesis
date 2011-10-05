@@ -28,7 +28,7 @@ while maintaining acceptable performance for
 \end{enumerate}
 The final key strength was achieved through extensive teamwork with David Muir, who used ray tracing techniques to quantify and optimize the resolution of our design.  His full analysis of spectrometer focussing and resolving power is published in his M.Sc. thesis; some relevant areas of overlap are summarized briefly in this chapter, but for full details we would refer interested readers to (TODO ref).
 
-The design was constrained by the maximum mechanical length of the spectrometer (the physical space available on the beamline floor was limited to 3m at the time), and the endstation budget of approximately \$1 million.
+Together, we set a quantitative goal for both efficiency and resolution: The design constraints were set by the maximum mechanical length of the spectrometer -- the physical space available on the beamline floor was limited to 3m at the time -- and the endstation budget of approximately \$1 million.
 \subsection{Comparative examples}
 Before starting work on the REIXS spectrometer, we examined the designs of existing spectrometers at facilities around the world.  (Given that we had never designed a soft x-ray spectrometer before, this was a natural starting point, and one that would ensure that -- for lack of original ideas -- we would design a machine at least as good as any other in existence.)
 
@@ -50,21 +50,25 @@ To determine the number of grating choices to offer, we started by assuming one 
 
 \begin{table}[h]
    \centering
-   \caption{Gratings chosen for the REIXS spectrometer, with their target energies used for optimization, and the final energy ranges they would be able to cover.}
-   {\small
- \begin{tabular}{@{} c c c@{}} % Column formatting, @{} suppresses leading/trailing space
+   \caption{Gratings chosen for the REIXS spectrometer, with their target energies used for optimization, the energy ranges they will be able to cover, and the final optimized grating parameters}
+   {\footnotesize
+ \begin{tabular}{@{} |rcccccc|@{}} % Column formatting, @{} suppresses leading/trailing space
       \hline
-        Grating    & Optimization Energy & Energy Range (eV)\\
+        Grating    & Optimization& Energy& Groove Density & Incidence & Coating & Blaze\\
+        & Energy (eV) & Range (eV) & (lines/mm) & Angle ($\deg$) & &Angle ($\deg$)\\
       \hline \hline
-      &&[1st order]\\
-Low Energy Grating (LEG) & 92 eV (Si) & 30 - 300 \\
-Impurity Grating (IMP) & \emph{400 eV (N)} & 75 - 750 \\
-Medium Energy Grating (MEG) & 400 eV (N) & 250+ \\
-High Energy Grating (HEG) & 725 eV (Fe) & 400+\\
-&&\\
- & &[3rd order]\\
-High Res Medium Energy Grating (HRMEG) & 400 eV (N) & 285+\\
-High Res High Energy Grating (HRHEG) & 725 eV (Fe) & 525+\\
+      &&1st order&&&&\\
+      \hline
+Low Energy (LEG) & 92 eV (Si) & 30 - 300&600&86&Au&1.85\\
+Impurity (IMP) & \emph{400 eV (N)} & 75 - 750&900&87&Ni&1.11\\
+Medium Energy (MEG) & 400 eV (N) & 250+&1200&88&Ni&1.48\\
+High Energy (HEG) & 725 eV (Fe) & 400+&2000&88&Pt&1.52\\
+&&&&&&\\
+\hline
+ & &3rd order&&&&\\
+ \hline
+High Res Medium Energy (HRMEG) & 280 eV (C) & 280+&1800&88&Ni&4.85\\
+High Res High Energy (HRHEG) & 725 eV (Fe) & 525+&2600&88.25&Pt&4.05\\
       \hline
    \end{tabular}
    }
@@ -73,7 +77,7 @@ High Res High Energy Grating (HRHEG) & 725 eV (Fe) & 525+\\
 
 The next step was to determine the grating parameters (line density, profile) and the optical geometry (incidence angle, distances, grating radii, etc.), subject to the focussing constraints, to reach our target resolution and efficiency.  Table \ref{4b} describes all of the overlapping parameters in a Rowland circle spectrometer that affect resolution, geometric efficiency, and/or grating efficiency; almost universally, increases in one goal result in decreases in the others.
 
-Because of the inherent tension between resolution and efficiency, attempts to establish the parameters for the gratings prompted a carefully-choreographed, swashbuckling duel between the Forces For Efficiency and the United Resolutionary Front.  This battle became an iterative process, inherently involving a degree of trial-and-error and continuous refinement.  In retrospect, the design process we would recommend for future designs is summarized in Figure \ref{4c}.
+Because of the inherent tension between resolution and efficiency, attempts to establish the parameters for the gratings prompted a carefully-choreographed, swashbuckling duel between the Forces For Efficiency and the United Resolutionary Front.  This battle became an iterative process, inherently involving a degree of trial-and-error and continuous refinement.  In retrospect, the design process we would recommend for future designs is summarized in Figure \ref{4c}.  The final grating parameters that effect efficiency are shown in Table \ref{gratings-table}.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -87,7 +91,7 @@ Because of the inherent tension between resolution and efficiency, attempts to e
 \label{rowlandVsVLS}
 We mentioned in Chapter 2 that spectrometer optics must focus as well as disperse light.  Some of the designs we surveyed achieved this using VLS gratings, while others employed spherical gratings in the ``Rowland circle'' configuration.  Fortunately, this provided us with a good basis for comparison.
 
-According to (TODO REF david's thesis), the main advantage of VLS gratings is to control the shape of the focal curve -- the path in space that needs to be travelled by the detector to keep the spectrometer focussed as a function of energy.  A flat focal curve simplifies the mechanical design, since the detector then only needs to move along one axis.  As Figure \ref{vlsCurves} shows, the VLS correction also shortens the focal curve, so that to handle the same energy range, a spectrometer can be made more compact.  Unfortunately, a compact focal curve places the detector closer to the grating and inherently reduces the resolution -- as a result, all of the VLS designs we surveyed required very high spatial resolution detectors to maintain just average resolution (TODO REF Table 3.3).
+According to (TODO REF david's thesis), the main advantage of VLS gratings is to control the shape of the focal curve -- the path in space that the detector must travel along to keep the spectrometer focussed as a function of energy.  A flat focal curve simplifies the mechanical design, since the detector then only needs to move along one axis.  As Figure \ref{vlsCurves} shows, the VLS correction also shortens the focal curve, so that to handle the same energy range, a spectrometer can be made more compact.  Unfortunately, a compact focal curve places the detector closer to the grating and inherently reduces the resolution -- as a result, all of the VLS designs we surveyed required very high spatial resolution detectors to maintain just average resolution (TODO REF Table 3.3).
 
 The VLS technique can also be used to minimize aberrations (astigmatism, coma, etc.), but these can only be fully corrected at a single energy; for a general-purpose spectrometer, this isn't helpful.\footnote{After completing our Rowland circle design, an external consultant attempted to optimize it by adding VLS terms to correct aberrations.  While this worked well at the optimization point of 200 eV, the detector image became heavily defocussed just 50 eV away (TODO REF, Figure 5.1).} Using VLS corrections also removes the flexibility to operate the spectrometer in higher orders: since the formulas for the correction terms depend on the diffraction order, VLS spectrometers behave erratically outside of their design order.
 
@@ -134,51 +138,40 @@ In future work, it would be helpful to characterize the typical groove shape of 
 
 \section{High-resolution (3rd order) design}
 \label{3rdOrderDesign}
-\subsection{Options for reaching extreme resolution:}
-          - increase groove dens... manufacturing limit; serious drop in efficiency.
-          - long detector distance (increased radius)... reduction in geometrical efficiency due to longer source-grating. [alternative: proposed design that alex reviewed: uses collecting mirror]
-          - Our Novel approach: attempt usage of specially-designed blazed gratings in 3rd order. (immediately see by differentiating grating equation with respect to wavelength: effect of order on resolution)
-               - Highlight: only known design in the world to do this.  Why?… Maybe we'll find out ; )
-               - effect on geometric efficiency: r (source grating)
-               
-          DATA 4e: triple-groove dens. vs. long-distance [scaled by geometric efficiency]  vs. 3rd-order design. [note: triple-groove density would be impossible to rule]
+\subsection{Options for reaching extreme resolution}
+We mentioned in Section \ref{resolutionGoals} that the two general ways to increase the resolution of a spectrometer design (besides choosing a better detector) are to move the detector further away from the grating, or to increase the angular dispersion of the grating.  Increasing the detector distance requires adjustments to the focussing scheme, and severely reduces geometric efficiency.\footnote{In a Rowland circle design, ray trace testing (TODO) showed us that the geometric efficiency is proportional to the inverse cube of the detector distance. The reduction in saggital angle captured by the detector causes the first reduction. The grating radius $R$ needs to be increased to maintain focussing,  and with spherical gratings, this further increases the saggital dispersion.  The entrance distance $r$ also needs to be increased, causing a reduction in the solid angle captured by the grating. This could be compensated by increasing the grating size, but the total grating size is constrained by limits on spherical aberration.}  This option also isn't an option when the constraints on the machine size have been reached.  The other method -- increasing the angular dispersion -- can either be achieved using the groove density, or the diffraction order.  As we saw in Figure \ref{3e-2}, higher groove densities reduce the grating efficiency, and are also constrained by manufacturing limits.\footnote{While some ruling engines can now reach extremely high groove densities approaching 10~000 lines/mm, the groove quality and accuracy suffers.  For soft x-ray gratings, 3~000 lines/mm seems to be a current effective limit for both mechanical and holographic ruling.}
+
+So this leaves three related questions for a designer trying to achieve extreme resolution: what do you when you've hit the machine size limit \emph{and} the groove density manufacturing limit? And is taking these parameters all the way to their limits actually the optimal solution for maintaining efficiency at high resolution?  What are the consequences of designing intentionally for a higher diffraction order?
+
+All existing soft x-ray spectrometers seem to be designed for 1st order operation, based on the assumption that diffraction efficiencies in higher orders are too low to be useful.  (We have seen users force some Rowland circle designs into second order, when trying to temporarily eke out higher resolution.)  Although it had never been done before, our survey of efficiency trends hinted that it might actually be more efficient to use gratings in third order, than to triple their groove density or extend the machine size.  Based on these results, we attempted to add ultra-high-resolution capabilities to the REIXS spectrometer, by adding gratings specifically optimized for third-order operation.
+
+A combination of grating efficiency calculations and ray tracing simulations showed that this novel 3rd order design would actually be the \emph{only} way to dramatically increase the resolution of our spectrometer, within the mechanical length constraints that existed at design time.  Figure \ref{4e} shows why the third-order design makes sense from an efficiency perspective.  From Equation TODO, we can easily see that switching from 1st order ($n=-1$) to 3rd order ($n=-3$) has the same effect on the angular dispersion (and resolution) as tripling the groove density.  The conventional assumption on higher order operation is that even when properly blazed, higher order efficiencies are extremely low compared to the first order.  However, we found that at certain points along the efficiency curve, the 3rd order grating efficiency would actually be \emph{higher} than for an equivalent-resolution grating with three times the groove density operated in 1st order.  Not only that, but in most cases the hypothetical triple-groove density alternative would be moot: it would be impossible to manufacture such a grating.\footnote{Even if it was possible to rule such an ultra-high density grating, decreases in the groove quality would reduce the real-world efficiency through stray light processes described in Section \ref{realWorldEffects}.  In Chapter 6, we characterize our own manufactured gratings and find a general reduction in real-world efficiency with increasing groove density, as the ruling process struggles to keep the grooves clean and properly formed.}
+
+Figure \ref{4e} is based on the efficiency curves for the two 3rd order gratings we ended up adding to the design.  For the 1800 line/mm HRMEG grating (a), designed for outstanding resolution near the carbon emission line (280 eV), the efficiency in 3rd order is actually higher than for an equivalent-resolution 5400 line/mm grating optimized for 1st order.  (Even with this advantage, we point out again that it would be impossible or very difficult to rule a 5400 line/mm grating with sufficient quality to achieve this theoretical efficiency.)  One interesting thing to note is that this temporary advantage in 3rd order efficiency persists even for appropriately-optimized sinusoidal gratings, shown in red.
+
+For the 2600 line/mm HRHEG grating (b), the 3rd order efficiency is comparable, but not quite higher, than its hypothetical equivalent 7800 line/mm 1st order grating.  In this case, however, the 3rd order design is really the only possibility; it would be practically impossible to manufacture the 7800 line/mm grating.
           
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter4/4j_justificationFor3rdOrder/4j.pdf} 
-   \caption{todo todo todo}
+   \caption{At some points along the efficiency curve, the grating efficiency is actually higher in 3rd order than it would be in 1st order for an equivalent-resolution grating with three times the groove density\ldots assuming you could even manufacture such a grating.  HRMEG and alternatives: nickel coating, geometry as indicated.  HRHEG and alternative: platinum coating, blaze angle of 4.05$\deg$.}
    \label{4e}
 \end{figure}
-          
-          
-          Alternative options to increase resolutiON
-          
-          
-          - We were constrained at maximum machine size. Even if you could make it bigger, would it be better?
-          - 
-          - Increasing R:
-          	- Need to maintain alpha (efficiency)
-		- r and r' increase
-			- First geometric efficiency hit: increase entrance arm... would need to increase grating size, but this increases cost; also limit on grating size because spherical aberrations become even more significant with grating size--> reduce focussing.   $1/r^2$
-			
-			- second geometric efficiency hit: increase exit distance. Only include sagittal; assume reduction in geometric efficiency due to detector catching smaller solid angle as inherent in increasing resolution.
-			- spherical grating: by increasing R, also decreasing saggital focussing
-			
-			
-			
-	TODO: Why is there a peak at 87 in the incidence curve? Does it depend on material?
-               
-\section{Coating choices:}
+
+\section{TODO Coating choices:}
      - DATA 4f: plot reflectivities over range for: Au, C, Ni, Pt, Ir, Ag, etc… [use DATA 3g]
+ 
      - Choices within regions of interest
 
-\section{Optimization and Tolerancing}
- simple hill-climbing [with constraints]
+\section{TODO: Optimization and Tolerancing}
+- simple hill-climbing [with constraints]
+
+- tolerance limits based on 15\% relative drop; c
+
 \section{Summary of Final Design}
-	-  Key performance parameters
-    	- TABLE 4g: Resolution and efficiency at emission edges of interest
-	
-	- DATA 4h: efficiency plots for each grating
+By combining efficiency and resolution calculations to carefully manage the trade-off between these two goals, we were able to exceed our design targets of 10\% efficiency and 2000 resolving power at all the emission lines of interest, using the LEG, MEG, and HEG gratings.  The addition of the impurity (IMP) grating added extremely high efficiency over a large portion of the soft x-ray energy range, and the two 3rd order gratings added massive resolving powers of 14~000 and 10~000 at the carbon and iron lines.  (Although their efficiency is substantially lower than the other gratings, the novel usage of the 3rd order was the only way to achieve this kind of resolution within our physical size constraints.)
+
+Table \ref{4g} shows the predicted resolving power and grating efficiency of our design for all the edges of interest.  The final optimized grating parameters are included in Table \ref{gratings-table}.  In Figures \ref{4h-1} through \ref{4h-3}, we show the theoretical predicted efficiency in 1st, 2nd, and 3rd order for all six gratings.  In Chapter 6, we compare these efficiencies with the real-world diffraction performance of the manufactured gratings.
 	
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -200,8 +193,3 @@ In future work, it would be helpful to characterize the typical groove shape of 
    \caption{Theoretical diffraction efficiency for the High Resolution Gratings, optimized to be used in 3rd order.}
    \label{4h-3}
 \end{figure}
-
-
-Note: effect of blazing: profound at low energies and low groove densities.  Less pronounced "humps" at higher energies and groove densities.
-EXPLORE: Optimize an LEG for 800eV. Still humps? Effect due to groove dens, energy, or incidence? [LEG is low on all of those]
-
