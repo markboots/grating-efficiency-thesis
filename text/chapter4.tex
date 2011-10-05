@@ -143,9 +143,10 @@ We mentioned in Section \ref{resolutionGoals} that the two general ways to incre
 
 So this leaves three related questions for a designer trying to achieve extreme resolution: what do you when you've hit the machine size limit \emph{and} the groove density manufacturing limit? And is taking these parameters all the way to their limits actually the optimal solution for maintaining efficiency at high resolution?  What are the consequences of designing intentionally for a higher diffraction order?
 
-All existing soft x-ray spectrometers seem to be designed for 1st order operation, based on the assumption that diffraction efficiencies in higher orders are too low to be useful.  (We have seen users force some Rowland circle designs into second order, when trying to temporarily eke out higher resolution.)  Although it had never been done before, our survey of efficiency trends hinted that it might actually be more efficient to use gratings in third order, than to triple their groove density or extend the machine size.  Based on these results, we attempted to add ultra-high-resolution capabilities to the REIXS spectrometer, by adding gratings specifically optimized for third-order operation.
+All existing soft x-ray spectrometers seem to be designed for 1st order operation, based on the assumption that diffraction efficiencies in higher orders are too low to be useful.  (We have seen users force some Rowland circle designs into 2nd order, when trying to temporarily eke out higher resolution.)  Although it had never been done before, our survey of efficiency trends hinted that it might actually be more efficient to use gratings in 3rd order, than to triple their groove density or extend the machine size.  Based on these results, we attempted to add ultra-high-resolution capabilities to the REIXS spectrometer, by considering gratings specifically optimized for 3rd order operation.
 
-A combination of grating efficiency calculations and ray tracing simulations showed that this novel 3rd order design would actually be the \emph{only} way to dramatically increase the resolution of our spectrometer, within the mechanical length constraints that existed at design time.  Figure \ref{4e} shows why the third-order design makes sense from an efficiency perspective.  From Equation TODO, we can easily see that switching from 1st order ($n=-1$) to 3rd order ($n=-3$) has the same effect on the angular dispersion (and resolution) as tripling the groove density.  The conventional assumption on higher order operation is that even when properly blazed, higher order efficiencies are extremely low compared to the first order.  However, we found that at certain points along the efficiency curve, the 3rd order grating efficiency would actually be \emph{higher} than for an equivalent-resolution grating with three times the groove density operated in 1st order.  Not only that, but in most cases the hypothetical triple-groove density alternative would be moot: it would be impossible to manufacture such a grating.\footnote{Even if it was possible to rule such an ultra-high density grating, decreases in the groove quality would reduce the real-world efficiency through stray light processes described in Section \ref{realWorldEffects}.  In Chapter 6, we characterize our own manufactured gratings and find a general reduction in real-world efficiency with increasing groove density, as the ruling process struggles to keep the grooves clean and properly formed.}
+\subsection{Justification for 3rd order design}
+A combination of grating efficiency calculations and ray tracing simulations showed that this novel 3rd order design would actually be the \emph{only} way to dramatically increase the resolution of our spectrometer, within the mechanical length constraints that existed at design time.  Figure \ref{4e} shows why the 3rd order design makes sense from an efficiency perspective.  From Equation \ref{angularDispersionEqn}, we can easily see that switching from 1st order ($n=-1$) to 3rd order ($n=-3$) has the same effect on the angular dispersion (and resolution) as tripling the groove density.  The conventional assumption on higher order operation is that even when properly blazed, higher order efficiencies are extremely low compared to the first order.  However, we found that at certain points along the efficiency curve, the 3rd order grating efficiency would actually be \emph{higher} than for an equivalent-resolution grating with three times the groove density operated in 1st order.  Not only that, but in most cases the hypothetical triple-groove density alternative would be moot: it would be impossible to manufacture such a grating.\footnote{Even if it was possible to rule such an ultra-high density grating, decreases in the groove quality would reduce the real-world efficiency through stray light processes described in Section \ref{realWorldEffects}.  In Chapter 6, we characterize our own manufactured gratings and find a general reduction in real-world efficiency with increasing groove density, as the ruling process struggles to keep the grooves clean and properly formed.}
 
 Figure \ref{4e} is based on the efficiency curves for the two 3rd order gratings we ended up adding to the design.  For the 1800 line/mm HRMEG grating (a), designed for outstanding resolution near the carbon emission line (280 eV), the efficiency in 3rd order is actually higher than for an equivalent-resolution 5400 line/mm grating optimized for 1st order.  (Even with this advantage, we point out again that it would be impossible or very difficult to rule a 5400 line/mm grating with sufficient quality to achieve this theoretical efficiency.)  One interesting thing to note is that this temporary advantage in 3rd order efficiency persists even for appropriately-optimized sinusoidal gratings, shown in red.
 
@@ -171,19 +172,39 @@ For the 2600 line/mm HRHEG grating (b), the 3rd order efficiency is comparable, 
 \section{Summary of Final Design}
 By combining efficiency and resolution calculations to carefully manage the trade-off between these two goals, we were able to exceed our design targets of 10\% efficiency and 2000 resolving power at all the emission lines of interest, using the LEG, MEG, and HEG gratings.  The addition of the impurity (IMP) grating added extremely high efficiency over a large portion of the soft x-ray energy range, and the two 3rd order gratings added massive resolving powers of 14~000 and 10~000 at the carbon and iron lines.  (Although their efficiency is substantially lower than the other gratings, the novel usage of the 3rd order was the only way to achieve this kind of resolution within our physical size constraints.)
 
-Table \ref{4g} shows the predicted resolving power and grating efficiency of our design for all the edges of interest.  The final optimized grating parameters are included in Table \ref{gratings-table}.  In Figures \ref{4h-1} through \ref{4h-3}, we show the theoretical predicted efficiency in 1st, 2nd, and 3rd order for all six gratings.  In Chapter 6, we compare these efficiencies with the real-world diffraction performance of the manufactured gratings.
-	
+Table \ref{4g} shows the predicted resolving power and grating efficiency of our design for all the edges of interest.  For those interested in resolution, Figure \ref{4y} compares the resolving power of our design to the competitors in Figure \ref{4a}.  The final optimized grating parameters are included in Table \ref{gratings-table}.  In Figures \ref{4h-1} through \ref{4h-3}, we show the theoretical predicted efficiency in 1st, 2nd, and 3rd order for all six gratings.  In Chapter 6, we compare these efficiencies with the real-world diffraction performance of the manufactured gratings.
+
+\begin{table}[h]
+   \centering
+   \caption{Predicted resolution and grating efficiency of the REIXS spectrometer at the emission lines of interest.  Values are listed for all gratings where emission energy lies within the detector's motion range.}
+   {\footnotesize
+ \begin{tabular}{@{} |c|@{}} % Column formatting, @{} suppresses leading/trailing space
+ \hline
+TODO\\
+      \hline
+   \end{tabular}
+   }
+   \label{4g}
+\end{table}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=1]{Chapter4/4y_resolutionComparison/4y_David4_7.pdf} 
+   \caption{The REIXS spectrometer design offers higher predicted resolution than the existing designs we surveyed in Figure \ref{4a}.  (The advantage is even more dramatic when considering the 3rd order high resolution gratings.)  However, the full strength of the design comes from a knowledgeable balance with grating efficiency, based on our combined calculations.  Image from: (TODO REF David's thesis Figure 4.7)}
+   \label{4y}
+\end{figure}
+
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter4/4h_gratings/LEG_IMP.pdf} 
-   \caption{Theoretical diffraction efficiency for the Low Energy Grating and Impurity Grating, as designed}
+   \caption{Theoretical diffraction efficiency for the Low Energy Grating and Impurity Grating.}
    \label{4h-1}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter4/4h_gratings/MEG_HEG.pdf} 
-   \caption{Theoretical diffraction efficiency for the Medium Energy and High Energy Gratings, as designed}
+   \caption{Theoretical diffraction efficiency for the Medium Energy and High Energy Gratings.}
    \label{4h-2}
 \end{figure}
 

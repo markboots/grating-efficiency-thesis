@@ -223,11 +223,12 @@ The immediate result of a spectroscopy experiment is the image produced along th
 \end{enumerate}
 
 Both of these solutions inherently reduce the \emph{geometric efficiency} of the spectrometer: the fraction of all photons captured by the detector assuming perfect mirror and grating efficiency.  In the dispersion direction (or \emph{meridional} direction, vertical in Figure \ref{1f}), the detector will now only capture photons from a smaller energy range; the corresponding reduction in light gathered is an unavoidable tradeoff no matter what scheme is used to increase  resolution.  However, the second method -- increasing the distance from the grating to the detector --  reduces the solid angle captured by the detector also in the perpendicular direction (or \emph{saggital} direction, out of the page), further decreasing the geometric efficiency to an extent which depends on the nature of focussing in that direction.\footnote{A complete analysis of focussing criteria would show that, at least for Rowland Circle spectrometers, increasing the source-grating distance requires an increase in both the entrance slit-grating distance, \emph{and} an increase in the grating radius; both of these actions further decrease the geometric efficiency, possibly as as function of the cube of the distance.  One could compensate by using larger gratings, but the maximum grating size must be limited to manage spherical aberrations; see (TODO REF).}  The only way to increase resolution with only the minimum essential reduction in geometric efficiency is by using the first method: increasing the grating's angular dispersion.  By differentiating the grating equation (\ref{gratingEquation}) with respect to wavelength (holding the incident angle $\theta_{2}$ constant):
-\begin{eqnarray*}
+\begin{eqnarray}
 \frac{n\lambda}{d} &=& \sin\theta_{2,n} - \sin\theta_{2} \\
 \frac{n}{d} &=& \cos \theta_{2,n} \frac{\dif \theta_{2,n}}{\dif \lambda} \\
 \frac{\dif \theta_{2,n}}{\dif \lambda} &=& \frac{n}{d\, \cos \theta_{2,n}}
-\end{eqnarray*}
+\label{angularDispersionEqn}
+\end{eqnarray}
 we derive an expression for the angular dispersion; it's clear that to create more dispersion, we can either increase the groove density (decrease the groove spacing $d$), or use a higher diffraction order $n$.  Unfortunately, as will be shown in Chapter 5, both of these actions substantially reduce the \emph{grating efficiency}.  As an additional challenge, we can see that the dispersion will be reduced for higher energies, which leave the grating at more normal angles, creating a larger $\cos \theta_{2,n}$.
 
 No matter which method is used, resolution and overall efficiency are in conflict.  Whether it's a hit to the grating or to the geometry, increasing the resolution demands a reduction in efficiency and vice-versa, the cleverness of the beamline designer being measured in his or her ability to negotiate this compromise.
