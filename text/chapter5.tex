@@ -1,6 +1,26 @@
 \chapter{Characterization: How we measured the actual grating performance, and accounted for differences}
+In the previous chapter, we applied grating efficiency calculations to create and optimize the optical design of the REIXS emission spectrometer.  After having the design reviewed by an external consultant, who confirmed our resolution and efficiency predictions (TODO REF), we solicited bids from grating manufacturers and selected Bach Research to mechanically rule the six gratings.  Finally, we passed the optical requirements over to a consulting engineer to design the mechanics of the spectrometer, which would be responsible for positioning the entrance slit, gratings, and detector, as well as achieving and maintaining ultra-high vacuum conditions throughout the beam path.
 
-\section{AFM measurements of manufactured grating profile}
+We lamented back in Chapter 4 the lack of published experimental comparisons of grating efficiency -- particularly in the soft x-ray regime -- and hypothesized that this was because beamline scientists, on receiving new gratings, were often eager to put them into their beamline and start commissioning, rather than spend more time characterizing them.  Unfortunately\footnote{for us in our role as beamline staff}, the construction of the REIXS spectrometer was delayed by a series of serious mechanical design flaws and oversights.  Fortunately\footnote{for our interests in grating efficiency}, this setback provided us with lots of time to characterize the ruling quality and real-world diffraction efficiency of our gratings.  Even more fortunately, the characterization process alerted us to serious ruling errors with a few of the gratings, which would have dramatically affected the spectrometer's resolution and efficiency had they not been discovered.  In the end, our characterization of the gratings resulted in several beneficial outcomes:
+\begin{itemize}
+\item We were able to contribute another set of experimental comparisons to theoretical grating efficiency calculations.
+\item We discovered a reason to be cautious when specifying nickel-coated gratings, despite nickel's apparently high reflectivity.
+\item We discovered a serious ruling problem in the HEG grating, which nearly eliminated its ability to diffract in the useful orders, and sent it back to the manufacturer for re-coating and re-ruling.
+\item We discovered substantial errors in the blaze angle (beyond the manufacturer's specified tolerance) for a few of the gratings; in the case of the HRHEG, the blaze angle was off by so much that we ended up using it as a temporary replacement for the HEG.
+\end{itemize}
+
+This chapter describes these results, based on atomic force microprobe (AFM) measurements of the groove profile and soft x-ray diffractometer measurements of the actual grating efficiency.  We also compare the calculated and measured grating efficiencies, and offer explanations for the differences.
+
+\section{AFM measurements of the manufactured grating profile}
+When we consider a grating like the HEG, with 2000 lines/mm and a blaze angle of 1.52$\deg$, it is clear that the physical size of the grooves is extremely small -- we're talking about little triangles 500nm wide and maybe 13nm tall.  Measuring the physical geometry is therefore actually impossible with visible light microscopes.
+
+Atomic force microscopy (AFM) is an extremely high-resolution technique for measuring the topography of a surface.  It uses an extremely sharp-tipped mechanical probe mounted on a piezo-electrically-controlled cantilever to ``feel'' the surface (Figure \ref{afm}).  The tip can either be dragged across the surface (contact mode) or electronically oscillated near its resonance frequency (\emph{non-contact mode}) while measuring the change in amplitude, phase and frequency caused by the tip-sample atomic interaction forces.  In both cases, the accurate vertical position of the tip is measured with a laser beam reflected off the back of the cantilever -- using either an interferometer or a deflection meter -- and the horizontal position of the tip is scanned using piezo drivers.  The resolution of the best atomic force microscopes is sufficient to image individual atoms on a surface, although for measuring soft x-ray gratings we only need angstrom-level accuracy.
+
+One limitation of AFM techniques is that it's easy to produce a two-dimensional map of the relative surface profile in arbitrary units, but difficult to accurately determine the absolute height.  In order to measure blaze angles of gratings, we need to measure the height difference from the bottom to the top of the grooves in absolute units, which requires calibration of the AFM using a height standard.  (Usually this is a gold mesh with an accurately-known wire size.)
+
+After receiving the gratings from the manufacturer, we first imaged them using the AFM at the University of Saskatchewan Structural Sciences Centre (SSSC).  However, we weren't able to calibrate the $z$-axis for these measurements, so with the assistance of Dr. Eric Gullikson, we requested a complete set of measurements using the AFM at the Center for X-Ray Optics at the Lawrence Berkeley National Laboratory.
+
+An example of an AFM scan is given in Figure \ref{5a}, where we show both the two-dimensional image (top) and a cross-section of heights perpendicular to the grooves (bottom), revealing the groove profile.  Although the grooves should be ideally uniform along their entire length, most of the AFM scans show profile variation across even one image (a distance of just a few micrometers).  To determine the average profile shape and average blaze angle, we integrated the two-dimensional image across the groove direction.  Since a single AFM scan only spans a few micrometers of the grating, we also need to be careful in extrapolating the results to the entire grating; therefore, we conducted multiple scans at the centre and the corners of the grating.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -9,10 +29,7 @@
    \label{5a}
 \end{figure}
 
-
-[locate all]
-
-challenge: blaze angle numerical measurements... requires calibration of z-axis.
+Figure \ref{5a} gives an example of the AFM output, for the LEG grating.  We present  groove profiles for all the gratings starting in Section \ref{gratingResults}, alongside a discussion of their effective diffraction performance.
 
 \section{Diffractometer measurements of actual grating efficiency}
 
@@ -87,6 +104,7 @@ reflect off axis... reduce periodicity... disrupt the perfect grating model. May
 \end{figure}
 
 \section{Grating results}
+\label{gratingResults}
    : (and comparison to theoretical)
 \subsection{LEG} (gold): profile clean; as expected; blaze angle off. [modelled]
 
