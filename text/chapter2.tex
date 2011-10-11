@@ -11,7 +11,7 @@
    \label{2a}
 \end{figure}
 
-For centuries, we've known that gratings reflect and transmit light into a set of discrete angles -- called \emph{orders} -- where the angles depend on the wavelength  (Figure \ref{2a}).  A variety of simple proofs have been used to explain this.  In undergraduate books, the grating equation is introduced as a consequence of constructive interference from a linear array of coherent emitters. (This makes sense for a slotted transmission grating, but it's less obvious why an arbitrarily-shaped periodic structure like those shown in Figure TODO would behave the same way.)  Other proofs -- such as those using Fermat's Principle to minimize an optical path function with a phase offset introduced by the grating [TODO ref] -- are general enough to explain the diffraction orders, but they don't say anything about how much light goes into each.
+For centuries, we have known that gratings reflect and transmit light into a set of discrete angles -- called \emph{orders} -- where the angles depend on the wavelength  (Figure \ref{2a}).  A variety of simple proofs have been used to explain this.  In undergraduate books, the grating equation is introduced as a consequence of constructive interference from a linear array of coherent emitters. (This makes sense for a slotted transmission grating, but it is less obvious why an arbitrarily-shaped periodic structure like those shown in Figure TODO would behave the same way.)  Other proofs -- such as those using Fermat's Principle to minimize an optical path function with a phase offset introduced by the grating [TODO ref] -- are general enough to explain the diffraction orders, but they do not say anything about how much light goes into each.
 
 It is only within the last twenty years that mathematical techniques and computational power have advanced enough to accurately model the electromagnetic field of light within and around the surface of a grating, allowing us to actually determine how energy is distributed between the orders, and how much is absorbed within the grating.  Although many researchers [TODO ref] have contributed to advancements in numerical grating theory over the last forty years, the most recent breakthroughs have come from the the work of Li [TODO ref] on the factorization of truncated Fourier series, and have been synthesized by Neviere and Popov [TODO Ref, ref].
 
@@ -31,10 +31,10 @@ However, the field within the grooves depends on the exact shape of the groove p
 \begin{enumerate} 
 	\item In the ``Rigorous Coupled Wave'' (RCW) approach, the grating groove shape is sliced into thin layers (Figure \ref{3a}) and approximated with vertical walls between layers (the ``staircase approximation'').  This simplifies the boundary conditions, so that at every layer the wave equation can be converted into a set of simultaneous linear equations and solved algebraically.  The effect of each layer on the field is propagated to the next using matrix methods.
 	
-	This approach is computationally efficient, and has been known to work accurately in TE polarization.  However, in TM polarization, the results often don't match experimental measurements, because the staircase approximation introduces sharp corners and artificially large electric field components at the step boundaries.
+	This approach is computationally efficient, and has been known to work accurately in TE polarization.  However, in TM polarization, the results often do not match experimental measurements, because the staircase approximation introduces sharp corners and artificially large electric field components at the step boundaries.
 	\item In the ``Differential Method'' approach, we numerically integrate the wave equation many times using different assumed initial values, to generate a complete orthogonal set of particular solutions. Then we use techniques of linear algebra to solve for the coefficients of the general solution that satisfy the boundary conditions along the grating interface.
 	\end{enumerate}
-\item Finally, most common grating structures consist of one (or often many) stacked layers\footnote{For example, dielectric gratings with a metal coating used for soft Xray beamlines, gratings with thin-film multilayer coatings, etc.} (Figure \ref{2d-1}).  In classical optics, the \emph{reflection matrix} and \emph{transmission matrix} are conveniently used to propagate an incoming field through an optical layer.  We can generalize this concept to gratings by defining a matrix which maps the Rayleigh coefficients of the incident field to the coefficients of the field that is reflected and transmitted by each layer.  The matrices for each layer can then be multiplied together to find the effect of the complete grating; this is known as the ``T-matrix'' approach.  While theoretically sound, the T-matrix becomes unstable in computer calculations because rounding errors introduce instability into diverging exponential functions.  An alternative formulation called the ``S-matrix'' approach defines a matrix at each layer which represents the cumulative effect of \emph{all layers below and including that layer} on the incident field; by definition, this matrix remains bounded and is safe to use for numerical calculations.
+\item Finally, most common grating structures consist of one (or often many) stacked layers\footnote{For example, dielectric gratings with a metal coating used for soft x-ray beamlines, gratings with thin-film multilayer coatings, etc.} (Figure \ref{2d-1}).  In classical optics, the \emph{reflection matrix} and \emph{transmission matrix} are conveniently used to propagate an incoming field through an optical layer.  We can generalize this concept to gratings by defining a matrix which maps the Rayleigh coefficients of the incident field to the coefficients of the field that is reflected and transmitted by each layer.  The matrices for each layer can then be multiplied together to find the effect of the complete grating; this is known as the ``T-matrix'' approach.  While theoretically sound, the T-matrix becomes unstable in computer calculations because rounding errors introduce instability into diverging exponential functions.  An alternative formulation called the ``S-matrix'' approach defines a matrix at each layer which represents the cumulative effect of \emph{all layers below and including that layer} on the incident field; by definition, this matrix remains bounded and is safe to use for numerical calculations.
 \end{enumerate}
 
 \subsection{Simplifying Assumptions}
@@ -42,7 +42,7 @@ However, the field within the grooves depends on the exact shape of the groove p
 Before we tackle the mathematics of grating theory, this section defines the geometry and terminology we'll use throughout this text, and introduces some assumptions that simplify the problem.  Figure \ref{2a} shows a side view of a reflection grating, in the following situation:
 \begin{enumerate}
 \item The mean surface of the grating is in the $x-z$ plane, with the grooves running parallel to the $z-$axis.  The groove profile is periodic and repeats every distance $d$ along the $x-$axis.
-\item The grating is illuminated with a light ray travelling parallel to the $x-y$ plane (ie: within the plane of the page). This is referred to as ``in-plane incidence'', and is typical of how most monochromators and spectrometers are used.  (When the incident ray has a component in the $z-$direction, the diffraction peaks end up dispersed over the surface of a three-dimensional cone, and this is referred to as ``conical mounting''.)
+\item The grating is illuminated with a light ray travelling parallel to the $x-y$ plane (i.e.: within the plane of the page). This is referred to as ``in-plane incidence'', and is typical of how most monochromators and spectrometers are used.  (When the incident ray has a component in the $z-$direction, the diffraction peaks end up dispersed over the surface of a three-dimensional cone, and this is referred to as ``conical mounting''.)
 \end{enumerate}
 These first two simplifications reduce the grating problem to two dimensions, since the whole system is unchanged by translation along the $z-$axis.
 
@@ -51,7 +51,7 @@ Additionally, we assume that:
 \item The incident light can be represented as a plane wave, infinite in extent.  
 \item The grating also stretches forever in the $x-$ and $z-$directions.
 \end{enumerate}
-Typical gratings used in soft Xray devices are much much larger (typically: 40 mm) than their groove spacing $d$ (typically: a few $\mu$m).  As long as they are illuminated with collimated light having a beam width much larger than the groove spacing, both of these assumptions seem reasonable.
+Typical gratings used in soft x-ray devices are much much larger (typically: 40 mm) than their groove spacing $d$ (typically: a few $\mu$m).  As long as they are illuminated with collimated light having a beam width much larger than the groove spacing, both of these assumptions seem reasonable.
 
 Finally, to simplify the electromagnetic field calculations, we assume that
 \begin{enumerate}
@@ -60,7 +60,9 @@ Finally, to simplify the electromagnetic field calculations, we assume that
 \end{enumerate}
 (These last two assumptions are also necessary to keep us within a two-dimensional problem.  If the material is non-isotropic, then the dielectric constant $\epsilon$ becomes a tensor $\left[\left[\epsilon\right]\right]$ and the problem requires a full 3D analysis.)
 
-These assumptions make the grating theory much simpler to present in this chapter. However, it should be noted that at the expense of larger matrices and higher mathematical complexity, it is possible to express the same theory in the full three-dimensional case, which enables the analysis of exotic situations like conical mounted gratings, crossed 2D gratings, and non-isotropic materials.  [Ref: Neviere Ch. 5] provides a derivation of the full general 3D version.
+These assumptions make the grating theory much simpler to present in this chapter. However, it should be noted that at the expense of larger matrices and higher mathematical complexity, it is possible to express the same theory in the full three-dimensional case, which enables the analysis of exotic situations like conical mount gratings, crossed 2D gratings, and non-isotropic materials.  [Ref: Neviere Ch. 5] provides a derivation of the full general 3D version.
+
+As one final assumption, we assume that the grating surface exactly matches the periodic profile given by $y=g(x)$ in Figure \ref{2a}.  For real-world applications, this turns out to be the most limiting assumption, since actual gratings will vary from groove to groove due imperfections in the manufacturing process, and their ideally-smooth surfaces will have an unavoidable amount of random micro-roughness.  Unfortunately, this assumption is necessary for any mathematical treatment; in Section \ref{realWorldEffects} we look at the impacts of real-world  imperfections on grating efficiency.
 
 \subsubsection{A few brief notes on notation:}
 \begin{itemize}
@@ -77,14 +79,14 @@ In Figure \ref{2a}, incoming light strikes the grating along wavevector $\vec k_
 
 The incoming light is a travelling electromagnetic plane wave with sinusoidal dependence on time.  We can express the electric field vector using the complex exponential form:
 \begin{eqnarray}
-\vec E_{incident} &=& \vec A\, \exp \left(i (\vec k_2 \cdot  \vec r - \omega t)\right)  = \vec A\, \exp \left(i\, k_2 (x \sin \theta_2 - y \cos \theta_2)\right)\exp \left(- i \omega t\right)
+\vec E_{incident} &=& \vec A\, \exp \left(i (\vec k_2 \,  \vec r - \omega t)\right)  = \vec A\, \exp \left(i\, k_2 (x \sin \theta_2 - y \cos \theta_2)\right)\exp \left(- i \omega t\right)
 \end{eqnarray}
-where the true (physical) field is contained in the real part.  Since all fields will have the same harmonic dependence on time, we drop the $e^{-i\omega t}$ factor from here on.  (The scalar $k_2$ is simply the magnitude of $\vec k_2$, ie: $\left| \vec k_2 \right| = v_2\, \omega/c$.)
+where the true (physical) field is contained in the real part.  Since all fields will have the same harmonic dependence on time, we drop the $e^{-i\omega t}$ factor from here on.  (The scalar $k_2$ is simply the magnitude of $\vec k_2$, i.e.: $\left| \vec k_2 \right| = v_2\, \omega/c$.)
 
 The electric field vector is always perpendicular to the direction of the wave $\vec k_2$, but can have an arbitrary polarization determined by $\vec A$.  This can always be expressed as a superposition of two orthogonal components:
 \begin{itemize}
-\item The TE (transverse electric) polarization represents the component of the electric field vector parallel to the $z$ axis (ie: into the page).  For a pure TE wave, the $E_x$ and $B_z$ fields are always 0.
-\item The TM (transverse magnetic) polarization represents the component of the electric field vector in the $x-y$ plane (ie: the magnetic field vector is along $z$).  For a pure TM wave, the $E_z$ and $B_x$ fields are always zero.
+\item The TE (transverse electric) polarization represents the component of the electric field vector parallel to the $z$ axis (i.e.: into the page).  For a pure TE wave, the $E_x$, $E_y$, and $B_z$ fields are always 0.
+\item The TM (transverse magnetic) polarization represents the component of the electric field vector in the $x-y$ plane (i.e.: the \emph{magnetic} field vector is along $z$).  For a pure TM wave, the $E_z$, $B_x$, and $B_y$ fields are always zero.
 \end{itemize}
 In general, the grating problem will be solved by applying the Maxwell equations to the incident electric field, according to the boundary conditions imposed by the grating.  By solving it separately for each polarization case (TE and TM), we can simplify these equations.  In the end, we can superpose the results we calculate for the outgoing fields, weighted based on the actual polarization of the incident light.
 
@@ -171,7 +173,7 @@ Here we define $u = E_z$ when working in TE polarization, and $u = H_z$ when wor
 \begin{eqnarray}
 u(x,y) = \mathbb{G} \, u_i(x,y)
 \end{eqnarray}
-Because the grating is periodic and extends forever, the operator $\mathbb{G}$ is invariant (doesn't change) under translation by a grating period: $x \rightarrow x+d$.  
+Because the grating is periodic and extends forever, the operator $\mathbb{G}$ is invariant (does not change) under translation by a grating period: $x \rightarrow x+d$.  
 \begin{eqnarray}
 u(x+d,y) = \mathbb{G} \, u_i(x+d,y)
 \end{eqnarray}
@@ -195,7 +197,7 @@ In other words, the total field translated by one period $d$ is equal to its unt
 \begin{eqnarray}
 u(x+d, y) &=& C \, u(x, y) = e^{i k_2 d \sin \theta_2} u(x,y) = e^{i \alpha_0 d} u(x,y)
 \end{eqnarray}
-where we've defined 
+where we have defined 
 \begin{eqnarray}
 \boxed{\alpha_0 \equiv k_2 \sin \theta_2}
 \end{eqnarray}
@@ -236,12 +238,12 @@ Where $k(x,y)$ is constant, the wave equations for both TE (\ref{wete}) and TM p
 where $k=k_1$ above the grating, and $k=k_2$ below it.  If we insert the Fourier expansion for the field $u(x,y)=\sum u_n(y) e^{i\alpha_n x}$ into the wave equation:
 \begin{eqnarray}
 \nabla^2 \left( \sum_{n=-\infty}^{\infty} u_n(y) e^{i2\pi nx/d}e^{i\alpha_0 x} \right) + k^2 \sum_{n=-\infty}^{\infty} u_n(y) e^{i2\pi n x/d}e^{i\alpha_0 x} &=& 0 \\
-e^{i \alpha_0 x} \sum_{n=-\infty}^{\infty}  \left( \frac{d^2}{dy^2} + (k^2 - (\alpha_0+2\pi n/d)^2) \right) u_n(y) e^{i2\pi n x/d} &=& 0
+e^{i \alpha_0 x} \sum_{n=-\infty}^{\infty}  \left( \frac{\partial^2}{\partial y^2} + (k^2 - (\alpha_0+2\pi n/d)^2) \right) u_n(y) e^{i2\pi n x/d} &=& 0
 \end{eqnarray}
 For this Fourier sum to be equal to zero, all of the coefficients must be zero:
 \begin{eqnarray}
-\left( \frac{d^2}{dy^2} + (k^2 - (\alpha_0+2\pi n/d)^2) \right) u_n(y) &=& 0\\
-\left( \frac{d^2}{dy^2} + (k^2 - \alpha_n^2) \right) u_n(y) &=& 0
+\left( \frac{\partial^2}{\partial y^2} + (k^2 - (\alpha_0+2\pi n/d)^2) \right) u_n(y) &=& 0\\
+\left( \frac{\partial^2}{\partial y^2} + (k^2 - \alpha_n^2) \right) u_n(y) &=& 0
 \end{eqnarray}
 This is a standard differential equation with the solution
 \begin{eqnarray}
@@ -267,7 +269,7 @@ u(x,y) =  \sum_{n=-\infty}^{\infty} A^{(2)}_n e^{i \alpha_n x - i \beta^{(2)}_n 
 \end{eqnarray}
 This result is remarkable.  The total field created above the grating is a finite sum of propagating plane waves (for all $n$ where $\beta^{(2)}_n$ is real) and an infinite sum of decaying (when $\beta^{(2)}_n$ is complex) plane waves.
 
-To expand on this conclusion: The first sum (with $A^{(2)}_n$ coefficients) are waves travelling in the $-y$ direction, down toward the grating.  For the finite set of $n$ for which $\beta^{(2)}_n$ is real, these are non-decaying, normal waves.  There are also  an infinite number of exponentially growing waves that explode as $y\rightarrow +\infty$, for the remaining $n$ that cause $\beta^{(2)}_n$ to be complex.
+To expand on this conclusion: The first sum (with $A^{(2)}_n$ coefficients) are waves travelling in the $-y$ direction, down toward the grating.  For the finite set of $n$ for which $\beta^{(2)}_n$ is real, these are non-decaying, normal waves.  There is also  an infinite number of exponentially growing waves that explode as $y\rightarrow +\infty$, for the remaining $n$ that cause $\beta^{(2)}_n$ to be complex.
 
 Similarly, the second sum (with $B^{(2)}_n$ coefficients) represents waves travelling away from the grating, in the $+y$ direction.  There is a finite set of propagating waves, and an infinite set of exponentially decaying waves that tend to zero as $y \rightarrow +\infty$.  
 
@@ -286,7 +288,7 @@ u(x,y) =  A^{(2)}_0 e^{i \alpha_0 x - i \beta^{(2)}_0 y} +  \sum_{n=-\infty}^{\i
 The diffraction grating's reflected orders appear out of this expansion as the finite set of $n$, $\beta^{(2)}_n$, and $B^{(2)}_n$ values that create propagating plane waves travelling away from the grating.  At this point, $n$ can now be properly identified with the \emph{diffraction order}.  This is known as the \emph{Rayleigh Expansion} for the diffraction field.  Figure \ref{2b} shows this visually and mathematically. 
 
 \subsubsection{Below the grating}
-The field below the grating ($y<0$) can be expanded using the same  technique.  One complication is that for grating materials which absorb energy, the refractive index (and hence $k=k_1$) will be complex.\footnote{In fact, this is the case for all materials at soft Xray wavelengths.}  In this situation there are two possibilities for the square root $\beta^{(1)}_n = \sqrt{k_1^2-\alpha_n^2}$.  The correct choice can be made by requiring that the diffracted waves remain bounded when $y\rightarrow -\infty$.  The result provides an expansion for the transmitted field, corresponding to the transmitted orders.  These are also shown visually in Figure \ref{2b}:
+The field below the grating ($y<0$) can be expanded using the same  technique.  One complication is that for grating materials that absorb energy, the refractive index (and hence $k=k_1$) will be complex.\footnote{In fact, this is the case for all materials at soft x-ray wavelengths.}  In this situation there are two possibilities for the square root $\beta^{(1)}_n = \sqrt{k_1^2-\alpha_n^2}$.  The correct choice can be made by requiring that the diffracted waves remain bounded when $y\rightarrow -\infty$.  The result provides an expansion for the transmitted field, corresponding to the transmitted orders.  These are also shown visually in Figure \ref{2b}:
 \begin{eqnarray}
 \label{gratingEqnT}
 u(x,y) =  \sum_{n=-\infty}^{\infty} A^{(1)}_{n} e^{i \alpha_n x - i \beta^{(1)}_{n} y}
@@ -306,14 +308,14 @@ From the geometry analyzed in Figure \ref{2b}, the $x$-component of the outgoing
 \label{kxEqn2}
 k_x &=& k_2 \sin \theta_2 +\frac{ 2\pi n}{d} = k_2 \sin \theta_{2,n}
 \end{eqnarray}
-and, after replacing the magnitude of the wavevector above the grating $k_2 = v_2\, \omega / c = v_2 \cdot 2\pi f / c =  2\pi / \lambda$, the famous grating equation (for reflected orders) is finally:
+and, after replacing the magnitude of the wavevector above the grating $k_2 = v_2\, \omega / c = v_2 \, 2\pi f / c =  2\pi / \lambda$, the famous grating equation (for reflected orders) is finally:
 \begin{eqnarray}
 \label{gratingEquation}
 \frac{n \lambda}{d} = \sin \theta_{2,n} -  \sin \theta_{2}
 \end{eqnarray}
-(where we've assumed that $v_2 = 1$ because we are in free space, and $\lambda$ is also the free-space wavelength.) This is often called the \emph{Fraunhofer Grating Equation}.
+(where we have assumed that $v_2 = 1$ because we are in free space, and $\lambda$ is also the free-space wavelength.) This is often called the \emph{Fraunhofer Grating Equation}.
 
-When $n=0$, the grating equation reverts to the law of reflection ($\theta_{2,0} = \theta_2$, ie: the angle of reflection is equal to the angle of incidence.)  This wave corresponds to a classically-reflected wave from a normal surface.  The reflected orders that fall \emph{between} the incident wave and the $n=0$ reflection are referred to as \emph{inside orders}; using our sign convention for diffraction angles, they correspond to $n<0$.  The \emph{outside orders} ($n>0$, see Figure \ref{2b}) are diffracted at angles beyond the $n=0$ reflection.
+When $n=0$, the grating equation reverts to the law of reflection ($\theta_{2,0} = \theta_2$, i.e.: the angle of reflection is equal to the angle of incidence.)  This wave corresponds to a classically-reflected wave from a normal surface.  The reflected orders that fall \emph{between} the incident wave and the $n=0$ reflection are referred to as \emph{inside orders}; using our sign convention for diffraction angles, they correspond to $n<0$.  The \emph{outside orders} ($n>0$, see Figure \ref{2b}) are diffracted at angles beyond the $n=0$ reflection.
 
 We can also use the same technique to determine the angles of the transmitted orders.  Equation \ref{gratingEqnT} gives the $x$- and $y$-components of the transmitted wavevectors:
 \begin{eqnarray}
@@ -325,10 +327,10 @@ From the geometry analyzed in Figure \ref{2b}, the $x$-component of the outgoing
 \label{kxEqn1}
 k_x &=& k_2 \sin \theta_2 +\frac{ 2\pi n}{d} = k_1 \sin \theta_{1,n}
 \end{eqnarray}
-and, after again replacing $k_1$, the magnitude of the wavevector below the grating $k_1 = v_1\, \omega / c = v_1 \cdot 2\pi f / c =  v_1 \cdot 2\pi / \lambda$, the transmission grating equation is:
+and, after again replacing $k_1$, the magnitude of the wavevector below the grating $k_1 = v_1\, \omega / c = v_1 \, 2\pi f / c =  v_1 \, 2\pi / \lambda$, the transmission grating equation is:
 \begin{eqnarray}
 \label{gratingEquation}
-\frac{n \lambda}{d} = v_1 \cdot \sin \theta_{1,n} -  v_2 \cdot \sin \theta_{2}
+\frac{n \lambda}{d} = v_1 \, \sin \theta_{1,n} -  v_2 \, \sin \theta_{2}
 \end{eqnarray}
 This time, instead of checking for the law of reflection, we can check that when $n=0$, the transmission equation reverts to Snell's law of refraction ($v_1\, \sin \theta_{1,0} = v_2 \, \sin \theta_2$).
 
@@ -352,7 +354,7 @@ Similarly, for the transmitted order,
 \end{eqnarray}
 
 \subsubsection{Finishing the grating problem}
-Based only on Maxwell's equations and an assumption of periodicity, we've shown that a grating reflects and transmits light into a set of discrete angles.  Incredibly, this result is fully general -- it doesn't depend at all on the shape or nature of the grating profile; all that's required is that it be periodic.  Unfortunately, this impressive result still says nothing at all about the \emph{grating efficiency}, or the \emph{amount} of light diffracted into each order.  We still don't know anything about the \emph{amplitudes} $B_n$, $A_n$ of the diffracted plane waves, and to determine these coefficients we'll need to get down and dirty inside the grooves of the grating.
+Based only on Maxwell's equations and an assumption of periodicity, we have shown that a grating reflects and transmits light into a set of discrete angles.  Incredibly, this result is fully general -- it does not depend at all on the shape or nature of the grating profile; all that's required is that it be periodic.  Unfortunately, this impressive result still says nothing at all about the \emph{grating efficiency}, or the \emph{amount} of light diffracted into each order.  We still do not know anything about the \emph{amplitudes} $B_n$, $A_n$ of the diffracted plane waves, and to determine these coefficients we will need to get down and dirty inside the grooves of the grating.
 
 Within the grooves, the wave equations (\ref{wete}, \ref{wetm}) are much more difficult to solve due to the position-dependence of $k(x,y)$.  The refractive index (and therefore the impedance $k$) will change whether inside or outside of a groove, and if the grating shape is complicated, $k(x,y)$ will be a complicated function indeed.  Several decades of intense research have produced a handful of methods for solving the full boundary-value problem, all of which are hampered by unique challenges of computational feasibility, numerical stability, and accuracy of approximations.  Table (TODO) lists the most common methods, with references and areas of applicability.   
 
@@ -373,8 +375,8 @@ where $\vec H^\ast$ denotes the complex conjugate of $\vec H$.
 
 We define the grating efficiency formally as \emph{the ratio of the total time-averaged Poynting flux} -- through a surface parallel to the mean grating plane -- \emph{of the outgoing order }($\bar S_n^{(2)}$) \emph{relative to the incident wave} ($\bar S^{(2)}$).  Figure \ref{2c} highlights the surface $Q_2$ used for reflected efficiencies ($e_n^{(r)}$), which spans one grating period $d$ in the $x$-direction, and has unit length in the $z$-direction.  For defining transmitted efficiencies $e_n^{(t)}$, we use a similar surface $Q_1$ at $y\leq0$.
 \begin{eqnarray}
-e_n^{(r)} &\equiv& \frac{\iint \limits_{Q_2} \bar S_n^{(2)} \cdot \hat y \, \dif z \dif x}{ \iint \limits_{Q_2} \bar S^{(2)} \cdot \hat y \, \dif z \dif x} \\
-e_n^{(t)} &\equiv&\frac{\iint \limits_{Q_1} \bar S_n^{(1)}\cdot \hat y \, \dif z \dif x}{ \iint \limits_{Q_1} \bar S^{(2)}\cdot \hat y \, \dif z \dif x}
+e_n^{(r)} &\equiv& \frac{\iint \limits_{Q_2} \bar S_n^{(2)} \, \hat y \, \dif z \dif x}{ \iint \limits_{Q_2} \bar S^{(2)} \, \hat y \, \dif z \dif x} \\
+e_n^{(t)} &\equiv&\frac{\iint \limits_{Q_1} \bar S_n^{(1)}\, \hat y \, \dif z \dif x}{ \iint \limits_{Q_1} \bar S^{(2)}\, \hat y \, \dif z \dif x}
 \end{eqnarray}
           
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
@@ -394,26 +396,26 @@ where $Z_2 = v_2 Z_0$ is the impedance of the space above the grating (usually f
 \begin{eqnarray}
 \left| \bar S \right| = B_n^{(2)} \, B_n^{(2)\ast} \, \eta_2
 \end{eqnarray}
-where we've defined \fbox{$\eta_2 \equiv 1/(2Z_2)$} in the case of TE polarization, and \fbox{$\eta_2 \equiv 2Z_2$} for TM polarization.  The direction of the vector is along the propagation direction, ie: at an angle $\theta_{2,n}$ to the $y$-axis, therefore the integrated flux through the surface is:
+where we have defined \fbox{$\eta_2 \equiv 1/(2Z_2)$} in the case of TE polarization, and \fbox{$\eta_2 \equiv 2Z_2$} for TM polarization.  The direction of the vector is along the propagation direction, ie: at an angle $\theta_{2,n}$ to the $y$-axis, therefore the integrated flux through the surface is:
 \begin{eqnarray}
-\iint \limits_{Q_2} \bar S_n^{(2)} \cdot \hat y \, \dif z \dif x &=& \int \limits_0^d \int \limits_0^1 \bar S_n^{(2)} \cdot \hat y \, \dif z \dif x \\
+\iint \limits_{Q_2} \bar S_n^{(2)} \, \hat y \, \dif z \dif x &=& \int \limits_0^d \int \limits_0^1 \bar S_n^{(2)} \, \hat y \, \dif z \dif x \\
 &=& B_n^{(2)} \, B_n^{(2)\ast} \, \eta_2 \, d \cos \theta_{2,n} 
 \end{eqnarray}
 For the incident wave, the integrated flux is similarly 
 \begin{eqnarray}
-\iint \limits_{Q_2} \bar S^{(2)} \cdot \hat y \, \dif z \dif x = A_0^{(2)} \, A_0^{(2)\ast} \, \eta_2 \, d \cos \theta_{2} 
+\iint \limits_{Q_2} \bar S^{(2)} \, \hat y \, \dif z \dif x = A_0^{(2)} \, A_0^{(2)\ast} \, \eta_2 \, d \cos \theta_{2} 
 \end{eqnarray}
 and so the reflected efficiency in order $n$ is:
 \begin{eqnarray}
 e_n^{(r)} &=& \frac{    B_n^{(2)} \, B_n^{(2)\ast} \cos \theta_{2,n}       }{    A_0^{(2)} \, A_0^{(2)\ast}  \cos \theta_{2}     }
 \end{eqnarray}
-We can simplify this somewhat by choosing a unit amplitude for the incident field, ie: $A_0^{(2)} = 1$V/m for the TE electric field, or 1A/m for the TM magnetic field. Also, since $\beta_n^{(2)} = k_2 \cos \theta_{2,n}$, we can simplify this to
+We can simplify this somewhat by choosing a unit amplitude for the incident field, i.e.: $A_0^{(2)} = 1$V/m for the TE electric field, or 1A/m for the TM magnetic field. Also, since $\beta_n^{(2)} = k_2 \cos \theta_{2,n}$, we can simplify this to
 \begin{eqnarray}
 e_n^{(r)} &=& B_n^{(2)} \, B_n^{(2)\ast} \, \frac{     \beta_n^{(2)}       }{    \beta_0^{(2)}      }
 \end{eqnarray}
 
 \subsubsection{Transmitted Efficiencies}
-Gratings used in the soft Xray regime are always used in reflection, due to the high absorption of materials at these wavelengths.  However, since we're working on a general theory with application to all gratings, we can go through the same process for simplifying the transmitted efficiencies.  
+Gratings used in the soft x-ray regime are always used in reflection, due to the high absorption of materials at these wavelengths.  However, since we're working on a general theory with application to all gratings, we can go through the same process for simplifying the transmitted efficiencies.  
 
 Again, we define \fbox{$\eta_1 \equiv 1/(2Z_1)$} in TE polarization, and \fbox{$\eta_1 \equiv 2Z_1)$} in TM polarization, where $Z_1 = v_1 Z_0$ is the impedance of the grating substrate material.  The same integrations over the surface $Q_1$ give the ratio between the total transmitted and incident fluxes:
 \begin{eqnarray}
@@ -465,7 +467,7 @@ e_n^{(t)} =& A_n^{(1)} \, A_n^{(1)\ast} \frac{  \beta_n^{(1)}   } {  \beta_0^{(2
 \end{figure}
 
 
-\section{XRays and materials: how do they interact?} (Especially: lossy metals)
+\section{X-rays and materials: how do they interact?} (Especially: lossy metals)
           - Characterized: atomic scattering factor -> *complex refractive index*
           
           FIGURE 2e: plot of real and imaginary components... Metals at 100-1000eV.

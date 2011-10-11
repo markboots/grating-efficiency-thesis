@@ -32,24 +32,56 @@ An example of an AFM scan is given in Figure \ref{5a}, where we show both the tw
 Figure \ref{5a} gives an example of the AFM output, for the LEG grating.  We present  groove profiles for all the gratings starting in Section \ref{gratingResults}, alongside a discussion of their effective diffraction performance.
 
 \section{Diffractometer measurements of actual grating efficiency}
-
-\subsection{Beamline 6.3.2 Diffractometer}
-- describe machine
-
-TODO: get paper and cite: http://ieeexplore.ieee.org/xpl/freeabs\_all.jsp?arnumber=4994440
+To measure the actual grating efficiency, we used the reflectometer on the Calibration and Standards Beamline (6.3.2) at the Advanced Light Source.  This beamline was designed specifically for testing the reflectivity of soft x-ray optical components like mirrors, thin films, multilayer coatings, and gratings.  It consists of a bending magnet source, a VLS-PGM monochromator with a resolving power of 7000 (Figure \ref{5b-a}), a higher-order suppressor, and a two-circle reflectometer (Figure \ref{5b}).  The beamline optics can focus the monochromator light to a small spot on the sample, or focus at infinite to generate parallel light (TODO REF http://ieeexplore.ieee.org/xpl/freeabs\_all.jsp?arnumber=4994440).
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=7in]{Chapter5/5b_diffractometer/diffractometer_labelled.pdf} 
-   \caption{The diffractometer on Beamline 6.3.2 at the Advanced Light Source allows for independently setting the angle of the gratings in the beam, and setting the angle of a pinhole photodiode detector.  Upstream, filters in the beamline are used to remove contamination from the higher-order light of the monochromator. }
+   \includegraphics[scale=0.8]{Chapter5/5b_diffractometer/beamlineSchematic2.png} 
+   \caption{The Calibration and Standards beamline (6.3.2) at the Advanced Light Source consists of a bending magnet source, a VLS-PGM monochromator with three selectable gratings, a higher-order suppressor, and a two-circle reflectometer shown in more detail in Figure \ref{5b}.  The curvature of refocussing mirror M3 can be adjusted to image the exit slit onto the sample, or to focus the light at infinite.  \textbf{Image from}: (TODO REF http://cxro.lbl.gov/als632/)}
+   \label{5b-a}
+\end{figure}
+
+\subsection{Beamline 6.3.2 Reflectometer}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter5/5b_diffractometer/diffractometerLabelled2.pdf} 
+   \caption{The reflectometer on Beamline 6.3.2 at the Advanced Light Source allows for independently setting the angle of the gratings in the beam, and setting the angle of a pinhole photodiode detector.  Upstream, filters in the beamline are used to remove contamination from the higher-order light of the monochromator. }
    \label{5b}
 \end{figure}
 
-FIGURE 5b: picture of diffractometer tank with gratings positioned
+The purpose of the reflectometer endstation (Figure \ref{5b}) is to measure the intensity of light reflected off a sample -- in our case, a grating -- as a function of both incidence and reflection angle.  We can use it to determine grating efficiency by positioning the grating at the intended incidence angle relative to the incoming beam,  measuring the intensity at the angle of the outgoing order, and comparing this to the initial beam intensity.  Upstream, the monochromator and order suppressor are used to produce the monochromatic incident beam and set its energy for each measurement point.
+
+In the reflectometer mechanics, a ``two-circle goniometer'' provides independent control over the angle of the sample and the angle of the detector arm, as well as providing precise (4 um) positioning to align the sample in $x$, $y$, and $z$.  The sample holder can accommodate samples up to 200 mm in diameter, which allowed us to mount two of our gratings side-by-side at once.  The detector arm contains a photodiode, a channel electron multiplier (CEM), and a CCD camera; for our grating measurements, we used the photodiode covered by a 2 mm pinhole.
+
+\subsubsection{Diffraction Experiment Procedure}
+
+\begin{enumerate}
+\item Grating Alignment
+	\begin{enumerate}
+	\item asdf
+	\end{enumerate}
+	
+\item Scanning (and scan modes)
 
 - If you know groove density: can position to detector to correct angle as you scan energy. Otherwise, need to scan angle to find diffraction peak, and take eff. there.
 
-DATA 5c: example angle scan at energies of interest
+	
+\item Wavelength Calibration
+	
+\item Normalization
+\end{enumerate}
+
+
+\subsubsection{Sources of Error}
+\begin{enumerate}
+\item - higher order contamination
+\item - monochromator energy calibration
+\item - photodiode dark current (depends on temperature)
+\item - energy dispersion across detector pinhole (finite size of pinhole + finite resolution dE)
+\item - defocussing ?
+\item - grating rotation (saggital)
+\end{enumerate}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
