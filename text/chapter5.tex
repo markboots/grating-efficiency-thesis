@@ -12,15 +12,15 @@ We lamented back in Chapter 4 the lack of published experimental comparisons of 
 This chapter describes these results, based on atomic force microprobe (AFM) measurements of the groove profile and soft x-ray diffractometer measurements of the actual grating efficiency.  We also compare the calculated and measured grating efficiencies, and offer explanations for the differences.
 
 \section{AFM measurements of the manufactured grating profile}
-When we consider a grating like the HEG, with 2000 lines/mm and a blaze angle of 1.52$\deg$, it is clear that the physical size of the grooves is extremely small -- we're talking about little triangles 500nm wide and maybe 13nm tall.  Measuring the physical geometry is therefore actually impossible with visible light microscopes.
+When we consider a grating like the HEG, with 2000 lines/mm and a blaze angle of 1.52$\deg$, it is clear that the physical size of the grooves is extremely small -- these are little triangles about 500 nm wide and maybe 13 nm tall.  Measuring the physical geometry is therefore actually impossible with a visible light microscope.
 
-Atomic force microscopy (AFM) is an extremely high-resolution technique for measuring the topography of a surface.  It uses an extremely sharp-tipped mechanical probe mounted on a piezo-electrically-controlled cantilever to ``feel'' the surface (Figure \ref{afm}).  The tip can either be dragged across the surface (contact mode) or electronically oscillated near its resonance frequency (\emph{non-contact mode}) while measuring the change in amplitude, phase and frequency caused by the tip-sample atomic interaction forces.  In both cases, the accurate vertical position of the tip is measured with a laser beam reflected off the back of the cantilever -- using either an interferometer or a deflection meter -- and the horizontal position of the tip is scanned using piezo drivers.  The resolution of the best atomic force microscopes is sufficient to image individual atoms on a surface, although for measuring soft x-ray gratings we only need angstrom-level accuracy.
+Instead, we used atomic force microscopy (AFM), an extremely high-resolution technique for measuring the topography of a surface.  It uses an extremely sharp-tipped mechanical probe mounted on a piezo-electrically-controlled cantilever to ``feel'' the surface (Figure \ref{afm}).  The tip can either be dragged across the surface (contact mode) or electronically oscillated near its resonance frequency (\emph{non-contact mode}) while measuring the change in amplitude, phase and frequency caused by the tip-sample atomic interaction forces.  In both cases, the accurate vertical position of the tip is measured with a laser beam reflected off the back of the cantilever -- using either an interferometer or a deflection meter -- and the horizontal position of the tip is scanned using piezo drivers.  The resolution of the best atomic force microscopes is sufficient to image individual atoms on a surface, although for measuring soft x-ray gratings we only need angstrom-level accuracy.
 
 One limitation of AFM techniques is that it's easy to produce a two-dimensional map of the relative surface profile in arbitrary units, but difficult to accurately determine the absolute height.  In order to measure blaze angles of gratings, we need to measure the height difference from the bottom to the top of the grooves in absolute units, which requires calibration of the AFM using a height standard.  (Usually this is a gold mesh with an accurately-known wire size.)
 
-After receiving the gratings from the manufacturer, we first imaged them using the AFM at the University of Saskatchewan Structural Sciences Centre (SSSC).  However, we weren't able to calibrate the $z$-axis for these measurements, so with the assistance of Dr. Eric Gullikson, we requested a complete set of measurements using the AFM at the Center for X-Ray Optics at the Lawrence Berkeley National Laboratory.
+After receiving the gratings from the manufacturer, we first imaged them using the AFM at the University of Saskatchewan Structural Sciences Centre (SSSC).  However, we were not able to calibrate the $z$-axis for these measurements, so with the assistance of Dr. Eric Gullikson, we requested a complete set of measurements using the AFM at the Center for X-Ray Optics at the Lawrence Berkeley National Laboratory.
 
-An example of an AFM scan is given in Figure \ref{5a}, where we show both the two-dimensional image (top) and a cross-section of heights perpendicular to the grooves (bottom), revealing the groove profile.  Although the grooves should be ideally uniform along their entire length, most of the AFM scans show profile variation across even one image (a distance of just a few micrometers).  To determine the average profile shape and average blaze angle, we integrated the two-dimensional image across the groove direction.  Since a single AFM scan only spans a few micrometers of the grating, we also need to be careful in extrapolating the results to the entire grating; therefore, we conducted multiple scans at the centre and the corners of the grating.
+An example of an AFM scan is given in Figure \ref{5a}, where we show both the two-dimensional image (top) and a cross-section of heights perpendicular to the grooves (bottom), which reveals the groove profile.  Although the grooves should be ideally uniform along their entire length, most of the AFM scans show profile variation across even one image (a distance of just a few micrometers).  To determine the average profile shape and average blaze angle, we integrated the two-dimensional image across the groove direction.  Since a single AFM scan only spans a few micrometers of the grating, we also need to be careful in extrapolating the results to the entire grating; therefore, we conducted multiple scans at the centre and the corners of the grating.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -50,30 +50,69 @@ To measure the actual grating efficiency, we used the reflectometer on the Calib
    \label{5b}
 \end{figure}
 
-The purpose of the reflectometer endstation (Figure \ref{5b}) is to measure the intensity of light reflected off a sample -- in our case, a grating -- as a function of both incidence and reflection angle.  We can use it to determine grating efficiency by positioning the grating at the intended incidence angle relative to the incoming beam,  measuring the intensity at the angle of the outgoing order, and comparing this to the initial beam intensity.  Upstream, the monochromator and order suppressor are used to produce the monochromatic incident beam and set its energy for each measurement point.
+The purpose of the reflectometer endstation (Figure \ref{5b}) is to measure the intensity of light reflected off a sample -- in our case, a grating -- as a function of both incidence and reflection angle.  We used it to determine grating efficiency by positioning the grating at the intended incidence angle relative to the incoming beam,  measuring the intensity at the angle of the outgoing order, and comparing this to the initial beam intensity.  Upstream, the monochromator and order suppressor were used to produce the monochromatic incident beam and set its energy for each datapoint.
 
-In the reflectometer mechanics, a ``two-circle goniometer'' provides independent control over the angle of the sample and the angle of the detector arm, as well as providing precise (4 um) positioning to align the sample in $x$, $y$, and $z$.  The sample holder can accommodate samples up to 200 mm in diameter, which allowed us to mount two of our gratings side-by-side at once.  The detector arm contains a photodiode, a channel electron multiplier (CEM), and a CCD camera; for our grating measurements, we used the photodiode covered by a 2 mm pinhole.
+In the reflectometer mechanics, a ``two-circle goniometer'' provided independent control over the angle of the sample and the angle of the detector arm, as well as providing precise (4 um) positioning to align the sample in $x$, $y$, and $z$.  The sample holder could accommodate samples up to 200 mm in diameter, which allowed us to mount two of our gratings side-by-side at once.  The detector arm contained a photodiode, a channel electron multiplier (CEM), and a CCD camera; for our grating measurements, we used the photodiode covered by a 2 mm pinhole.
 
 \subsubsection{Diffraction Experiment Procedure}
 
 \begin{enumerate}
-\item Grating Alignment
+\item \textbf{Grating Alignment}\\
+To achieve the correct incidence angle and detector angle using the motion control system, the grating had to be aligned correctly.  In the $z$-direction (vertical direction, normal to the grating surface when at grazing incidence), the centre of the grating surface had to coincide with the centre of sample rotation, which was also at the height of the beam.  In the $x$-direction (parallel to the grating grooves), the beam had to land on the centre of the grating; otherwise the curvature of the grating would introduce a slope in the saggital direction, and we would end up with conical mounting.
 	\begin{enumerate}
-	\item asdf
+	\item To crudely align the grating in the $z$-direction, the grating angle was set to zero degrees, and the CCD camera was placed at a detection angle of 0 degrees.  With the sample moved fully down out of the way in $z$, this allowed the beam to shine past the grating directly onto the centre of the CCD, confirming the alignment of the beam angle. 
+	\item The grating was then moved upward in $z$ until it just started blocking the beam from reaching the CCD detector, indicating that the surface was now at (or just above) beam height.
+	\item With the grating blocking the CCD detector in this position, it was translated in $x$ until light returned, indicating that the beam had fallen off the side edge of the grating.  This was repeated in the $(-x)$-direction, providing us with the position of the opposite side; the grating was then positioned midway between these two positions, achieving alignment in $x$.
+	\item To accurately complete the alignment in $z$, the grating was angled at two degrees, and the photodiode detector was positioned to collect reflected (0th order) light at four degrees.  As long as the beam was incident on the grating, this would register a signal on the detector.  The grating was then translated upward in $z$ until the signal disappeared, indicating that the beam had fallen off the bottom edge of the grating. This $z$-position was recorded as the bottom grating edge.
+	\item The grating was then lowered in $z$ until the signal disappeared again, indicating that the beam had fallen off the top edge of the grating.  This $z$-position was recorded as the top grating edge, and then the grating was moved to the average of the two recorded $z$-positions; this process ensured that the beam was now incident on the exact centre of the grating.
 	\end{enumerate}
 	
-\item Scanning (and scan modes)
+\item \textbf{Scanning Modes}\\
+All of the efficiency plots we calculated in Chapter 5 to predict the REIXS gratings' performance show efficiency as a function of photon energy.  We wanted to show our real-world measurements in the same format, which required us to scan the beamline energy while measuring the intensity of the desired order with the photodiode.  Therefore, the detector angle had to change as we changed the beamline energy, according to the outgoing angle specified by the grating equation (Equation \ref{gratingEquation}).  
 
-- If you know groove density: can position to detector to correct angle as you scan energy. Otherwise, need to scan angle to find diffraction peak, and take eff. there.
+If we had known the groove density very accurately, we could have calculated the correct detector angle and positioned the detector simultaneously while scanning the beamline energy.  However, for brand new gratings, it would be unlikely for the groove density to end up exactly as requested from the manufacturer; in this case we would actually need to conduct a two-dimensional scan: for every photon energy datapoint, we would need to conduct an angular scan of the photodiode to find the diffraction peaks.\footnote{After completing this scan, we could use the angular position of the diffraction peaks to calculate the actual groove density, but only within a precision determined by the angular extent of the 2mm photodiode pinhole.}
 
-	
+For four of the gratings, we did have an accurate groove density, obtained from Power Spectral Density (PSD) measurements taken by the metrology lab at the Canadian Light Source.  However, for two of the gratings, the exact groove density was unknown, so we had to use the two-dimensional scan method.  Mechanically, this is actually the simplest way to operate the reflectometer, and an example of the results are shown in Figure \ref{5c}.  The procedure was as follows:
+
+	\begin{enumerate}
+	\item The monochromator was set to the desired photon energy, and the corresponding filters were selected in the higher-order absorber.
+	\item The grating was positioned at its specified incidence angle relative to the beam, as it would be during operation of the spectrometer.
+	\item The photodiode was scanned, recording intensity as a function of outgoing angle.
+	\item The grating was moved out of the way of the beam, and the photodiode was placed at zero degrees to measure the direct beam intensity; this intensity value was used to normalize the data as described in Item \ref{normalizationEff}. 
+	\item The results (Figure \ref{5c}) show the intensity of reflected light as a fraction of the incident beam intensity, as a function of detector angle.  The 0th order, 1st order, and 2nd order peaks are clearly seen; we can quickly check that the 0th order peaks show no wavelength dependency and occur at twice the incidence angle.  The grating efficiency in the $n$th order is taken from the height at the centre of the $n$th diffraction peak.
+	\end{enumerate}
+
+This procedure had to be repeated every photon energy datapoint that we wanted to test, and this could be tedious.  For the gratings where the groove density was known accurately, we used a more expedient method, which required synchronized scanning of the detector angle and beamline energy:
+
+	\begin{enumerate}
+	\item The higher-order suppressor was configured for the energy range of the scan. (This limited each individual scan to the valid energy range of a single higher-order filter; see Section \ref{higherOrderContamination})
+	\item The control software was configured to move the detector angle in tandem with the beamline energy to stay on top of the diffraction peak, using the grating equation and the specified groove density and order.
+	\item The beamline energy and the detector angle were scanned together, recording the intensity of the diffracted order at each datapoint.
+	\item The grating was then moved out of the way of the beam, and the detector angle was set to zero degrees to measure the direct beam.  The beamline energy scan was repeated to measure the incident intensity as a function of energy, to use for normalization (see Item \ref{normalizationEff}).
+	\item The normalized results (Figure \ref{5d}) directly show the intensity of diffracted light in the specified order as a fraction of the incident beam intensity, as a function of energy .  With this method, it is easier to measure a finely-spaced set of datapoints along the energy axis, to compare with our efficiency prediction plots in Chapter 5.
+	\end{enumerate}
+
 \item Wavelength Calibration
-	
 \item Normalization
+\label{normalizationEff}
 \end{enumerate}
 
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter5/5c_angleScan/5c.pdf} 
+   \caption{The simplest diffractometer experiment scans the detector angle while illuminating the grating with a constant photon energy.  The diffraction orders are visible as peaks along the outgoing angle axis (here, measured up from the grating surface at 0$\deg$).  The 0th order (reflection) peak is easily visible at 3.5$\deg$, or twice the incident angle (88.25$\deg$, or 1.75$\deg$ from grazing).  Grating: HRHEG.}
+   \label{5c}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter5/5d_energyScan/5d_LEG.pdf} 
+   \caption{When the groove density of a grating is accurately known, the detector angle can be moved in tandem with the beamline energy to keep it on the diffraction peak as the incident photon energy is scanned.  This allows faster, nearly continuous efficiency measurements as a function of photon energy.  Grating: LEG}
+   \label{5d}
+\end{figure}
 
 \subsubsection{Sources of Error}
+\label{higherOrderContamination}
 \begin{enumerate}
 \item - higher order contamination
 \item - monochromator energy calibration
@@ -81,23 +120,8 @@ In the reflectometer mechanics, a ``two-circle goniometer'' provides independent
 \item - energy dispersion across detector pinhole (finite size of pinhole + finite resolution dE)
 \item - defocussing ?
 \item - grating rotation (saggital)
+\item - only testing a spot size in the middle of the grating, 0.01mm x 0.3mm
 \end{enumerate}
-
-\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[scale=0.8]{Chapter5/5c_angleScan/5c.pdf} 
-   \caption{The simplest diffractometer experiment scans the detector angle while illuminating the grating with a constant photon energy.  The diffraction orders are visible as peaks along the outgoing angle axis (here, measured up from the grating surface at 0 $\deg$).  The 0th order (reflection) peak is easily visible at twice the incident angle.  (Grating: HRHEG)}
-   \label{5c}
-\end{figure}
-
-DATA: 5d example energy scan known groove density
-
-\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[scale=0.8]{Chapter5/5d_energyScan/5d_LEG.pdf} 
-   \caption{When the groove density of a grating is accurately known, the detector angle can be scanned in synchronization to keep it on the diffraction peak as the incident photon energy is scanned.  This allows faster, continuous efficiency measurements as a function of  photon energy.  (Grating: LEG)}
-   \label{5d}
-\end{figure}
 
 - mono: higher-order light contamination.  Uses filters in front of end station
 
