@@ -22,14 +22,14 @@ After receiving the gratings from the manufacturer, we first imaged them using t
 
 An example of an AFM scan is given in Figure \ref{5a}, where we show both the two-dimensional image (top) and a cross-section of heights perpendicular to the grooves (bottom), which reveals the groove profile.  Although the grooves should be ideally uniform along their entire length, most of the AFM scans show profile variation across even one image (a distance of just a few micrometers).  To determine the average profile shape and average blaze angle, we integrated the two-dimensional image across the groove direction.  Since a single AFM scan only spans a few micrometers of the grating, we also need to be careful in extrapolating the results to the entire grating; therefore, we conducted multiple scans at the centre and the corners of the grating.
 
+Figure \ref{5a} gives an example of the AFM output, for the LEG grating.  We present  groove profiles for all the gratings starting in Section \ref{gratingResults}, alongside a discussion of their effective diffraction performance.
+
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=6.5in]{Chapter5/5a_exampleAFM/afm_LEG_xsect1.png} 
+   \includegraphics[scale=0.25]{Chapter5/5a_exampleAFM/afm_LEG_xsect1.png} 
    \caption{The Low Energy Grating has a smooth regular profile, shown in this example image measured using an Atomic Force Microprobe (AFM).}
    \label{5a}
 \end{figure}
-
-Figure \ref{5a} gives an example of the AFM output, for the LEG grating.  We present  groove profiles for all the gratings starting in Section \ref{gratingResults}, alongside a discussion of their effective diffraction performance.
 
 \section{Diffractometer measurements of actual grating efficiency}
 To measure the actual grating efficiency, we used the reflectometer on the Calibration and Standards Beamline (6.3.2) at the Advanced Light Source.  This beamline was designed specifically for testing the reflectivity of soft x-ray optical components like mirrors, thin films, multilayer coatings, and gratings.  It consists of a bending magnet source, a VLS-PGM monochromator with a resolving power of 7000 (Figure \ref{5b-a}), a higher-order suppressor, and a two-circle reflectometer (Figure \ref{5b}).  The beamline optics can focus the monochromator light to a small spot on the sample, or focus at infinite to generate parallel light (TODO REF http://ieeexplore.ieee.org/xpl/freeabs\_all.jsp?arnumber=4994440).
@@ -37,11 +37,11 @@ To measure the actual grating efficiency, we used the reflectometer on the Calib
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter5/5b_diffractometer/beamlineSchematic2.png} 
-   \caption{The Calibration and Standards beamline (6.3.2) at the Advanced Light Source consists of a bending magnet source, a VLS-PGM monochromator with three selectable gratings, a higher-order suppressor, and a two-circle reflectometer shown in more detail in Figure \ref{5b}.  The curvature of refocussing mirror M3 can be adjusted to image the exit slit onto the sample, or to focus the light at infinite.  \textbf{Image from}: (TODO REF http://cxro.lbl.gov/als632/)}
+   \caption{The Calibration and Standards Beamline (6.3.2) at the Advanced Light Source consists of a bending magnet source, a VLS-PGM monochromator with three selectable gratings, a higher-order suppressor, and a two-circle reflectometer shown in more detail in Figure \ref{5b}.  The curvature of refocussing mirror M3 can be adjusted to image the exit slit onto the sample, or to focus the light at infinite.  \textbf{Image from}: (TODO REF http://cxro.lbl.gov/als632/)}
    \label{5b-a}
 \end{figure}
 
-\subsection{Beamline 6.3.2 Reflectometer}
+\subsection{Beamline 6.3.2 reflectometer}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -52,13 +52,20 @@ To measure the actual grating efficiency, we used the reflectometer on the Calib
 
 The purpose of the reflectometer endstation (Figure \ref{5b}) is to measure the intensity of light reflected off a sample -- in our case, a grating -- as a function of both incidence and reflection angle.  We used it to determine grating efficiency by positioning the grating at the intended incidence angle relative to the incoming beam,  measuring the intensity at the angle of the outgoing order, and comparing this to the initial beam intensity.  Upstream, the monochromator and order suppressor were used to produce the monochromatic incident beam and set its energy for each datapoint.
 
-In the reflectometer mechanics, a ``two-circle goniometer'' provided independent control over the angle of the sample and the angle of the detector arm, as well as providing precise (4 um) positioning to align the sample in $x$, $y$, and $z$.  The sample holder could accommodate samples up to 200 mm in diameter, which allowed us to mount two of our gratings side-by-side at once.  The detector arm contained a photodiode, a channel electron multiplier (CEM), and a CCD camera; for our grating measurements, we used the photodiode covered by a 2 mm pinhole.
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter5/5b_diffractometer/reflectometerCoordinates.pdf} 
+   \caption{In the coordinate convention for the reflectometer, the sample angle is measured up from grazing incidence, and the detector angle is measured up from grazing incidence.  The sample position stage ($x$, $y$, $z$) is mounted to the sample angle stage, so that the centre of rotation is always at the height of the beam.}
+   \label{reflectometerCoordinates}
+\end{figure}
 
-\subsubsection{Diffraction Experiment Procedure}
+Inside the reflectometer mechanics, a ``two-circle goniometer'' provided independent control over the angle of the sample and the angle of the detector arm, as well as providing precise (4 um) positioning to align the sample in $x$, $y$, and $z$.  (Figure \ref{reflectometerCoordinates} shows the coordinate system convention, with angles measured from grazing incidence or inline with the beam; the ``0 degree'' sample position would place the grating at perfect grazing incidence, while the ``0 degree'' position for the detector would capture the incoming beam when unobstructed.)  The sample holder could accommodate samples up to 200 mm in diameter, which allowed us to mount two of our gratings side-by-side at once.  The detector arm contained a Hamamatsu gallium arsenide photodiode, a channel electron multiplier (CEM, or ``channeltron''), and a CCD camera. For all of our grating measurements, we used the photodiode covered by a 2 mm pinhole.
 
-\begin{enumerate}
-\item \textbf{Grating Alignment}\\
-To achieve the correct incidence angle and detector angle using the motion control system, the grating had to be aligned correctly.  In the $z$-direction (vertical direction, normal to the grating surface when at grazing incidence), the centre of the grating surface had to coincide with the centre of sample rotation, which was also at the height of the beam.  In the $x$-direction (parallel to the grating grooves), the beam had to land on the centre of the grating; otherwise the curvature of the grating would introduce a slope in the saggital direction, and we would end up with conical mounting.
+\subsection{Diffraction experiment procedure}
+\label{procedure}
+Diffraction efficiency measurements are easily susceptible to a variety of systematic and unintentional errors.  The following sections describe in detail the procedure we used for measuring the grating efficiency, and how we dealt with sources of error.
+\subsubsection{Grating Alignment}
+To achieve correct incidence angles and accurate detection angles, the grating had to be aligned correctly.  In the $z$-direction (Figure \ref{reflectometerCoordinates}), the centre of the grating surface had to coincide with the centre of sample rotation, which was also aligned to the height of the beam.  In the $x$-direction (parallel to the grating grooves), the beam had to land on the centre of the grating; otherwise the curvature of the grating would introduce a slope in the saggital direction, and we would end up with conical mounting.
 	\begin{enumerate}
 	\item To crudely align the grating in the $z$-direction, the grating angle was set to zero degrees, and the CCD camera was placed at a detection angle of 0 degrees.  With the sample moved fully down out of the way in $z$, this allowed the beam to shine past the grating directly onto the centre of the CCD, confirming the alignment of the beam angle. 
 	\item The grating was then moved upward in $z$ until it just started blocking the beam from reaching the CCD detector, indicating that the surface was now at (or just above) beam height.
@@ -67,10 +74,10 @@ To achieve the correct incidence angle and detector angle using the motion contr
 	\item The grating was then lowered in $z$ until the signal disappeared again, indicating that the beam had fallen off the top edge of the grating.  This $z$-position was recorded as the top grating edge, and then the grating was moved to the average of the two recorded $z$-positions; this process ensured that the beam was now incident on the exact centre of the grating.
 	\end{enumerate}
 	
-\item \textbf{Scanning Modes}\\
-All of the efficiency plots we calculated in Chapter 5 to predict the REIXS gratings' performance show efficiency as a function of photon energy.  We wanted to show our real-world measurements in the same format, which required us to scan the beamline energy while measuring the intensity of the desired order with the photodiode.  Therefore, the detector angle had to change as we changed the beamline energy, according to the outgoing angle specified by the grating equation (Equation \ref{gratingEquation}).  
+\subsubsection{Scanning modes}
+All of the efficiency plots we calculated in Chapter 5 to predict the REIXS gratings' performance show efficiency as a function of photon energy.  We wanted to show our real-world measurements in the same format, which required us to scan the monochromator energy while measuring the intensity of the desired order with the photodiode.  Therefore, the detector angle had to change as we changed the monochromator energy, according to the outgoing angle specified by the grating equation (Equation \ref{gratingEquation}).  
 
-If we had known the groove density very accurately, we could have calculated the correct detector angle and positioned the detector simultaneously while scanning the beamline energy.  However, for brand new gratings, it would be unlikely for the groove density to end up exactly as requested from the manufacturer; in this case we would actually need to conduct a two-dimensional scan: for every photon energy datapoint, we would need to conduct an angular scan of the photodiode to find the diffraction peaks.\footnote{After completing this scan, we could use the angular position of the diffraction peaks to calculate the actual groove density, but only within a precision determined by the angular extent of the 2mm photodiode pinhole.}
+If we had known the groove density very accurately, we could have calculated the correct diffraction angle and positioned the detector simultaneously while scanning the monochromator energy.  However, for brand new gratings, it would be unlikely for the groove density to end up exactly as requested from the manufacturer; in this case we would actually need to conduct a two-dimensional scan: for every photon energy datapoint, we would need to conduct an angular scan of the photodiode to find the diffraction peaks.\footnote{After completing this scan, we could use the angular position of the diffraction peaks to calculate the actual groove density, but only within a precision determined by the angular extent of the 2mm photodiode pinhole.}
 
 For four of the gratings, we did have an accurate groove density, obtained from Power Spectral Density (PSD) measurements taken by the metrology lab at the Canadian Light Source.  However, for two of the gratings, the exact groove density was unknown, so we had to use the two-dimensional scan method.  Mechanically, this is actually the simplest way to operate the reflectometer, and an example of the results are shown in Figure \ref{5c}.  The procedure was as follows:
 
@@ -78,52 +85,113 @@ For four of the gratings, we did have an accurate groove density, obtained from 
 	\item The monochromator was set to the desired photon energy, and the corresponding filters were selected in the higher-order absorber.
 	\item The grating was positioned at its specified incidence angle relative to the beam, as it would be during operation of the spectrometer.
 	\item The photodiode was scanned, recording intensity as a function of outgoing angle.
-	\item The grating was moved out of the way of the beam, and the photodiode was placed at zero degrees to measure the direct beam intensity; this intensity value was used to normalize the data as described in Item \ref{normalizationEff}. 
+	\item The grating was moved out of the way of the beam, and the photodiode was placed at zero degrees to measure the direct beam intensity; this intensity value was used to normalize the data as described later in this section. 
 	\item The results (Figure \ref{5c}) show the intensity of reflected light as a fraction of the incident beam intensity, as a function of detector angle.  The 0th order, 1st order, and 2nd order peaks are clearly seen; we can quickly check that the 0th order peaks show no wavelength dependency and occur at twice the incidence angle.  The grating efficiency in the $n$th order is taken from the height at the centre of the $n$th diffraction peak.
 	\end{enumerate}
 
-This procedure had to be repeated every photon energy datapoint that we wanted to test, and this could be tedious.  For the gratings where the groove density was known accurately, we used a more expedient method, which required synchronized scanning of the detector angle and beamline energy:
+This procedure had to be repeated every photon energy datapoint that we wanted to test, and this could be tedious.  For the gratings where the groove density was known accurately, we used a more expedient method, which required synchronized scanning of the detector angle and monochromator energy:
 
 	\begin{enumerate}
 	\item The higher-order suppressor was configured for the energy range of the scan. (This limited each individual scan to the valid energy range of a single higher-order filter; see Section \ref{higherOrderContamination})
-	\item The control software was configured to move the detector angle in tandem with the beamline energy to stay on top of the diffraction peak, using the grating equation and the specified groove density and order.
-	\item The beamline energy and the detector angle were scanned together, recording the intensity of the diffracted order at each datapoint.
-	\item The grating was then moved out of the way of the beam, and the detector angle was set to zero degrees to measure the direct beam.  The beamline energy scan was repeated to measure the incident intensity as a function of energy, to use for normalization (see Item \ref{normalizationEff}).
-	\item The normalized results (Figure \ref{5d}) directly show the intensity of diffracted light in the specified order as a fraction of the incident beam intensity, as a function of energy .  With this method, it is easier to measure a finely-spaced set of datapoints along the energy axis, to compare with our efficiency prediction plots in Chapter 5.
+	\item The control software was configured to move the detector angle in tandem with the monochromator energy to stay on top of the diffraction peak, using the grating equation and the specified groove density and order.
+	\item The monochromator energy and the detector angle were scanned together, recording the intensity of the diffracted order at each datapoint.
+	\item The grating was then moved out of the way of the beam, and the detector angle was set to zero degrees to measure the direct beam.  The monochromator energy scan was repeated to measure the incident intensity as a function of energy, to use for normalization (see Item \ref{normalizationEff}).
+	\item The normalized results (Figure \ref{5d}) directly show the intensity of diffracted light in the specified order as a fraction of the incident beam intensity, as a function of energy.  With this method, it is easier to measure a finely-spaced set of datapoints along the energy axis, to compare with our efficiency prediction plots in Chapter 5.
 	\end{enumerate}
-
-\item Wavelength Calibration
-\item Normalization
-\label{normalizationEff}
-\end{enumerate}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter5/5c_angleScan/5c.pdf} 
-   \caption{The simplest diffractometer experiment scans the detector angle while illuminating the grating with a constant photon energy.  The diffraction orders are visible as peaks along the outgoing angle axis (here, measured up from the grating surface at 0$\deg$).  The 0th order (reflection) peak is easily visible at 3.5$\deg$, or twice the incident angle (88.25$\deg$, or 1.75$\deg$ from grazing).  Grating: HRHEG.}
+   \includegraphics[scale=0.8]{Chapter5/5c_angleScan/5c_solidColors.pdf} 
+   \caption{The simplest diffractometer experiment scans the detector angle while illuminating the grating with a constant photon energy.  The diffraction orders are visible as peaks along the outgoing angle axis (measured up from the incident beam direction at 0$\deg$).  The 0th order (reflection) peak is easily visible at 3.5$\deg$, or twice the incident angle (88.25$\deg$, or 1.75$\deg$ from grazing).  Grating: HRHEG.}
    \label{5c}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter5/5d_energyScan/5d_LEG.pdf} 
-   \caption{When the groove density of a grating is accurately known, the detector angle can be moved in tandem with the beamline energy to keep it on the diffraction peak as the incident photon energy is scanned.  This allows faster, nearly continuous efficiency measurements as a function of photon energy.  Grating: LEG}
+   \caption{When the groove density of a grating is accurately known, the detector angle can be moved in tandem with the monochromator energy to keep it on the diffraction peak as the incident photon energy is scanned.  This allows faster, nearly continuous efficiency measurements as a function of photon energy.  Grating: LEG}
    \label{5d}
 \end{figure}
 
-\subsubsection{Sources of Error}
-\label{higherOrderContamination}
-\begin{enumerate}
-\item - higher order contamination
-\item - monochromator energy calibration
-\item - photodiode dark current (depends on temperature)
-\item - energy dispersion across detector pinhole (finite size of pinhole + finite resolution dE)
-\item - defocussing ?
-\item - grating rotation (saggital)
-\item - only testing a spot size in the middle of the grating, 0.01mm x 0.3mm
-\end{enumerate}
+\subsubsection{Wavelength calibration}
+The monochromator on Beamline 6.3.2 is slitless, therefore its absolute energy calibration is affected by the position of the beam in the ALS storage ring.  To calibrate the energy axis of our data, we scanned the monochromator through the absorption edges of the higher-order suppression filters, and compared the onset of the edges with the published values for the binding energies of these elements:
+	\begin{enumerate}
+	\item For every new energy range, monochromator grating change, or storage ring refill, the sample was moved out of the way and the photodiode was placed at 0 degrees to measure the direct beam.
+	\item The monochromator was scanned upward in energy through the onset of the nearest absorption edge of a filter placed in the beam path.  (For example, prior to doing scans in the energy range from 82.6 to 112 eV, we installed the silicon filter and scanned across the Si $L3$ absorption edge, located at 99.42 eV.)  Essentially, this amounted to measuring a transmission x-ray absorption spectrum of the filter element.
+	\item The wavelength shift of the onset of the absorption edge (in monochromator wavelength units) away from its theoretical position provided a correction offset that was applied to the wavelength axis for all scans in this range.\footnote{The monochromator control software used wavelength units rather than energy units, so we conducted all of our efficiency scans in wavelength units and converted later from nm to eV, using the photon energy relationship $E=hc/\lambda$.}
+	\end{enumerate}
+	
+\subsubsection{Normalization}
+\label{normalizationEff}
+Chapter 3 defined grating efficiency as the ratio of the intensities of the $n$th order diffracted beam and the incident beam.  In our measurement procedure (above), we used the photodiode to record the intensity of the reflected beam $I_r$, and subsequently the intensity of the incident beam $I_i$.  The efficiency $e^{(r)}$ would then be
+\begin{eqnarray}
+e^{(r)} = \frac{I_r}{I_i}
+\end{eqnarray}
+Using the same detector to measure both the reflected and incident beam eliminates error due to differences in detector sensitivity.  However, because these measurements were not taken simultaneously, it is possible that the incident beam intensity would have changed in the interim; in fact, this would be virtually guaranteed due to decay of the storage ring current over time.  Because the light intensity of a bending magnet beamline is proportional to the storage ring current $J_{\mathrm{ring}}$, we can record the ring current at the time of each measurement, and use it to normalize the intensities:
+\begin{eqnarray}
+e^{(r)} = \frac{I_r / J_{\mathrm{ring},r}}{I_i / J_{\mathrm{ring},i}}
+\end{eqnarray}
 
-- mono: higher-order light contamination.  Uses filters in front of end station
+Finally, as we identify in the following section, the dominant source of error in low-light photodiode measurements is the \emph{dark current}: an intensity-independent signal from the photodiode that increases with temperature due to thermal generation of electron-hole pairs.  With the beam blocked, we measured the dark current $I_{\mathrm{dark}}$ for every gain setting of the photodiode, and subtracted this current contribution to determine the true intensity ratio:
+\begin{eqnarray}
+e^{(r)} = \frac{(I_r - I_{\mathrm{dark}}) / J_{\mathrm{ring},r}}{(I_i - I_{\mathrm{dark}})/ J_{\mathrm{ring},i}}
+\label{effNormalization}
+\end{eqnarray}
+We used Equation \ref{effNormalization} to normalize all of the efficiency datapoints.
+
+\subsection{Sources of error}
+\label{sourcesOfError}
+In the previous description of our procedure, we briefly mentioned the ``higher-order suppressor'', the dark current, and the energy calibration.  In this section, we take a look at all of the sources of error which could affect the grating efficiency measurements.
+\subsubsection{Higher-order contamination}
+\label{higherOrderContamination}
+A bending magnet source like the one on Beamline 6.3.2 produces light of all wavelengths, from infrared to hard x-rays; it is the responsibility of the monochromator to extract a single wavelength from this broadband input.  The problem with grating monochromators, however, is that the grating equation cannot distinguish between equivalent products of $n$ and $\lambda$: light with a wavelength of $x$ nanometers diffracted in 1st order will leave at the same angle as $x/2$-nanometer light diffracted in 2nd order.\footnote{In terms of energy, photons with an energy of $y$ eV will diffract in 1st order to the same angle as $2y$-eV photons in 2nd order.}  When both wavelengths are present in the monochromator input, this creates what is known as ``higher-order contamination'' in the output.  Because the monochromator gratings are likely more efficient in 1st order than any other, the intensity of $x/2$ and $x/3$-nanometer light will be comparatively lower than the desired wavelength, but it will still contaminate the mono output.  If this higher-order light were to arrive at the grating under test, it would be diffracted again, introducing additional erroneous peaks into the detector angle scan.  (Depending on the ratio of the monochromator and test-grating groove densities, these erroneous peaks could either overlap or fall beside the ``true'' diffraction peaks.)  Therefore, reflectometry experiments require a method to eliminate this higher-order light before it reaches the sample.
+
+Beamline 6.3.2 has two techniques for higher-order suppression.  The first is a variable-incidence mirror with multiple sets of coating stripes.  This design exploits the change in reflectivity as a function of incidence angle and energy that we saw (for example) in Figure \ref{reflectionVsAngle}.  Depending on the desired wavelength, the mirror coating and grazing angle are chosen to provide high reflectivity at the desired wavelength, but significantly lower reflectivity at fractionally-shorter wavelengths. (TODO find ref)
+
+The second technique is a filter wheel containing a set of transmission filters from various elements which may be inserted into the beam path prior to the endstation.  The filters are between 300 nm and 1 um thick, and are designed to remove 50\% or more of the light at energies above the filter's absorption edge.
+
+Table \ref{filterTable} shows the mirror coating, mirror angle, and filter element that we used for higher-order suppression.
+
+\begin{table}[htbp]
+   \centering
+   \caption{For higher-order suppression, Beamline 6.3.2 has a variable-incidence mirror and a set of transmission filter elements.  The mirror coating, mirror angle, and filter need to be selected based on the energy range of the scan.  (Mirror angles are measured from grazing incidence.)}
+   \begin{tabular}{@{} |c|l|c|l| @{}} % Column formatting, @{} suppresses leading/trailing space
+      \hline
+Energy Range	(eV) &	Mirror	&	Mirror Angle ($\deg$)	&	Filter	\\
+\hline\hline62 - 99	&	\multirow{4}{*}{Carbon}	&	\multirow{2}{*}{10}	&	Silicon	\\83 - 112	&			&			&	Beryllium	\\
+\cline{3-4}103 - 155	&			&	8	&	\multirow{2}{*}{Boron}	\\141 - 188	&			&	6.2	&			\\
+\hline182 - 276	&	\multirow{2}{*}{Nickel}	&	\multirow{2}{*}{8}	&	Carbon	\\275 - 454	&			&			&	[None]	\\
+\hline441 - 546	&	\multirow{4}{*}{[None]}	&		&	Chromium	\\544 - 775	&			&		&	Cobalt	\\751 - 932	&			&		&	Copper	\\898 -  1305&			&		&	Magnesium	\\
+      \hline
+   \end{tabular}
+   \label{filterTable}
+\end{table}
+
+\subsubsection{Monochromator energy calibration}
+The monochromator is approximately calibrated, so that entering a wavelength -- for example, 2.73 nm -- into the control software will align the mono grating to diffract light of approximately 2.73 nm out through the exit slit.  However, the calibration is not perfect, and it is also affected by shifts in the ALS electron beam orbit position.  Therefore, it is important to obtain an absolute wavelength calibration whenever moving to a substantially different wavelength range, changing monochromator gratings, or resuming scans after a storage ring refill.
+
+As described in the procedure, we calibrated the wavelength axis of our efficiency scans (eventually, the energy axis) by conducting transmission absorption spectroscopy on the filter elements in Table \ref{filterTable}.  The difference between the monochromator's apparent wavelength at the halfway height of the absorption edge, and the wavelength corresponding to the published binding energies for those elements, was used to generate a wavelength offset for nearby scans.  The monochromator's calibration might also suffer from errors which require linear and quadratic scaling corrections, but we assumed that a simple offset would be sufficient over the short length of these scans.
+
+\subsubsection{Photodiode dark current}
+Photodiodes can be operated in a forward-biased (\emph{photovoltaic}) mode, or in a reverse-biased (\emph{photoconductive}) mode.  When used as sensitive detectors of light intensity, the photoconductive mode is almost always used, because it offers faster response times and a linear response to light intensity over many orders of magnitude.  In this mode, a reverse bias is applied and -- in the absence of light -- only a small \emph{dark current} flows through the diode, due to the thermal generation of electron-hole pairs in the $p-n$ junction.  When light strikes the $p-n$ junction, incident photons create electron-hole pairs which are swept across the junction by the reverse bias, and create an intensity-dependent \emph{photocurrent}.  The total current through the photodiode is measured by a sensitive current amplifier.
+
+The dark current depends on temperature, and slightly on the magnitude of the reverse bias voltage.  (In our instrumentation, the reverse bias was affected by the gain setting of the current amplifier.)  To account for this, we measured the dark current at every gain setting with the beam turned off, and then subtracted this in the normalization equation (Equation \ref{effNormalization}).  The dark current measurements were conducted after the diode had been operating under reverse bias for some time (and hopefully had reached operating temperature).  Since the dark current increases with temperature, it is possible that exposure to extreme intensity would heat the detector and change the dark current contribution; however, this effect should be negligible for the low intensities observed in our experiment.
+
+\subsubsection{Saggital tilt of the grating}
+The reflectometer mechanics enable the intended rotation of the sample (grating) around the $x$-axis in FIgure \ref{reflectometerCoordinates}.  If the grating surface were tilted away from normal incidence around the $y$-axis -- either due to an offset in the grating mount, or due to the curvature of the grating combined with incorrect alignment in the $x$-direction -- light would be reflected out of the $y-z$ plane.  This would create the ``conical mount'' situation we assumed we could avoid modelling in Chapter 2, and would also cause the diffracted beam to partially or completely miss the 2 mm pinhole of the photodiode detector.  Both of these effects would reduce the observed intensity from what we would expect.
+
+The zero-order alignment test we described in the procedure confirmed that with the grating positioned at 2 degrees, a substantial current was observed on the photodiode at 4 degrees.  However, we cannot confirm that the alignment was flawless, and it is possible that the observed efficiencies are lower than they should be.
+
+\subsubsection{Limited beam spot size}
+TODO check if beam focussed or at infinite for grating measurements. 0.01mm is only 6 grooves on the LEG. Really?
+
+The Beamline 6.3.2 optics focus the beam to a spot size of 0.010 mm x 0.3 mm on the grating.  Because the grating needs to be aligned on the centre of rotation, there can only be one position for the beam on the grating, and so we could only test the efficiency at this point.  If there is variation in the groove profile across the grating, the illuminated part of the grating may not be representative of the average efficiency.  
+
+It is impossible to overcome this limitation; even if it were possible to fully illuminate the grating, the curvature would not be correct to focus the diffracted beam to the same size on the detector as the incident beam would be.  Therefore, a small beam size is a necessary compromise to minimize the focussing effect of the grating.
+
+\subsubsection{energy dispersion across detector pinhole (finite size of pinhole + finite resolution dE)}
+\subsubsection{defocussing ?}
+
 
 \section{Real-world grating effects}
 \label{realWorldEffects}
