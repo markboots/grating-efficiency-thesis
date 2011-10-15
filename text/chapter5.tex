@@ -150,7 +150,7 @@ Beamline 6.3.2 has two techniques for higher-order suppression.  The first is a 
 
 The second technique is a filter wheel containing a set of transmission filters from various elements which may be inserted into the beam path prior to the endstation.  The filters are between 300 nm and 1 um thick, and are designed to remove 50\% or more of the light at energies above the filter's absorption edge.
 
-Table \ref{filterTable} shows the mirror coating, mirror angle, and filter element that we used for higher-order suppression.
+Table \ref{filterTable} shows the mirror coating, mirror angle, and filter element that we used for higher-order suppression.  The energy ranges of each mirror/filter combination (shown in the left column) restricted the maximum extent of each efficiency scan; for the efficiency results shown in Section \ref{gratingResults}, we have combined multiple scans together.
 
 \begin{table}[htbp]
    \centering
@@ -180,30 +180,74 @@ The dark current depends on temperature, and slightly on the magnitude of the re
 \subsubsection{Saggital tilt of the grating}
 The reflectometer mechanics enable the intended rotation of the sample (grating) around the $x$-axis in FIgure \ref{reflectometerCoordinates}.  If the grating surface were tilted away from normal incidence around the $y$-axis -- either due to an offset in the grating mount, or due to the curvature of the grating combined with incorrect alignment in the $x$-direction -- light would be reflected out of the $y-z$ plane.  This would create the ``conical mount'' situation we assumed we could avoid modelling in Chapter 2, and would also cause the diffracted beam to partially or completely miss the 2 mm pinhole of the photodiode detector.  Both of these effects would reduce the observed intensity from what we would expect.
 
-The zero-order alignment test we described in the procedure confirmed that with the grating positioned at 2 degrees, a substantial current was observed on the photodiode at 4 degrees.  However, we cannot confirm that the alignment was flawless, and it is possible that the observed efficiencies are lower than they should be.
+The zero-order alignment test we described in the procedure confirmed that with the grating positioned at 2 degrees, a substantial current was observed on the photodiode at 4 degrees.  However, we cannot confirm that the alignment was flawless, and it is possible that the measured efficiencies are lower than they would be under perfect alignment.
 
 \subsubsection{Limited beam spot size}
 TODO check if beam focussed or at infinite for grating measurements. 0.01mm is only 6 grooves on the LEG. Really?
 
-The Beamline 6.3.2 optics focus the beam to a spot size of 0.010 mm x 0.3 mm on the grating.  Because the grating needs to be aligned on the centre of rotation, there can only be one position for the beam on the grating, and so we could only test the efficiency at this point.  If there is variation in the groove profile across the grating, the illuminated part of the grating may not be representative of the average efficiency.  
+The Beamline 6.3.2 optics focus the beam to a spot size of 0.010 mm x 0.3 mm on the grating.  Because the grating needs to be aligned on the centre of rotation, there can only be one position for the beam on the grating, and so we could only test the efficiency at this point.  If there is variation in the groove profile across the grating, the illuminated part of the grating may not actually be representative of the average efficiency.  
 
 It is impossible to overcome this limitation; even if it were possible to fully illuminate the grating, the curvature would not be correct to focus the diffracted beam to the same size on the detector as the incident beam would be.  Therefore, a small beam size is a necessary compromise to minimize the focussing effect of the grating.
 
-\subsubsection{energy dispersion across detector pinhole (finite size of pinhole + finite resolution dE)}
-\subsubsection{defocussing ?}
-
+\subsubsection{Energy dispersion across detector pinhole (finite size of pinhole + finite resolution dE)}
+TODO need to discuss with Eric Gullikson
+\subsubsection{Defocussing}
+TODO need to discuss with Eric Gullikson
 
 \section{Real-world grating effects}
 \label{realWorldEffects}
-\subsection{Stray Radiant Energy}
-http://gratings.newport.com/information/technotes/technote9.asp
+The comparisons between the predicted and measured efficiencies for each grating are discussed in Section \ref{gratingResults}, and impatient readers might have already beat us there.  However, before looking at the results, it might be useful to consider some of the factors which could cause a discrepancy between the two.  If there are differences between the predicted and measured efficiency, this would imply one -- or more -- of three distinct possibilities:
+\begin{enumerate}
+\item That the measurement procedure, due to experimental error, did not measure the actual grating efficiency.
+\item That the theory and calculation method do not correctly describe the gratings they attempted to model,\\
+or,
+\item That the real-world gratings, as produced, are different from the ones we modelled.
+\end{enumerate}
+We dealt with the first possibility in the previous section on sources of error.  Before accepting the second possibility, we take a look at some of the ways manufactured gratings differ from ideal ones.
+
+\subsection{Stray radiant energy}
+For a perfectly periodic surface, Chapter 3 showed that all of the light propagating away from a grating leaves as plane waves in discrete orders. Regardless of the groove shape, no light leaves except at the angles given by the grating equation (Equation \ref{gratingEquation}).  In real-world gratings, deviations from perfect periodicity lead to \emph{stray radiant energy} (SRE), which is a general term for all radiation that leaves at other angles.  (TODO REF http://gratings.newport.com/information/technotes/technote9.asp) Due to conservation of energy, the more SRE that exists, the less energy there is in the desired orders, and the lower the grating efficiency.  SRE also affects the resolution of a grating instrument, by increasing the background noise level and contaminating the outgoing angles with light of the wrong wavelength.
+
+Stray radiant energy can be caused by microroughness of the grating surface, variation in the height or spacing from groove to groove, or other imperfections such as dust and scratches.
 \subsubsection{Surface roughness}
- (scattering: uniform decrease in efficiency)
-  Other way to think about: periodic structures with \emph{many} frequency components. Diffract all over the place.
-  
-  TODO: Find reference and descriptive math...
-  
-          - Not modelled.  Accept a uniform constant reduction (usually about ~50\%) lower due to scattering.
+The grating model in Chapter 3 assumed a perfectly smooth surface, given by the periodic profile $y=g(x)$ (Figure \ref{3a}).  Unfortunately, both ruling and coating processes invariably create a certain amount of microroughness, shown exaggerated in Figure \ref{5e}.  When the surface is rough on the scale of the incident wavelength, it causes diffuse scattering, which is analogous to the diffuse (or non-specular) reflection that would occur off any rough surface.
+
+Although it might not be clear from Figure \ref{5e} -- which is two-dimensional -- diffuse scattering need not be constrained to the plane of incidence. The roughness creates slope variation in both $x$ and $z$, so scattered light could end up anywhere in the hemisphere above the grating.  However, in-plane scattering is stronger than out-of-plane scattering by a factor of $1/\cos\theta$ (where $\theta$ is the incidence angle from normal). Therefore, at grazing incidence, the in-plane scattering is dominant. (TODO REF http://www2.astro.psu.edu/~niel/astro485/xrayschool/schwartz-xray\_optics.pdf)
+
+To correct the predicted grating efficiencies for scattering, we need to understand two things:
+\begin{enumerate}
+\item The amount of energy lost to scattering, as a function of roughness, wavelength, incidence angle, and diffraction order.
+\item The angular distribution of the scattered intensity. Does it affect all diffraction orders the same way?
+\end{enumerate}
+
+Given the randomness of the surface structure, we need statistical methods to answer these questions.  Statistically, the surface roughness is characterized by $\sigma$, the root mean square (RMS) variation in height from the nominal plane, and by $P(z)$, the probability distribution function for the height.
+
+Even for the simpler (non-grating) case of roughness on flat surfaces, a substantial amount of research has only succeeded in producing a sea of approximate models. (TODO REF Elfouhaily and Guerin) categorized 260 references -- 177 since 1980 -- into 30 different methods, before concluding that "there does not seem to be a universal method that is to be preferred systematically. All methods present a compromise between versatility, simplicity, numerical efficiency, accuracy and robustness, with a different weighting in these various fields. [...] No approximate model has fulfilled all listed criteria."
+
+Even though they only deal with nominally flat surfaces, all of these methods are based on the assumption that a random rough surface can be decomposed into a superposition of sinusoidal gratings\footnote{Obviously, of very high groove density!}, and that scattering can be explained as a diffraction effect from the phase changes created by the ``microtopography'' of the surface.  (TODO REF Modified Beckmann-Kirchhoff scattering model for rough surfaces with large incident and scattering angles
+Opt. Eng. 46, 078002 (Jul 02, 2007); doi:10.1117/1.2752180)  There are two fundamental approaches: the Rayleigh-Rice theory (TODO REF), which is a vector perturbation method for periodic surfaces, or the Beckmann-Kirchoff theory, which uses a scalar wave equation and applies the Kirchoff diffraction formula (TODO REF P. Beckmann and A. Spizzichino, The Scattering of Electromagnetic Waves from Rough Surfaces; Pergamon, New York, 1963, Chaps. 4 and 5.).  Both contain approximations; the Rayleigh-Rice methods are only applicable to what are known as ``smooth'' surfaces ($\sigma << \lambda$), and the Beckmann-Kirchoff methods contain a small-angle assumption that restricts them to near-normal incidence and scattering.
+
+Since approximated grating theories are already being used to describe diffuse scattering from rough \emph{flat} surfaces, applying these methods to \emph{actual} gratings is even more difficult; this amounts to creating a superposition of (very high density) gratings, \emph{on the surface of a grating}(!) TODO REF (Angular distribution of light scattered from a sinusoidal grating 1 September 2000 Vol. 39, No. 25 APPLIED OPTICS) looks at this scenario for rough sinusoidal gratings illuminated by coherent visible light, and confirms that roughness increases the background light level. (TODO wish we could say more...)  TODO L. Nevot, P. Croce, Rev. Phys. Appl. 15, 761 (1980). 10.1051/rphysap:01980001503076100  Says What?
+
+For gratings, (TODO REF http://www.gratinglab.com/information/handbook/chapter10.asp\#10.1.1) reports that within the plane, the intensity of diffuse scattering is stronger at angles near the diffraction orders than it is between orders.  (TODO REF M. R. Sharpe and D. Irish, "Stray light in diffraction grating monochromators," Opt. Acta 25, 861-893 (1978)) analyzes scattering specifically from gratings, and indicates that the intensity of scattering increases as the fourth power of the energy.
+ 
+ Because of the difficulty in analyzing gratings structured on top of gratings, we apply some of the simplified results for rough mirrors to come up with a reasonable correction for our grating efficiencies.  The X-ray Data Booklet (TODO REF) gives a correction factor for the reflectivity $R'$ of a real mirror, where $R$ would be the reflectivity of an ideally smooth surface:
+\begin{eqnarray}
+R' &=& R \exp\left(  - \left(\frac{4\pi\sigma}{\lambda}\right)^2 \mathbf{Re}\left[ \sin \theta \sqrt{n^2 - \sin^2 \theta}  \right]    \right)
+\end{eqnarray}
+where $\sigma$ is the RMS value of the surface roughness, $n$ is the complex refractive index, and $\theta$ is the incidence angle from normal.
+
+TODO argument on conservation of energy, and maintaining ratio of efficiencies?
+
+By analogy from reflectivity (``fraction of incident light reflected'') to grating efficiency (``fraction of incident light reflected in order $n$''), we apply the same factor to determine the form of the roughness correction to apply to the grating efficiencies:
+\begin{eqnarray}
+e_n' &=& e_n \exp\left(  - \left(\frac{4\pi\sigma}{\lambda}\right)^2 \mathbf{Re}\left[ \sin \theta \sqrt{n^2 - \sin^2 \theta}  \right]    \right)
+\end{eqnarray}
+Since we don't have measurements of each grating's RMS roughness, we used $\sigma$ as a free parameter to attempt to fit the theoretical efficiencies to the measured efficiencies; the results are shown in Section \ref{gratingResults}.
+
+Our AFM measurements show that re-coating the grating after ruling adds to the roughness, due to the granular nature of the evaporated coating.  Due to extended manufacturing experience, gold coatings are usually the smoothest to apply -- as was the case for our LEG.  The additional platinum and nickel coatings on the remaining gratings resulted in a much rougher surface.
+
+Finally: TODO add note on ``geometric case'' when $\sigma >> \lambda$.  Microfacets... handle like BESSY: adds statistically random deviation to surface normal for each reflected ray, based on surface roughness. Howe exactly the angular probability distribution is computed, I don't know (whether this depends on energy).
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -211,11 +255,12 @@ http://gratings.newport.com/information/technotes/technote9.asp
    \caption{Roughness of the grating surface scatters stray light outside the diffraction orders}
    \label{5e}
 \end{figure}
-       
 
-\subsubsection{Dust, scratches, pinholes act as scattering centers}
-\subsubsection{Irregularities in the groove position create ghost peaks}
-\subsubsection{Irregularities along the groove direct light elsewhere}
+\subsubsection{Dust, scratches, and pinholes}
+
+\subsubsection{Irregularities in the groove position: ghost peaks}
+\subsubsection{Irregularities along the groove: out-of-plane reflection}
+
 reflect off axis... reduce periodicity... disrupt the perfect grating model. May be directed or diffuse.
 \subsection{Blaze angle errors shift the efficiency peak}
 \subsection{Coating oxidation changes the reflectivity spectrum}
