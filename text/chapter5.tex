@@ -158,10 +158,20 @@ Table \ref{filterTable} shows the mirror coating, mirror angle, and filter eleme
    \begin{tabular}{@{} |c|l|c|l| @{}} % Column formatting, @{} suppresses leading/trailing space
       \hline
 Energy Range	(eV) &	Mirror	&	Mirror Angle ($\deg$)	&	Filter	\\
-\hline\hline62 - 99	&	\multirow{4}{*}{Carbon}	&	\multirow{2}{*}{10}	&	Silicon	\\83 - 112	&			&			&	Beryllium	\\
-\cline{3-4}103 - 155	&			&	8	&	\multirow{2}{*}{Boron}	\\141 - 188	&			&	6.2	&			\\
-\hline182 - 276	&	\multirow{2}{*}{Nickel}	&	\multirow{2}{*}{8}	&	Carbon	\\275 - 454	&			&			&	[None]	\\
-\hline441 - 546	&	\multirow{4}{*}{[None]}	&		&	Chromium	\\544 - 775	&			&		&	Cobalt	\\751 - 932	&			&		&	Copper	\\898 -  1305&			&		&	Magnesium	\\
+\hline\hline
+62 - 99	&	\multirow{4}{*}{Carbon}	&	\multirow{2}{*}{10}	&	Silicon	\\
+83 - 112	&			&			&	Beryllium	\\
+\cline{3-4}
+103 - 155	&			&	8	&	\multirow{2}{*}{Boron}	\\
+141 - 188	&			&	6.2	&			\\
+\hline
+182 - 276	&	\multirow{2}{*}{Nickel}	&	\multirow{2}{*}{8}	&	Carbon	\\
+275 - 454	&			&			&	[None]	\\
+\hline
+441 - 546	&	\multirow{4}{*}{[None]}	&		&	Chromium	\\
+544 - 775	&			&		&	Cobalt	\\
+751 - 932	&			&		&	Copper	\\
+898 -  1305&			&		&	Magnesium	\\
       \hline
    \end{tabular}
    \label{filterTable}
@@ -210,7 +220,14 @@ For a perfectly periodic surface, Chapter 3 showed that all of the light propaga
 
 Stray radiant energy can be caused by microroughness of the grating surface, variation in the height or spacing from groove to groove, and other imperfections such as dust and scratches.
 \subsubsection{Surface roughness}
-The grating model in Chapter 3 assumed a perfectly smooth surface, given by the periodic profile $y=g(x)$ in Figure \ref{3a}.  Unfortunately, both ruling and coating processes invariably leave a certain amount of microroughness, shown exaggerated in Figure \ref{5e}.  When the surface is rough on the scale of the incident wavelength, it causes diffuse scattering, which is analogous to the diffuse (or non-specular) reflection that would occur off any rough surface.  Because this phenomenon affects the entire  area of the grating, diffuse scattering from surface roughness is typically responsible for most of the reduction in real-world grating efficiency (compared to theoretical calculations).
+The grating model in Chapter 3 assumed a perfectly smooth surface, given by the periodic profile $y=g(x)$ in Figure \ref{2a}.  Unfortunately, both ruling and coating processes invariably leave a certain amount of microroughness, shown exaggerated in Figure \ref{5e}.  When the surface is rough on the scale of the incident wavelength, it causes diffuse scattering, which is analogous to the diffuse (or non-specular) reflection that would occur off any rough surface.  Because this phenomenon affects the entire  area of the grating, diffuse scattering from surface roughness is typically responsible for most of the reduction in real-world grating efficiency (compared to theoretical calculations).
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter5/5e_surfaceRoughness/5e.pdf} 
+   \caption{Roughness of the grating surface scatters stray light outside the diffraction orders. Typically, surface roughness is responsible for most of the reduction in real-world grating efficiency, compared to theoretical calculations.}
+   \label{5e}
+\end{figure}
  
 Although it might not be clear from Figure \ref{5e} -- which is two-dimensional -- diffuse scattering need not be constrained to the plane of incidence. The roughness creates slope variation in both $x$ and $z$, so scattered light could end up anywhere in the hemisphere above the grating.  However, in-plane scattering is stronger than out-of-plane scattering by a factor of $1/\cos\theta$ (where $\theta$ is the incidence angle from normal). Therefore, at grazing incidence, the in-plane scattering is dominant. (TODO REF http://www2.astro.psu.edu/~niel/astro485/xrayschool/schwartz-xray\_optics.pdf)
 
@@ -223,10 +240,10 @@ To correct the predicted grating efficiencies for scattering, we need to underst
 Given the randomness of the surface structure, we need statistical methods to answer these questions.  Statistically, the surface roughness is characterized by $\sigma$, the root mean square (RMS) variation in height from the nominal plane, and by the power spectral density (PSD) function, which describes how the height variation is distributed in frequency.
 %\footnote{Because the surface height is ``stationary random process'' -- i.e.: the mean and variance do not change over position -- the PSD is the Fourier transform of the autocorrelation function of the height $h(x)$.}
 
-Even for the simpler (non-grating) case of roughness on flat surfaces, a substantial amount of research has only succeeded in producing a sea of approximate models. (TODO REF Elfouhaily and Guerin) categorized 260 references -- 177 since 1980 -- into 30 different methods, before concluding that ``there does not seem to be a universal method that is to be preferred systematically. All methods present a compromise between versatility, simplicity, numerical efficiency, accuracy and robustness, with a different weighting in these various fields. [...] No approximate model has fulfilled all listed criteria''
+Even for the simpler (non-grating) case of roughness on flat surfaces, a substantial amount of research has only succeeded in producing a murky swamp of approximate models. (TODO REF Elfouhaily and Guerin) categorized 260 references -- 177 since 1980 -- into 30 different methods, before concluding that ``there does not seem to be a universal method that is to be preferred systematically. All methods present a compromise between versatility, simplicity, numerical efficiency, accuracy and robustness, with a different weighting in these various fields. [...] No approximate model has fulfilled all listed criteria''
 
 Even though they only deal with nominally flat surfaces, all of these methods are based on the assumption that a random rough surface can be decomposed into a superposition of sinusoidal gratings\footnote{Obviously, in our case, of much higher groove density than the actual gratings!}, and that scattering can be explained as a diffraction effect from the phase changes created by the ``microtopography'' of the surface.  (TODO REF Modified Beckmann-Kirchhoff scattering model for rough surfaces with large incident and scattering angles
-Opt. Eng. 46, 078002 (Jul 02, 2007); doi:10.1117/1.2752180)  There are two fundamental approaches: the Rayleigh-Rice theory (TODO REF Lord Rayleigh, “On the Dynamical Theory of Gratings”, Proc. Roy. Soc. A79, 399-416 (1907)., S. O. Rice, “Reflection of Electromagnetic Waves from Slightly Rough Surfaces”,Commun. Pure Appl. Math., vol. 4, 1951, p.351., ), which is a perturbation approximation for solving the electromagnetic vector wave equation near periodic interfaces, and the Beckmann-Kirchoff theory, which uses a scalar wave equation and applies the Kirchoff diffraction formula (TODO REF P. Beckmann and A. Spizzichino, The Scattering of Electromagnetic Waves from Rough Surfaces; Pergamon, New York, 1963, Chaps. 4 and 5.).  Both contain approximations; the Rayleigh-Rice methods are only applicable to ``smooth'' surfaces, where the perturbation from a flat surface is small -- i.e., where the RMS roughness is small compared to the wavelength ($\sigma \ll \lambda$).  The Beckmann-Kirchoff methods are appropriate for ``rougher'' surfaces up to $(\sigma \cos \theta \leq \lambda)$, but they contain a small-angle assumption that restricts them to near-normal incidence and scattering angles (TODO REF modified).  (In the extreme case where the roughness is much larger than the wavelength, it becomes more appropriate to handle it using a geometric optics approach, rather than a diffraction approach.  In this situation, we can imagine a surface made up of many ``microfacets'' all reflecting light at different angles; the BESSY raytracing software suite actually uses this approach to model roughness by randomly varying the direction of a mirror's normal vector (slightly) for each reflecting ray, according to the statistical description of the surface (TODO REF bessy RAY paper.)
+Opt. Eng. 46, 078002 (Jul 02, 2007); doi:10.1117/1.2752180)  There are two fundamental approaches: the Rayleigh-Rice theory (TODO REF Lord Rayleigh, “On the Dynamical Theory of Gratings”, Proc. Roy. Soc. A79, 399-416 (1907)., S. O. Rice, “Reflection of Electromagnetic Waves from Slightly Rough Surfaces”,Commun. Pure Appl. Math., vol. 4, 1951, p.351., ), which is a perturbation approximation for solving the electromagnetic vector wave equation near periodic interfaces, and the Beckmann-Kirchoff theory, which uses a scalar wave equation and applies the Kirchoff diffraction formula (TODO REF P. Beckmann and A. Spizzichino, The Scattering of Electromagnetic Waves from Rough Surfaces; Pergamon, New York, 1963, Chaps. 4 and 5.).  Both contain approximations; the Rayleigh-Rice methods are only applicable to ``smooth'' surfaces, where the perturbation from a flat surface is small -- i.e., where the RMS roughness is small compared to the wavelength ($\sigma \ll \lambda$).  The Beckmann-Kirchoff methods are appropriate for ``rougher'' surfaces up to $(\sigma \cos \theta \leq \lambda)$, but they contain a small-angle approximation that restricts them to near-normal incidence and scattering angles (TODO REF modified).  (In the extreme case where the roughness is much larger than the wavelength, it becomes more appropriate to handle it using a geometric optics approach, rather than a diffraction approach.  In this situation, we can imagine a surface made up of many ``microfacets'' all reflecting light at different angles; the BESSY raytracing software suite actually uses this approach to model roughness by randomly varying the direction of a mirror's normal vector (slightly) for each reflecting ray, according to the statistical description of the surface (TODO REF bessy RAY paper.)
 
 Since grating theories are already being used to describe diffuse scattering from rough \emph{flat} surfaces, applying these methods to \emph{actual} gratings is even more difficult; this amounts to creating a superposition of (very high density) gratings, \emph{on the surface of a grating}(!)
  
@@ -249,18 +266,11 @@ e_n' &=& e_n \exp\left(  - \left(\frac{4\pi\sigma}{\lambda}\right)^2 \sin \theta
 \end{eqnarray}
 Since we do not have measurements of each grating's RMS roughness, we used $\sigma$ as a free parameter to attempt to fit the theoretical efficiencies to the measured efficiencies; the results are shown in Section \ref{gratingResults}.
 
-Roughness on gratings may have different effects than roughness on flat mirrors.  (TODO REF http://www.gratinglab.com/information/handbook/chapter10.asp\#10.1.1) reports that the diffuse scattering is not isotropic; within the plane of incidence, the intensity is stronger at angles near the diffraction orders than it is between orders.  (TODO REF M. R. Sharpe and D. Irish, "Stray light in diffraction grating monochromators," Opt. Acta 25, 861-893 (1978)) analyzes scattering specifically from gratings, and indicates that the intensity of scattering increases as the fourth power of the energy.  (TODO REF Angular distribution of light scattered from a sinusoidal grating 1 September 2000 Vol. 39, No. 25 APPLIED OPTICS) looks at sinusoidal gratings illuminated by coherent visible light, and confirms that surface roughness increases the background light level. (TODO REF L. Nevot, P. Croce, Rev. Phys. Appl. 15, 761 (1980). 10.1051/rphysap:01980001503076100) provides another comprehensive study of rough gratings, and comes to a result consistent with Sinha et. al. (Equation \ref{roughnessCorrection}), although through a different method.
+Although we do use this mirror expression to correct our predicted efficiencies, it is important to note that roughness on gratings may actually cause different effects than roughness on flat mirrors.  (TODO REF http://www.gratinglab.com/information/handbook/chapter10.asp\#10.1.1) reports that the diffuse scattering is not isotropic; within the plane of incidence, the intensity is stronger at angles near the diffraction orders than it is between orders.  (TODO REF M. R. Sharpe and D. Irish, "Stray light in diffraction grating monochromators," Opt. Acta 25, 861-893 (1978)) analyzes scattering specifically from gratings, and indicates that the intensity of scattering increases as the fourth power of the energy.  (TODO REF Angular distribution of light scattered from a sinusoidal grating 1 September 2000 Vol. 39, No. 25 APPLIED OPTICS) looks at sinusoidal gratings illuminated by coherent visible light, and confirms that surface roughness increases the background light level. (TODO REF L. Nevot, P. Croce, Rev. Phys. Appl. 15, 761 (1980). 10.1051/rphysap:01980001503076100) provides another comprehensive study of rough gratings, and comes to a result consistent with Sinha et. al. (Equation \ref{roughnessCorrection}), although through a different method.
 
 Figure TODO shows the reduction in efficiency caused by different amounts of roughness, over the range of soft x-ray energies.  These were calculated at grazing incidence using the Sinha approach, so we are limited to RMS roughnesses much smaller than the wavelength.  The Beckmann (Equation \ref{beckmannFactor}) and Sinha (Equation \ref{roughnessCorrection}) factors are compared in Figure TODO, showing the limits of each one's applicability.
 
-Figure TODO reinforces how important it is to keep the roughness low during manufacturing.  Our AFM measurements show that re-coating the grating after ruling adds to the roughness, due to the granular nature of the evaporated coating.  Due to extensive manufacturing experience, gold coatings are usually the smoothest to apply -- as was the case for our LEG.  The subsequent platinum and nickel overcoatings on the remaining gratings resulted in a much rougher surface.
-
-\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[scale=0.8]{Chapter5/5e_surfaceRoughness/5e.pdf} 
-   \caption{Roughness of the grating surface scatters stray light outside the diffraction orders}
-   \label{5e}
-\end{figure}
+Figure TODO reinforces how important it is to keep the roughness low during manufacturing.  Our AFM measurements suggest that re-coating the grating after ruling adds to the roughness, due to the granular nature of the evaporated coating.  Due to extensive manufacturing experience, gold coatings are usually the smoothest to apply -- as was the case for our LEG.  The subsequent platinum and nickel overcoatings on the remaining gratings resulted in a much rougher surface.
 
 \subsubsection{Dust, scratches, and pinholes}
 Dust, scratches, pinholes, and any other out-of-place bumps on the surface also contribute to the stray radiant energy.  All of these features act as scattering centres and create diffuse light; we can easily confirm this for visible wavelengths (using our biological photodetectors) when looking at a dirty grating under bright light.  Given the challenges of modelling statistically well-behaved surface roughness, we do not even attempt to model these purely random defects, beyond recognizing that they will reduce the overall grating efficiency and contribute to stray light.
@@ -273,11 +283,17 @@ We assumed in Chapter 3 that the grating was invariant (i.e., did not change) al
 
 Elasticity changes will also cause random (non-periodic) variation in the groove depth from groove-to-groove.  This has been shown to create a continuous distribution of scattered light which increases as a function of $(1/\lambda^3)$ (TODO REF M. R. Sharpe and D. Irish, "Stray light in diffraction grating monochromators," Opt. Acta 25, 861-893 (1978).)
 
-\subsection{Manufacturing errors the can be modelled}
-All of the previous real-world grating flaws -- surface roughness, dust and scratches, periodic and non-periodic groove irregularities -- represent deviation from the theoretical profile we modelled in Chapter 3, in ways that cannot be incorporated into the model without breaking our initial assumptions (Section \ref{s_assumptions}).  It is also possible for manufacturing errors to create deviation that we \emph{can} actually model; differences between the requested and manufactured profile shape are the best example of this.
-\subsubsection{Profile errors: blaze angle errors shift the efficiency peak}
+\subsection{Manufacturing errors the \emph{can} be modelled}
+All of the previous real-world grating flaws -- surface roughness, dust and scratches, periodic and non-periodic groove irregularities -- represent deviation from the theoretical profile we modelled in Chapter 3, in ways that cannot be incorporated into the model without breaking our initial assumptions (Section \ref{s_assumptions}).  It is also possible for manufacturing errors to create deviation that we \emph{can} actually model; the best example of this would be differences between the requested and manufactured groove geometry.
+\subsubsection{Profile errors: Blaze angle errors shift the efficiency peak}
+Figure \ref{3i-2} showed how small (0.1$\deg$) changes in the blaze angle can significantly shift the efficiency peak.  For mechanically-ruled gratings, the accuracy of the blaze angle depends on the persistence and perfectionism of the ruling engine operator, who must adjust the diamond tip angle during setup through tedious trial-and-error.  If, after manufacturing, the real blaze angle turns out to be different than what the customer specified -- always true to some degree -- we can measure the true blaze angle using a calibrated AFM, and re-calculate the theoretical efficiencies using a better approximation of the profile.
+
+Alternatively, if calibrated AFM measurements are not available, we have determined that the shape of the measured efficiency curves and the ratio between 1st and 2nd order efficiency can provide a strong indication of the real blaze angle.  (For example, by choosing the best-fit blaze angle to match the measured and calculated efficiency curves, we predicted a blaze angle of 2.0$\deg$ for the MEG grating, before determining from AFM measurements that the real blaze angle was 2.04$\deg$.)  In Section \ref{gratingResults}, we discuss the blaze angle agreement for each grating.
+
+The same techniques can be applied to profiles other than blazed gratings; the first method works as long as the groove geometry (Figure \ref{3c-profile}) can be measured.  For profiles like trapezoidal gratings that have three -- instead of just one -- adjustable parameters, it becomes more involved to try to estimate the best-fit geometry, but this can be accomplished using multidimensional minimization algorithms.
 
 \subsubsection{Coating oxidation changes the reflectivity spectrum}
+
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
