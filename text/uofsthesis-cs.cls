@@ -508,7 +508,7 @@ or \protect\degree{\protect\MSc}}
 \ifx\proposal\undefined
         \relax
 \else
-        Thesis Proposal:\\
+        Comprehensive Exam:\\
 \fi
 \textsc{\@title}\\
 \strut\\
