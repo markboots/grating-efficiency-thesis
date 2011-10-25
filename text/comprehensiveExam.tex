@@ -75,7 +75,11 @@
 
 % ABSTRACT
 \abstract{
-%TODO
+For almost two hundred years, diffraction gratings have been -- and still are -- at the heart of many instruments responsible for breakthroughs in scientific understanding.  Today, diffraction gratings are used in astronomy telescopes, chemistry spectrographs, spectrophotometers for life science, and in optics for material science experiments, over a range of wavelengths from the far infrared to soft x-rays.  The sensitivity and speed of these instruments depends on the efficiency of gratings, i.e., the intensity of useful diffracted light compared to the incident light.  In some cases -- such as Peter Zeeman's famous discovery of energy level splitting in a magnetic field -- improvements in grating efficiency make a previously-undetectable effect detectable.  
+
+To support these applications, one component of my graduate work has focussed on the diffraction efficiency of gratings.  While this research happens to be applicable to a wide range of scenarios -- both theoretical and applied, I have been working toward a very tangible application: designing and optimizing an innovative soft x-ray emission spectrometer for the REIXS beamline at the Canadian Light Source.  Over the course of this project, I have created software tools to automate efficiency calculations, used these tools to understand efficiency trends, and applied them to the optical design of the spectrometer.  I have also measured the efficiency of real-world gratings and extensively compared these measurements with calculations.
+
+In this comprehensive report, I present the motivation for this project and some background on both gratings and soft x-ray spectroscopy. I also provide a history of developments in grating theory, explain how we selected the theoretical method I used for modelling grating efficiencies, and introduce this theory.  (For the sake of length constraints, I set up the foundation of the problem, but omit some mathematical details of the algorithms for now.)  In the last chapter, I briefly cover the work that I have already written into my thesis draft, and outline future work to be done.
 }
 
 % THESIS ACKNOWLEDGEMENTS -- This can be free-form.
@@ -110,15 +114,16 @@ Acknowledgements go here.  Typically you would at least thank your supervisor.
 % FIRST CHAPTER OF THESIS BEGINS HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Introduction}
 
-For almost two hundred years, diffraction gratings have been -- and still are -- at the heart of many instruments responsible for breakthroughs in scientific understanding.  Today, diffraction gratings are used in astronomy telescopes, chemistry spectrographs, spectrophotometers for life science, and in optics for material science experiments, over a range of wavelengths from the far infrared to soft x-rays.  The sensitivity and speed of these instruments depends on the efficiency of gratings, i.e., the intensity of useful diffracted light compared to the incident light.  In some cases -- such as Peter Zeeman's famous discovery of energy level splitting in a magnetic field -- improvements in grating efficiency make a previously-undetectable effect detectable.  
+% Since thesis chapters are very long and there are a lot of them, it is recommended
+% that you put each chapter in a separate .tex file and \input each one of them
+% in order.  For example:
+%
+\input chapter1.tex
+\input chapter2.tex
 
-To support these applications, one component of my graduate work has focussed on the diffraction efficiency of gratings.  While this research happens to be applicable to a wide range of scenarios -- both theoretical and applied, I have been working toward a very tangible application: designing and optimizing an innovative soft x-ray emission spectrometer for the REIXS beamline at the Canadian Light Source.  Over the course of this project, I have created software tools to automate efficiency calculations, used these tools to understand efficiency trends, and applied them to the optical design of the spectrometer.  I have also measured the efficiency of real-world gratings and extensively compared these measurements with calculations.
-
-\subsubsection{In this report}
-In this comprehensive report, I present the motivation for this project and some background on both gratings and soft x-ray spectroscopy. I also provide a history of developments in grating theory, explain how we selected the theoretical method I used to model grating efficiencies, and introduce this theory.  (For the sake of length constraints, I set up the foundation of the problem, but omit some mathematical details of the algorithms for now.)
-
+\titlespacing{\chapter}{0pt}{-30pt}{20pt}
+\chapter{Current and future work}
 \subsubsection{Work currently covered in my thesis draft}
 The rest of my thesis draft covers the implementation of this grating theory, and describes the software I wrote to make efficiency calculations more efficient.  Next, I show a comprehensive survey of calculations that can be used by beamline designers to understand trends and factors that affect grating efficiency.  After experimentally validating the calculations, I go on to explain the process I used -- in collaboration with David Muir -- to create an innovative optical design for the REIXS spectrometer.  It turns out that for grating instruments like spectrometers and monochromators, resolution and efficiency are inherently in tension.  By intelligently balancing the trade-offs between these two goals, and exploiting our understanding of efficiency trends and anomalies, we created a design that is predicted to approach world records in both areas (although obviously not simultaneously).  This work was novel because in most cases of beamline design, the grating efficiency is hardly considered, or left to the manufacturer to worry about.
 
@@ -129,12 +134,6 @@ By using a fitting routine to match calculated efficiencies to reflectometer mea
 
 Another area of future work focusses on improved numerical implementations of grating theory using massively parallel processing and cloud computing.  All of the rigorous grating methods are computationally expensive, so it can be tedious to calculate efficiency curves over a range of energies, or conduct an optimization of grating parameters. (This is even more true when doing a large number of calculations to attempt to fit a measured efficiency curve.)  The computation can be easily parallelized to take advantage of many processors, but no existing software codes make use of this.  I intend to implement one -- or ideally several -- of the grating theories ``from scratch'' on a grid computing platform; by combining this computing engine with a web-based user interface, it would become possible for beamline designers around the world to benefit from quasi-instant access to grating efficiency results.
 
-% Since thesis chapters are very long and there are a lot of them, it is recommended
-% that you put each chapter in a separate .tex file and \input each one of them
-% in order.  For example:
-%
-\input chapter1.tex
-\input chapter2.tex
 
 % ...
 %

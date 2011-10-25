@@ -600,11 +600,11 @@ Requests for permission to copy or to make other use of material in this thesis 
 \fi
 
 % ABSTRACT
-%\addcontentsline{toc}{chapter}{Abstract}
-%\chapter*{Abstract}
-%%\strut\\
-%\@abstract
-%\newpage
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Abstract}
+%\strut\\
+\@abstract
+\newpage
 
 %ACKNOWLEDGEMENTS (if any)
 \ifx \@acknowledgements \@empty
