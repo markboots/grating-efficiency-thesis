@@ -1,10 +1,10 @@
-remember to include in introduction:
-\begin{itemize}
-\item - define diffraction grating (transmission, reflection)
-\item - orders... energy dispersiveness of non n=0 orders
-\item - what is: diffraction efficiency
-\item - mention: in most cases of beamline design the grating eff is hardly considered, or left to the manufacturer. Even more rare to actually \textbf{test} the gratings for their actual efficiency.
-\end{itemize}
+%remember to include in introduction:
+%\begin{itemize}
+%\item - define diffraction grating (transmission, reflection)
+%\item - orders... energy dispersiveness of non n=0 orders
+%\item - what is: diffraction efficiency
+%\item - mention: in most cases of beamline design the grating eff is hardly considered, or left to the manufacturer. Even more rare to actually \textbf{test} the gratings for their actual efficiency.
+%\end{itemize}
 
 \chapter{Motivation: Why grating efficiency matters}
 
@@ -18,7 +18,8 @@ More importantly, the diffraction grating quickly became the foundation of spect
 \item Biologists and biochemists regularly use spectrophotometers to assay the concentration of a tagged reagent in a solution, making gratings a routine (and almost forgotten) tool in life sciences, pharmaceutical, and genetic research.
 \end{itemize}
 
-One common lamentation of the early spectroscopists was the faintness of the light leaving the grating; indeed, we can imagine them in darkened rooms, peering through telescope objectives,  straining to make out the faintest lines by eye (Figure TODO):
+One common lamentation of the early spectroscopists was the faintness of the light leaving the grating; indeed, we can imagine them in darkened rooms, peering through telescope objectives,  straining to make out the faintest lines by eye:
+% (Figure TODO):
 
 \begin{quote}
 \emph{Some lines can be distinguished in the spectrum of \emph{Procyon}; but they are seen with difficulty, and so indistinctly that their positions cannot be determined with certainty.  I \emph{think} I saw a line at the position D in the orange.}
@@ -56,7 +57,14 @@ Soft x-ray experiments use this light -- usually created by a tuneable source su
 \subsection{Absorption spectroscopy}
 Absorption spectroscopy measures the absorption rate of photons as a function of their wavelength (or energy).  Experimentally, this is done by shining a monochromatic beam of light onto the sample and measuring the amount of light absorbed as the energy of the beam is changed.  
 
-Figure TODO shows the available absorption processes.  When the photon energy increases to become sufficient to excite an electronic transition in the material, dramatically more photons will be absorbed; this is known as an \emph{absorption edge} (Figure TODO).  Near the edge, as photons are absorbed by exciting electrons from the core level into unoccupied levels, adjacent unoccupied  levels will have different probabilities of experiencing a transition, according to the quantum mechanical nature of the bonding in the material.  (Note that according to the selection rule for dipole radiation, only electron transitions with a change in orbital angular momentum quantum number $\Delta l = \pm 1$ are allowed, since momentum must be conserved and photons have an angular momentum [spin] of one unit.)  The absorption will increase for energies where the transition probability is higher; therefore, the absorption spectrum is actually a measure of the \emph{density of unoccupied states} for electrons in the material.\footnote{To be accurate, we should say the `\emph{partial} density of unoccupied states', since the vacancy left behind in the original electron state (``core-hole'') will affect the energy of the unoccupied states.}
+Figure \ref{1i} shows the available absorption processes, on the left side in red.  When the photon energy increases to become sufficient to excite an electronic transition in the material, dramatically more photons will be absorbed; this is known as an \emph{absorption edge}.  Near the edge, as photons are absorbed by exciting electrons from the core level into unoccupied levels, adjacent unoccupied  levels will have different probabilities of experiencing a transition, according to the quantum mechanical nature of the bonding in the material.  (Note that according to the selection rule for dipole radiation, only electron transitions with a change in orbital angular momentum quantum number $\Delta l = \pm 1$ are allowed, since momentum must be conserved and photons have an angular momentum [spin] of one unit.)  The absorption will increase for energies where the transition probability is higher; therefore, the absorption spectrum is actually a measure of the \emph{density of unoccupied states} for electrons in the material.\footnote{To be accurate, we should say the `\emph{partial} density of unoccupied states', since the vacancy left behind in the original electron state (``core-hole'') will affect the energy of the unoccupied states.}
+
+\begin{figure}[htb] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{../data/Chapter1/1i_sxsProcesses/1i.pdf} 
+   \caption{X-ray absorption spectroscopy (on the left, in red) probes the density of \emph{unoccupied} electronic states, modified by the presence of a core-hole: a vacancy left behind by the excited electron.  In this example for oxygen, the absorption edge starts at 6 eV above the Fermi level, labelled $E_F$.\\X-ray emission spectroscopy (on the right, in blue) probes the density of \emph{occupied} valence states, as a valence electron decays by emitting a photon to fill the core-hole.  In this diagram, the absorption and emission spectrum have been plotted vertically to line up with the schematic of the energy levels; they are conventionally plotted on a horizontal energy axis.  Grey areas represent the computed density of states.  \textbf{Image from: }Ref. \cite{McL10}}
+   \label{1i}
+\end{figure}
 
 One outstanding question concerns how the absorption rate is measured -- how do we know how many photons were absorbed?  Perfect absorption spectroscopy would shine the beam clear through the sample, and measure the intensity of the beam before and after to determine the fraction of light absorbed.  While \emph{transmission measurements} like this are feasible with hard x-rays, the short attenuation length of soft x-rays would require prohibitively thin samples for any beam to be left on the other side.  Instead, different measurements are used as a proxy for the total absorption rate:
 \subsubsection{Total Electron Yield}
@@ -69,9 +77,7 @@ Total Fluorescence Yield (TFY) measurements overcome these problems by using a l
 \subsection{Emission spectroscopy}
 While absorption measurements provide information about the \emph{unoccupied} states, we can also study what happens \emph{after} the initial photon is absorbed.  When a core-level electron is promoted by the absorption of a photon, it leaves behind a ``core-hole'', and the atom (or molecule, or crystal) is left in an excited state.  While there are many ways for the system to collapse back to the ground state, there is a small probability that some valence-band electron will decay to fill the core-hole by the emission of another photon.  Since the energy of the emitted photon will match the energy difference between that valence electron and the core level, the intensity distribution of \emph{all emitted light} will correspond to the probability of finding electrons in the valence band at those energies.  Therefore, if we could collect the \emph{fluorescence} emitted from the sample and plot its intensity as a function of energy, we would have a measure of the \emph{density of occupied states} for electrons in the material.  In this way, emission spectroscopy provides information on the bound electronic states, which is not present in the absorption spectrum.
 
-Experimentally, XES measurements are done by illuminating the sample with a fixed photon energy above the absorption edge.  The fluorescence is captured using an energy- (or wavelength-)sensitive detector which is tuned to the energy range just below the absorption edge.  Over time, an intensity spectrum is built up from the collected photons (Figure TODO).  Since fluorescence transitions are a random process, and highly improbable compared to other decay mechanisms like Auger decay, XES measurements require a sufficient exposure time to build up good statistics.  They also benefit greatly from a high-intensity beam source and an efficient detector -- such as a sensitive spectrometer with high-efficiency gratings.
-
-TODO Figure: XES process
+Experimentally, XES measurements are done by illuminating the sample with a fixed photon energy above the absorption edge.  The fluorescence is captured using an energy- (or wavelength-)sensitive detector which is tuned to the energy range just below the absorption edge.  Over time, an intensity spectrum is built up from the collected photons (Figure \ref{1i}, Figure \ref{1e}).  Since fluorescence transitions are a random process, and highly improbable compared to other decay mechanisms like Auger decay, XES measurements require a sufficient exposure time to build up good statistics.  They also benefit greatly from a high-intensity beam source and an efficient detector -- such as a sensitive spectrometer with high-efficiency gratings.
 
 \subsubsection{Resonant Inelastic X-ray Scattering (RIXS)}
 An advanced form of XES is known as RIXS (\emph{Resonant Inelastic X-ray Scattering}).  Instead of exciting a sample with a photon energy well above the absorption edge, the energy of the beam is tuned to match transitions previously identified in the absorption spectrum (or stepped incrementally through this range).  This allows the experimenter to preferentially excite into specific electronic states: at \emph{resonance}, the transition probability will be extremely high because the exciting photon energy exactly matches the transition energy and the emitted photon energy.
@@ -117,21 +123,21 @@ One must be able to capture the light emitted from the sample and resolve it by 
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{../data/Chapter1/1b_spectrometerSchematic/1b_monochromator.pdf} 
+   \includegraphics[scale=0.6]{../data/Chapter1/1b_spectrometerSchematic/1b_monochromator.pdf} 
    \caption{In this schematic of a grating monochromator, light from the source is focussed by mirrors and dispersed by the grating. An exit slit picks out the desired wavelength or energy range, and blocks the remaining light.  Depending on the design, the output wavelength can be adjusted by changing the angle of the grating, the angle of the mirrors, and/or the position of the exit slit.  (The resolution -- the energy bandwidth of the outgoing light -- depends on the dispersion of the grating, the geometry, and the size of the exit slit.  An ideal monochromator would produce truly monochromatic light, but this would require an infinitely small slit.)}
    \label{1b_monochromator}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{../data/Chapter1/1b_spectrometerSchematic/1b_mirrorSpectrometer.pdf} 
+   \includegraphics[scale=0.6]{../data/Chapter1/1b_spectrometerSchematic/1b_mirrorSpectrometer.pdf} 
    \caption{In this schematic of a grating spectrometer, mirrors are used to focus light from the source (or entrance slit) onto the detector, passing over a plane grating en-route to disperse the light by wavelength.  (This is a \emph{Czerny-Turner} arrangement, typical of compact visible-light designs like the one in Figure \ref{1a}.)  Since the grating diffracts different wavelengths at different angles, the intensity distribution across the detector surface creates a spectrum related to the wavelength (or photon energy).}
    \label{1b_mirrorSpectrometer}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{../data/Chapter1/1b_spectrometerSchematic/1b_rowlandSpectrometer.pdf} 
+   \includegraphics[scale=0.6]{../data/Chapter1/1b_spectrometerSchematic/1b_rowlandSpectrometer.pdf} 
    \caption{The spectrometer in this schematic uses a curved grating to both disperse light by wavelength, and focus it onto the detector.  (This is typical of soft x-ray designs where the poor reflectivity of additional mirrors is usually avoided.)  The intensity distribution along the surface of the detector can be converted into a spectrum with respect to wavelength or energy.  Since the detector only captures a limited range of outgoing angles, it can be moved to pick out the desired wavelength window for each measurement.}
    \label{1b_rowlandSpectrometer}
 \end{figure}
@@ -175,14 +181,16 @@ The spectrometer in Figure \ref{1b_rowlandSpectrometer} is more representative o
 
 Like monochromators, spectrometer designs usually offer switchable gratings with different line densities and coatings, optimized for different energy ranges as we show in Chapter 5 of my thesis draft.  Figure \ref{1d} shows a top and side view of the SXF endstation on Beamline 8.0.1 of the Advanced Light Source, a typical ``workhorse'' spectrometer, which balances moderate resolution with reasonable efficiency.  It uses four gratings with groove densities of 600, 1000, and 1500 lines/mm to cover the energy range from 70 to 1200 eV, and uses a 40 mm wide multi-channel plate detector with an effective spatial resolution between 40 and 80 um.  Figure \ref{1e} shows an image recorded by that detector, and the corresponding spectrum.
 
-\begin{figure}[p] %  figure placement: here, top, bottom, or page
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=1.2]{../data/Chapter1/1d_spectrometerExample/1d_bl801SXF_2.pdf} 
-   \caption{The SXF endstation spectrometer on Beamline 8.0.1 of the Advanced Light Source -- a typical ``workhorse'' spectrometer.  It uses spherical gratings in a Rowland Circle design; four gratings let users choose between higher resolution or higher efficiency at different energy ranges.  The resolving power of this machine is compared with other leading spectrometers in Figure \ref{4a}.  \textbf{Image from:} \cite{Jia95}}
+   \caption{The SXF endstation spectrometer on Beamline 8.0.1 of the Advanced Light Source -- a typical ``workhorse'' spectrometer.  It uses spherical gratings in a Rowland Circle design; four gratings let users choose between higher resolution or higher efficiency at different energy ranges.  
+   % TODO The resolving power of this machine is compared with other leading spectrometers in Figure \ref{4a}.  \textbf{Image from:} \cite{Jia95}
+   }
    \label{1d}
 \end{figure}
 
-\begin{figure}[p] %  figure placement: here, top, bottom, or page
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[height=2in]{../data/Chapter1/1e_spectrometerData/1e_image.png} \includegraphics[height=2in]{../data/Chapter1/1e_spectrometerData/1e_spectrum.png}
    \caption{A detector image and corresponding spectrum produced by the SXF spectrometer in Figure \ref{1d}.  (This particular scan is of the nitrogen emission lines in nitrogen-doped zinc oxide.)  The curvature of the spherical gratings provides focussing in the dispersion direction ($x-$axis), but unfortunately produces a curved image in the perpendicular direction ($y-$axis).  This curvature is corrected by aligning rows along the red curve when the image is summed to produce the spectrum on the right.}
@@ -203,7 +211,7 @@ What makes these two goals challenging is that they are inherently in tension.  
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \hspace*{-0.4in}\includegraphics[scale=0.8]{../data/Chapter1/1f_spectrometerResolution/1f_2.pdf} 
+   \hspace*{-0.4in}\includegraphics[scale=0.6]{../data/Chapter1/1f_spectrometerResolution/1f_2.pdf} 
    \caption{The detector has an effective spatial resolution $\mathrm{d}x$ which is the minimum distance required to resolve two adjacent incident rays.  Except for the $n=0$ order, the grating produces an angular dispersion $\mathrm{d}\theta_{2,n}/\mathrm{d}\lambda$, which is the angular separation between infinitesmally-adjacent wavelengths.  To increase the spacing between adjacent wavelengths on the detector, we can either increase the grating-detector distance $r^\prime$, or increase the angular dispersion. }
    \label{1f}
 \end{figure}
@@ -245,7 +253,9 @@ Two approaches are necessary to work around this challenge.  Optical coatings ne
 but very strong absorption features at 284 eV and 853 eV respectively; these coatings would only be appropriate for optical elements used within a narrow wavelength range away from those edges.  In many-electron materials like gold and platinum, the most pronounced core-level absorption edges occur outside the soft x-ray region, and as result they have acceptable reflectivity over a wide bandwidth.\footnote{Gold and platinum do have absorption edges in the soft x-ray range, but these correspond to outer shell electrons (for example, gold 4s electrons bound at 802 eV) instead of core-level electrons. The outer electrons see shielding by the inner ones, and therefore have a lower transition probability.}
 
 \label{TER-intro}
-Second, mirrors and gratings need to be aligned and used at \emph{grazing incidence} -- i.e., with the incident light striking them at glancing angles just a few degrees from parallel to their surface.  At soft x-ray wavelengths, most materials have a refractive index with a real part \emph{less than} one; the phase velocity of light is actually \emph{faster} than it would be in a vacuum.  This allows us to exploit the phenomenon of total internal reflection (TIR), except in this case it becomes a \emph{total external reflection}, since the refractive index is higher in the grating material than it is in the vacuum above it.  Just as with conventional TIR in glass and air, we can calculate a critical angle above which total external reflection will occur (see Section \ref{TER}).  For most metals, this turns out to be around 83 to 85 degrees from the surface normal.
+Second, mirrors and gratings need to be aligned and used at \emph{grazing incidence} -- i.e., with the incident light striking them at glancing angles just a few degrees from parallel to their surface.  At soft x-ray wavelengths, most materials have a refractive index with a real part \emph{less than} one; the phase velocity of light is actually \emph{faster} than it would be in a vacuum.  This allows us to exploit the phenomenon of total internal reflection (TIR), except in this case it becomes a \emph{total external reflection}, since the refractive index is higher in the grating material than it is in the vacuum above it.  Just as with conventional TIR in glass and air, we can calculate a critical angle above which total external reflection will occur.  
+% TODO (see Section \ref{TER} of my thesis draft)
+For most metals, this turns out to be around 83 to 85 degrees from the surface normal.
 
 \section{REIXS spectrometer project}
 This thesis -- and its motivation to establish a better understanding of diffraction grating efficiency -- emerged from a primary engineering goal: to design and build a world-class emission spectrometer for the REIXS beamline at the Canadian Light Source.  The REIXS (\emph{Resonant Elastic and Inelastic X-ray Scattering}) beamline is optimized for material science experiments; it offers an elliptically-polarizing undulator to produce a high brightness beam of soft x-ray photons, and a high-resolution monochromator with a flux of $\sim10^{13}$ photons/second and a resolving power greater than 5000.  The beamline has room for two endstations; our task was to build the emission spectrometer, which will be used for inelastic scattering experiments, while a team from the University of British Columbia built the second endstation used for elastic scattering measurements.
