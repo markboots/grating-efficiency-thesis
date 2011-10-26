@@ -201,15 +201,17 @@ For the case of TM polarization, the Maxwell equations (\ref{maxwellEqn4}, \ref{
 -\frac{\partial H_z}{\partial x} &=& -i \omega \epsilon E_y \\
 \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} &=& i \omega \mu H_z
 \end{eqnarray}
-
 and an identical procedure produces the wave equation in $H_z$:
 \begin{eqnarray}
 \label{wetm}
-\nabla\left[  \frac{1}{k^2} \nabla H_z  \right] + H_z &=& 0 \\
-\nabla^2 H_z + k^2 H_z &=& 0
+\nabla\left[  \frac{1}{k^2} \nabla H_z  \right] + H_z &=& 0% \\
+%\nabla^2 H_z + k^2 H_z &=& 0
 \end{eqnarray}
-
-Due to the (near) symmetry of the Maxwell equations, the form of the wave equation is the same for the $H_z$ field in TM polarization as it is for the $E_z$ field in TE polarization.  To solve the grating problem, we will need to find the solution to this wave equation in the presence of the grating boundary conditions.\footnote{Although the wave equation is the same, the boundary conditions for electric and magnetic fields are different at the grating boundary where $\epsilon$ and $v$ change suddenly -- for example, the normal component of the electric field is discontinuous, while the normal component of the magnetic field is continuous. This leads to a difference in the TE and TM efficiency.}
+In general, $k$ here is still a function of position $k(x,y)$ depending on whether we are inside or outside of a groove valley, or above or below the modulated region.  However, in the homogenous space above and below the modulated region, $k$ is constant and both Equation \ref{wete} and Equation \ref{wetm} reduce to the Helmholtz equation:
+\begin{eqnarray}
+\nabla^2 U_z + k^2 U_z &=& 0
+\end{eqnarray}
+Due to the (near) symmetry of the Maxwell equations, the form of the wave equation in homogeneous space is the same for the $U_z = H_z$ field in TM polarization as it is for the $U_z = E_z$ field in TE polarization.  To solve the grating problem, we will need to find the solution to this wave equation in the presence of the grating boundary conditions.\footnote{Although the wave equation is the same, the boundary conditions for electric and magnetic fields are different at the grating boundary where $\epsilon$ and $v$ change suddenly -- for example, the normal component of the electric field is discontinuous, while the normal component of the magnetic field is continuous. This leads to a difference in the TE and TM efficiency.}
 \subsection{Periodicity of gratings and fields (aka, pseudo-periodic functions and the Fourier basis)}
 The periodic nature of the grating grooves immediately hints that we could represent them conveniently using a Fourier series.  But can a Fourier expansion also be used to represent the fields $E_z$ and $H_z$?
 
