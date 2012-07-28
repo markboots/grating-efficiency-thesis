@@ -1,0 +1,2086 @@
+Intro | Single Grating | Complex Scan | Mirror | Plot | Optimize | Files | Options
+Blaze angle optimization:
+
+Wl: 0.012.  Period: 0.4. Calculating...
+
+
+
+wl: 0.012  Period: 0.4  Optimal Incidence: 78.4  Blaze angle: 3.49  Efficiency: 0.302502E+00
+
+
+
+
+Wl: 0.012.  Period: 0.6. Calculating...
+
+
+
+wl: 0.012  Period: 0.6  Optimal Incidence: 78.96  Blaze angle: 2.59  Efficiency: 0.376762E+00
+
+
+
+
+Wl: 0.012.  Period: 0.8. Calculating...
+
+
+
+wl: 0.012  Period: 0.8  Optimal Incidence: 80.08  Blaze angle: 2.15  Efficiency: 0.424130E+00
+
+
+
+
+Wl: 0.012.  Period: 1. Calculating...
+
+
+
+wl: 0.012  Period: 1  Optimal Incidence: 80.2  Blaze angle: 1.75  Efficiency: 0.456562E+00
+
+
+
+
+Wl: 0.012.  Period: 1.2. Calculating...
+
+
+
+wl: 0.012  Period: 1.2  Optimal Incidence: 80.44  Blaze angle: 1.51  Efficiency: 0.483647E+00
+
+
+
+
+Wl: 0.012.  Period: 1.4. Calculating...
+
+
+
+wl: 0.012  Period: 1.4  Optimal Incidence: 80.76  Blaze angle: 1.35  Efficiency: 0.505652E+00
+
+
+
+
+Wl: 0.012.  Period: 1.6. Calculating...
+
+
+
+wl: 0.012  Period: 1.6  Optimal Incidence: 81.04  Blaze angle: 1.23  Efficiency: 0.524025E+00
+
+
+
+
+Wl: 0.012.  Period: 1.8. Calculating...
+
+
+
+wl: 0.012  Period: 1.8  Optimal Incidence: 81.12  Blaze angle: 1.11  Efficiency: 0.539646E+00
+
+
+
+
+Wl: 0.012.  Period: 2. Calculating...
+
+
+
+wl: 0.012  Period: 2  Optimal Incidence: 81.28  Blaze angle: 1.03  Efficiency: 0.553236E+00
+
+
+
+
+Wl: 0.012.  Period: 2.2. Calculating...
+
+
+
+wl: 0.012  Period: 2.2  Optimal Incidence: 81.6  Blaze angle: 0.97  Efficiency: 0.565254E+00
+
+
+
+
+Wl: 0.012.  Period: 2.4. Calculating...
+
+
+
+wl: 0.012  Period: 2.4  Optimal Incidence: 81.92  Blaze angle: 0.93  Efficiency: 0.575841E+00
+
+
+
+
+Wl: 0.0115.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0115  Period: 0.4  Optimal Incidence: 78.84  Blaze angle: 3.45  Efficiency: 0.299021E+00
+
+
+
+
+Wl: 0.0115.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0115  Period: 0.6  Optimal Incidence: 79.28  Blaze angle: 2.55  Efficiency: 0.376006E+00
+
+
+
+
+Wl: 0.0115.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0115  Period: 0.8  Optimal Incidence: 80.28  Blaze angle: 2.11  Efficiency: 0.424998E+00
+
+
+
+
+Wl: 0.0115.  Period: 1. Calculating...
+
+
+
+wl: 0.0115  Period: 1  Optimal Incidence: 80.52  Blaze angle: 1.73  Efficiency: 0.457834E+00
+
+
+
+
+Wl: 0.0115.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0115  Period: 1.2  Optimal Incidence: 80.84  Blaze angle: 1.51  Efficiency: 0.485389E+00
+
+
+
+
+Wl: 0.0115.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0115  Period: 1.4  Optimal Incidence: 80.84  Blaze angle: 1.31  Efficiency: 0.507850E+00
+
+
+
+
+Wl: 0.0115.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0115  Period: 1.6  Optimal Incidence: 81.12  Blaze angle: 1.19  Efficiency: 0.526555E+00
+
+
+
+
+Wl: 0.0115.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0115  Period: 1.8  Optimal Incidence: 81.44  Blaze angle: 1.11  Efficiency: 0.542469E+00
+
+
+
+
+Wl: 0.0115.  Period: 2. Calculating...
+
+
+
+wl: 0.0115  Period: 2  Optimal Incidence: 81.52  Blaze angle: 1.01  Efficiency: 0.556247E+00
+
+
+
+
+Wl: 0.0115.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0115  Period: 2.2  Optimal Incidence: 81.76  Blaze angle: 0.95  Efficiency: 0.568395E+00
+
+
+
+
+Wl: 0.0115.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0115  Period: 2.4  Optimal Incidence: 82.08  Blaze angle: 0.91  Efficiency: 0.579088E+00
+
+
+
+
+Wl: 0.011.  Period: 0.4. Calculating...
+
+
+
+wl: 0.011  Period: 0.4  Optimal Incidence: 79.28  Blaze angle: 3.43  Efficiency: 0.292981E+00
+
+
+
+
+Wl: 0.011.  Period: 0.6. Calculating...
+
+
+
+wl: 0.011  Period: 0.6  Optimal Incidence: 79.6  Blaze angle: 2.51  Efficiency: 0.372903E+00
+
+
+
+
+Wl: 0.011.  Period: 0.8. Calculating...
+
+
+
+wl: 0.011  Period: 0.8  Optimal Incidence: 80.52  Blaze angle: 2.07  Efficiency: 0.423820E+00
+
+
+
+
+Wl: 0.011.  Period: 1. Calculating...
+
+
+
+wl: 0.011  Period: 1  Optimal Incidence: 80.8  Blaze angle: 1.69  Efficiency: 0.457192E+00
+
+
+
+
+Wl: 0.011.  Period: 1.2. Calculating...
+
+
+
+wl: 0.011  Period: 1.2  Optimal Incidence: 80.88  Blaze angle: 1.45  Efficiency: 0.485408E+00
+
+
+
+
+Wl: 0.011.  Period: 1.4. Calculating...
+
+
+
+wl: 0.011  Period: 1.4  Optimal Incidence: 81.24  Blaze angle: 1.31  Efficiency: 0.508331E+00
+
+
+
+
+Wl: 0.011.  Period: 1.6. Calculating...
+
+
+
+wl: 0.011  Period: 1.6  Optimal Incidence: 81.36  Blaze angle: 1.17  Efficiency: 0.527386E+00
+
+
+
+
+Wl: 0.011.  Period: 1.8. Calculating...
+
+
+
+wl: 0.011  Period: 1.8  Optimal Incidence: 81.68  Blaze angle: 1.09  Efficiency: 0.543592E+00
+
+
+
+
+Wl: 0.011.  Period: 2. Calculating...
+
+
+
+wl: 0.011  Period: 2  Optimal Incidence: 81.84  Blaze angle: 1.01  Efficiency: 0.557605E+00
+
+
+
+
+Wl: 0.011.  Period: 2.2. Calculating...
+
+
+
+wl: 0.011  Period: 2.2  Optimal Incidence: 81.96  Blaze angle: 0.92999999999999  Efficiency: 0.569939E+00
+
+
+
+
+Wl: 0.011.  Period: 2.4. Calculating...
+
+
+
+wl: 0.011  Period: 2.4  Optimal Incidence: 82.24  Blaze angle: 0.88999999999999  Efficiency: 0.580812E+00
+
+
+
+
+Wl: 0.0105.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0105  Period: 0.4  Optimal Incidence: 79.84  Blaze angle: 3.41  Efficiency: 0.282633E+00
+
+
+
+
+Wl: 0.0105.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0105  Period: 0.6  Optimal Incidence: 80.12  Blaze angle: 2.51  Efficiency: 0.365770E+00
+
+
+
+
+Wl: 0.0105.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0105  Period: 0.8  Optimal Incidence: 80.72  Blaze angle: 2.03  Efficiency: 0.418977E+00
+
+
+
+
+Wl: 0.0105.  Period: 1. Calculating...
+
+
+
+wl: 0.0105  Period: 1  Optimal Incidence: 81.12  Blaze angle: 1.67  Efficiency: 0.453108E+00
+
+
+
+
+Wl: 0.0105.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0105  Period: 1.2  Optimal Incidence: 81.32  Blaze angle: 1.45  Efficiency: 0.482013E+00
+
+
+
+
+Wl: 0.0105.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0105  Period: 1.4  Optimal Incidence: 81.4  Blaze angle: 1.27  Efficiency: 0.505440E+00
+
+
+
+
+Wl: 0.0105.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0105  Period: 1.6  Optimal Incidence: 81.72  Blaze angle: 1.15  Efficiency: 0.524984E+00
+
+
+
+
+Wl: 0.0105.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0105  Period: 1.8  Optimal Incidence: 81.76  Blaze angle: 1.05  Efficiency: 0.541536E+00
+
+
+
+
+Wl: 0.0105.  Period: 2. Calculating...
+
+
+
+wl: 0.0105  Period: 2  Optimal Incidence: 81.92  Blaze angle: 0.96999999999999  Efficiency: 0.555859E+00
+
+
+
+
+Wl: 0.0105.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0105  Period: 2.2  Optimal Incidence: 82.16  Blaze angle: 0.90999999999999  Efficiency: 0.568486E+00
+
+
+
+
+Wl: 0.0105.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0105  Period: 2.4  Optimal Incidence: 82.44  Blaze angle: 0.86999999999999  Efficiency: 0.579664E+00
+
+
+
+
+Wl: 0.01.  Period: 0.4. Calculating...
+
+
+
+wl: 0.01  Period: 0.4  Optimal Incidence: 80.52  Blaze angle: 3.41  Efficiency: 0.264071E+00
+
+
+
+
+Wl: 0.01.  Period: 0.6. Calculating...
+
+
+
+wl: 0.01  Period: 0.6  Optimal Incidence: 80.64  Blaze angle: 2.49  Efficiency: 0.350420E+00
+
+
+
+
+Wl: 0.01.  Period: 0.8. Calculating...
+
+
+
+wl: 0.01  Period: 0.8  Optimal Incidence: 81.04  Blaze angle: 2.01  Efficiency: 0.406071E+00
+
+
+
+
+Wl: 0.01.  Period: 1. Calculating...
+
+
+
+wl: 0.01  Period: 1  Optimal Incidence: 81.92  Blaze angle: 1.77  Efficiency: 0.443781E+00
+
+
+
+
+Wl: 0.01.  Period: 1.2. Calculating...
+
+
+
+wl: 0.01  Period: 1.2  Optimal Incidence: 81.76  Blaze angle: 1.45  Efficiency: 0.471256E+00
+
+
+
+
+Wl: 0.01.  Period: 1.4. Calculating...
+
+
+
+wl: 0.01  Period: 1.4  Optimal Incidence: 81.84  Blaze angle: 1.27  Efficiency: 0.495390E+00
+
+
+
+
+Wl: 0.01.  Period: 1.6. Calculating...
+
+
+
+wl: 0.01  Period: 1.6  Optimal Incidence: 82.04  Blaze angle: 1.15  Efficiency: 0.515536E+00
+
+
+
+
+Wl: 0.01.  Period: 1.8. Calculating...
+
+
+
+wl: 0.01  Period: 1.8  Optimal Incidence: 82.2  Blaze angle: 1.05  Efficiency: 0.532631E+00
+
+
+
+
+Wl: 0.01.  Period: 2. Calculating...
+
+
+
+wl: 0.01  Period: 2  Optimal Incidence: 82.16  Blaze angle: 0.94999999999999  Efficiency: 0.547064E+00
+
+
+
+
+Wl: 0.01.  Period: 2.2. Calculating...
+
+
+
+wl: 0.01  Period: 2.2  Optimal Incidence: 82.56  Blaze angle: 0.90999999999999  Efficiency: 0.560397E+00
+
+
+
+
+Wl: 0.01.  Period: 2.4. Calculating...
+
+
+
+wl: 0.01  Period: 2.4  Optimal Incidence: 82.64  Blaze angle: 0.84999999999999  Efficiency: 0.571859E+00
+
+
+
+
+Wl: 0.0095.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0095  Period: 0.4  Optimal Incidence: 81.28  Blaze angle: 3.41  Efficiency: 0.233693E+00
+
+
+
+
+Wl: 0.0095.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0095  Period: 0.6  Optimal Incidence: 81.4  Blaze angle: 2.51  Efficiency: 0.319577E+00
+
+
+
+
+Wl: 0.0095.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0095  Period: 0.8  Optimal Incidence: 81.68  Blaze angle: 2.03  Efficiency: 0.375764E+00
+
+
+
+
+Wl: 0.0095.  Period: 1. Calculating...
+
+
+
+wl: 0.0095  Period: 1  Optimal Incidence: 82.12  Blaze angle: 1.73  Efficiency: 0.415953E+00
+
+
+
+
+Wl: 0.0095.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0095  Period: 1.2  Optimal Incidence: 82.8  Blaze angle: 1.55  Efficiency: 0.444994E+00
+
+
+
+
+Wl: 0.0095.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0095  Period: 1.4  Optimal Incidence: 82.56  Blaze angle: 1.29  Efficiency: 0.467886E+00
+
+
+
+
+Wl: 0.0095.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0095  Period: 1.6  Optimal Incidence: 82.56  Blaze angle: 1.15  Efficiency: 0.488375E+00
+
+
+
+
+Wl: 0.0095.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0095  Period: 1.8  Optimal Incidence: 82.84  Blaze angle: 1.07  Efficiency: 0.506130E+00
+
+
+
+
+Wl: 0.0095.  Period: 2. Calculating...
+
+
+
+wl: 0.0095  Period: 2  Optimal Incidence: 82.96  Blaze angle: 0.98999999999998  Efficiency: 0.521399E+00
+
+
+
+
+Wl: 0.0095.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0095  Period: 2.2  Optimal Incidence: 83  Blaze angle: 0.90999999999998  Efficiency: 0.534743E+00
+
+
+
+
+Wl: 0.0095.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0095  Period: 2.4  Optimal Incidence: 83.24  Blaze angle: 0.86999999999998  Efficiency: 0.546731E+00
+
+
+
+
+Wl: 0.009.  Period: 0.4. Calculating...
+
+
+
+wl: 0.009  Period: 0.4  Optimal Incidence: 81.92  Blaze angle: 3.41  Efficiency: 0.203150E+00
+
+
+
+
+Wl: 0.009.  Period: 0.6. Calculating...
+
+
+
+wl: 0.009  Period: 0.6  Optimal Incidence: 82.2  Blaze angle: 2.53  Efficiency: 0.285925E+00
+
+
+
+
+Wl: 0.009.  Period: 0.8. Calculating...
+
+
+
+wl: 0.009  Period: 0.8  Optimal Incidence: 82.36  Blaze angle: 2.03  Efficiency: 0.341406E+00
+
+
+
+
+Wl: 0.009.  Period: 1. Calculating...
+
+
+
+wl: 0.009  Period: 1  Optimal Incidence: 82.6  Blaze angle: 1.73  Efficiency: 0.382138E+00
+
+
+
+
+Wl: 0.009.  Period: 1.2. Calculating...
+
+
+
+wl: 0.009  Period: 1.2  Optimal Incidence: 83  Blaze angle: 1.53  Efficiency: 0.413313E+00
+
+
+
+
+Wl: 0.009.  Period: 1.4. Calculating...
+
+
+
+wl: 0.009  Period: 1.4  Optimal Incidence: 83.52  Blaze angle: 1.39  Efficiency: 0.437178E+00
+
+
+
+
+Wl: 0.009.  Period: 1.6. Calculating...
+
+
+
+wl: 0.009  Period: 1.6  Optimal Incidence: 83.4  Blaze angle: 1.21  Efficiency: 0.456511E+00
+
+
+
+
+Wl: 0.009.  Period: 1.8. Calculating...
+
+
+
+wl: 0.009  Period: 1.8  Optimal Incidence: 83.4  Blaze angle: 1.09  Efficiency: 0.474476E+00
+
+
+
+
+Wl: 0.009.  Period: 2. Calculating...
+
+
+
+wl: 0.009  Period: 2  Optimal Incidence: 83.56  Blaze angle: 1.01  Efficiency: 0.490143E+00
+
+
+
+
+Wl: 0.009.  Period: 2.2. Calculating...
+
+
+
+wl: 0.009  Period: 2.2  Optimal Incidence: 83.6  Blaze angle: 0.92999999999998  Efficiency: 0.503928E+00
+
+
+
+
+Wl: 0.009.  Period: 2.4. Calculating...
+
+
+
+wl: 0.009  Period: 2.4  Optimal Incidence: 83.72  Blaze angle: 0.86999999999998  Efficiency: 0.516224E+00
+
+
+
+
+Wl: 0.0085.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0085  Period: 0.4  Optimal Incidence: 82.44  Blaze angle: 3.41  Efficiency: 0.172290E+00
+
+
+
+
+Wl: 0.0085.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0085  Period: 0.6  Optimal Incidence: 82.92  Blaze angle: 2.53  Efficiency: 0.247957E+00
+
+
+
+
+Wl: 0.0085.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0085  Period: 0.8  Optimal Incidence: 83.12  Blaze angle: 2.05  Efficiency: 0.301296E+00
+
+
+
+
+Wl: 0.0085.  Period: 1. Calculating...
+
+
+
+wl: 0.0085  Period: 1  Optimal Incidence: 83.32  Blaze angle: 1.75  Efficiency: 0.341209E+00
+
+
+
+
+Wl: 0.0085.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0085  Period: 1.2  Optimal Incidence: 83.48  Blaze angle: 1.53  Efficiency: 0.372601E+00
+
+
+
+
+Wl: 0.0085.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0085  Period: 1.4  Optimal Incidence: 83.76  Blaze angle: 1.37  Efficiency: 0.398039E+00
+
+
+
+
+Wl: 0.0085.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0085  Period: 1.6  Optimal Incidence: 84.119999999999  Blaze angle: 1.27  Efficiency: 0.418708E+00
+
+
+
+
+Wl: 0.0085.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0085  Period: 1.8  Optimal Incidence: 84.439999999999  Blaze angle: 1.19  Efficiency: 0.435701E+00
+
+
+
+
+Wl: 0.0085.  Period: 2. Calculating...
+
+
+
+wl: 0.0085  Period: 2  Optimal Incidence: 84.119999999999  Blaze angle: 1.03  Efficiency: 0.450885E+00
+
+
+
+
+Wl: 0.0085.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0085  Period: 2.2  Optimal Incidence: 84.199999999999  Blaze angle: 0.94999999999998  Efficiency: 0.464951E+00
+
+
+
+
+Wl: 0.0085.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0085  Period: 2.4  Optimal Incidence: 84.279999999999  Blaze angle: 0.88999999999998  Efficiency: 0.477555E+00
+
+
+
+
+Wl: 0.008.  Period: 0.4. Calculating...
+
+
+
+wl: 0.008  Period: 0.4  Optimal Incidence: 83.04  Blaze angle: 3.41  Efficiency: 0.144100E+00
+
+
+
+
+Wl: 0.008.  Period: 0.6. Calculating...
+
+
+
+wl: 0.008  Period: 0.6  Optimal Incidence: 83.639999999999  Blaze angle: 2.53  Efficiency: 0.209287E+00
+
+
+
+
+Wl: 0.008.  Period: 0.8. Calculating...
+
+
+
+wl: 0.008  Period: 0.8  Optimal Incidence: 83.879999999999  Blaze angle: 2.07  Efficiency: 0.258409E+00
+
+
+
+
+Wl: 0.008.  Period: 1. Calculating...
+
+
+
+wl: 0.008  Period: 1  Optimal Incidence: 83.999999999999  Blaze angle: 1.75  Efficiency: 0.296073E+00
+
+
+
+
+Wl: 0.008.  Period: 1.2. Calculating...
+
+
+
+wl: 0.008  Period: 1.2  Optimal Incidence: 84.199999999999  Blaze angle: 1.55  Efficiency: 0.326268E+00
+
+
+
+
+Wl: 0.008.  Period: 1.4. Calculating...
+
+
+
+wl: 0.008  Period: 1.4  Optimal Incidence: 84.319999999999  Blaze angle: 1.39  Efficiency: 0.351241E+00
+
+
+
+
+Wl: 0.008.  Period: 1.6. Calculating...
+
+
+
+wl: 0.008  Period: 1.6  Optimal Incidence: 84.399999999999  Blaze angle: 1.25  Efficiency: 0.372340E+00
+
+
+
+
+Wl: 0.008.  Period: 1.8. Calculating...
+
+
+
+wl: 0.008  Period: 1.8  Optimal Incidence: 84.639999999999  Blaze angle: 1.17  Efficiency: 0.390583E+00
+
+
+
+
+Wl: 0.008.  Period: 2. Calculating...
+
+
+
+wl: 0.008  Period: 2  Optimal Incidence: 84.879999999999  Blaze angle: 1.09  Efficiency: 0.406169E+00
+
+
+
+
+Wl: 0.008.  Period: 2.2. Calculating...
+
+
+
+wl: 0.008  Period: 2.2  Optimal Incidence: 85.119999999999  Blaze angle: 1.03  Efficiency: 0.419649E+00
+
+
+
+
+Wl: 0.008.  Period: 2.4. Calculating...
+
+
+
+wl: 0.008  Period: 2.4  Optimal Incidence: 84.959999999999  Blaze angle: 0.92999999999998  Efficiency: 0.431554E+00
+
+
+
+
+Wl: 0.0075.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0075  Period: 0.4  Optimal Incidence: 83.679999999999  Blaze angle: 3.35  Efficiency: 0.120887E+00
+
+
+
+
+Wl: 0.0075.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0075  Period: 0.6  Optimal Incidence: 84.279999999999  Blaze angle: 2.51  Efficiency: 0.175675E+00
+
+
+
+
+Wl: 0.0075.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0075  Period: 0.8  Optimal Incidence: 84.519999999999  Blaze angle: 2.05  Efficiency: 0.219182E+00
+
+
+
+
+Wl: 0.0075.  Period: 1. Calculating...
+
+
+
+wl: 0.0075  Period: 1  Optimal Incidence: 84.679999999999  Blaze angle: 1.75  Efficiency: 0.253572E+00
+
+
+
+
+Wl: 0.0075.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0075  Period: 1.2  Optimal Incidence: 84.839999999999  Blaze angle: 1.55  Efficiency: 0.281696E+00
+
+
+
+
+Wl: 0.0075.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0075  Period: 1.4  Optimal Incidence: 84.919999999999  Blaze angle: 1.39  Efficiency: 0.305294E+00
+
+
+
+
+Wl: 0.0075.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0075  Period: 1.6  Optimal Incidence: 85.039999999999  Blaze angle: 1.27  Efficiency: 0.325557E+00
+
+
+
+
+Wl: 0.0075.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0075  Period: 1.8  Optimal Incidence: 85.039999999999  Blaze angle: 1.15  Efficiency: 0.343058E+00
+
+
+
+
+Wl: 0.0075.  Period: 2. Calculating...
+
+
+
+wl: 0.0075  Period: 2  Optimal Incidence: 85.239999999999  Blaze angle: 1.09  Efficiency: 0.358899E+00
+
+
+
+
+Wl: 0.0075.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0075  Period: 2.2  Optimal Incidence: 85.359999999999  Blaze angle: 1.03  Efficiency: 0.372872E+00
+
+
+
+
+Wl: 0.0075.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0075  Period: 2.4  Optimal Incidence: 85.479999999999  Blaze angle: 0.94999999999998  Efficiency: 0.385419E+00
+
+
+
+
+Wl: 0.007.  Period: 0.4. Calculating...
+
+
+
+wl: 0.007  Period: 0.4  Optimal Incidence: 84.279999999999  Blaze angle: 3.27  Efficiency: 0.105696E+00
+
+
+
+
+Wl: 0.007.  Period: 0.6. Calculating...
+
+
+
+wl: 0.007  Period: 0.6  Optimal Incidence: 84.759999999999  Blaze angle: 2.45  Efficiency: 0.152930E+00
+
+
+
+
+Wl: 0.007.  Period: 0.8. Calculating...
+
+
+
+wl: 0.007  Period: 0.8  Optimal Incidence: 85.039999999999  Blaze angle: 2.03  Efficiency: 0.191358E+00
+
+
+
+
+Wl: 0.007.  Period: 1. Calculating...
+
+
+
+wl: 0.007  Period: 1  Optimal Incidence: 85.159999999999  Blaze angle: 1.73  Efficiency: 0.222474E+00
+
+
+
+
+Wl: 0.007.  Period: 1.2. Calculating...
+
+
+
+wl: 0.007  Period: 1.2  Optimal Incidence: 85.319999999999  Blaze angle: 1.53  Efficiency: 0.248334E+00
+
+
+
+
+Wl: 0.007.  Period: 1.4. Calculating...
+
+
+
+wl: 0.007  Period: 1.4  Optimal Incidence: 85.399999999999  Blaze angle: 1.37  Efficiency: 0.270289E+00
+
+
+
+
+Wl: 0.007.  Period: 1.6. Calculating...
+
+
+
+wl: 0.007  Period: 1.6  Optimal Incidence: 85.479999999999  Blaze angle: 1.25  Efficiency: 0.289340E+00
+
+
+
+
+Wl: 0.007.  Period: 1.8. Calculating...
+
+
+
+wl: 0.007  Period: 1.8  Optimal Incidence: 85.559999999999  Blaze angle: 1.15  Efficiency: 0.306095E+00
+
+
+
+
+Wl: 0.007.  Period: 2. Calculating...
+
+
+
+wl: 0.007  Period: 2  Optimal Incidence: 85.639999999999  Blaze angle: 1.07  Efficiency: 0.321062E+00
+
+
+
+
+Wl: 0.007.  Period: 2.2. Calculating...
+
+
+
+wl: 0.007  Period: 2.2  Optimal Incidence: 85.719999999999  Blaze angle: 1.01  Efficiency: 0.334609E+00
+
+
+
+
+Wl: 0.007.  Period: 2.4. Calculating...
+
+
+
+wl: 0.007  Period: 2.4  Optimal Incidence: 85.799999999999  Blaze angle: 0.94999999999997  Efficiency: 0.346869E+00
+
+
+
+
+Wl: 0.0065.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0065  Period: 0.4  Optimal Incidence: 84.679999999999  Blaze angle: 3.13  Efficiency: 0.979732E-01
+
+
+
+
+Wl: 0.0065.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0065  Period: 0.6  Optimal Incidence: 85.119999999999  Blaze angle: 2.37  Efficiency: 0.140924E+00
+
+
+
+
+Wl: 0.0065.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0065  Period: 0.8  Optimal Incidence: 85.399999999999  Blaze angle: 1.97  Efficiency: 0.176089E+00
+
+
+
+
+Wl: 0.0065.  Period: 1. Calculating...
+
+
+
+wl: 0.0065  Period: 1  Optimal Incidence: 85.559999999999  Blaze angle: 1.69  Efficiency: 0.204940E+00
+
+
+
+
+Wl: 0.0065.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0065  Period: 1.2  Optimal Incidence: 85.639999999999  Blaze angle: 1.49  Efficiency: 0.229137E+00
+
+
+
+
+Wl: 0.0065.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0065  Period: 1.4  Optimal Incidence: 85.799999999999  Blaze angle: 1.35  Efficiency: 0.249914E+00
+
+
+
+
+Wl: 0.0065.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0065  Period: 1.6  Optimal Incidence: 85.879999999999  Blaze angle: 1.23  Efficiency: 0.268028E+00
+
+
+
+
+Wl: 0.0065.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0065  Period: 1.8  Optimal Incidence: 85.959999999999  Blaze angle: 1.13  Efficiency: 0.284065E+00
+
+
+
+
+Wl: 0.0065.  Period: 2. Calculating...
+
+
+
+wl: 0.0065  Period: 2  Optimal Incidence: 86.039999999999  Blaze angle: 1.07  Efficiency: 0.298471E+00
+
+
+
+
+Wl: 0.0065.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0065  Period: 2.2  Optimal Incidence: 86.079999999999  Blaze angle: 0.98999999999997  Efficiency: 0.311469E+00
+
+
+
+
+Wl: 0.0065.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0065  Period: 2.4  Optimal Incidence: 86.199999999999  Blaze angle: 0.94999999999997  Efficiency: 0.323380E+00
+
+
+
+
+Wl: 0.006.  Period: 0.4. Calculating...
+
+
+
+wl: 0.006  Period: 0.4  Optimal Incidence: 85.039999999999  Blaze angle: 3.01  Efficiency: 0.930286E-01
+
+
+
+
+Wl: 0.006.  Period: 0.6. Calculating...
+
+
+
+wl: 0.006  Period: 0.6  Optimal Incidence: 85.439999999999  Blaze angle: 2.29  Efficiency: 0.133195E+00
+
+
+
+
+Wl: 0.006.  Period: 0.8. Calculating...
+
+
+
+wl: 0.006  Period: 0.8  Optimal Incidence: 85.679999999999  Blaze angle: 1.89  Efficiency: 0.166208E+00
+
+
+
+
+Wl: 0.006.  Period: 1. Calculating...
+
+
+
+wl: 0.006  Period: 1  Optimal Incidence: 85.839999999999  Blaze angle: 1.63  Efficiency: 0.193508E+00
+
+
+
+
+Wl: 0.006.  Period: 1.2. Calculating...
+
+
+
+wl: 0.006  Period: 1.2  Optimal Incidence: 85.959999999999  Blaze angle: 1.45  Efficiency: 0.216581E+00
+
+
+
+
+Wl: 0.006.  Period: 1.4. Calculating...
+
+
+
+wl: 0.006  Period: 1.4  Optimal Incidence: 86.039999999999  Blaze angle: 1.31  Efficiency: 0.236457E+00
+
+
+
+
+Wl: 0.006.  Period: 1.6. Calculating...
+
+
+
+wl: 0.006  Period: 1.6  Optimal Incidence: 86.119999999999  Blaze angle: 1.19  Efficiency: 0.253892E+00
+
+
+
+
+Wl: 0.006.  Period: 1.8. Calculating...
+
+
+
+wl: 0.006  Period: 1.8  Optimal Incidence: 86.239999999999  Blaze angle: 1.11  Efficiency: 0.269432E+00
+
+
+
+
+Wl: 0.006.  Period: 2. Calculating...
+
+
+
+wl: 0.006  Period: 2  Optimal Incidence: 86.279999999999  Blaze angle: 1.03  Efficiency: 0.283366E+00
+
+
+
+
+Wl: 0.006.  Period: 2.2. Calculating...
+
+
+
+wl: 0.006  Period: 2.2  Optimal Incidence: 86.279999999999  Blaze angle: 0.94999999999997  Efficiency: 0.295846E+00
+
+
+
+
+Wl: 0.006.  Period: 2.4. Calculating...
+
+
+
+wl: 0.006  Period: 2.4  Optimal Incidence: 86.399999999999  Blaze angle: 0.90999999999997  Efficiency: 0.307604E+00
+
+
+
+
+Wl: 0.0055.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0055  Period: 0.4  Optimal Incidence: 85.279999999999  Blaze angle: 2.85  Efficiency: 0.925689E-01
+
+
+
+
+Wl: 0.0055.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0055  Period: 0.6  Optimal Incidence: 85.679999999999  Blaze angle: 2.19  Efficiency: 0.131524E+00
+
+
+
+
+Wl: 0.0055.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0055  Period: 0.8  Optimal Incidence: 85.879999999999  Blaze angle: 1.81  Efficiency: 0.163387E+00
+
+
+
+
+Wl: 0.0055.  Period: 1. Calculating...
+
+
+
+wl: 0.0055  Period: 1  Optimal Incidence: 86.039999999999  Blaze angle: 1.55  Efficiency: 0.189757E+00
+
+
+
+
+Wl: 0.0055.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0055  Period: 1.2  Optimal Incidence: 86.199999999999  Blaze angle: 1.39  Efficiency: 0.212135E+00
+
+
+
+
+Wl: 0.0055.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0055  Period: 1.4  Optimal Incidence: 86.279999999999  Blaze angle: 1.25  Efficiency: 0.231465E+00
+
+
+
+
+Wl: 0.0055.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0055  Period: 1.6  Optimal Incidence: 86.359999999999  Blaze angle: 1.15  Efficiency: 0.248466E+00
+
+
+
+
+Wl: 0.0055.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0055  Period: 1.8  Optimal Incidence: 86.439999999999  Blaze angle: 1.05  Efficiency: 0.263593E+00
+
+
+
+
+Wl: 0.0055.  Period: 2. Calculating...
+
+
+
+wl: 0.0055  Period: 2  Optimal Incidence: 86.519999999999  Blaze angle: 0.98999999999997  Efficiency: 0.277248E+00
+
+
+
+
+Wl: 0.0055.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0055  Period: 2.2  Optimal Incidence: 86.559999999999  Blaze angle: 0.92999999999997  Efficiency: 0.289665E+00
+
+
+
+
+Wl: 0.0055.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0055  Period: 2.4  Optimal Incidence: 86.639999999999  Blaze angle: 0.86999999999997  Efficiency: 0.300991E+00
+
+
+
+
+Wl: 0.005.  Period: 0.4. Calculating...
+
+
+
+wl: 0.005  Period: 0.4  Optimal Incidence: 85.479999999999  Blaze angle: 2.71  Efficiency: 0.967833E-01
+
+
+
+
+Wl: 0.005.  Period: 0.6. Calculating...
+
+
+
+wl: 0.005  Period: 0.6  Optimal Incidence: 85.799999999999  Blaze angle: 2.07  Efficiency: 0.136646E+00
+
+
+
+
+Wl: 0.005.  Period: 0.8. Calculating...
+
+
+
+wl: 0.005  Period: 0.8  Optimal Incidence: 86.039999999999  Blaze angle: 1.71  Efficiency: 0.168949E+00
+
+
+
+
+Wl: 0.005.  Period: 1. Calculating...
+
+
+
+wl: 0.005  Period: 1  Optimal Incidence: 86.119999999999  Blaze angle: 1.47  Efficiency: 0.195555E+00
+
+
+
+
+Wl: 0.005.  Period: 1.2. Calculating...
+
+
+
+wl: 0.005  Period: 1.2  Optimal Incidence: 86.279999999999  Blaze angle: 1.31  Efficiency: 0.218087E+00
+
+
+
+
+Wl: 0.005.  Period: 1.4. Calculating...
+
+
+
+wl: 0.005  Period: 1.4  Optimal Incidence: 86.399999999999  Blaze angle: 1.19  Efficiency: 0.237516E+00
+
+
+
+
+Wl: 0.005.  Period: 1.6. Calculating...
+
+
+
+wl: 0.005  Period: 1.6  Optimal Incidence: 86.479999999999  Blaze angle: 1.09  Efficiency: 0.254577E+00
+
+
+
+
+Wl: 0.005.  Period: 1.8. Calculating...
+
+
+
+wl: 0.005  Period: 1.8  Optimal Incidence: 86.559999999999  Blaze angle: 1.01  Efficiency: 0.269766E+00
+
+
+
+
+Wl: 0.005.  Period: 2. Calculating...
+
+
+
+wl: 0.005  Period: 2  Optimal Incidence: 86.599999999999  Blaze angle: 0.92999999999997  Efficiency: 0.283406E+00
+
+
+
+
+Wl: 0.005.  Period: 2.2. Calculating...
+
+
+
+wl: 0.005  Period: 2.2  Optimal Incidence: 86.679999999999  Blaze angle: 0.86999999999997  Efficiency: 0.295834E+00
+
+
+
+
+Wl: 0.005.  Period: 2.4. Calculating...
+
+
+
+wl: 0.005  Period: 2.4  Optimal Incidence: 86.719999999999  Blaze angle: 0.82999999999997  Efficiency: 0.307261E+00
+
+
+
+
+Wl: 0.0045.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0045  Period: 0.4  Optimal Incidence: 85.639999999999  Blaze angle: 2.55  Efficiency: 0.991617E-01
+
+
+
+
+Wl: 0.0045.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0045  Period: 0.6  Optimal Incidence: 85.959999999999  Blaze angle: 1.95  Efficiency: 0.139918E+00
+
+
+
+
+Wl: 0.0045.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0045  Period: 0.8  Optimal Incidence: 86.199999999999  Blaze angle: 1.61  Efficiency: 0.172850E+00
+
+
+
+
+Wl: 0.0045.  Period: 1. Calculating...
+
+
+
+wl: 0.0045  Period: 1  Optimal Incidence: 86.279999999999  Blaze angle: 1.39  Efficiency: 0.199908E+00
+
+
+
+
+Wl: 0.0045.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0045  Period: 1.2  Optimal Incidence: 86.439999999999  Blaze angle: 1.23  Efficiency: 0.222737E+00
+
+
+
+
+Wl: 0.0045.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0045  Period: 1.4  Optimal Incidence: 86.519999999999  Blaze angle: 1.11  Efficiency: 0.242405E+00
+
+
+
+
+Wl: 0.0045.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0045  Period: 1.6  Optimal Incidence: 86.599999999999  Blaze angle: 1.01  Efficiency: 0.259676E+00
+
+
+
+
+Wl: 0.0045.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0045  Period: 1.8  Optimal Incidence: 86.599999999999  Blaze angle: 0.92999999999997  Efficiency: 0.274839E+00
+
+
+
+
+Wl: 0.0045.  Period: 2. Calculating...
+
+
+
+wl: 0.0045  Period: 2  Optimal Incidence: 86.679999999999  Blaze angle: 0.86999999999997  Efficiency: 0.288687E+00
+
+
+
+
+Wl: 0.0045.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0045  Period: 2.2  Optimal Incidence: 86.799999999999  Blaze angle: 0.82999999999997  Efficiency: 0.301373E+00
+
+
+
+
+Wl: 0.0045.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0045  Period: 2.4  Optimal Incidence: 86.799999999999  Blaze angle: 0.76999999999997  Efficiency: 0.312620E+00
+
+
+
+
+Wl: 0.004.  Period: 0.4. Calculating...
+
+
+
+wl: 0.004  Period: 0.4  Optimal Incidence: 85.919999999999  Blaze angle: 2.43  Efficiency: 0.992670E-01
+
+
+
+
+Wl: 0.004.  Period: 0.6. Calculating...
+
+
+
+wl: 0.004  Period: 0.6  Optimal Incidence: 86.239999999999  Blaze angle: 1.85  Efficiency: 0.140188E+00
+
+
+
+
+Wl: 0.004.  Period: 0.8. Calculating...
+
+
+
+wl: 0.004  Period: 0.8  Optimal Incidence: 86.359999999999  Blaze angle: 1.51  Efficiency: 0.173277E+00
+
+
+
+
+Wl: 0.004.  Period: 1. Calculating...
+
+
+
+wl: 0.004  Period: 1  Optimal Incidence: 86.519999999999  Blaze angle: 1.31  Efficiency: 0.200510E+00
+
+
+
+
+Wl: 0.004.  Period: 1.2. Calculating...
+
+
+
+wl: 0.004  Period: 1.2  Optimal Incidence: 86.639999999999  Blaze angle: 1.17  Efficiency: 0.223473E+00
+
+
+
+
+Wl: 0.004.  Period: 1.4. Calculating...
+
+
+
+wl: 0.004  Period: 1.4  Optimal Incidence: 86.719999999999  Blaze angle: 1.05  Efficiency: 0.243221E+00
+
+
+
+
+Wl: 0.004.  Period: 1.6. Calculating...
+
+
+
+wl: 0.004  Period: 1.6  Optimal Incidence: 86.799999999999  Blaze angle: 0.96999999999997  Efficiency: 0.260559E+00
+
+
+
+
+Wl: 0.004.  Period: 1.8. Calculating...
+
+
+
+wl: 0.004  Period: 1.8  Optimal Incidence: 86.879999999999  Blaze angle: 0.88999999999997  Efficiency: 0.275941E+00
+
+
+
+
+Wl: 0.004.  Period: 2. Calculating...
+
+
+
+wl: 0.004  Period: 2  Optimal Incidence: 86.879999999999  Blaze angle: 0.82999999999997  Efficiency: 0.289753E+00
+
+
+
+
+Wl: 0.004.  Period: 2.2. Calculating...
+
+
+
+wl: 0.004  Period: 2.2  Optimal Incidence: 86.999999999999  Blaze angle: 0.78999999999997  Efficiency: 0.302386E+00
+
+
+
+
+Wl: 0.004.  Period: 2.4. Calculating...
+
+
+
+wl: 0.004  Period: 2.4  Optimal Incidence: 87.079999999999  Blaze angle: 0.74999999999997  Efficiency: 0.313868E+00
+
+
+
+
+Wl: 0.0035.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0035  Period: 0.4  Optimal Incidence: 86.119999999999  Blaze angle: 2.27  Efficiency: 0.100512E+00
+
+
+
+
+Wl: 0.0035.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0035  Period: 0.6  Optimal Incidence: 86.439999999999  Blaze angle: 1.73  Efficiency: 0.141988E+00
+
+
+
+
+Wl: 0.0035.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0035  Period: 0.8  Optimal Incidence: 86.639999999999  Blaze angle: 1.43  Efficiency: 0.175529E+00
+
+
+
+
+Wl: 0.0035.  Period: 1. Calculating...
+
+
+
+wl: 0.0035  Period: 1  Optimal Incidence: 86.719999999999  Blaze angle: 1.23  Efficiency: 0.203064E+00
+
+
+
+
+Wl: 0.0035.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0035  Period: 1.2  Optimal Incidence: 86.799999999999  Blaze angle: 1.09  Efficiency: 0.226222E+00
+
+
+
+
+Wl: 0.0035.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0035  Period: 1.4  Optimal Incidence: 86.919999999999  Blaze angle: 0.98999999999996  Efficiency: 0.246195E+00
+
+
+
+
+Wl: 0.0035.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0035  Period: 1.6  Optimal Incidence: 86.999999999999  Blaze angle: 0.88999999999996  Efficiency: 0.263650E+00
+
+
+
+
+Wl: 0.0035.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0035  Period: 1.8  Optimal Incidence: 87.039999999999  Blaze angle: 0.82999999999996  Efficiency: 0.279165E+00
+
+
+
+
+Wl: 0.0035.  Period: 2. Calculating...
+
+
+
+wl: 0.0035  Period: 2  Optimal Incidence: 87.079999999999  Blaze angle: 0.76999999999996  Efficiency: 0.293063E+00
+
+
+
+
+Wl: 0.0035.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0035  Period: 2.2  Optimal Incidence: 87.159999999999  Blaze angle: 0.72999999999996  Efficiency: 0.305783E+00
+
+
+
+
+Wl: 0.0035.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0035  Period: 2.4  Optimal Incidence: 87.199999999999  Blaze angle: 0.68999999999996  Efficiency: 0.317351E+00
+
+
+
+
+Wl: 0.003.  Period: 0.4. Calculating...
+
+
+
+wl: 0.003  Period: 0.4  Optimal Incidence: 86.319999999999  Blaze angle: 2.09  Efficiency: 0.107062E+00
+
+
+
+
+Wl: 0.003.  Period: 0.6. Calculating...
+
+
+
+wl: 0.003  Period: 0.6  Optimal Incidence: 86.599999999999  Blaze angle: 1.59  Efficiency: 0.151481E+00
+
+
+
+
+Wl: 0.003.  Period: 0.8. Calculating...
+
+
+
+wl: 0.003  Period: 0.8  Optimal Incidence: 86.759999999999  Blaze angle: 1.31  Efficiency: 0.187140E+00
+
+
+
+
+Wl: 0.003.  Period: 1. Calculating...
+
+
+
+wl: 0.003  Period: 1  Optimal Incidence: 86.879999999999  Blaze angle: 1.13  Efficiency: 0.216165E+00
+
+
+
+
+Wl: 0.003.  Period: 1.2. Calculating...
+
+
+
+wl: 0.003  Period: 1.2  Optimal Incidence: 86.959999999999  Blaze angle: 0.98999999999996  Efficiency: 0.240374E+00
+
+
+
+
+Wl: 0.003.  Period: 1.4. Calculating...
+
+
+
+wl: 0.003  Period: 1.4  Optimal Incidence: 87.039999999999  Blaze angle: 0.88999999999996  Efficiency: 0.261133E+00
+
+
+
+
+Wl: 0.003.  Period: 1.6. Calculating...
+
+
+
+wl: 0.003  Period: 1.6  Optimal Incidence: 87.119999999999  Blaze angle: 0.82999999999996  Efficiency: 0.279274E+00
+
+
+
+
+Wl: 0.003.  Period: 1.8. Calculating...
+
+
+
+wl: 0.003  Period: 1.8  Optimal Incidence: 87.199999999999  Blaze angle: 0.76999999999996  Efficiency: 0.295288E+00
+
+
+
+
+Wl: 0.003.  Period: 2. Calculating...
+
+
+
+wl: 0.003  Period: 2  Optimal Incidence: 87.199999999999  Blaze angle: 0.70999999999996  Efficiency: 0.309589E+00
+
+
+
+
+Wl: 0.003.  Period: 2.2. Calculating...
+
+
+
+wl: 0.003  Period: 2.2  Optimal Incidence: 87.199999999999  Blaze angle: 0.64999999999996  Efficiency: 0.322175E+00
+
+
+
+
+Wl: 0.003.  Period: 2.4. Calculating...
+
+
+
+wl: 0.003  Period: 2.4  Optimal Incidence: 87.319999999999  Blaze angle: 0.62999999999996  Efficiency: 0.334447E+00
+
+
+
+
+Wl: 0.0025.  Period: 0.4. Calculating...
+
+
+
+wl: 0.0025  Period: 0.4  Optimal Incidence: 86.559999999999  Blaze angle: 1.95  Efficiency: 0.107422E+00
+
+
+
+
+Wl: 0.0025.  Period: 0.6. Calculating...
+
+
+
+wl: 0.0025  Period: 0.6  Optimal Incidence: 86.879999999999  Blaze angle: 1.47  Efficiency: 0.154044E+00
+
+
+
+
+Wl: 0.0025.  Period: 0.8. Calculating...
+
+
+
+wl: 0.0025  Period: 0.8  Optimal Incidence: 86.959999999999  Blaze angle: 1.19  Efficiency: 0.192005E+00
+
+
+
+
+Wl: 0.0025.  Period: 1. Calculating...
+
+
+
+wl: 0.0025  Period: 1  Optimal Incidence: 87.119999999999  Blaze angle: 1.03  Efficiency: 0.222963E+00
+
+
+
+
+Wl: 0.0025.  Period: 1.2. Calculating...
+
+
+
+wl: 0.0025  Period: 1.2  Optimal Incidence: 87.199999999999  Blaze angle: 0.90999999999996  Efficiency: 0.248642E+00
+
+
+
+
+Wl: 0.0025.  Period: 1.4. Calculating...
+
+
+
+wl: 0.0025  Period: 1.4  Optimal Incidence: 87.279999999999  Blaze angle: 0.82999999999996  Efficiency: 0.270511E+00
+
+
+
+
+Wl: 0.0025.  Period: 1.6. Calculating...
+
+
+
+wl: 0.0025  Period: 1.6  Optimal Incidence: 87.319999999999  Blaze angle: 0.74999999999996  Efficiency: 0.289474E+00
+
+
+
+
+Wl: 0.0025.  Period: 1.8. Calculating...
+
+
+
+wl: 0.0025  Period: 1.8  Optimal Incidence: 87.359999999999  Blaze angle: 0.68999999999996  Efficiency: 0.306158E+00
+
+
+
+
+Wl: 0.0025.  Period: 2. Calculating...
+
+
+
+wl: 0.0025  Period: 2  Optimal Incidence: 87.359999999999  Blaze angle: 0.62999999999996  Efficiency: 0.320718E+00
+
+
+
+
+Wl: 0.0025.  Period: 2.2. Calculating...
+
+
+
+wl: 0.0025  Period: 2.2  Optimal Incidence: 87.479999999999  Blaze angle: 0.60999999999996  Efficiency: 0.334556E+00
+
+
+
+
+Wl: 0.0025.  Period: 2.4. Calculating...
+
+
+
+wl: 0.0025  Period: 2.4  Optimal Incidence: 87.479999999999  Blaze angle: 0.56999999999996  Efficiency: 0.346689E+00
+
+
+
+
+Wl: 0.002.  Period: 0.4. Calculating...
+
+
+
+wl: 0.002  Period: 0.4  Optimal Incidence: 86.839999999999  Blaze angle: 1.77  Efficiency: 0.107431E+00
+
+
+
+
+Wl: 0.002.  Period: 0.6. Calculating...
+
+
+
+wl: 0.002  Period: 0.6  Optimal Incidence: 87.159999999999  Blaze angle: 1.33  Efficiency: 0.155579E+00
+
+
+
+
+Wl: 0.002.  Period: 0.8. Calculating...
+
+
+
+wl: 0.002  Period: 0.8  Optimal Incidence: 87.279999999999  Blaze angle: 1.07  Efficiency: 0.195987E+00
+
+
+
+
+Wl: 0.002.  Period: 1. Calculating...
+
+
+
+wl: 0.002  Period: 1  Optimal Incidence: 87.399999999999  Blaze angle: 0.92999999999996  Efficiency: 0.228853E+00
+
+
+
+
+Wl: 0.002.  Period: 1.2. Calculating...
+
+
+
+wl: 0.002  Period: 1.2  Optimal Incidence: 87.479999999999  Blaze angle: 0.80999999999996  Efficiency: 0.255962E+00
+
+
+
+
+Wl: 0.002.  Period: 1.4. Calculating...
+
+
+
+wl: 0.002  Period: 1.4  Optimal Incidence: 87.519999999999  Blaze angle: 0.72999999999996  Efficiency: 0.278935E+00
+
+
+
+
+Wl: 0.002.  Period: 1.6. Calculating...
+
+
+
+wl: 0.002  Period: 1.6  Optimal Incidence: 87.559999999999  Blaze angle: 0.66999999999996  Efficiency: 0.298830E+00
+
+
+
+
+Wl: 0.002.  Period: 1.8. Calculating...
+
+
+
+wl: 0.002  Period: 1.8  Optimal Incidence: 87.639999999999  Blaze angle: 0.60999999999996  Efficiency: 0.316204E+00
+
+
+
+
+Wl: 0.002.  Period: 2. Calculating...
+
+
+
+wl: 0.002  Period: 2  Optimal Incidence: 87.639999999999  Blaze angle: 0.56999999999996  Efficiency: 0.331675E+00
+
+
+
+
+Wl: 0.002.  Period: 2.2. Calculating...
+
+
+
+wl: 0.002  Period: 2.2  Optimal Incidence: 87.639999999999  Blaze angle: 0.52999999999996  Efficiency: 0.345374E+00
+
+
+
+
+Wl: 0.002.  Period: 2.4. Calculating...
+
+
+
+wl: 0.002  Period: 2.4  Optimal Incidence: 87.759999999999  Blaze angle: 0.50999999999996  Efficiency: 0.358313E+00
+
+
+
+
+
+
+beamteam.usask.ca	dev: [email] Mark Boots
+University of Saskatchewan

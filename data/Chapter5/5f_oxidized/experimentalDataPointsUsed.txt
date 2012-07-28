@@ -1,0 +1,36 @@
+Experimental data points used: Normalized data files from reflectometer:
+
+MEG 1st order:
+
+145: 0-100
+142: 18-108
+128: 5-150
+131: 6-250
+134: 1-132
+
+MEG 2nd order:
+
+146: 0-100
+143: 80-108
+129: 5-150
+132: 10-250
+135: 1-137
+
+IMP First order
+
+72: 1-20
+69: 6-42
+52:7-50
+49: 0-100
+44: 45-100
+56: 3-150 (exclude 16,15,14)
+62: 2-10
+59: all
+
+IMP 2nd order:
+
+50: 0-100 (all)
+45: 47-127
+57: 3-150 (exclude 16,15,14)
+63: 1-10
+60: 4-243
