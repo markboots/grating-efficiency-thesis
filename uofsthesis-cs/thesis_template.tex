@@ -1,0 +1,166 @@
+\documentclass{uofsthesis-cs}
+
+% Documentation for the uofsthesis-cs class is given in uofsthesis-cs.dvi
+% 
+% It is recommended that you read the CGSR thesis preparation
+% guidelines before proceeding.
+% They can be found at http://www.usask.ca/cgsr/thesis/index.htm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRONTMATTER - In this section, specify information to be used to
+% typeset the thesis frontmatter.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% THESIS TITLE
+% Specify the title. Set the capitalization how you want it.
+\title{This is the Title of My Thesis}
+
+% AUTHOR'S NAME
+% Your name goes here.
+\author{Author's Name}
+
+% DEGREE SOUGHT.  
+% Use \MSc or \PhD here
+\degree{\MSc}         
+
+% EXPECTED CONVOCATION DATE
+% Should be month/year, e.g. July 2004
+\convocationdate{Month/Year}
+
+
+% NAME OF ACADEMIC UNIT
+%
+% The following two commands allow you to specify the academic unit you belong to.
+% This will appear on the title page as
+% ``<academic unit> of <department>''.
+% So if you are in the division of biomedical engineering you would need to do:
+% \department{Biomedical Engineering}
+% \academicunit{Division}
+%
+% The default is ``Department of Computer Science'' if these commands
+% are not given.
+%
+% If you are in a discipline other than Computer Science, uncomment the following line and
+% specify your discipline/department.  Default is 'Computer Science'.
+% \department{If not Computer Science, put the name of your department here}
+
+% If you are not in a department, but say, a division, uncomment the following line.
+% \academicunit{Put the type of academic unit you belong to here, e.g. Division, College}
+
+
+% PERMISSION TO USE ADDRESS
+%
+% If you are not in Compuer Science you will want to change the
+% address on the Permission to Use page.  This is done using the
+% \ptuaddress{}.  Example:
+%
+% \ptuaddress{Head of the Department of Computer Science\\
+% 176 Thorvaldson Building\\
+% 110 Science Place\\
+% University of Saskatchewan\\
+% Saskatoon, Saskatchewan\\
+% Canada\\
+% S7N 5C9
+% }
+
+% ABSTRACT
+\abstract{
+This is the abstract of my thesis.  
+}
+
+% THESIS ACKNOWLEDGEMENTS -- This can be free-form.
+\acknowledgements{
+Acknowledgements go here.  Typically you would at least thank your supervisor.
+}
+
+% THESIS DEDICATION -- Also free-form.  If you don't want a dedication, comment out the following
+% line.
+\dedication{This is the thesis dedication (optional)}
+
+% LIST OF ABBREVIATIONS - Sample  
+% If you don't want a list of abbreviations, comment the following 4 lines.
+\loa{\abbrev{SCUBA}{Self Contained Underwater Breathing Apparatus}
+\abbrev{LOF}{List of Figures}
+\abbrev{LOT}{List of Tables}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF FRONTMATTER SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Typeset the title page
+\maketitle
+
+% Typeset the frontmatter.  
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIRST CHAPTER OF THESIS BEGINS HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+
+Testing testing testing 
+
+% Since thesis chapters are very long and there are a lot of them, it is recommended
+% that you put each chapter in a separate .tex file and \input each one of them
+% in order.  For example:
+%
+% \input chap1.tex
+% \input chap2.tex
+% ...
+%
+% The \input command inserts contents of the specified file at the point of the command.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSEQUENT CHAPTERS (or \input's)  GO HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Bibliograpy should go here. BEFORE appendices!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Typeset the Bibliography.  The bibliography style used is "plain".
+% Optionally, you can specify the bibliography style to use:
+% \uofsbibliography[stylename]{yourbibfile}
+
+\uofsbibliography{880Paper}
+
+% If you are not using bibtex, comment the line above and uncomment
+% the line below.  
+%Follow the line below with a thebibliography environmentand bibitems.  
+% Note: use of bibtex is usually the preferred method.
+
+%\uofsbibliographynobibtex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPENDICES
+%
+% Any chapters appearing after the \appendix command get numbered with
+% capital letters starting with appendix 'A'.
+% New chapters from here on will be called 'Appendix A', 'Appendix B'
+% as opposed to 'Chapter 1', 'Chapter 2', etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Activate thesis appendix mode.
+\uofsappendix
+
+\chapter{Sample Appendix}
+
+Stuff for this appendix goes here.
+
+\chapter{Another Sample Appendix}
+
+Stuff for this appendix goes here.
+
+
+\end{document}
