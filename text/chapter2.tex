@@ -38,9 +38,7 @@ Reference \cite{Pet80} provides a comprehensive review of all the methods that w
 \subsubsection{Choosing a theoretical method}
 Appendix \ref{methodComparison} presents just enough theory on each method to understand their limitations and areas of applicability with respect to groove geometry, material conductivity, polarization, numerical stability, and their ability to handle layers and coatings.  Since we are primarily interested in the efficiency of soft x-ray gratings used in grazing incidence, these limitations provide clear guidance for choosing an appropriate method.  At the frequency of soft x-ray radiation, metals behave as absorbing, weak dielectrics with a refractive index near $(0.999 - 0.001i)$; therefore, we do not need to worry about limitations on perfectly-conducting materials.  At grazing incidence, polarization effects are also minimized; there turns out to be very little difference between measured and calculated results for TE and TM polarization.  Finally, gratings optimized for grazing incidence tend to have shallow grooves, relative to the groove period, which frees up the limitation on deep gratings.
 
-However, we must be able to model a variety of groove profiles, including rectangular but also triangular, trapezoidal, and sinusoidal shapes, with at least one coating layer.  (The triangular, or ``blazed'' profile -- featuring sharp vertices -- will turn out to be particularly important for our spectrometer design.)  Therefore, we ruled out the modal and RCW methods, and were left with a choice between the integral method and the full differential method.    Given the necessity of modelling coatings and sharp profiles, we selected the differential method for its simplicity and robustness.  We used an implementation of this method for all the grating efficiency calculations, optimizations, 
-%and comparisons shown later in this thesis.
-and comparisons shown later in the thesis.
+However, we must be able to model a variety of groove profiles, including rectangular but also triangular, trapezoidal, and sinusoidal shapes, with at least one coating layer.  (The triangular, or ``blazed'' profile -- featuring sharp vertices -- will turn out to be particularly important for our spectrometer design.)  Therefore, we ruled out the modal and RCW methods, and were left with a choice between the integral method and the full differential method.    Given the necessity of modelling coatings and sharp profiles, we selected the differential method for its simplicity and robustness.  We used two implementations of this method for all the grating efficiency calculations, optimizations, and comparisons shown later in this thesis.
 
 \subsection{Overview of the differential theory}
 \label{overview}
@@ -403,7 +401,7 @@ Similarly, for the transmitted order,
 Based only on Maxwell's equations and an assumption of periodicity, we have shown that a grating reflects and transmits light into a set of discrete angles.  Incredibly, this result is fully general -- it does not depend at all on the shape or nature of the grating profile; all that's required is that it be periodic.  Unfortunately, this impressive result still says nothing at all about the \emph{grating efficiency}, or the \emph{amount} of light diffracted into each order.  We still do not know anything about the \emph{amplitudes} $B_n$, $A_n$ of the diffracted plane waves, and to determine these coefficients we will need to get down and dirty inside the grooves of the grating.
 
 Within the grooves, the wave equations (\ref{wete}, \ref{wetm}) are much more difficult to solve due to the position-dependence of $k(x,y)$.  The refractive index (and therefore the impedance $k$) will change whether inside or outside of a groove; if the grating shape is complicated, $k(x,y)$ will be a complicated function indeed.
-At this point, we need to apply the numerical integration techniques of the classical differential method, or the eigenvalue method used in the RCW approach.  For brevity in this report, we omit those mathematical details here.  Before wrapping up the theory section, however, we take a closer look at defining grating efficiency.
+At this point, we need to apply the numerical integration techniques of the classical differential method, or the eigenvalue method used in the RCW approach.  Before getting there, however, we take a closer look at defining grating efficiency.
 
 %Some methods are only applicable in specific cases.  For example, for certain particular groove profiles, there exist coordinate transformations (``conformal mappings'') which simplify the boundary conditions so they can be solved analytically.  In the following sections, we present an overview of two \emph{general} methods which can handle arbitrary groove profiles.  Before getting there, however, we take a closer look at defining grating efficiency.
 
@@ -464,7 +462,7 @@ e_n^{(r)} &=& B_n^{(2)} \, B_n^{(2)\ast} \, \frac{     \beta_n^{(2)}       }{   
 
 
 \subsubsection{Transmitted Efficiencies}
-Gratings used in the soft x-ray regime are always used in reflection, due to the high absorption of materials at these wavelengths.  However, since we're working on a general theory with application to all gratings, we can go through the same process for simplifying the transmitted efficiencies.  
+Gratings used in the soft x-ray regime are always used in reflection, due to the high absorption of materials at these wavelengths.  However, since we are working on a general theory with application to all gratings, we can go through the same process for simplifying the transmitted efficiencies.  
 
 Again, we define \fbox{$\eta_1 \equiv 1/(2Z_1)$} in TE polarization, and \fbox{$\eta_1 \equiv 2Z_1)$} in TM polarization, where $Z_1 = v_1 Z_0$ is the impedance of the grating substrate material.  The same integrations over the surface $Q_1$ give the ratio between the total transmitted and incident fluxes:
 \begin{eqnarray}
@@ -478,39 +476,39 @@ e_n^{(t)} =& A_n^{(1)} \, A_n^{(1)\ast} \frac{  \beta_n^{(1)}   } {  \beta_0^{(2
 
 
                          
-%\section{Solving for efficiency}
-%
-%
-%          - Solving: Requires periodic representation of refractive index: only true at fixed (y).  Needs computational methods
-%          
-%          -- key set of differential equations to solve... d2En/dy2 + k2 En = 0
-%\subsection{Numerical Challenges}
-%\subsubsection{Integration of growing exponentials}
-%               - Integrating growing exponentials: floating point rounding error leads to runaway [reference: Neviere: S-matrix; Somebody: R-matrix]
-%\subsubsection{Truncation of Fourier expansions}
-%               - Must truncate Fourier expansion.  Problem in TM case: makes field discontinuous, where should be continuous. [reference: Li, FFF]
-%\subsection{Applying boundary conditions within the groove region}
-%          - Highlighted methods for dealing with boundary conditions in groove region:
-%          
-%               - RCWA: split into thin layers and make rectangular
-%               
-%               - Differential method
-%               
-%          - Table of methods, areas of applicability, and references
-%          
-%\subsection{Handling stacks of gratings}
-%
-%
+\section{Solving for efficiency}
+
+
+          - Solving: Requires periodic representation of refractive index: only true at fixed (y).  Needs computational methods
+          
+          -- key set of differential equations to solve... d2En/dy2 + k2 En = 0
+\subsection{Numerical Challenges}
+\subsubsection{Integration of growing exponentials}
+               - Integrating growing exponentials: floating point rounding error leads to runaway [reference: Neviere: S-matrix; Somebody: R-matrix]
+\subsubsection{Truncation of Fourier expansions}
+               - Must truncate Fourier expansion.  Problem in TM case: makes field discontinuous, where should be continuous. [reference: Li, FFF]
+\subsection{Applying boundary conditions within the groove region}
+          - Highlighted methods for dealing with boundary conditions in groove region:
+          
+               - RCWA: split into thin layers and make rectangular
+               
+               - Differential method
+               
+          - Table of methods, areas of applicability, and references
+          
+\subsection{Handling stacks of gratings}
 
 
 
-%\section{X-rays and materials: how do they interact?} (Especially: lossy metals)
-%          - Characterized: atomic scattering factor -> *complex refractive index*
-%          
-%          FIGURE 2e: plot of real and imaginary components... Metals at 100-1000eV.
-%          
-%          - RI Derived from Henke Data
-%          
-%               - Reference CXRO calculator
-%               
-%          - Note: total external reflection (overcome notoriously absorbing materials via grazing incidence)
+
+
+\section{X-rays and materials: how do they interact?} (Especially: lossy metals)
+          - Characterized: atomic scattering factor -> *complex refractive index*
+          
+          FIGURE 2e: plot of real and imaginary components... Metals at 100-1000eV.
+          
+          - RI Derived from Henke Data
+          
+               - Reference CXRO calculator
+               
+          - Note: total external reflection (overcome notoriously absorbing materials via grazing incidence)
