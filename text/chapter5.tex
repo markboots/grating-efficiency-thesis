@@ -37,7 +37,7 @@ To measure the actual grating efficiency, we used the reflectometer on the Calib
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter5/5b_diffractometer/beamlineSchematic2.png} 
-   \caption{The Calibration and Standards Beamline (6.3.2) at the Advanced Light Source consists of a bending magnet source, a VLS-PGM monochromator with three selectable gratings, a higher-order suppressor, and a two-circle reflectometer shown in more detail in Figure \ref{5b}.  The curvature of refocussing mirror M3 can be adjusted to image the exit slit onto the sample, or to focus the light at infinite.  \textbf{Image from}: (TODO REF http://cxro.lbl.gov/als632/)}
+   \caption[The Calibration and Standards Beamline (6.3.2) at the Advanced Light Source consists of a bending magnet source, a VLS-PGM monochromator with three selectable gratings, a higher-order suppressor, and a two-circle reflectometer.]{The Calibration and Standards Beamline (6.3.2) at the Advanced Light Source consists of a bending magnet source, a VLS-PGM monochromator with three selectable gratings, a higher-order suppressor, and a two-circle reflectometer shown in more detail in Figure \ref{5b}.  The curvature of refocussing mirror M3 can be adjusted to image the exit slit onto the sample, or to focus the light at infinite.  \textbf{Image from}: (TODO REF http://cxro.lbl.gov/als632/)}
    \label{5b-a}
 \end{figure}
 
@@ -46,7 +46,7 @@ To measure the actual grating efficiency, we used the reflectometer on the Calib
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter5/5b_diffractometer/diffractometerLabelled2.pdf} 
-   \caption{The reflectometer on Beamline 6.3.2 at the Advanced Light Source allows for independently setting the angle of the gratings in the beam, and setting the angle of a pinhole photodiode detector.  Upstream, filters in the beamline are used to remove contamination from the higher-order light of the monochromator. }
+   \caption[The reflectometer on Beamline 6.3.2 at the Advanced Light Source allows for independently setting the angle of the gratings in the beam, and setting the angle of a pinhole photodiode detector.]{The reflectometer on Beamline 6.3.2 at the Advanced Light Source allows for independently setting the angle of the gratings in the beam, and setting the angle of a pinhole photodiode detector.  Upstream, filters in the beamline are used to remove contamination from the higher-order light of the monochromator. }
    \label{5b}
 \end{figure}
 
@@ -55,7 +55,7 @@ The purpose of the reflectometer endstation (Figure \ref{5b}) is to measure the 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter5/5b_diffractometer/reflectometerCoordinates.pdf} 
-   \caption{In the coordinate convention for the reflectometer, the sample angle is measured up from grazing incidence, and the detector angle is measured up from grazing incidence.  The sample position stage ($x$, $y$, $z$) is mounted to the sample angle stage, so that the centre of rotation is always at the height of the beam.}
+   \caption[Reflectometer coordinates: the sample angle is measured up from grazing incidence, and the detector angle is measured up from grazing incidence.]{In the coordinate convention for the reflectometer, the sample angle is measured up from grazing incidence, and the detector angle is measured up from grazing incidence.  The sample position stage ($x$, $y$, $z$) is mounted to the sample angle stage, so that the centre of rotation is always at the height of the beam.}
    \label{reflectometerCoordinates}
 \end{figure}
 
@@ -75,7 +75,7 @@ To achieve correct incidence angles and accurate detection angles, the grating h
 	\end{enumerate}
 	
 \subsubsection{Scanning modes}
-All of the efficiency plots we calculated in Chapter 5 to predict the REIXS gratings' performance show efficiency as a function of photon energy.  We wanted to show our real-world measurements in the same format, which required us to scan the monochromator energy while measuring the intensity of the desired order with the photodiode.  Therefore, the detector angle had to change as we changed the monochromator energy, according to the outgoing angle specified by the grating equation (Equation \ref{gratingEquation}).  
+All of the efficiency plots we calculated in Chapter 5 to predict the REIXS gratings' performance show efficiency as a function of photon energy.  We wanted to show our real-world measurements in the same format, which required us to scan the monochromator energy while measuring the intensity of the desired order with the photodiode.  Therefore, the detector angle had to change as we changed the monochromator energy, according to the outgoing angle specified by the grating equation (Eqn. \eq{gratingEquation}).  
 
 If we had known the groove density very accurately, we could have calculated the correct diffraction angle and positioned the detector simultaneously while scanning the monochromator energy.  However, for brand new gratings, it would be unlikely for the groove density to end up exactly as requested from the manufacturer; in this case we would actually need to conduct a two-dimensional scan: for every photon energy datapoint, we would need to conduct an angular scan of the photodiode to find the diffraction peaks.\footnote{After completing this scan, we could use the angular position of the diffraction peaks to calculate the actual groove density, but only within a precision determined by the angular extent of the 2mm photodiode pinhole.}
 
@@ -102,14 +102,14 @@ This procedure had to be repeated for every photon energy datapoint that we want
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter5/5c_angleScan/5c_solidColors.pdf} 
-   \caption{The simplest diffractometer experiment scans the detector angle while illuminating the grating with a constant photon energy.  The diffraction orders are visible as peaks along the outgoing angle axis (measured up from the incident beam direction at 0$\deg$).  The 0th order (reflection) peak is easily visible at 3.5$\deg$, or twice the incident angle (88.25$\deg$, or 1.75$\deg$ from grazing).  Grating: HRHEG.}
+   \caption[The simplest diffractometer experiment scans the detector angle while illuminating the grating with a constant photon energy.]{The simplest diffractometer experiment scans the detector angle while illuminating the grating with a constant photon energy.  The diffraction orders are visible as peaks along the outgoing angle axis (measured up from the incident beam direction at 0$\deg$).  The 0th order (reflection) peak is easily visible at 3.5$\deg$, or twice the incident angle (88.25$\deg$, or 1.75$\deg$ from grazing).  Grating: HRHEG.}
    \label{5c}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter5/5d_energyScan/5d_LEG.pdf} 
-   \caption{When the groove density of a grating is accurately known, the detector angle can be moved in tandem with the monochromator energy to keep it on the diffraction peak as the incident photon energy is scanned.  This allows faster, nearly continuous efficiency measurements as a function of photon energy.  (Grating: LEG)}
+   \caption[When the groove density of a grating is accurately known, the detector angle can be moved in tandem with the monochromator energy to keep it on the diffraction peak as the incident photon energy is scanned.]{When the groove density of a grating is accurately known, the detector angle can be moved in tandem with the monochromator energy to keep it on the diffraction peak as the incident photon energy is scanned.  This allows faster, nearly continuous efficiency measurements as a function of photon energy.  (Grating: LEG)}
    \label{5d}
 \end{figure}
 
@@ -124,20 +124,20 @@ The monochromator on Beamline 6.3.2 is slitless, therefore its absolute energy c
 \subsubsection{Normalization}
 \label{normalizationEff}
 Chapter 3 defined grating efficiency as the ratio of the intensities of the $n$th order diffracted beam and the incident beam.  In our measurement procedure (above), we used the photodiode to record the intensity of the reflected beam $I_r$, and subsequently the intensity of the incident beam $I_i$.  The efficiency $e^{(r)}$ would then be
-\begin{eqnarray}
+\begin{align}
 e^{(r)} = \frac{I_r}{I_i}
-\end{eqnarray}
+\end{align}
 Using the same detector to measure both the reflected and incident beam eliminates error due to differences in detector sensitivity.  However, because these measurements were not taken simultaneously, it is possible that the incident beam intensity would have changed in the interim; in fact, this would be virtually guaranteed due to decay of the storage ring current over time.  Because the light intensity of a bending magnet beamline is proportional to the storage ring current $J_{\mathrm{ring}}$, we can record the ring current at the time of each measurement, and use it to normalize the intensities:
-\begin{eqnarray}
+\begin{align}
 e^{(r)} = \frac{I_r / J_{\mathrm{ring},r}}{I_i / J_{\mathrm{ring},i}}
-\end{eqnarray}
+\end{align}
 
 Finally, as we identify in the following section, the dominant source of error in low-light photodiode measurements is the \emph{dark current}: an intensity-independent signal from the photodiode that increases with temperature due to thermal generation of electron-hole pairs.  With the beam blocked, we measured the dark current $I_{\mathrm{dark}}$ for every gain setting of the photodiode, and subtracted this  contribution from all measurements to determine the true intensity ratio:
-\begin{eqnarray}
+\begin{align}
 e^{(r)} = \frac{(I_r - I_{\mathrm{dark}}) / J_{\mathrm{ring},r}}{(I_i - I_{\mathrm{dark}})/ J_{\mathrm{ring},i}}
 \label{effNormalization}
-\end{eqnarray}
-We used Equation \ref{effNormalization} to normalize all of the efficiency results in Section \ref{gratingResults}.
+\end{align}
+We used Eqn. \eq{effNormalization} to normalize all of the efficiency results in Section \ref{gratingResults}.
 
 \subsection{Sources of error}
 \label{sourcesOfError}
@@ -154,7 +154,7 @@ Table \ref{filterTable} shows the mirror coating, mirror angle, and filter eleme
 
 \begin{table}[htbp]
    \centering
-   \caption{For higher-order suppression, Beamline 6.3.2 has a variable-incidence mirror and a set of transmission filter elements.  The mirror coating, mirror angle, and filter need to be selected based on the energy range of the scan.  (Mirror angles are measured from grazing incidence.)}
+   \caption[For higher-order suppression, Beamline 6.3.2 has a variable-incidence mirror and a set of transmission filter elements.  The mirror coating, mirror angle, and filter need to be selected based on the energy range of the scan.]{For higher-order suppression, Beamline 6.3.2 has a variable-incidence mirror and a set of transmission filter elements.  The mirror coating, mirror angle, and filter need to be selected based on the energy range of the scan.  (Mirror angles are measured from grazing incidence.)}
    \begin{tabular}{@{} |c|l|c|l| @{}} % Column formatting, @{} suppresses leading/trailing space
       \hline
 Energy Range	(eV) &	Mirror	&	Mirror Angle ($\deg$)	&	Filter	\\
@@ -185,7 +185,7 @@ As described in the procedure, we calibrated the wavelength axis of our efficien
 \subsubsection{Photodiode dark current}
 Photodiodes can be operated in a forward-biased (\emph{photovoltaic}) mode, or in a reverse-biased (\emph{photoconductive}) mode.  When used as sensitive detectors of light intensity, the photoconductive mode is almost always used, because it offers faster response times and a linear response to light intensity over many orders of magnitude.  In this mode, a reverse bias is applied and -- in the absence of light -- only a small \emph{dark current} flows through the diode, due to the thermal generation of electron-hole pairs in the $p-n$ junction.  When light strikes the $p-n$ junction, incident photons create electron-hole pairs which are swept across the junction by the reverse bias, and create an intensity-dependent \emph{photocurrent}.  The total current through the photodiode is measured by a sensitive current amplifier.
 
-The dark current depends on temperature, and slightly on the magnitude of the reverse bias voltage.  (In our instrumentation, the reverse bias was affected by the gain setting of the current amplifier.)  To account for this, we measured the dark current at every gain setting with the beam turned off, and then subtracted this in the normalization equation (Equation \ref{effNormalization}).  The dark current measurements were conducted after the diode had been operating under reverse bias for some time (and hopefully had reached operating temperature).  Since the dark current increases with temperature, it is possible that exposure to extreme intensity would heat the detector and change the dark current contribution; however, this effect should be negligible for the low intensities observed in our experiment.
+The dark current depends on temperature, and slightly on the magnitude of the reverse bias voltage.  (In our instrumentation, the reverse bias was affected by the gain setting of the current amplifier.)  To account for this, we measured the dark current at every gain setting with the beam turned off, and then subtracted this in the normalization equation (Eqn. \eq{effNormalization}).  The dark current measurements were conducted after the diode had been operating under reverse bias for some time (and hopefully had reached operating temperature).  Since the dark current increases with temperature, it is possible that exposure to extreme intensity would heat the detector and change the dark current contribution; however, this effect should be negligible for the low intensities observed in our experiment.
 
 \subsubsection{Saggital tilt of the grating}
 The reflectometer mechanics enable the intended rotation of the sample (grating) around the $x$-axis in FIgure \ref{reflectometerCoordinates}.  If the grating surface were tilted away from normal incidence around the $y$-axis -- either due to an offset in the grating mount, or due to the curvature of the grating combined with incorrect alignment in the $x$-direction -- light would be reflected out of the $y-z$ plane.  This would create the ``conical mount'' situation we assumed we could avoid modelling in Chapter 3, and would also cause the diffracted beam to partially or completely miss the 2 mm pinhole of the photodiode detector.  Both of these effects would reduce the observed intensity from what we would expect.
@@ -214,7 +214,7 @@ or,
 We dealt with the first possibility in the previous section on sources of error.  Before accepting the second possibility, we take a look at some of the ways manufactured gratings differ from ideal ones.
 
 \subsection{Stray radiant energy}
-For a perfectly periodic surface, the Rayleigh expansion in Chapter 3 showed that all of the light propagating away from a grating leaves as plane waves in discrete orders. Regardless of the groove shape, no light leaves except at the angles given by the grating equation (Equation \ref{gratingEquation}).  In real-world gratings, deviations from perfect periodicity lead to \emph{stray radiant energy} (SRE), which is a general term for all radiation that leaves at other angles.  (TODO REF http://gratings.newport.com/information/technotes/technote9.asp) Due to conservation of energy, the more SRE that exists, the less energy there is in the desired orders, and the lower the grating efficiency.  SRE also affects the resolution of a grating instrument, by increasing the background noise level and contaminating the outgoing angles with light of the wrong wavelength.
+For a perfectly periodic surface, the Rayleigh expansion in Chapter 3 showed that all of the light propagating away from a grating leaves as plane waves in discrete orders. Regardless of the groove shape, no light leaves except at the angles given by the grating equation (Eqn. \eq{gratingEquation}).  In real-world gratings, deviations from perfect periodicity lead to \emph{stray radiant energy} (SRE), which is a general term for all radiation that leaves at other angles.  (TODO REF http://gratings.newport.com/information/technotes/technote9.asp) Due to conservation of energy, the more SRE that exists, the less energy there is in the desired orders, and the lower the grating efficiency.  SRE also affects the resolution of a grating instrument, by increasing the background noise level and contaminating the outgoing angles with light of the wrong wavelength.
 
 Stray radiant energy can be caused by microroughness of the grating surface, variation in the height or spacing from groove to groove, and other imperfections such as dust and scratches.
 \subsubsection{Surface roughness}
@@ -246,27 +246,27 @@ Opt. Eng. 46, 078002 (Jul 02, 2007); doi:10.1117/1.2752180)  There are two funda
 Since grating theories are already being used to describe diffuse scattering from rough \emph{flat} surfaces, applying these methods to \emph{actual} gratings is even more difficult; this amounts to creating a superposition of (very high density) gratings, \emph{on the surface of a grating}(!)
  
  It would be theoretically difficult to analyze ``gratings structured on top of gratings'', so instead, we apply some of the results for rough mirrors to come up with an approximate correction for our grating efficiencies.  Many texts and computer programs use a simple expression called the ``Beckmann factor''
-\begin{eqnarray}
-R' &=& R \exp\left(  - \left(\frac{4\pi\sigma \,  \cos \theta}{\lambda}\right)^2    \right)
-\end{eqnarray}
+\begin{align}
+R' &= R \exp\left(  - \left(\frac{4\pi\sigma \,  \cos \theta}{\lambda}\right)^2    \right)
+\end{align}
 to approximate the reflectivity $R'$ of a real mirror, where $R$ would be the reflectivity of an ideally smooth surface.  However, this is subject to the small-angle approximation in the Beckmann approach, and predicts that the reflectivity is essentially unchanged  when approaching grazing incidence due to the $\cos^2\theta$ term in the exponential. 
  
  Based on a the x-ray-specific work of (TODO REF http://link.aps.org.cyber.usask.ca/doi/10.1103/PhysRevB.38.2297), the X-ray Data Booklet (TODO REF) gives a correction factor of
-\begin{eqnarray}
-R' &=& R \exp\left(  - \left(\frac{4\pi\sigma}{\lambda}\right)^2 \sin \theta \, \mathbf{Re}\left[ \sqrt{n^2 - \sin^2 \theta}  \right]    \right)
-\end{eqnarray}
+\begin{align}
+R' &= R \exp\left(  - \left(\frac{4\pi\sigma}{\lambda}\right)^2 \sin \theta \, \mathbf{Re}\left[ \sqrt{n^2 - \sin^2 \theta}  \right]    \right)
+\end{align}
 where $n$ is the complex refractive index.\footnote{TODO REF gives the complex reflection coefficient, instead of the reflectivity.  Compared to the expression given there, we have converted from grazing incidence angles to normal incidence angles, and multiplied by the complex conjugate to determine the reflectivity.}  This was derived from the ``distorted-wave Born approximation'', which uses a Rayleigh-Rice-like perturbation approach; it is far more accurate in the limit of grazing incidence.
 
 By analogy from reflectivity (``fraction of incident light reflected'') to grating efficiency (``fraction of incident light reflected in order $n$''), we have used the same factor to determine the form of the roughness correction to apply to the grating efficiencies:
-\begin{eqnarray}
-e_n' &=& e_n \exp\left(  - \left(\frac{4\pi\sigma}{\lambda}\right)^2 \sin \theta \, \mathbf{Re}\left[ \sqrt{n^2 - \sin^2 \theta}  \right]    \right)
+\begin{align}
+e_n' &= e_n \exp\left(  - \left(\frac{4\pi\sigma}{\lambda}\right)^2 \sin \theta \, \mathbf{Re}\left[ \sqrt{n^2 - \sin^2 \theta}  \right]    \right)
 \label{roughnessCorrection}
-\end{eqnarray}
+\end{align}
 Since we do not have measurements of each grating's RMS roughness, we used $\sigma$ as a free parameter to attempt to fit the theoretical efficiencies to the measured efficiencies; the results are shown in Section \ref{gratingResults}.
 
-Although we do use this mirror expression to correct our predicted efficiencies, it is important to note that roughness on gratings may actually cause different effects than roughness on flat mirrors.  (TODO REF http://www.gratinglab.com/information/handbook/chapter10.asp\#10.1.1) reports that the diffuse scattering is not isotropic; within the plane of incidence, the intensity is stronger at angles near the diffraction orders than it is between orders.  (TODO REF M. R. Sharpe and D. Irish, "Stray light in diffraction grating monochromators," Opt. Acta 25, 861-893 (1978)) analyzes scattering specifically from gratings, and indicates that the intensity of scattering increases as the fourth power of the energy.  (TODO REF Angular distribution of light scattered from a sinusoidal grating 1 September 2000 Vol. 39, No. 25 APPLIED OPTICS) looks at sinusoidal gratings illuminated by coherent visible light, and confirms that surface roughness increases the background light level. (TODO REF L. Nevot, P. Croce, Rev. Phys. Appl. 15, 761 (1980). 10.1051/rphysap:01980001503076100) provides another comprehensive study of rough gratings, and comes to a result consistent with Sinha et. al. (Equation \ref{roughnessCorrection}), although through a different method.
+Although we do use this mirror expression to correct our predicted efficiencies, it is important to note that roughness on gratings may actually cause different effects than roughness on flat mirrors.  (TODO REF http://www.gratinglab.com/information/handbook/chapter10.asp\#10.1.1) reports that the diffuse scattering is not isotropic; within the plane of incidence, the intensity is stronger at angles near the diffraction orders than it is between orders.  (TODO REF M. R. Sharpe and D. Irish, "Stray light in diffraction grating monochromators," Opt. Acta 25, 861-893 (1978)) analyzes scattering specifically from gratings, and indicates that the intensity of scattering increases as the fourth power of the energy.  (TODO REF Angular distribution of light scattered from a sinusoidal grating 1 September 2000 Vol. 39, No. 25 APPLIED OPTICS) looks at sinusoidal gratings illuminated by coherent visible light, and confirms that surface roughness increases the background light level. (TODO REF L. Nevot, P. Croce, Rev. Phys. Appl. 15, 761 (1980). 10.1051/rphysap:01980001503076100) provides another comprehensive study of rough gratings, and comes to a result consistent with Sinha et. al. (Eqn. \eq{roughnessCorrection}), although through a different method.
 
-Figure TODO shows the reduction in efficiency caused by different amounts of roughness, over the range of soft x-ray energies.  These were calculated at grazing incidence using the Sinha approach, so we are limited to RMS roughnesses much smaller than the wavelength.  The Beckmann (Equation \ref{beckmannFactor}) and Sinha (Equation \ref{roughnessCorrection}) factors are compared in Figure TODO, showing the limits of each one's applicability.
+Figure TODO shows the reduction in efficiency caused by different amounts of roughness, over the range of soft x-ray energies.  These were calculated at grazing incidence using the Sinha approach, so we are limited to RMS roughnesses much smaller than the wavelength.  The Beckmann (Eqn. \eq{beckmannFactor}) and Sinha (Eqn. \eq{roughnessCorrection}) factors are compared in Figure TODO, showing the limits of each one's applicability.
 
 Figure TODO reinforces how important it is to keep the roughness low during manufacturing.  Our AFM measurements suggest that re-coating the grating after ruling adds to the roughness, due to the granular nature of the evaporated coating.  Due to extensive manufacturing experience, gold coatings are usually the smoothest to apply -- as was the case for our LEG.  The subsequent platinum and nickel overcoatings on the remaining gratings resulted in a much rougher surface.
 
