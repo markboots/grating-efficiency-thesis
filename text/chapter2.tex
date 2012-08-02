@@ -186,6 +186,7 @@ We use $\nu$ to designative the refractive index. Here, $\nu_2$ designates the r
 
 The incoming light is a travelling electromagnetic plane wave with sinusoidal dependence on time.  We can express the electric field vector using the complex exponential form:
 \begin{align}
+\label{eqnPlaneWave}
 \vec E_{incident} &= \vec A\, \exp \left(i (\vec k_2 \,  \vec r - \omega t)\right)  = \vec A\, \exp \left(i\, k_2 (x \sin \theta_2 - y \cos \theta_2)\right)\exp \left(- i \omega t\right)
 \end{align}
 where the true (physical) field is contained in the real part.  Since all fields will have the same harmonic dependence on time, we drop the $e^{-i\omega t}$ factor from here on.  (The scalar $k_2$ is simply the magnitude of $\vec k_2$, i.e.: $\left| \vec k_2 \right| = \nu_2\, \omega/c$.)
@@ -852,13 +853,51 @@ B_n^{(M)} &= S_{12,n,0}^{(M-1)} e^{(-i (\beta_n^{(M)} + \beta_0^{(M)}) y_{M-1})}
 \end{align}
 Having computed the outgoing Rayleigh coefficients without loss of significance, Equations \eq{eqnEffR} and \eq{eqnEffT} compute the final reflected and transmitted efficiencies in each diffraction order.
 
-\section{X-rays and materials: how do they interact?} (Especially: lossy metals)
-          - Characterized: atomic scattering factor -> *complex refractive index*
-          
-          FIGURE 2e: plot of real and imaginary components... Metals at 100-1000eV.
-          
-          - RI Derived from Henke Data
-          
-               - Reference CXRO calculator
-               
-          - Note: total external reflection (overcome notoriously absorbing materials via grazing incidence)
+\section{Interaction of X-rays and materials}
+In setting up the differential theory, we assumed that light propagation within the grating material could be described by a refractive index, but we failed to suggest what this refractive index would be, and how it would vary with wavelength.  In this final theory section, we verify the assumption and suggest one source of refractive index data.
+
+In the soft X-ray region, the refractive index description is generally valid -- both for conventional dielectrics like SiO$_2$, and for metals.  In metals, the frequency of X-ray light is much higher than the plasma frequency; free electrons cannot respond fast enough to follow the changing electric field, so the material behaves as a weak dielectric rather than a conductor.  However, the incident X-rays are sufficiently energetic to cause electronic state transitions in bound electrons (\textbf{photoabsorption}); the result is substantial attenuation of the beam as it propagates through the material.  Energy in the beam is also lost through \textbf{coherent scattering} of photons off electrons in the material.  These two processes mean that attenuation is always present, but it becomes extremely strong at photon energies immediately above the material's \textbf{absorption edges}.
+
+The complex refractive index $\nu$
+\begin{align}
+\nu(\lambda) = n + i \kappa
+\end{align}
+can describe both the dielectric strength and the attenuation.  The real component $n$ is analogous to the conventional refractive index; it describes the phase velocity $v$ of the light in the material,
+\begin{align}
+n = c / v,
+\end{align}
+while the \textbf{extinction coefficient }$\kappa$ describes the amount of attenuation.  When using the sign convention for the electric field in Equation \eq{eqnPlaneWave},
+\begin{align}
+E \propto \exp(i(kz - \omega t)) = \exp(i \omega(\nu z/c - t)),
+\end{align}
+the sign of $\kappa$ must be positive for absorption.  ($\kappa < 0$ would imply amplification as the light travelled through the material.)
+For almost all materials at X-ray wavelengths, $n$ is smaller than, but very close to one, so the refractive index is often listed as
+\begin{align}
+\nu = 1 - \delta + i \kappa
+\end{align}
+
+\subsection{Atomic scattering factors and the refractive index}
+At soft X-ray wavelengths, it nearly impossible to measure the refractive index directly.  Instead, scattering theory and absorption measurements can be used together to determine semi-empirical values.  Scattering of electromagnetic waves from single point charges (e.g., electrons) is well described by classical \textbf{Thomson scattering}.  To extend this to multi-electron situations, the \textbf{atomic scattering factor} $f$ describes the amplitude of an electromagnetic wave scattered by a complete atom, compared to what would be scattered by a single electron.
+\begin{align}
+f = f_1 + i f_2
+\end{align}
+It is complex because all of the atom's electrons might not scatter in phase.  It can be separated into a forward-scattering component $f(0)$ and a correction $\Delta f_0$ that depends on the scattering angle $\theta$:
+\begin{align}
+f = f_1 + i f_2 = f_1(0) - \Delta f_0(\theta) + i f_2(0)
+\end{align}
+The ``Henke Data'' publication \cite{Hen93} tabulates the atomic scattering factors for all elements from Hydrogen to Uranium over the energy range from 50 eV to 30,000 eV.  The authors calculate the scattering factors from a survey of all existing available photoabsorption measurements, using a modified Kramers-Kronig dispersion relation that accounts for relativistic effects.  Across energy regions where photoabsorption measurements were not available, the values were interpolated using theoretical calculations.
+
+If the atoms within a material (metal, molecule, or crystal) can be assumed to scatter as dipoles, the complex refractive index can be determined from the scattering factors of all the constituent atoms. This allows us to estimate the refractive index -- even for compound grating materials like SiO$_2$ and MgF$_2$ -- as a function of wavelength:
+\begin{align}
+\tilde n = 1 - \delta - i \beta = 1 - \frac{r_e}{2\pi} \lambda ^2 \sum\limits_{q=1}^Q n_q f_q(0),
+\label{nFromScatteringFactor}
+\end{align}
+where there are $Q$ different types of atoms in the material, $n_q$ is the number density of atoms of type $q$, $f_q(0)$ is the complex forward scattering factor $f(0)$ for atom $q$, and $r_e$ is the classical electron radius \cite{Hen93}.    (Note that the refractive index $\tilde n$ here uses the opposite sign convention to $\nu$ defined above; if $\tilde n = 1 - \delta - i \beta$,  $\nu = 1 - \delta + i \beta$.)
+
+Using this method to calculate the refractive index assumes that the photoabsorption cross section does not depend on the bonding environment of atoms in the material; i.e., \emph{it assumes that the individual atoms scatter independently}.  In the vicinity of absorption edges, two processes invalidate this assumption: transitions to weakly bound excited states produce fine structure near the absorption edge (NEXAFS), and backscattering of outgoing photoelectrons from the atoms in a crystal causes oscillations above the edge (EXAFS).
+
+Given these effects, is it acceptable to use refractive indexes derived from the Henke data?  Two examples from Reference \cite{Hen93} show the limits of validity.  Figure TODO compares the reflectivity of a pure silicon wafer calculated from atomic scattering factors against measurements of the real crystal; in this case the agreement is good.  In Figure TODO, the near-edge absorption fine structure of CO$_2$ causes deviation in the measured absorption spectrum compared to the vector sum of the atomic photoabsorption.
+
+Far away from absorption edges, the semi-empirical nature of the data gives us a high degree of trust in the accuracy of the Henke-based refractive indexes; however, we need to remember that they will not reflect reality in the vicinity of a material's absorption edges.
+
+The Center for X-Ray Optics website \cite{CXR11} offers an online calculator to calculate the refractive index of a compound material using Equation \eq{nFromScatteringFactor} based on its chemical formula and density, subject to the atomic-like assumption.  We used this service to build a database of complex refractive indexes for common grating materials over the 50 eV to 10,000 eV range.  These values were used in all calculations shown later in the text.  In Section TODO, we examine the effect that potential errors in the refractive index would have on the efficiency results.
