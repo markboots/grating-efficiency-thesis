@@ -6,8 +6,8 @@
 	<integer>0</integer>
 	<key>ApplicationVersion</key>
 	<array>
-		<string>com.omnigroup.OmniGraffle</string>
-		<string>138.27.0.154334</string>
+		<string>com.omnigroup.OmniGraffle.MacAppStore</string>
+		<string>139.7</string>
 	</array>
 	<key>AutoAdjust</key>
 	<true/>
@@ -33,6 +33,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>BaseZoom</key>
+	<integer>0</integer>
 	<key>CanvasOrigin</key>
 	<string>{0, 0}</string>
 	<key>ColumnAlign</key>
@@ -46,12 +48,12 @@
 	<key>DisplayScale</key>
 	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
-	<integer>6</integer>
+	<integer>8</integer>
 	<key>GraphicsList</key>
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{484.8269, 106.2207}, {35.141113, 17.833252}}</string>
+			<string>{{484.82690000000002, 106.22069999999999}, {35.141112999999997, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -88,7 +90,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{454.91821, 124.2207}, {77.943359, 17.833252}}</string>
+			<string>{{454.91820999999999, 124.22069999999999}, {77.943359000000001, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -125,11 +127,11 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{430.69995, 142.2207}, {108.78516, 17.833252}}</string>
+			<string>{{430.69995, 142.22069999999999}, {108.78516, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
-			<integer>79</integer>
+			<integer>82</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -162,7 +164,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{407.4978, 160.2207}, {131.44385, 17.833252}}</string>
+			<string>{{407.49779999999998, 160.22069999999999}, {131.44385, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -199,7 +201,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{386.29272, 178.2207}, {158.4248, 17.833252}}</string>
+			<string>{{386.29271999999997, 178.22069999999999}, {158.4248, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -236,7 +238,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{364.81519, 196.2207}, {179.7876, 17.833252}}</string>
+			<string>{{364.81518999999997, 196.22069999999999}, {179.7876, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -273,7 +275,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{345.21558, 214.2207}, {199.38965, 17.833252}}</string>
+			<string>{{345.21557999999999, 214.22069999999999}, {199.38964999999999, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -310,7 +312,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{321.93286, 232.2207}, {227.14551, 17.833252}}</string>
+			<string>{{321.93286000000001, 232.22069999999999}, {227.14551, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -347,7 +349,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{298.375, 250.2207}, {253.73657, 17.833252}}</string>
+			<string>{{298.375, 250.22069999999999}, {253.73657, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -384,7 +386,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{216.89209, 106.2207}, {35.141113, 17.833252}}</string>
+			<string>{{216.89209, 106.22069999999999}, {35.141112999999997, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -421,7 +423,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{186.9834, 124.2207}, {77.943359, 17.833252}}</string>
+			<string>{{186.98339999999999, 124.22069999999999}, {77.943359000000001, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -458,7 +460,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{162.76514, 142.2207}, {108.78516, 17.833252}}</string>
+			<string>{{162.76514, 142.22069999999999}, {108.78516, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -495,7 +497,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{139.56299, 160.2207}, {131.44385, 17.833252}}</string>
+			<string>{{139.56299000000001, 160.22069999999999}, {131.44385, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -532,7 +534,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{118.35791, 178.2207}, {158.4248, 17.833252}}</string>
+			<string>{{118.35791, 178.22069999999999}, {158.4248, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -569,7 +571,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{96.880371, 196.2207}, {179.7876, 17.833252}}</string>
+			<string>{{96.880370999999997, 196.22069999999999}, {179.7876, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -606,7 +608,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{77.280762, 214.2207}, {199.38965, 17.833252}}</string>
+			<string>{{77.280761999999996, 214.22069999999999}, {199.38964999999999, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -643,7 +645,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{53.998047, 232.2207}, {227.14551, 17.833252}}</string>
+			<string>{{53.998047, 232.22069999999999}, {227.14551, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -680,7 +682,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{30.440186, 250.2207}, {253.73657, 17.833252}}</string>
+			<string>{{30.440186000000001, 250.22069999999999}, {253.73657, 17.833252000000002}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -722,8 +724,8 @@
 			<integer>61</integer>
 			<key>Points</key>
 			<array>
-				<string>{298.21231, 267.73795}</string>
-				<string>{287.01526, 267.73813}</string>
+				<string>{298.21231, 267.73795000000001}</string>
+				<string>{287.01526000000001, 267.73813000000001}</string>
 			</array>
 			<key>Rotation</key>
 			<real>20</real>
@@ -733,6 +735,8 @@
 				<dict>
 					<key>HeadArrow</key>
 					<string>0</string>
+					<key>Legacy</key>
+					<true/>
 					<key>TailArrow</key>
 					<string>0</string>
 					<key>Width</key>
@@ -752,37 +756,37 @@
 			<integer>60</integer>
 			<key>Points</key>
 			<array>
-				<string>{298.21231, 267.73795}</string>
+				<string>{298.21231, 267.73795000000001}</string>
 				<string>{298.21231, 249.33434}</string>
-				<string>{321.77661, 249.33434}</string>
-				<string>{321.77661, 231.42801}</string>
+				<string>{321.77661000000001, 249.33434}</string>
+				<string>{321.77661000000001, 231.42801}</string>
 				<string>{344.90186, 231.42801}</string>
-				<string>{344.90186, 213.52151}</string>
-				<string>{364.36066, 213.52151}</string>
+				<string>{344.90186, 213.52151000000001}</string>
+				<string>{364.36066, 213.52151000000001}</string>
 				<string>{364.36066, 195.61514}</string>
-				<string>{386.07526, 195.61514}</string>
-				<string>{386.07526, 177.70874}</string>
-				<string>{407.12927, 177.70874}</string>
-				<string>{407.12927, 159.80238}</string>
-				<string>{430.44293, 159.80238}</string>
-				<string>{430.44293, 141.89603}</string>
-				<string>{454.43854, 141.89603}</string>
-				<string>{454.43854, 123.98958}</string>
-				<string>{484.6731, 123.98958}</string>
-				<string>{484.6731, 106.08321}</string>
-				<string>{519.83496, 106.08321}</string>
-				<string>{519.83496, 123.98958}</string>
-				<string>{532.78491, 123.98958}</string>
-				<string>{532.78491, 141.89603}</string>
-				<string>{539.08386, 141.89603}</string>
-				<string>{539.08386, 177.70874}</string>
-				<string>{544.55542, 177.70874}</string>
-				<string>{544.55542, 231.42801}</string>
-				<string>{548.94849, 231.42801}</string>
-				<string>{548.94849, 249.33434}</string>
-				<string>{552.03577, 249.33434}</string>
-				<string>{552.03577, 267.63712}</string>
-				<string>{555.25525, 267.63712}</string>
+				<string>{386.07526000000001, 195.61514}</string>
+				<string>{386.07526000000001, 177.70874000000001}</string>
+				<string>{407.12927000000002, 177.70874000000001}</string>
+				<string>{407.12927000000002, 159.80238}</string>
+				<string>{430.44292999999999, 159.80238}</string>
+				<string>{430.44292999999999, 141.89603}</string>
+				<string>{454.43853999999999, 141.89603}</string>
+				<string>{454.43853999999999, 123.98958}</string>
+				<string>{484.67309999999998, 123.98958}</string>
+				<string>{484.67309999999998, 106.08320999999999}</string>
+				<string>{519.83496000000002, 106.08320999999999}</string>
+				<string>{519.83496000000002, 123.98958}</string>
+				<string>{532.78490999999997, 123.98958}</string>
+				<string>{532.78490999999997, 141.89603}</string>
+				<string>{539.08385999999996, 141.89603}</string>
+				<string>{539.08385999999996, 177.70874000000001}</string>
+				<string>{544.55542000000003, 177.70874000000001}</string>
+				<string>{544.55542000000003, 231.42801}</string>
+				<string>{548.94848999999999, 231.42801}</string>
+				<string>{548.94848999999999, 249.33434}</string>
+				<string>{552.03576999999996, 249.33434}</string>
+				<string>{552.03576999999996, 267.63711999999998}</string>
+				<string>{555.25525000000005, 267.63711999999998}</string>
 			</array>
 			<key>Rotation</key>
 			<real>20</real>
@@ -792,6 +796,8 @@
 				<dict>
 					<key>HeadArrow</key>
 					<string>0</string>
+					<key>Legacy</key>
+					<true/>
 					<key>TailArrow</key>
 					<string>0</string>
 					<key>Width</key>
@@ -806,8 +812,8 @@
 			<integer>45</integer>
 			<key>Points</key>
 			<array>
-				<string>{30.440178, 268.15479}</string>
-				<string>{19.243116, 268.15497}</string>
+				<string>{30.440178, 268.15478999999999}</string>
+				<string>{19.243116000000001, 268.15496999999999}</string>
 			</array>
 			<key>Rotation</key>
 			<real>20</real>
@@ -817,6 +823,8 @@
 				<dict>
 					<key>HeadArrow</key>
 					<string>0</string>
+					<key>Legacy</key>
+					<true/>
 					<key>TailArrow</key>
 					<string>0</string>
 					<key>Width</key>
@@ -836,37 +844,37 @@
 			<integer>46</integer>
 			<key>Points</key>
 			<array>
-				<string>{30.440178, 268.15479}</string>
-				<string>{30.440178, 249.75113}</string>
-				<string>{54.004505, 249.75113}</string>
-				<string>{54.004505, 231.8448}</string>
-				<string>{77.129707, 231.8448}</string>
-				<string>{77.129707, 213.93831}</string>
-				<string>{96.588516, 213.93831}</string>
-				<string>{96.588516, 196.03194}</string>
-				<string>{118.30315, 196.03194}</string>
+				<string>{30.440178, 268.15478999999999}</string>
+				<string>{30.440178, 249.75112999999999}</string>
+				<string>{54.004505000000002, 249.75112999999999}</string>
+				<string>{54.004505000000002, 231.84479999999999}</string>
+				<string>{77.129706999999996, 231.84479999999999}</string>
+				<string>{77.129706999999996, 213.93831}</string>
+				<string>{96.588515999999998, 213.93831}</string>
+				<string>{96.588515999999998, 196.03193999999999}</string>
+				<string>{118.30315, 196.03193999999999}</string>
 				<string>{118.30315, 178.12553}</string>
-				<string>{139.35712, 178.12553}</string>
-				<string>{139.35712, 160.21918}</string>
-				<string>{162.67081, 160.21918}</string>
-				<string>{162.67081, 142.31282}</string>
-				<string>{186.66644, 142.31282}</string>
-				<string>{186.66644, 124.40638}</string>
+				<string>{139.35712000000001, 178.12553}</string>
+				<string>{139.35712000000001, 160.21917999999999}</string>
+				<string>{162.67080999999999, 160.21917999999999}</string>
+				<string>{162.67080999999999, 142.31281999999999}</string>
+				<string>{186.66643999999999, 142.31281999999999}</string>
+				<string>{186.66643999999999, 124.40638}</string>
 				<string>{216.90097, 124.40638}</string>
 				<string>{216.90097, 106.50001}</string>
-				<string>{252.0629, 106.50001}</string>
-				<string>{252.0629, 124.40638}</string>
-				<string>{265.01276, 124.40638}</string>
-				<string>{265.01276, 142.31282}</string>
-				<string>{271.31177, 142.31282}</string>
-				<string>{271.31177, 178.12553}</string>
-				<string>{276.78326, 178.12553}</string>
-				<string>{276.78326, 231.8448}</string>
-				<string>{281.17639, 231.8448}</string>
-				<string>{281.17639, 249.75113}</string>
-				<string>{284.26367, 249.75113}</string>
-				<string>{284.26367, 267.80396}</string>
-				<string>{287.48315, 267.80396}</string>
+				<string>{252.06290000000001, 106.50001}</string>
+				<string>{252.06290000000001, 124.40638}</string>
+				<string>{265.01276000000001, 124.40638}</string>
+				<string>{265.01276000000001, 142.31281999999999}</string>
+				<string>{271.31177000000002, 142.31281999999999}</string>
+				<string>{271.31177000000002, 178.12553}</string>
+				<string>{276.78325999999998, 178.12553}</string>
+				<string>{276.78325999999998, 231.84479999999999}</string>
+				<string>{281.17639000000003, 231.84479999999999}</string>
+				<string>{281.17639000000003, 249.75112999999999}</string>
+				<string>{284.26366999999999, 249.75112999999999}</string>
+				<string>{284.26366999999999, 267.80396000000002}</string>
+				<string>{287.48315000000002, 267.80396000000002}</string>
 			</array>
 			<key>Rotation</key>
 			<real>20</real>
@@ -876,6 +884,8 @@
 				<dict>
 					<key>HeadArrow</key>
 					<string>0</string>
+					<key>Legacy</key>
+					<true/>
 					<key>TailArrow</key>
 					<string>0</string>
 					<key>Width</key>
@@ -895,8 +905,8 @@
 					<integer>48</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 106.50007}</string>
-						<string>{553.89795, 106.50007}</string>
+						<string>{19.000032000000001, 106.50006999999999}</string>
+						<string>{553.89795000000004, 106.50006999999999}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -906,6 +916,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -920,8 +932,8 @@
 					<integer>49</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 124.40642}</string>
-						<string>{553.89795, 124.40642}</string>
+						<string>{19.000032000000001, 124.40642}</string>
+						<string>{553.89795000000004, 124.40642}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -931,6 +943,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -945,8 +959,8 @@
 					<integer>50</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 142.31284}</string>
-						<string>{553.89795, 142.31284}</string>
+						<string>{19.000032000000001, 142.31283999999999}</string>
+						<string>{553.89795000000004, 142.31283999999999}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -956,6 +970,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -970,8 +986,8 @@
 					<integer>51</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 160.21931}</string>
-						<string>{553.89795, 160.21931}</string>
+						<string>{19.000032000000001, 160.21931000000001}</string>
+						<string>{553.89795000000004, 160.21931000000001}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -981,6 +997,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -995,8 +1013,8 @@
 					<integer>52</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 178.1255}</string>
-						<string>{553.89795, 178.1255}</string>
+						<string>{19.000032000000001, 178.12549999999999}</string>
+						<string>{553.89795000000004, 178.12549999999999}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -1006,6 +1024,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -1020,8 +1040,8 @@
 					<integer>53</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 196.03191}</string>
-						<string>{553.89795, 196.03191}</string>
+						<string>{19.000032000000001, 196.03191000000001}</string>
+						<string>{553.89795000000004, 196.03191000000001}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -1031,6 +1051,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -1045,8 +1067,8 @@
 					<integer>54</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 213.93834}</string>
-						<string>{553.89795, 213.93834}</string>
+						<string>{19.000032000000001, 213.93834000000001}</string>
+						<string>{553.89795000000004, 213.93834000000001}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -1056,6 +1078,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -1070,8 +1094,8 @@
 					<integer>55</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 231.84476}</string>
-						<string>{553.89795, 231.84476}</string>
+						<string>{19.000032000000001, 231.84476000000001}</string>
+						<string>{553.89795000000004, 231.84476000000001}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -1081,6 +1105,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -1095,8 +1121,8 @@
 					<integer>56</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 249.7511}</string>
-						<string>{553.89795, 249.7511}</string>
+						<string>{19.000032000000001, 249.75110000000001}</string>
+						<string>{553.89795000000004, 249.75110000000001}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -1106,6 +1132,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -1120,8 +1148,8 @@
 					<integer>57</integer>
 					<key>Points</key>
 					<array>
-						<string>{19.000032, 267.65768}</string>
-						<string>{553.89795, 267.65768}</string>
+						<string>{19.000032000000001, 267.65768000000003}</string>
+						<string>{553.89795000000004, 267.65768000000003}</string>
 					</array>
 					<key>Rotation</key>
 					<real>20</real>
@@ -1131,6 +1159,8 @@
 						<dict>
 							<key>HeadArrow</key>
 							<string>0</string>
+							<key>Legacy</key>
+							<true/>
 							<key>Pattern</key>
 							<integer>2</integer>
 							<key>TailArrow</key>
@@ -1149,9 +1179,9 @@
 			<integer>58</integer>
 			<key>Points</key>
 			<array>
-				<string>{286.87549, 268.05396}</string>
-				<string>{506.12399, 109.45715}</string>
-				<string>{553.89758, 266.5293}</string>
+				<string>{286.87549000000001, 268.05396000000002}</string>
+				<string>{506.12398999999999, 109.45715}</string>
+				<string>{553.89757999999995, 266.52929999999998}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1159,6 +1189,8 @@
 				<dict>
 					<key>HeadArrow</key>
 					<string>0</string>
+					<key>Legacy</key>
+					<true/>
 					<key>LineType</key>
 					<integer>1</integer>
 					<key>TailArrow</key>
@@ -1175,9 +1207,9 @@
 			<integer>59</integer>
 			<key>Points</key>
 			<array>
-				<string>{19.242992, 268.05396}</string>
+				<string>{19.242992000000001, 268.05396000000002}</string>
 				<string>{238.49149, 109.45715}</string>
-				<string>{286.26529, 266.5293}</string>
+				<string>{286.26528999999999, 266.52929999999998}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1185,6 +1217,8 @@
 				<dict>
 					<key>HeadArrow</key>
 					<string>0</string>
+					<key>Legacy</key>
+					<true/>
 					<key>LineType</key>
 					<integer>1</integer>
 					<key>TailArrow</key>
@@ -1204,7 +1238,7 @@
 	<key>HPages</key>
 	<integer>1</integer>
 	<key>ImageCounter</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>KeepToScale</key>
 	<false/>
 	<key>Layers</key>
@@ -1242,7 +1276,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2011-08-25 05:59:12 +0000</string>
+	<string>2012-08-02 00:28:47 +0000</string>
 	<key>Modifier</key>
 	<string>Mark Boots</string>
 	<key>NotesVisible</key>
@@ -1270,15 +1304,10 @@
 			<string>float</string>
 			<string>18</string>
 		</array>
-		<key>NSPaperName</key>
-		<array>
-			<string>string</string>
-			<string>US Letter</string>
-		</array>
 		<key>NSPaperSize</key>
 		<array>
-			<string>coded</string>
-			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU1ZhbHVlAISECE5TT2JqZWN0AIWEASqEhAx7X05TU2l6ZT1mZn2WgWQCgRgDhg==</string>
+			<string>size</string>
+			<string>{612, 792}</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
@@ -1298,148 +1327,6 @@
 	</dict>
 	<key>PrintOnePage</key>
 	<false/>
-	<key>QuickLookPreview</key>
-	<data>
-	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
-	9p4MykpV5ZHhiCxsZjiZSLqaCkKGnAnbrgzpczH1ukk6MsSvrT15zDEs1ogjTGSeTfHj
-	HSv/8/j8/N7fuYZsPn9LGdqMs1qRWempS4WJ0qupoC0y23KG+GhBKkuY6bc6zAT49lPx
-	H0GYiarTR/M8AlRvzDCLqKc7iQ3DTY8lIDN4UyZiPt0vvR/CsIhOCvSu0Cd59y2IsiNP
-	+ohuxRdhI6XFVMbFVBHO7eDvTmK8UlR8iyyMcluRVdklyEIzvYO/kSG+KFsofVd2+uWg
-	0+jC4owwE226Tr9MTMNN1xWy6b3JRVaKhiO/FUSQxl2qjl+J1HBTdYW3qv7lfzPgKf4K
-	ZW5kc3RyZWFtCmVuZG9iago2IDAgb2JqCjE5MTAKZW5kb2JqCjMgMCBvYmoKPDwgL1R5
-	cGUgL1BhZ2UgL1BhcmVudCA0IDAgUiAvUmVzb3VyY2VzIDcgMCBSIC9Db250ZW50cyA1
-	IDAgUiAvTWVkaWFCb3ggWzAgMCA1NzYgNzMzXQo+PgplbmRvYmoKNyAwIG9iago8PCAv
-	UHJvY1NldCBbIC9QREYgXSAvQ29sb3JTcGFjZSA8PCAvQ3MxIDggMCBSID4+IC9FeHRH
-	U3RhdGUgPDwgL0dzMSA5IDAgUgo+PiA+PgplbmRvYmoKOSAwIG9iago8PCAvVHlwZSAv
-	RXh0R1N0YXRlIC9jYSAwLjUgPj4KZW5kb2JqCjEwIDAgb2JqCjw8IC9MZW5ndGggMTEg
-	MCBSIC9OIDMgL0FsdGVybmF0ZSAvRGV2aWNlUkdCIC9GaWx0ZXIgL0ZsYXRlRGVjb2Rl
-	ID4+CnN0cmVhbQp4AYVU32vTUBT+2mWdsOGLOmcRCT5okW5kU3RDnLZrV7rNWuo2tyFI
-	m6ZtXJrGJO1+sAfZi286xXfxBz75BwzZg297kg3GFGH4rIgiTPYis56bNE0nUwO597vf
-	+e45J+fkXqD5cVrTFC8PFFVTT8XC/MTkFN/yAV4cQyv8aE2LhhZKJkdAD9Oyee+z8w4e
-	xmx07m/fq/5j1ZqVDBHwHCC+lDXEIuFZoGlc1HQT4NaJ750xNcLNTHNYpwQJH2c4b2OB
-	4YyNI5ZmNDVAmgnCB8VCOku4QDiYaeDzDdjOgRTkJyapki6LPKtFUi/lZEWyDPbwH3OD
-	8l+wqJTpm63nEI1tmhlO0XyK3h85fXCM5gDVwT9fGL1BuJ1wWDbjozV+Qs0krhEmvefu
-	dGmY7WWal1kpEiUcJLxiVK4zbGnmCwOJmubT7fRQkrCfNL80M1nz4+1QlQTrMcX19ktG
-	9Lq919uRkwfjNT6nKdZ/QP699/VyiuV5kvDrtB6N1fRbkjpW29vkzaYjw8R3UT8DSEKC
-	jhxkKOCRQgxhmmPEqvhMFhkiSqTSaXRUebI41jsok5btHEd4yV8OuF4W9VuyuPbg+57d
-	JdeOvBWFxbej2FHttYHpurITmht/dWGlo27hN7nlmxttqwsIUf6K5bFIXmXKT4JR13U2
-	5pBTl/x1C88ylO4ldhJYDLqs8F74KmwKT4UXwpe/1MjO3q0Ry4BxLD6rnlPNxuwl0kzS
-	62S4v4r1QsYY+ZAxQ1qdviRNnIo58tpQCycGd4Lr5uJcL9cHnrvMXeH6uQitLnIjjsIX
-	9UV8IfC+M74+X7dviGGn277TZOujMVrru9ORuqKxepSP2yf2PY6qExmysb6xflYIK7Si
-	Y2pKs3RPAAMlbU6X8wWT7xGEC3yIri2Jj6tiV5BPKwpvmQxelwxJr0jZLrA7j+0DtlPW
-	XeZpX3M58ypw6Rv9w+suN1UGXhnA0XMuF6AzdeQJsHxeLOsV2x88nreAkTvbY609bWG6
-	iz5Wq9t0LlseAbsPq9Wfz6rV3efkfwt4o/wGqSMK1gplbmRzdHJlYW0KZW5kb2JqCjEx
-	IDAgb2JqCjc4NQplbmRvYmoKOCAwIG9iagpbIC9JQ0NCYXNlZCAxMCAwIFIgXQplbmRv
-	YmoKNCAwIG9iago8PCAvVHlwZSAvUGFnZXMgL01lZGlhQm94IFswIDAgNjEyIDc5Ml0g
-	L0NvdW50IDEgL0tpZHMgWyAzIDAgUiBdID4+CmVuZG9iagoxMiAwIG9iago8PCAvVHlw
-	ZSAvQ2F0YWxvZyAvT3V0bGluZXMgMiAwIFIgL1BhZ2VzIDQgMCBSIC9WZXJzaW9uIC8x
-	LjQgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL0xhc3QgMTMgMCBSIC9GaXJzdCAxNCAwIFIg
-	Pj4KZW5kb2JqCjE0IDAgb2JqCjw8IC9QYXJlbnQgMTUgMCBSIC9Db3VudCAwIC9EZXN0
-	IFsgMyAwIFIgL1hZWiAwIDczMyBudWxsIF0gL1RpdGxlIChDYW52YXMgMSkKPj4KZW5k
-	b2JqCjE1IDAgb2JqCjw8ID4+CmVuZG9iagoxMyAwIG9iago8PCAvUGFyZW50IDE1IDAg
-	UiAvQ291bnQgMCAvRGVzdCBbIDMgMCBSIC9YWVogMCA3MzMgbnVsbCBdIC9UaXRsZSAo
-	Q2FudmFzIDEpCj4+CmVuZG9iagoxNiAwIG9iagooTWFjIE9TIFggMTAuNyBRdWFydHog
-	UERGQ29udGV4dCkKZW5kb2JqCjE3IDAgb2JqCihEOjIwMTEwODI1MDYwMjA2WjAwJzAw
-	JykKZW5kb2JqCjEgMCBvYmoKPDwgL1Byb2R1Y2VyIDE2IDAgUiAvQ3JlYXRpb25EYXRl
-	IDE3IDAgUiAvTW9kRGF0ZSAxNyAwIFIgPj4KZW5kb2JqCnhyZWYKMCAxOAowMDAwMDAw
-	MDAwIDY1NTM1IGYgCjAwMDAwMDM3MzMgMDAwMDAgbiAKMDAwMDAwMzM3OSAwMDAwMCBu
-	IAowMDAwMDAyMDI2IDAwMDAwIG4gCjAwMDAwMDMyMTYgMDAwMDAgbiAKMDAwMDAwMDAy
-	MiAwMDAwMCBuIAowMDAwMDAyMDA2IDAwMDAwIG4gCjAwMDAwMDIxMzAgMDAwMDAgbiAK
-	MDAwMDAwMzE4MCAwMDAwMCBuIAowMDAwMDAyMjI2IDAwMDAwIG4gCjAwMDAwMDIyNzIg
-	MDAwMDAgbiAKMDAwMDAwMzE2MCAwMDAwMCBuIAowMDAwMDAzMjk5IDAwMDAwIG4gCjAw
-	MDAwMDM1NDUgMDAwMDAgbiAKMDAwMDAwMzQyNyAwMDAwMCBuIAowMDAwMDAzNTIzIDAw
-	MDAwIG4gCjAwMDAwMDM2NDEgMDAwMDAgbiAKMDAwMDAwMzY5MSAwMDAwMCBuIAp0cmFp
-	bGVyCjw8IC9TaXplIDE4IC9Sb290IDEyIDAgUiAvSW5mbyAxIDAgUiAvSUQgWyA8ZTll
-	MTM4ODBjNGRkYTZiNjQ4MWEzNmE5MDMxMTI4NzQ+CjxlOWUxMzg4MGM0ZGRhNmI2NDgx
-	YTM2YTkwMzExMjg3ND4gXSA+PgpzdGFydHhyZWYKMzgwOAolJUVPRgoxIDAgb2JqCjw8
-	L0F1dGhvciAoTWFyayBCb290cykvQ3JlYXRpb25EYXRlIChEOjIwMTEwODI1MDUzOTAw
-	WikvQ3JlYXRvciAoT21uaUdyYWZmbGUgNS4zLjEpL01vZERhdGUgKEQ6MjAxMTA4MjUw
-	NTU5MDBaKS9Qcm9kdWNlciAxNiAwIFIgL1RpdGxlICgzYS5ncmFmZmxlKT4+CmVuZG9i
-	agp4cmVmCjEgMQowMDAwMDA0MzI1IDAwMDAwIG4gCnRyYWlsZXIKPDwvSUQgWzxlOWUx
-	Mzg4MGM0ZGRhNmI2NDgxYTM2YTkwMzExMjg3ND4gPGU5ZTEzODgwYzRkZGE2YjY0ODFh
-	MzZhOTAzMTEyODc0Pl0gL0luZm8gMSAwIFIgL1ByZXYgMzgwOCAvUm9vdCAxMiAwIFIg
-	L1NpemUgMTg+PgpzdGFydHhyZWYKNDQ5MAolJUVPRgo=
-	</data>
-	<key>QuickLookThumbnail</key>
-	<data>
-	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
-	</data>
 	<key>ReadOnly</key>
 	<string>NO</string>
 	<key>RowAlign</key>
@@ -1470,7 +1357,7 @@
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{260, 0}, {710, 778}}</string>
+		<string>{{47, 72}, {898, 778}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -1484,7 +1371,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {575, 623}}</string>
+		<string>{{-94, 0}, {763, 639}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
@@ -1496,7 +1383,5 @@
 			</array>
 		</array>
 	</dict>
-	<key>saveQuickLookFiles</key>
-	<string>YES</string>
 </dict>
 </plist>

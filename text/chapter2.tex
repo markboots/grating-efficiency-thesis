@@ -479,7 +479,7 @@ We can define the grating efficiency for a single order quite rigorously in the 
 \begin{align}
 \vec S = \vec E \times \vec H
 \end{align}
-This gives the instantaneous energy flux, which will oscillate in time with the wave.  The \emph{time-averaged Poynting vector} gives the average flux delivered over a full period of the wave.  For harmonic waves, this turns out to be
+This gives the instantaneous energy flux, which will oscillate in time with the wave.  The \emph{time-averaged Poynting vector} gives the average flux delivered over a full period of the wave.  For harmonic waves, this works out to
 \begin{align}
  \bar S  = \frac{1}{2}\, \operatorname{Re} \left( \vec E \times \vec H^\ast \right)
 \end{align}
@@ -538,6 +538,7 @@ e_n^{(t)} &= \frac{    A_n^{(1)} \, A_n^{(1)\ast} \cos \theta_{1,n} \, \eta_1   
 \end{align}
 In this case, the difference in impedance above and below the grooves causes $\eta_1$ and $\eta_2$ to remain in the formula, so the final simplification depends on polarization:
 \begin{align}
+\label{eqnEffT}
 e_n^{(t)} &= A_n^{(1)} \, A_n^{(1)\ast} \frac{  \beta_n^{(1)}   } {  \beta_0^{(2)} }  & \textrm{(TE Polarization)} \\
 &= A_n^{(1)} \, A_n^{(1)\ast} \frac{  \beta_n^{(1)}   } {  \beta_0^{(2)} }  \left( \frac{v_2}{v_1} \right)^2 & \textrm{(TM Polarization)}
 \end{align}
@@ -674,17 +675,24 @@ This concludes the basic formulation of the differential method.  However, there
 
 \subsection{Integration of growing exponentials: The S-Matrix method}
 \label{SMatrixMethod}
-The integration process \eq{matrixDE3} requires numerically integrating a set of growing and decaying exponential functions.  As the groove depth, or integration distance $a$, increases, the values of $\tilde u_p$ and $\tilde u'_p$ become very large -- for example, on the order of $10^{22}$ for a depth of just $a = 0.1$ um.  However, the algebraic process \eq{axb} requires taking the sum and difference of many large $\tilde u_p$ values to produce a number less than unity.  On a computer with finite-precision floating point numbers, this will result in a loss of significance that can make the final result meaningless.
+The integration process \eq{matrixDE3} requires numerically integrating a set of growing and decaying exponential functions.  As the groove depth, or integration distance $a$ increases, the values of $\tilde u_p$ and $\tilde u'_p$ become very large -- for example, on the order of $10^{22}$ for a depth of just $a = 0.1$ um.  However, the algebraic process \eq{axb} requires taking the sum and difference of many large $\tilde u_p$ values to produce a number less than unity.  On a computer with finite-precision floating point numbers, this will result in a loss of significance that can make the final result meaningless.
 
 For example, standard double-precision (IEEE 754) variables have a decimal precision of approximately 16 digits.  The subtraction of two numbers on the order of $10^{22}$ will have a result precision of $\pm10^6$.  Obviously, a final efficiency result of $e_{r,1} = 0.21 \pm 10^6$ would be of little use.  To mitigate this, we need a strategy to keep the $\tilde u_p$ values bounded within the significant range; the only way to accomplish this is to limit the integration distance.
 
 The solution to this problem was originally developed for handling stacks of grating layers, like those shown in Figure \ref{2d-1}.  Here, the grating is sliced into layers between modulated regions (Figure \ref{2d-2}).  However, the technique can also be applied to a single deep grating, as shown in Figure \ref{2d-3}, where the layer thicknesses are chosen small enough to keep the integration values bounded.  The basic concept is to conduct separate numerical integrations using assumed starting values from the bottom to the top of each layer, and then to combine the effects of all layers using a stable matrix algorithm.
 
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=\textwidth]{Chapter2/2d_stacksOfGratings/2d_3.pdf} 
+   \caption[Using the S-matrix method, thick gratings are divided into layers, where each layer is thin enough to avoid losing numerical significance during integration.]{Using the S-matrix method, thick gratings are divided into layers, where each layer is thin enough to avoid losing numerical significance during integration.  Conceptually, we insert a zero-thickness homogeneous layer between each ``real'' region, so that Rayleigh expansions with coefficients $A'_n,\, B'_n$ are valid.  (These conceptual layers have the same impedance $(k_M^2)$ and $\beta_n^{(M)}$ as the vacuum region $M$.)}
+   \label{2d-3}
+\end{figure}
+
 Between each ``real'' grating layer (Figure \ref{2d-3}), we can conceptually insert a homogeneous layer with zero thickness.  By giving the conceptual layer the same refractive index as the vacuum, we ensure that the Rayleigh expansion that applies within it has the same $\beta_n$ values and propagation angles as the Rayleigh expansion above the grating.  (Introducing this conceptual layer has no effect on the grating efficiency, because it has zero thickness; we introduce it only to make the mathematics convenient.)
 
 Previously, in the single-layer formulation, we had a single down-going wave $A^{(2)}_0$ above the grating, and a set of up-going reflected waves $B^{(2)}_n$.  Below the grating (inside the substrate) there was a set of down-going transmitted waves $A^{(1)}_n$.  In the multi-layer formulation, we now have down-going and up-going waves within each conceptual layer.  Instead of just one incident wave, all except the external layers have a complete set of waves incident from both above and below.  Transmitted light from the region above creates down-going incident waves; reflected light from the region below creates up-going incident waves.
 
-Figure \ref{2d_2} shows the numbering we adopt now for the conceptual homogeneous layers.  They are numbered from $m=1$ (the substrate) to $m=M-1$.  The number of ``real'' grating slices is $M-2$, and the vacuum region above the grating is labelled  $M$.  Within each conceptual layer $m$, at a height $y_m$, the field is described by a Rayleigh expansion
+Figure \ref{2d-3} shows the numbering we adopt now for the conceptual homogeneous layers.  They are numbered from $m=1$ (the substrate) to $m=M-1$.  The number of ``real'' grating slices is $M-2$, and the vacuum region above the grating is labelled  $M$.  Within each conceptual layer $m$, at a height $y_m$, the field is described by a Rayleigh expansion
 \begin{align}
 E_z(x,y) &= \sum\limits_{n=-N}^{N} \left[ A'^{(m)}_n  e^{-i \beta^{(M)}_n y_m}   +  B'^{(m)}_n e^{i \beta^{(M)}_n y_m} \right] e^{i \alpha_n x}.
 \label{rayleighS}
@@ -718,13 +726,17 @@ There are no up-going waves incident from below the substrate, so $B^{(1)}_n = 0
 This equation is sufficient to calculate the outgoing transmitted waves $A^{(1)}_n$ and reflected waves $B^{(M)}_n$ for any incidence condition $A_n^{(M)}$.
 
 \subsubsection{Determining the T-matrix for one layer}
-To determine the $T^{(m)}$ matrix that describes the region below conceptual layer $m$, we again apply the shooting method.  Like in Section \ref{shootingMethodDescription}, we generate a set of $P$ orthogonal trial solution vectors $V^{(m-1)}_p$ that satisfy the boundary conditions at the bottom of the region, and integrate them numerically from $y_{m-1}$ to $y_{m}$.  Then, we choose a linear combination of the resulting $V^{(m)}_p$ that satisfy the boundary conditions at the top ($y_m$).  However, because we now have up-going \emph{and} down-going incident waves within the region, we need twice as many trial solutions as before: $P=2(2N+1)$.
+To determine the $T^{(m)}$ matrix that describes the region below the $m^\textrm{th}$ conceptual layer, we again apply the shooting method.  Like in Section \ref{shootingMethodDescription}, we generate a set of $P$ orthogonal trial solution vectors $V^{(m-1)}_p$ that satisfy the boundary conditions at the bottom of the region, and integrate them numerically from $y_{m-1}$ to $y_{m}$.  Then, we choose a linear combination of the resulting $V^{(m)}_p$ that satisfy the boundary conditions at the top ($y_m$).  However, because we now have up-going \emph{and} down-going incident waves within the region, we need twice as many trial solutions as before: $P=2(2N+1)$.
 
 As a reminder, the boundary conditions now require that our numerical solution within the modulated region below $y_m$ must match up to the Rayleigh expansions defined in the conceptual layers above and below. The boundary conditions come from the continuity of the tangential electric field $\left(E_z = \sum E_n(y) \exp{\left(i \alpha_n x\right)} \right)$ and its first derivative at $y_{m-1}$ and $y_m$:
 \begin{align}
+\label{eqnBounds1S}
 E_n(y_{m-1}) &= A'^{(m)}_n e^{-i \beta^{(M)}_n y_{m-1}} + B'^{(m)} e^{i \beta^{(M)}_n y_{m-1}} \\
+\label{eqnBounds2S}
 \left. \frac{dE_n}{dy} \right|_{y_{m-1}} &= -i \beta^{(M)}_n A'^{(m)}_n e^{-i \beta^{(M)}_n y_{m-1}} + i \beta^{(M)}_n B'^{(m)}_n e^{i \beta^{(M)}_n y_{m-1}}  \\
+\label{eqnBounds3S}
 E_n(y_m) &= A'^{(m)}_n e^{-i \beta^{(M)}_n y_m} + B'^{(m)} e^{i \beta^{(M)}_n y_m} \\
+\label{eqnBounds4S}
 \left. \frac{dE_n}{dy} \right|_{y_m} &= -i \beta^{(M)}_n A'^{(m)}_n e^{-i \beta^{(M)}_n y_m} + i \beta^{(M)}_n B'^{(m)}_n e^{i \beta^{(M)}_n y_m}
 \end{align}
 
@@ -758,7 +770,7 @@ These correspond to starting values of the electric field components
 \left. \frac{d \tilde E_{n,p}}{dy} \right|_{y_{m-1}} &= i \beta^{(M)}_n \delta_{n,p-(2N+1)}.
 \end{align}
 
-Now we can numerically integrate the electric field components from $y_{m-1}$ to $y_m$ as before, using Equation \eq{matrixDE}.  From the second pair of boundary conditions, we can compute $V^{(m)}_p$ at the end of the integration:
+Now we can numerically integrate the electric field components from $y_{m-1}$ to $y_m$ as before, using Equation \eq{matrixDE}.  From the second pair of boundary conditions \eq{eqnBounds3S}\eq{eqnBounds4S}, we can compute $V^{(m)}_p$ at the end of the integration:
 \begin{align}
 V^{(m)}_{p} &=   \left(\begin{array}{c}\vdots \\   A'^{(m)}_n  e^{-i \beta^{(M)}_n y_{m}}  \\ \vdots \\\hline \vdots \\  B'^{(m)}_n  e^{i \beta^{(M)}_n y_{m}}  \\ \vdots \end{array}\right)  =  \left(\begin{array}{c} \vdots \\        \frac{1}{2}\left( \tilde E_{n,p}(y_m) - \frac{1}{i\beta^{(M)}_n}\frac{d\tilde E_{n,p}}{dy}(y_m)   \right)            \\ \vdots  \\\hline \vdots \\            \frac{1}{2}\left( \tilde E_{n,p}(y_m) + \frac{1}{i\beta^{(M)}_n}\frac{d\tilde E_{n,p}}{dy}(y_m)   \right)             \\ \vdots \end{array}\right).
 \end{align}
@@ -825,7 +837,20 @@ S^{(2)}_{22} &= \left(T^{(2)}_{11}  \right)^{-1}
 \end{align}
 The rest of the stack is solved inductively by computing the $T^{(q+1)}$ matrix at each layer $q+1$, and then using Equation \eq{SmatZ}, \eq{Smat22}, and \eq{Smat12} to determine $S^{(q+1)}$, until we reach the top layer.
 
-TODO solving final rayleigh coefficients.
+Finally, we can use the blocks of the final $S^{(M-1)}$ matrix to relate the incident waves at the top of the grating to the diffracted and transmitted waves, using Equation \eq{sMatrixDef}. Since there are no up-going waves incident from below the substrate $(B_n^{(1)} = 0)$:
+\begin{equation}
+ \left(\begin{array}{c}\vdots \\ B^{(M)}_n  e^{i \beta^{(M)}_n y_{M-1}} \\ \vdots \\\hline \vdots \\ A^{(1)}_n \\ \vdots\end{array}\right) =            \left[\begin{array}{c|c}S^{(M-1)}_{11} & S^{(M-1)}_{12} \\\hline S^{(M-1)}_{21} & S^{(M-1)}_{22}\end{array}\right]       \left(\begin{array}{c}\vdots \\ 0  \\ \vdots \\\hline \vdots \\ A^{(M)}_n e^{-i \beta^{(M)}_n y_{M-1}} \\ \vdots\end{array}\right) 
+ \label{sMatrixDef}
+\end{equation}
+For a single incident plane wave with normalized intensity, $A_n^{(M)} = \delta_{n,0}$.  From this we can work out the transmitted Rayleigh coefficients below the grating
+\begin{align}
+A_n^{(1)} &= S_{22,n,0}^{(M-1)} e^{(-i \beta_0^{(M)}y_{M-1})},
+\end{align}
+and the diffracted Rayleigh coefficients above the grating
+\begin{align}
+B_n^{(M)} &= S_{12,n,0}^{(M-1)} e^{(-i (\beta_n^{(M)} + \beta_0^{(M)}) y_{M-1})}.
+\end{align}
+Having computed the outgoing Rayleigh coefficients without loss of significance, Equations \eq{eqnEffR} and \eq{eqnEffT} compute the final reflected and transmitted efficiencies in each diffraction order.
 
 \section{X-rays and materials: how do they interact?} (Especially: lossy metals)
           - Characterized: atomic scattering factor -> *complex refractive index*
