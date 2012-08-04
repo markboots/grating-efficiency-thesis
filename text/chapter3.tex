@@ -16,11 +16,11 @@ Table \ref{commercialComparison} compares the features, cost, and performance of
 \begin{tabularx}{\textwidth}{@{} p{1.7in}p{1in}p{0.8in}XXX @{}}
 \toprule
         Name and Organization                                                        & Method                         & Price (USD)                                            & Graphical User Interface & Arbitrary Shapes        & Comparative Run Time \\ \midrule
-        \textbf{PCGrate-SX 6.5}\newline IIG, Inc.\newline http://www.pcgrate.com & Modified Integral Method (MIM) & GUI: 15749\newline Console: 11249\newline Both: 22499 & Available                & Yes                     & ~                    \\ 
+        \texttt{\textbf{PCGrate-SX 6.5}}\newline IIG, Inc.\newline http://www.pcgrate.com & Modified Integral Method (MIM) & GUI: 15749\newline Console: 11249\newline Both: 22499 & Available                & Yes                     & ~                    \\ 
 
-        \textbf{GSolver 5.2} \newline Grating Solver Development Co. \newline http://www.gsolver.com            & Rigorous Coupled Wave (RCW)    & 795                                                    & Yes                      & Yes & ~                    \\  
-        \textbf{Gradif}\newline Dr. Michel Neviere \newline m.neviere@free.fr                                                    & Differential Method            & 6090                                                   & No                       & No                      & ~                    \\ 
-        \textbf{REFLEC}\newline Dr. Michael Krumrey\newline Michael.Krumrey@ptb.de                 & Differential Method            & 0                                                      & No                       & No                      & ~    \\
+        \texttt{\textbf{GSolver 5.2}} \newline Grating Solver Development Co. \newline http://www.gsolver.com            & Rigorous Coupled Wave (RCW)    & 795                                                    & Yes                      & Yes & ~                    \\  
+        \texttt{\textbf{Gradif}}\newline Dr. Michel Neviere \newline m.neviere@free.fr                                                    & Differential Method            & 6090                                                   & No                       & No                      & ~                    \\ 
+        \texttt{\textbf{REFLEC}}\newline Dr. Michael Krumrey\newline Michael.Krumrey@ptb.de                 & Differential Method            & 0                                                      & No                       & No                      & ~    \\
 \bottomrule
    \end{tabularx}
 }
@@ -29,7 +29,7 @@ Table \ref{commercialComparison} compares the features, cost, and performance of
 \renewcommand{\arraystretch}{1.2}
 
 
-\section{Improving the usability and efficiency of Gradif}
+\section{Improving the usability and efficiency of \texttt{\textbf{Gradif}}}
 The Canadian Light Source purchased the \texttt{\textbf{Gradif}} code and made it available for this project.  However, there were two challenges involved in applying the code:
 \begin{enumerate}
 \item The code itself is a Fortran-language program that provides no user interface.  Instead, to calculate an efficiency data point for a grating at just one energy, approximately 30 numbers must be entered into a blank screen, with no prompts, in the correct order.  These numbers define the grating geometry, the coating/layer thicknesses, the incidence conditions, the integration parameters, and also the complex refractive indices of the layers and the substrate.\footnote{These last two values will change as a function of photon energy, since the refractive index varies with wavelength, so we need to look them up for each data point.}  Using this program requires a time-consuming and error-prone data entry process.
@@ -48,7 +48,7 @@ Figure \ref{3b} shows a screenshot of the graphical user interface (GUI) that we
    \label{3b}
 \end{figure}
 
-The interface was implemented as a web-based application, so it could be used from anywhere through a browser, without having to distribute the Gradif code or install anything on a person's individual computer.  Users described the grating parameters and incidence scenario through a form that prompted them for the necessary information based on the type of grating (Figure \ref{3b}).  When the calculation finished, an efficiency plot would be generated, and users could also download data tables of their calculations.  These tables were also archived so they could be retrieved later.
+The interface was implemented as a web-based application, so it could be used from anywhere through a browser, without having to distribute the \texttt{\textbf{Gradif}} code or install anything on a person's individual computer.  Users described the grating parameters and incidence scenario through a form that prompted them for the necessary information based on the type of grating (Figure \ref{3b}).  When the calculation finished, an efficiency plot would be generated, and users could also download data tables of their calculations.  These tables were also archived so they could be retrieved later.
 
 It supported the following features:
 \begin{itemize}
@@ -106,10 +106,10 @@ Because the user interface ran as a web application, it could be (and was) acces
 \subsection{Motivation for new grating software}
 The \texttt{\textbf{Gradif}} code allowed us to complete the design and optimization of the REIXS spectrometer in Chapter 6; however, several limitations provided motivation for improvement:
 \begin{enumerate}
-\item \textbf{Unpredictable instability}: For some rare but reasonable grating inputs, the numerical integration process becomes unexpectedly unstable. We expect this to happen for deep gratings outside of Gradif's convergence range, but in other cases the failed calculations are surrounded by successful calculations. The random failures can usually be avoided by tweaking the number of integration steps or the number of Fourier coefficients, but not in a consistent or predictable way.
-\item \textbf{Performance}: The run time of a single calculation depends on the grating depth, number of Fourier coefficients, and number of integration steps required for convergence; it can range from two seconds for shallow gratings to well over 30 seconds.  At this speed, it is feasible to calculate the efficiency of a single grating over a range of wavelengths; however, if we want to do global optimization or fitting (Chapter 7), faster run times are desired.  The Gradif code is inherently single-threaded, although independent calculations can be run simultaneously by invoking the program multiple times.
+\item \textbf{Unpredictable instability}: For some rare but reasonable grating inputs, the numerical integration process becomes unexpectedly unstable. We expect this to happen for deep gratings outside of \texttt{\textbf{Gradif}}'s convergence range, but in other cases the failed calculations are surrounded by successful calculations. The random failures can usually be avoided by tweaking the number of integration steps or the number of Fourier coefficients, but not in a consistent or predictable way.
+\item \textbf{Performance}: The run time of a single calculation depends on the grating depth, number of Fourier coefficients, and number of integration steps required for convergence; it can range from two seconds for shallow gratings to well over 30 seconds.  At this speed, it is feasible to calculate the efficiency of a single grating over a range of wavelengths; however, if we want to do global optimization or fitting (Chapter 7), faster run times are desired.  The \texttt{\textbf{Gradif}} code is inherently single-threaded, although independent calculations can be run simultaneously by invoking the program multiple times.
 \item \textbf{Arbitrary groove profiles}: As we will see in Chapter 7, grating manufacturing rarely produces the perfect, intended groove profile.  To model real-world gratings, we need the ability to represent profiles of arbitrary shape; for example, point-wise defined curves derived from atomic force microscopy (AFM) measurements.
-\item \textbf{Open online access}: Finally, since grating efficiency has rarely been considered during many past beamline designs, we believe the soft x-ray instrument design community would benefit from having access to an easy-to-use, easy-to-access grating efficiency calculator.  It became obvious after taking down the original web interface to Gradif that there was a strong demand for this service.
+\item \textbf{Open online access}: Finally, since grating efficiency has rarely been considered during many past beamline designs, we believe the soft x-ray instrument design community would benefit from having access to an easy-to-use, easy-to-access grating efficiency calculator.  It became obvious after taking down the original web interface to \texttt{\textbf{Gradif}} that there was a strong demand for this service.
 \end{enumerate}
 
 These four factors motivated us to write a new implementation of the differential method from scratch.
@@ -142,32 +142,59 @@ The solver and command-line interface support the following features:
 \item Note: Coatings are not yet supported on custom profiles.
 \end{itemize}
 \item \textbf{Material Database}: automatic lookup of complex refractive indexes for common materials based on the Henke tables.
-\item \textbf{Incidence scanning modes} when calculating efficiency curves:
+\item \textbf{Incidence scanning modes}: calculation of common efficiency curves with a single command:
+\begin{enumerate}
+\item \texttt{constantIncidence} mode calculates the efficiency over a range of wavelengths (or photon energies) at a constant incidence angle.
+\item \texttt{constantIncludedAngle} mode automatically varies the incidence angle as a function of wavelength, to satisfy a condition of a constant deviation from the incident light to the outgoing order $n$.  (This represents the operating mode of many monochromator designs.)  The incidence angle $\theta_{2}$ is computed from the grating equation \eq{gratingEquation} and the requirement that the included angle $\phi = \theta_{2} + \theta_{2,n}$:
+\begin{eqnarray}
+\theta_{2} &=& \arcsin \left(  \frac{-n\lambda}{2 d \cos(\phi/2)}  \right) + \phi/2
+\end{eqnarray}
+\item \texttt{constantWavelength} mode calculates the efficiency over a range of incidence angles at a constant wavelength.
+\end{enumerate}
+\item \textbf{Parallel calculations}:
 \begin{itemize}
-\item over wavelength, using a constant incidence angle, 
-\item over wavelength, maintaining a constant included angle, and 
-\item over incidence angle at a constant wavelength.
-\end{itemize}
-\item \textbf{Scalable parallel calculations}:
-\begin{itemize}
-\item fine parallelization of a single calculation
-\item coarse parallelization of many efficiency points using grid computers.
+\item Fine parallelization of a single calculation
+\item Coarse parallelization of many efficiency points using cluster compute nodes
 \end{itemize}
 \end{itemize}
 
 \subsubsection{Limitations}
 The current version has two main limitations; work is ongoing to remove both of these:
 \begin{enumerate}
-\item The solver currently only calculates the efficiency for TE polarization.  Since the TE and TM polarization efficiencies converge at grazing incidence, for soft x-ray optics used in grazing incidence there is very little difference between the TE and TM polarization.  Figure \ref{TODO} shows a grating at 88 degrees incidence calculated using the Gradif program; the difference between TE and TM efficiency is less than 2\% (relative) everywhere.  Therefore, designers currently using the TE results for optimization should not be misled even if their actual incidence configuration includes TM light; however, implementing the TM solver is necessary for completeness and accuracy at more normal incidence angles.
+\item The solver currently only calculates the efficiency for TE polarization.  Since the TE and TM polarization efficiencies converge at grazing incidence, for soft x-ray optics used in grazing incidence there is very little difference between the TE and TM polarization.  Figure \ref{TEvsTM_88} shows a grating at 88 degrees incidence calculated using the \texttt{\textbf{Gradif}} program; the difference between TE and TM efficiency is generally less than 5\% (relative).  The shape of the TE and TM curves are also identical; therefore, designers currently using the TE results for optimization should not be misled even if their actual incidence configuration includes TM light.  However, implementing the TM solver is necessary for completeness, and accuracy at more normal incidence angles (Figure \ref{TEvsTM_80}).
 \item Interpenetrating coatings are not yet supported for custom (point-wise defined) groove profiles.
 \end{enumerate}
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Extended/Polarization/TEvsTM_88.pdf} 
+   \caption[The difference in efficiency between TE and TM polarization is very small for grazing-incidence optics.]{The difference in efficiency between TE and TM polarization is very small for grazing-incidence optics.  For this grating at 88 degrees incidence, the difference is less than relative 5\%.  Grating: 1200 lines/mm, 1.48\dg blaze angle, Nickel coating. }
+   \label{TEvsTM_88}
+\end{figure}
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Extended/Polarization/TEvsTM_80.pdf} 
+   \caption[At more normal incidence, the efficiency is different for TE and TM polarization.]{At more normal incidence, the efficiency is different for TE and TM polarization.  This is the same grating as Figure \ref{TEvsTM_88} but at 80 degrees incidence; the difference becomes up to relative 20\%.  However, because the shapes of the curves are identical, optimization of the TE efficiency provides the same results as optimization of the TM efficiency.  Grating: 1200 lines/mm, 1.48\dg blaze angle, Nickel coating.}
+   \label{TEvsTM_80}
+\end{figure}
 
 \subsubsection{Improving Stability}
-The solver uses two techniques to improve integration stability of the ordinary differential equation \eq{matrixDE}.  Gradif uses a fixed number of vertical integration steps, regardless of the height of the grating or the thickness of the S-matrix layers.  Therefore, the user needs to manually estimate the appropriate number of integration steps necessary for convergence of a specific problem.  Instead of a fixed step size, we use an adaptive step size integration algorithm with error prediction, to ensure that the error at every integration step remains under a defined tolerance.  This allows us to automatically use smaller steps where the problem is sensitive, and larger steps for faster performance whenever possible.  The user no longer needs to manually estimate the appropriate number of integration steps, although they can adjust the tolerance setting if required for exceptional problems.  (The default tolerance setting was determined over a range of typical soft x-ray grating inputs to offer good performance while ensuring convergence and a wide margin of stability.)  Although the variable step size method offers better accuracy, better reliability, and less possibility of operator error, it comes with one performance trade-off: we can no longer share computations of the $M(y)$ matrix and $k^2_n(y)$ expansions across all the trial solutions; each trial solution will potentially need to evaluate them at different values of $y$.
+The solver uses two techniques to improve integration stability of the ordinary differential equation \eq{matrixDE}.  \texttt{\textbf{Gradif}} uses a fixed number of vertical integration steps, regardless of the height of the grating or the thickness of the S-matrix layers.  Therefore, the user needs to manually estimate the appropriate number of integration steps necessary for convergence of a specific problem.  Instead of a fixed step size, we use an adaptive step size integration algorithm with error prediction, to ensure that the error at every integration step remains under a defined tolerance.  This allows us to automatically use smaller steps where the problem is sensitive, and larger steps for faster performance whenever possible.  The user no longer needs to manually estimate the appropriate number of integration steps, although they can adjust the tolerance setting if required for exceptional problems.  (The default tolerance setting was determined over a range of typical soft x-ray grating inputs to offer good performance while ensuring convergence and a wide margin of stability.)  Although the variable step size method offers better accuracy, better reliability, and less possibility of operator error, it comes with one performance trade-off: we can no longer share computations of the $M(y)$ matrix and $k^2_n(y)$ expansions across all the trial solutions; each trial solution will potentially need to evaluate them at different values of $y$.
 
-For the ODE integration algorithm, we experimented with a variety of explicit methods (classical 4th order Runge-Kutta, Runge-Kutta-Fehlberg, multistep Adams-Bashforth) and implicit methods (second and fourth-order Runge-Kutta, Bulirsch-Stoer, multi-step backward difference).   We found that the results were insensitive to the integration method to more than six significant figures, and that the explicit methods (predictably) ran much faster than the implicit ones.  Currently, we use a method under the family of \emph{Adams-Bashforth multistep methods}, which uses an explicit Adams-Bashforth predictor and an implicit Adams-Moulton corrector \cite{Byr75}. It was found to offer the highest performance, since the error estimation requires far fewer function evaluations than  the classical Runge-Kutta algorithm.
+For the ODE integration algorithm, we experimented with a variety of explicit methods,
+\begin{itemize}
+\item classical 4th order Runge-Kutta,
+\item Runge-Kutta-Fehlberg,
+\item multistep Adams-Bashforth,
+\end{itemize}
+and implicit methods,
+\begin{itemize}
+\item second and fourth-order Runge-Kutta,
+\item Bulirsch-Stoer, and
+\item multi-step backward difference.
+\end{itemize}
+We found that the results were insensitive to the integration method to more than six significant figures, and that the explicit methods (predictably) ran much faster than the implicit ones.  Currently, we use a method under the family of \emph{Adams-Bashforth multistep methods}, which uses an explicit Adams-Bashforth predictor and an implicit Adams-Moulton corrector \cite{Byr75}. It was found to offer the highest performance, since the error estimation requires far fewer function evaluations than  the classical Runge-Kutta algorithm.
 
-The solver's second stability improvement comes from automatically estimating the number of S-matrix layers required to keep the integration values bounded within significance.  The largest values of the exponential functions $[\exp(i \beta_n y)]$ occur for the largest orders $-N$ and $N$, where $\beta_{(\pm N)} \approx \pm i 2\pi N/d$.  To estimate the maximum size these will reach after integration over a layer of thickness $h$, we can bound them with an assumed homogeneous layer with the same index as the vacuum:
+The solver's second stability improvement comes from automatically estimating the number of S-matrix layers required to keep the integration values bounded within significance.  The largest values of the exponential functions $[\exp(i \beta_n y)]$ occur for the largest orders $-N$ and $N$ when they are evanescent, where $\beta_{(\pm N)} \approx \pm i 2\pi N/d$.  To estimate the maximum size these will reach after integration over a layer of thickness $h$, we can bound them with an assumed homogeneous layer with the same index as the vacuum:
 \begin{align}
 \textrm{Maximum Value} &\approx \left|  e^{i \beta^{(M)}_{(\pm N)} h}  \right|
 \end{align}
@@ -196,7 +223,7 @@ Work is still ongoing on a new web-based graphical user interface.  However, the
 \end{tabular}
 \end{center}
 
-Table \ref{pegInput} documents the command-line arguments for specifying the grating and incidence configuration.  A copy of the sample output from the program is shown in Figure \ref{pegOutput}.
+The program accepts input via command-line arguments, and writes efficiency results to an output file. It can optionally update a progress file while the calculations are running; this allows other processes (such as a graphical front-end or web interface) to monitor the status of the run, check for failures, and see what fraction of the total calculations are finished. Table \ref{pegInput} documents the command-line arguments for specifying the grating and incidence configuration.  An example of the output file format is shown in Figure \ref{pegOutput}.
 
 \renewcommand{\arraystretch}{1.0}
 \begin{table}[htbp]
@@ -275,7 +302,7 @@ Table \ref{pegInput} documents the command-line arguments for specifying the gra
 
 \begin{table}[htbp]
    \centering
-   \topcaption{Output file format for the \texttt{pegSerial} and \texttt{pegMPI} programs.  The Input section restates the program input, the Progress section is updated as the calculation completes, and each row of the Output section lists the independent variable (wavelength, eV, or incidence angle, depending on the mode) followed by the calculated efficiencies for all orders from $-N$ to $N$.} % requires the topcapt package
+   \topcaption[Output file format for the \texttt{pegSerial} and \texttt{pegMPI} programs.]{Output file format for the \texttt{pegSerial} and \texttt{pegMPI} programs.  The Input section restates the program input, the Progress section is updated as the calculation completes, and each row of the Output section lists the independent variable (wavelength, eV, or incidence angle, depending on the mode) followed by the calculated efficiencies for all orders from $-N$ to $N$.\\~\\  {\footnotesize Test executed with: \texttt{./pegSerial --mode constantIncidence --min 100 --max 120 --increment 5 --eV --incidenceAngle 88 --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --outputFile testOutput.txt --progressFile testProgress.txt}} } % requires the topcapt package
 \begin{lstlisting}[frame=single,numberstyle=\small]
 # Input
 mode=constantIncidence
@@ -288,17 +315,20 @@ gratingType=blazed
 gratingPeriod=1
 gratingGeometry=2.5,30
 gratingMaterial=Au
+coatingMaterial=[none]
+coatingThickness=0
 N=15
+integrationTolerance=1e-05
 # Progress
 status=succeeded
 completedSteps=5
 totalSteps=5
 # Output
-100	1.33437e-08,2.01772e-09,3.14758e-08,1.26258e-07,3.16875e-07,6.42301e-07,1.15956e-06,1.96424e-06,3.60516e-06,4.37926e-06,6.85693e-06,1.07995e-05,1.80188e-05,3.47459e-05,0.000100891, 1.0115,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-105	3.10432e-07,1.55365e-07,2.82109e-07,9.94978e-07,2.7072e-06,6.06691e-06,1.24446e-05,2.89393e-05,1.56923e-05,3.91265e-05,6.86083e-05,0.000116368,0.000206277,0.000420725,0.00129465, 0.667446,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-110	1.16288e-07,9.20616e-07,2.97772e-06,6.85694e-06,1.33289e-05,2.35907e-05,4.04132e-05,8.6704e-05,4.52472e-05,0.000100956,0.000160452,0.000247542,0.000404021,0.000767342,0.00219208, 1.57674,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-115	1.33797e-08,1.59323e-09,3.72418e-08,1.49557e-07,3.76447e-07,7.69366e-07,1.42177e-06,3.03323e-06,3.41893e-06,5.4017e-06,8.37909e-06,1.32201e-05,2.21424e-05,4.28869e-05,0.000125008, 1.02805,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-120	2.54404e-07,1.29081e-07,2.35166e-07,8.24594e-07,2.28514e-06,5.43443e-06,1.49531e-05,7.57429e-06,1.89261e-05,3.38267e-05,5.67474e-05,9.52516e-05,0.000168523,0.000344133,0.00106247, 0.706105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+100	4.86049e-06,5.73524e-06,1.15331e-05,2.26984e-05,3.40043e-05,3.20538e-05,1.09471e-05,2.46656e-05,0.000207617,0.000525489,0.000402885,9.29454e-05,0.00604008,0.0202516,0.193704,0.688149, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+105	5.17974e-06,4.87572e-06,8.75638e-06,1.96591e-05,3.6063e-05,4.48567e-05,2.63319e-05,8.62826e-06,0.000156884,0.000572518,0.000629053,6.95573e-06,0.00581251,0.0252621,0.200502,0.678858, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+110	5.85305e-06,4.91785e-06,6.66783e-06,1.53924e-05,3.35836e-05,5.23866e-05,4.57548e-05,9.18712e-06,9.75067e-05,0.000564861,0.000862771,2.38342e-05,0.00534777,0.0305067,0.205757,0.669051, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+115	6.70782e-06,5.76303e-06,5.81191e-06,1.15465e-05,2.8753e-05,5.44993e-05,6.33855e-05,2.451e-05,4.82133e-05,0.000510943,0.00107579,0.000154448,0.00472995,0.0359483,0.209988,0.658912, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+120	7.51931e-06,7.11245e-06,6.20636e-06,8.89412e-06,2.30516e-05,5.20039e-05,7.60472e-05,4.85705e-05,1.87322e-05,0.000421879,0.00124637,0.000396847,0.00401002,0.0415518,0.213464,0.648892, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 \end{lstlisting}
    \label{pegOutput}
 \end{table}
@@ -316,47 +346,41 @@ e_n = \textrm{eff}(\lambda, p_1, p_2, \ldots),
 \end{eqnarray}
 where the parameters $p_1, p_2, \ldots$ represent the grating parameters.  
 
-Based on our experience with Gradif, we expect that this single calculation can take from two seconds up to several minutes depending on the grating.  \textbf{Fine-grained parallelization} attempts to speed up a single invocation of the differential method.
-\begin{enumerate}
-\item In the shooting method, all of the $P=2(2N+1)$ trial solutions need to be numerically integrated from $y=_{m-1}$ to $y=_m$ in each slice.  All of the trial solutions are independent, allowing parallelization of this process over $p$.  Profiling results (Table \ref{timing}) show that this integration, including calculation of the permittivity matrix $M(y)$ at each integration step, represents 99.99\% of the total calculation time. This suggests that this is the (only) worthwhile candidate for parallelization.  When using the S-matrix method, if there are more processors available than trial solutions $P$, we can also parallelize the independent integrations over each layer $m$.
-\item The permittivity matrix $M(y)$ must be calculated based on the grating profile, for each grid value along the $y-$axis.  If the integration routine uses a fixed step size, the computation of all the $M$ matrices could be parallelized over grid points.  This is not directly possible if the integration routine uses a dynamic step size, in which case $M$ needs to be evaluated at each integration step.
-\item The final step of the shooting method requires inversion of a $2N+1$ linear algebraic system; this could optionally use a parallel iterative solver, but for typical $N$ values from 15 to 45, there is little room for improvement here: the matrix calculations are already small, fast, and fit easily within a single processor's memory space.  With $N=15$, they account for only 0.0095\% of the total run time of the serial program (Table \ref{timing}).
-\end{enumerate}
+Based on our experience with \texttt{\textbf{Gradif}}, we expect that this single calculation can take from two seconds up to several minutes depending on the grating.  \textbf{Fine-grained parallelization} attempts to speed up a single invocation of the differential method.
+\begin{itemize}
+\item \textbf{Option 1}: In the shooting method, all of the $P=2(2N+1)$ trial solutions need to be numerically integrated from $y_{m-1}$ to $y_m$ in each slice.  All of the trial solutions are independent, allowing parallelization of this process over $p$.  Profiling results (Table \ref{timing}) show that this integration, including calculation of the permittivity matrix $M(y)$ at each integration step, represents 99.99\% of the total calculation time. This suggests that this is the (only) worthwhile candidate for parallelization.  When using the S-matrix method, if there are more processors available than trial solutions $P$, we can also parallelize the independent integrations over each layer $m$.
+\item \textbf{Option 2}: The permittivity matrix $M(y)$ must be calculated based on the grating profile, for each grid value along the $y-$axis.  If the integration routine uses a fixed step size, the computation of all the $M$ matrices could be parallelized over grid points.  This is not directly possible if the integration routine uses a variable step size, in which case $M$ needs to be evaluated at each integration step.
+\item \textbf{Option 3}: The final step of the shooting method requires inversion of a $2N+1$ linear algebraic system; this could optionally use a parallel iterative solver, but for typical $N$ values from 15 to 45, there is little room for improvement here: the matrix calculations are already small, fast, and fit easily within a single processor's memory space.  With $N=15$, they account for less than 0.02\% of the total run time of the serial program (Table \ref{timing}).
+\end{itemize}
 
 \begin{table}[htbp]
    \begin{center}
-\topcaption{Time profile measurements of solver operations, averaged over 5 runs in single-threaded mode.  Essentially all of the time is spent in the integration of the trial solutions, which includes the required calculation of $M(y)$ at each integration step.  This example is for a blazed grating, using $N=15$.}   \begin{tabular}{@{} lr @{}} % Column formatting, @{} suppresses leading/trailing space
+\topcaption[Time profile measurements of solver operations, averaged over 5 runs in single-threaded mode.]{Time profile measurements of solver operations, averaged over 5 runs in single-threaded mode.  Essentially all of the time is spent in the integration of the trial solutions, which includes the required calculation of $M(y)$ at each integration step.  This example is for a blazed grating, using $N=15$.  \\~\\  {\footnotesize Test executed with: \texttt{./pegSerial --mode constantIncidence --min 100 --max 120 --increment 5 --eV --incidenceAngle 88 --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --outputFile testOutput.txt --progressFile testProgress.txt --measureTiming}} }
+   \begin{tabular}{@{} lr @{}} % Column formatting, @{} suppresses leading/trailing space
       \toprule
 	Solver Operation & Percent of Run time\\
       \midrule
-Allocate Memory &	0.0004\%	\\
-Setup problem variables &	0.0001\%	\\
-Compute $\alpha_n$, $\beta^{(M)}_n$, and $\beta^{(1)}_n$ values &	0.0009\%	\\
-Integrate all trial solutions &	99.9886\%	\\
-Solve linear system for all $A_n$ &	0.0095\%	\\
-Compute all $B_n$ &	0.0003\%	\\
-Compute and package efficiencies &	0.0001\%	\\
+   Allocate Memory	&	0.0003\%	\\   Look up refractive index	&	0.6803\%	\\   Compute $\alpha_n$, $\beta_n$ values and layers	&	0.0006\%	\\   Numerically integrate trial solutions	&	99.3011\%	\\   Matrix operations	&	0.0174\%	\\   Compute Rayleigh coefficients $B^{(M)}_n$	&	0.0003\%	\\   Compute and package efficiencies	&	0.0001\%	\\
       \bottomrule
    \end{tabular}
    \label{timing}
  \end{center}
- \vspace*{0.2in}  {\footnotesize Test executed with: \texttt{./pegSerial --mode constantIncidence --min 100 --max 120 --increment 5 --incidenceAngle 88 --outputFile testOutput.txt --progressFile testProgress.txt --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --eV --measureTiming}}
 \end{table}
 
 \subsubsection{Coarse-grained Parallelization}
-Fine-grained parallelization over trial solutions has a limit to scaling: it can only use up to $P(M-1)$ processors, if we distribute every trial integration within every layer.  However, all three of the use-cases -- efficiency curves, optimization, and fitting -- require repeated calculations of the efficiency function over different wavelengths or parameters.  Therefore, because all of these calculations can be done completely independently, we can obtain a nearly linear speedup using an ``embarrassingly parallel'' distribution of the computation over wavelength.  This avoids nearly all the overhead of synchronization and communication.  Due to the small amount of information that needs to be shared across processes (wavelength and grating parameters only), this approach could scale to use hundreds or thousands of nodes in a distributed-memory cluster.
+Fine-grained parallelization over trial solutions has a limit to scaling: it can only use up to $P\times(M-1)$ processors, if we distribute every trial integration within every layer.  However, all three of the use-cases (efficiency curves, optimization, and fitting) require repeated calculations of the efficiency function over different wavelengths or parameters.  Therefore, because all of these calculations can be done completely independently, we can obtain a nearly linear speedup using an ``embarrassingly parallel'' distribution of the calculations over wavelength.  This avoids nearly all the overhead of synchronization and communication.  Due to the small amount of information that needs to be shared across processes (wavelength and grating parameters only), this approach could scale to use hundreds or thousands of nodes in a distributed-memory cluster.
 
-\subsubsection{Parallel Implementation}
+\subsubsection{Parallel Implementation Details}
 The fine-grained approach requires substantially more inter-process communication than the coarse-grained approach.  Therefore, we implemented it using the shared-memory programming paradigm using the OpenMP library \cite{openmp08}.  Based on profiling results (Table \ref{timing}), we determined that any performance gained from Option 3 would not be significant enough to make it worth attempting.  Because we chose an adaptive step-size integration algorithm to increase the integration stability, Option 2 was not possible, so we concentrated on implementing parallelization over trial solutions (Option 1).
+TODO: scalability
 
 The coarse-grained parallelization lends itself naturally to distributed-memory computing, and so we implemented it using the Message Passing Interface (MPI) standard \cite{mpi08}.
+TODO: running
 
-Modern cluster computers usually contain The two techniques can be used together in a hybrid execution model -- using fine-grained distribution over a the of local processor cores, and coarse distribution over cluster nodes -- takes advantage of the internal architecture of modern cluster computers; this is expected to provides the ultimate theoretical performance.
+Modern cluster architectures usually contain many independent computers (``nodes'') connected via a local area network, with every node having four to eight local processor cores.  To take advantage of this architecture, the two parallel modes can be used simultaneously in a hybrid execution model -- using fine-grained distribution over the local processor cores, and coarse distribution over cluster nodes.
 
-\subsection{Validation} 
+\subsection{Validation of the new software} 
 - validate the new implementation against the gradif code
 - s-matrix approach: for shallow gratings, results do not change when going from a single layer to arbitrary number of layers (10, 100).  The results are also identical when compared to the basic (non-S-matrix) method described Section TODO. For deep gratings that showed instability at some wavelengths, the S-matrix implementation removes these instabilities, but also converges to the stable non-S-matrix results. (Figure \ref{} LEG example ).
 - coatings: 0 thickness coating. Thick null coating (no change to six significant figures.)
-\subsection{New web interface}
-\subsection{Future work}
 
