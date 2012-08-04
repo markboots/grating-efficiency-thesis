@@ -15,7 +15,7 @@ This is unfortunate, because to determine grating efficiency, we must determine 
 
 \subsection{A brief history of grating theory}
 
-The ``grating problem'' -- as we define it -- is the problem of determining the intensity of a grating's reflected and transmitted light everywhere.  In general, this requires finding the solution to Maxwell's equations for the electric and magnetic fields of the light, in the presence of the grating's periodic boundary conditions, for a known incident field.  
+We define the ``grating problem'' as the problem of determining the intensity of a grating's reflected and transmitted light everywhere.  In general, this requires finding the solution to Maxwell's equations for the electric and magnetic fields of the light, in the presence of the grating's periodic boundary conditions, for a known incident field.  
 
 Prior to the availability of computers and numerical techniques, great attempts were made to solve this problem analytically.  In 1907, Lord Rayleigh set up the problem\footnote{Actually, Rayleigh's first application of this technique was to the diffraction of sound waves \cite{Ray86}.  It turns out that the wave equation for a pressure wave in compressible media is the same as for the fields in an electromagnetic wave, and the boundary conditions at interfaces are also analogous. In Reference \cite{Ray07} he shows applications to both sound and light.} using a Fourier approach identical to the one we use later in this chapter \cite{Ray07}.  However, without access to powerful numerical methods, he could only make coarse approximations, using expansions truncated at the first or second power of the groove height.\footnote{And this, despite assuming a perfectly reflecting grating, exactly normal incidence, and only one term in the Fourier expansion for the groove shape -- i.e., a sinusoidal grating.}  This led to some obviously non-physical results, such as predictions of infinite intensity in any order when the outgoing angle of a higher order reached exactly 90 degrees.  From 1907 until 1960, advancements in grating theory amounted to finding clever but limited simplifications to these expansions, which would work in the case of one particular groove profile, incidence angle, or approximation limit.
 
@@ -420,12 +420,12 @@ From the geometry analyzed in Figure \ref{2b}, the $x$-component of the outgoing
 \label{kxEqn2}
 k_x &= k_2 \sin \theta_2 +\frac{ 2\pi n}{d} = k_2 \sin \theta_{2,n}
 \end{align}
-and, after replacing the magnitude of the wavevector above the grating $k_2 = v_2\, \omega / c = v_2 \, 2\pi f / c =  2\pi / \lambda$, the famous grating equation (for reflected orders) is finally:
+and, after replacing the magnitude of the wavevector above the grating $k_2 = \nu_2\, \omega / c = \nu_2 \, 2\pi f / c =  2\pi / \lambda$, the famous grating equation (for reflected orders) is finally:
 \begin{align}
 \label{gratingEquation}
 \frac{n \lambda}{d} = \sin \theta_{2,n} -  \sin \theta_{2}
 \end{align}
-(where we have assumed that $v_2 = 1$ because we are in free space, and $\lambda$ is also the free-space wavelength.) This is often called the \emph{Fraunhofer Grating Equation}.
+(where we have assumed that $\nu_2 = 1$ because we are in free space, and $\lambda$ is also the free-space wavelength.) This is often called the \emph{Fraunhofer Grating Equation}.
 
 When $n=0$, the grating equation reverts to the law of reflection ($\theta_{2,0} = \theta_2$, i.e.: the angle of reflection is equal to the angle of incidence.)  This wave corresponds to a classically-reflected wave from a normal surface.  The reflected orders that fall \emph{between} the incident wave and the $n=0$ reflection are referred to as \emph{inside orders}; using our sign convention for diffraction angles, they correspond to $n<0$.  The \emph{outside orders} ($n>0$, see Figure \ref{2b}) are diffracted at angles beyond the $n=0$ reflection.
 
@@ -439,12 +439,12 @@ From the geometry analyzed in Figure \ref{2b}, the $x$-component of the outgoing
 \label{kxEqn1}
 k_x &= k_2 \sin \theta_2 +\frac{ 2\pi n}{d} = k_1 \sin \theta_{1,n}
 \end{align}
-and, after again replacing $k_1$, the magnitude of the wavevector below the grating $k_1 = v_1\, \omega / c = v_1 \, 2\pi f / c =  v_1 \, 2\pi / \lambda$, the transmission grating equation is:
+and, after again replacing $k_1$, the magnitude of the wavevector below the grating $k_1 = \nu_1\, \omega / c = \nu_1 \, 2\pi f / c =  \nu_1 \, 2\pi / \lambda$, the transmission grating equation is:
 \begin{align}
 \label{gratingEquation}
-\frac{n \lambda}{d} = v_1 \, \sin \theta_{1,n} -  v_2 \, \sin \theta_{2}
+\frac{n \lambda}{d} = \nu_1 \, \sin \theta_{1,n} -  \nu_2 \, \sin \theta_{2}
 \end{align}
-This time, instead of checking for the law of reflection, we can check that when $n=0$, the transmission equation reverts to Snell's law of refraction ($v_1\, \sin \theta_{1,0} = v_2 \, \sin \theta_2$).
+This time, instead of checking for the law of reflection, we can check that when $n=0$, the transmission equation reverts to Snell's law of refraction ($\nu_1\, \sin \theta_{1,0} = \nu_2 \, \sin \theta_2$).
 
 \subsubsection{Note: Simplifying $\beta_n$}
 Equations \eq{kxEqn2} and \eq{kxEqn1} provide a useful simplification for $\beta_n$.  Since 
@@ -547,7 +547,7 @@ e_n^{(t)} &= A_n^{(1)} \, A_n^{(1)\ast} \frac{  \beta_n^{(1)}   } {  \beta_0^{(2
 \section{Solving for efficiency}
 To determine $A_n$, $B_n$, and the efficiency, we need to find numerical solutions inside the modulated region for the general wave equations (TE polarization: \eq{wete}, TM polarization: \eq{wetm}). The solutions must match up to the boundary conditions at the top and bottom of the grooves, defined by the Rayleigh expansions \eq{rayleighExp2}, \eq{rayleighExp1}.
 
-The wave equations and electromagnetic boundary conditions now depend on the polarization.  \textbf{In this section, we present the analysis for TE polarization only.}  The approach for TM polarization is similar.  However, in TM, the normal component of the electric field is discontinuous at the interface; this introduces convergence issues when the Fourier expansions are truncated. A small reformulation is necessary to ensure that the boundary conditions are uniformly satisfied everywhere \cite{Li96b}.  For a detailed application of the differential method in TM polarization, see Reference \cite[Chapter 4]{Nev02}.
+The wave equations and electromagnetic boundary conditions now depend on the polarization.  \textbf{In this section, we present the analysis for TE polarization only.}  The approach for TM polarization is similar, but the electromagnetic boundary conditions are different.  The normal component of the TM electric field is discontinuous at the interface; this introduces convergence issues when the Fourier expansions are truncated. A small reformulation is necessary to ensure that the boundary conditions are uniformly satisfied everywhere \cite{Li96b}.  For a detailed application of the differential method in TM polarization, see Reference \cite[Chapter 4]{Nev02}.
 
 \subsection{Representing the grating}
 
@@ -584,11 +584,11 @@ k^2_n= \frac{-1}{2 \pi n} \left[ \sigma_1 \left( \sin \left(\frac{2\pi n x_1}{d}
 \end{align}
 
 \subsection{Matrix Formulation of Numerical Solution: Inside the Groooves}
-When we put the Fourier expansions for $E_z$ \eq{eqnFourierExpansionU} and $k^2$ \eq{k2FourierExpansion} into the general differential equation \eq{wete} and truncate to $n=[-N, N]$, we get one second-order differential equation for every $n$:
+When we put the Fourier expansions for $u_z = E_z$ \eq{eqnFourierExpansionU} and $k^2$ \eq{k2FourierExpansion} into the general differential equation \eq{wete} and truncate to $n=[-N, N]$, we get one second-order differential equation for every $n$:
 \begin{align}
-\frac{d^2 u_n(y)}{d^2y} + \sum \limits_{m=-N}^{N} k^2_{(n-m)}(y) u_m(y) - \alpha_n^2 u_n(y) = 0
+\frac{d^2 E_n(y)}{d^2y} + \sum \limits_{m=-N}^{N} k^2_{(n-m)}(y) E_m(y) - \alpha_n^2 E_n(y) = 0
 \end{align}
-This is conveniently expressed by defining the column vector $\left[u(y)\right]$ with $2N+1$ components $u_n(y)$, and the $(2N+1)\times(2N+1)$ square matrix $M$ as
+where $E_n$ is the $n^\textrm{th}$ Fourier coefficient in the expansion of the electric field.  This is conveniently expressed by defining the column vector $\left[E(y)\right]$ with $2N+1$ components $E_n(y)$, and the $(2N+1)\times(2N+1)$ square matrix $M$ as
 \begin{align}
 M_{nm}(y) = -k^2_{(n-m)}(y) + \alpha^2_n \,\delta_{nm}  \qquad \qquad \delta_{nm} = \left\{ \begin{array}{c}1 \textrm{, if } n=m \\0 \textrm{, if } n\neq m\end{array}\right.
 \end{align}
@@ -596,9 +596,9 @@ M_{nm}(y) = -k^2_{(n-m)}(y) + \alpha^2_n \,\delta_{nm}  \qquad \qquad \delta_{nm
 giving the matrix equation
 \begin{align}
 \label{matrixDE}
-\frac{d^2 \left[u(y)\right]}{dy^2} = M(y) \, \left[u(y)\right]
+\frac{d^2 \left[E(y)\right]}{dy^2} = M(y) \, \left[E(y)\right]
 \end{align}
-This is now a set of second order differential equations in $y$ that need to be solved so that the values of the field coefficients $u_n(y)$ satisfy boundary conditions at the top and bottom of the grooves: $y=a$ and $y=0$.
+This is now a set of second order differential equations in $y$ that need to be solved so that the values of the field coefficients $E_n(y)$ satisfy boundary conditions at the top and bottom of the grooves: $y=a$ and $y=0$.
 \subsection{Boundary conditions at the top and bottom of the grooves}
 Regardless of the shape of the profile, it will always have a maximum value at $y=a$, and a minimum value at $y=0$.  The Maxwell Equations provide two additional boundary conditions here:
 \begin{enumerate}
@@ -607,9 +607,9 @@ Regardless of the shape of the profile, it will always have a maximum value at $
 For TE polarization, the tangential component is just the $E_z$ component, so we require that the electric field is continuous at $y=0$ and $y=a$.  Therefore, the field must match up to the Rayleigh expansion solutions found for Region 2 and Region 1:
 \begin{align}
 \label{boundsA1}
-u_n(a) &= A_0^{(2)} e^{-i \beta_0^{(2)} a} \delta_{n,0} + B_n^{(2)} e^{i \beta_n^{(2)}a} \\
+E_n(a) &= A_0^{(2)} e^{-i \beta_0^{(2)} a} \delta_{n,0} + B_n^{(2)} e^{i \beta_n^{(2)}a} \\
 \label{bounds01}
-u_n(0) &= A_n^{(1)}
+E_n(0) &= A_n^{(1)}
 \end{align}
 At this point, both the $A_n$ and $B_n$ coefficients are still unknown.
 
@@ -618,17 +618,17 @@ At this point, both the $A_n$ and $B_n$ coefficients are still unknown.
 In TE polarization, the tangential magnetic field is proportional to the normal derivative of the electric field.  At $y=a$ and $y=0$, regardless of the profile shape, the normal vector to the grating surface will be along the $y-$direction, so we need $dE_z/dy$ to be continuous; this gives the remaining two boundary conditions:
 \begin{align}
 \label{boundsA2}
-\left. \frac{d u_n(y)}{dy} \right|_{y=a} &= -i \beta_0^{(2)} A_0^{(2)} e^{-i\beta_0^{(2)}a} \delta_{n,0} + i \beta_n^{(2)} B_n^{(2)} e^{i \beta_n^{(2)}a} \\
+\left. \frac{d E_n(y)}{dy} \right|_{y=a} &= -i \beta_0^{(2)} A_0^{(2)} e^{-i\beta_0^{(2)}a} \delta_{n,0} + i \beta_n^{(2)} B_n^{(2)} e^{i \beta_n^{(2)}a} \\
 \label{bounds02}
-\left. \frac{d u_n(y)}{dy} \right|_{y=0} &= - i \beta_n^{(1)} A_n^{(1)}
+\left. \frac{d E_n(y)}{dy} \right|_{y=0} &= - i \beta_n^{(1)} A_n^{(1)}
 \end{align}
 
 \end{enumerate}
 
-Optionally, these four requirements can be combined to give two equations that link the function $u_n(y)$ to its derivative at $y=0$ and $y=a$:
+Optionally, these four requirements can be combined to give two equations that link the function $E_n(y)$ to its derivative at $y=0$ and $y=a$:
 \begin{align}
-\left. \frac{du_n(y)}{dy} \right|_{y=0} &= - i \beta_n^{(1)} u_n(0)\\
-\left. \frac{d u_n(y)}{dy} \right|_{y=a} &=  \left\{   \begin{array}{cl}      i \beta_n^{(2)} u_n(a)   &\qquad (n\neq 0)  \\ -i \beta_0^{(2)} A_0^{(2)} e^{-i\beta_0^{(2)}a}  + i \beta_n^{(2)} \left( u_n(a) - A_0^{(2)} e^{-i \beta_0^{(2)} a} \right)  &\qquad (n=0)  \end{array}   \right.
+\left. \frac{dE_n(y)}{dy} \right|_{y=0} &= - i \beta_n^{(1)} E_n(0)\\
+\left. \frac{d E_n(y)}{dy} \right|_{y=a} &=  \left\{   \begin{array}{cl}      i \beta_n^{(2)} E_n(a)   &\qquad (n\neq 0)  \\ -i \beta_0^{(2)} A_0^{(2)} e^{-i\beta_0^{(2)}a}  + i \beta_n^{(2)} \left( E_n(a) - A_0^{(2)} e^{-i \beta_0^{(2)} a} \right)  &\qquad (n=0)  \end{array}   \right.
 \end{align}
 
 The four boundary equations (\eq{boundsA1}, \eq{bounds01}, \eq{boundsA2}, \eq{bounds02}), along with the matrix differential equation \eq{matrixDE}, establish the grating boundary value problem (BVP) in the Fourier space, for TE polarization.
@@ -641,12 +641,12 @@ At this point, we have $2N+1$ second-order boundary value problems that need to 
 Because the differential equation is a linear system, we can construct a general solution that matches the boundary conditions out of a linear combination of trial solutions.  The Fourier expansion for the field represents a complete basis, so we can use it to generate a complete set of $2N+1$ trial solutions $[\tilde u(y)]_p$ for the vector $[u(y)]$, where $p = [-N, N]$.  Any orthogonal set of particular solutions that satisfies the boundary conditions at $y=0$ \eq{bounds02} is acceptable, so we choose these values for the $p-$th trial solution at $y=0$:
 \begin{align}
 \label{startingValues}
-\tilde u_n(0)_{p} &= \delta_{p,n},\\
-\tilde u_n^\prime(0)_{p} &= -i \beta_n^{(1)} \delta_{p,n}.
+\tilde E_n(0)_{p} &= \delta_{p,n},\\
+\tilde E_n^\prime(0)_{p} &= -i \beta_n^{(1)} \delta_{p,n}.
 \end{align}
 This transforms the $2N+1$ boundary value problems into $(2N+1)\times(2N+1)$ initial value problems.  All of the trial solutions can now be individually integrated from $y=0$ to $y=a$, using Equation \eq{matrixDE}:
 \begin{equation}
-[\tilde u^{\prime\prime}(y)]_p = M(y) [\tilde u(y)]_p
+[\tilde E^{\prime\prime}(y)]_p = M(y) [\tilde E(y)]_p
 \label{matrixDE3}
 \end{equation}
 using any reliable numerical integration routine.
@@ -654,8 +654,8 @@ using any reliable numerical integration routine.
 Finally, we need to find a linear superposition of the trial solutions that satisfies the boundary conditions at $y=a$ \eq{boundsA1}, \eq{boundsA2}:
 \begin{align}
 \label{superposition1}
-\sum \limits_{p=-N}^{+N} c_p \tilde u_{np}(a) &= A_0^{(2)} e^{-i \beta_0^{(2)} a} \delta_{n,0} + B_n^{(2)} e^{i \beta_n^{(2)}a}, \\
-\sum \limits_{p=-N}^{+N} c_p \tilde u^\prime_{np}(a) &= -i \beta_0^{(2)} A_0^{(2)} e^{-i\beta_0^{(2)}a} \delta_{n,0} + i \beta_n^{(2)} B_n^{(2)} e^{i \beta_n^{(2)}a}.
+\sum \limits_{p=-N}^{+N} c_p \tilde E_{np}(a) &= A_0^{(2)} e^{-i \beta_0^{(2)} a} \delta_{n,0} + B_n^{(2)} e^{i \beta_n^{(2)}a}, \\
+\sum \limits_{p=-N}^{+N} c_p \tilde E^\prime_{np}(a) &= -i \beta_0^{(2)} A_0^{(2)} e^{-i\beta_0^{(2)}a} \delta_{n,0} + i \beta_n^{(2)} B_n^{(2)} e^{i \beta_n^{(2)}a}.
 \end{align}
 Because of the $y=0$ boundary condition \eq{bounds01} and our choice of starting values \eq{startingValues}, the superposition constants $c_p$ can be identified with the coefficients $A^{(1)}_n$: $c_p = A^{(1)}_n$ for $n=p$.  Therefore, these represent $2(2N+1)$ linear equations for the $2(2N+1)$ unknowns $A_n^{(1)}$, $B_n^{(2)}$.  If we eliminate $B_n^{(2)}$, we can express the resulting equations in linear matrix form $A \vec x = \vec b$:
 \begin{align}
@@ -668,7 +668,7 @@ V^{(2)}_n =  \delta_{n,0} \,e^{-i\beta^{(2)}_0 a},
 \end{align}
 and $T$ is the square matrix with elements
 \begin{align}
-T_{np}=   \frac{1}{2} \left[ \tilde u_{np}(a) - \frac{\tilde u^\prime_{np}(a)}{i\beta_n^{(2)}} \right].
+T_{np}=   \frac{1}{2} \left[ \tilde E_{np}(a) - \frac{\tilde E^\prime_{np}(a)}{i\beta_n^{(2)}} \right].
 \end{align}
 Because the grating problem has a unique solution, $T$ must be invertible (as long as the numerical integration process was stable and accurate).  Using $LU$ decomposition or any other standard matrix method to solve the linear system of Equation \eq{axb} provides the coefficients for the transmitted orders $A_n^{(1)}$.  In the final step, Equation \eq{superposition1} provides the $B_n^{(2)}$ coefficients, from which we can compute the reflected efficiencies using Equation \eq{eqnEffR}.
 
@@ -693,7 +693,7 @@ Between each ``real'' grating layer (Figure \ref{2d-3}), we can conceptually ins
 
 Previously, in the single-layer formulation, we had a single down-going wave $A^{(2)}_0$ above the grating, and a set of up-going reflected waves $B^{(2)}_n$.  Below the grating (inside the substrate) there was a set of down-going transmitted waves $A^{(1)}_n$.  In the multi-layer formulation, we now have down-going and up-going waves within each conceptual layer.  Instead of just one incident wave, all except the external layers have a complete set of waves incident from both above and below.  Transmitted light from the region above creates down-going incident waves; reflected light from the region below creates up-going incident waves.
 
-Figure \ref{2d-3} shows the numbering we adopt now for the conceptual homogeneous layers.  They are numbered from $m=1$ (the substrate) to $m=M-1$.  The number of ``real'' grating slices is $M-2$, and the vacuum region above the grating is labelled  $M$.  Within each conceptual layer $m$, at a height $y_m$, the field is described by a Rayleigh expansion
+Figure \ref{2d-3} shows the numbering we adopt now for the conceptual homogeneous layers.  They are numbered from $m=1$ (the substrate) to $m=M-1$.  The number of ``real'' grating slices is $M-2$, and the vacuum region above the grating is labelled  $M$.  Within each conceptual layer $m$, at a height $y_m$, the field is described by a Rayleigh expansion with coefficients $A'^{(m)}_n$ and $B'^{(m)}_n$:
 \begin{align}
 E_z(x,y) &= \sum\limits_{n=-N}^{N} \left[ A'^{(m)}_n  e^{-i \beta^{(M)}_n y_m}   +  B'^{(m)}_n e^{i \beta^{(M)}_n y_m} \right] e^{i \alpha_n x}.
 \label{rayleighS}
@@ -845,18 +845,18 @@ Finally, we can use the blocks of the final $S^{(M-1)}$ matrix to relate the inc
 \end{equation}
 For a single incident plane wave with normalized intensity, $A_n^{(M)} = \delta_{n,0}$.  From this we can work out the transmitted Rayleigh coefficients below the grating
 \begin{align}
-A_n^{(1)} &= S_{22,n,0}^{(M-1)} e^{(-i \beta_0^{(M)}y_{M-1})},
+A_n^{(1)} &= S_{22,n,0}^{(M-1)} e^{-i \beta_0^{(M)}y_{M-1}},
 \end{align}
 and the diffracted Rayleigh coefficients above the grating
 \begin{align}
-B_n^{(M)} &= S_{12,n,0}^{(M-1)} e^{(-i (\beta_n^{(M)} + \beta_0^{(M)}) y_{M-1})}.
+B_n^{(M)} &= S_{12,n,0}^{(M-1)} e^{-i (\beta_n^{(M)} + \beta_0^{(M)}) y_{M-1}}.
 \end{align}
 Having computed the outgoing Rayleigh coefficients without loss of significance, Equations \eq{eqnEffR} and \eq{eqnEffT} compute the final reflected and transmitted efficiencies in each diffraction order.
 
 \section{Interaction of X-rays and materials}
 In setting up the differential theory, we assumed that light propagation within the grating material could be described by a refractive index, but we failed to suggest what this refractive index would be, and how it would vary with wavelength.  In this final theory section, we verify the assumption and suggest one source of refractive index data.
 
-In the soft X-ray region, the refractive index description is generally valid -- both for conventional dielectrics like SiO$_2$, and for metals.  In metals, the frequency of X-ray light is much higher than the plasma frequency; free electrons cannot respond fast enough to follow the changing electric field, so the material behaves as a weak dielectric rather than a conductor.  However, the incident X-rays are sufficiently energetic to cause electronic state transitions in bound electrons (\textbf{photoabsorption}); the result is substantial attenuation of the beam as it propagates through the material.  Energy in the beam is also lost through \textbf{coherent scattering} of photons off electrons in the material.  These two processes mean that attenuation is always present, but it becomes extremely strong at photon energies immediately above the material's \textbf{absorption edges}.
+In the soft x-ray region, the refractive index description is generally valid -- both for conventional dielectrics like SiO$_2$, and for metals.  In metals, the frequency of x-ray light is much higher than the plasma frequency; free electrons cannot respond fast enough to follow the changing electric field, so the material behaves as a weak dielectric rather than a conductor.  However, the incident x-rays are sufficiently energetic to cause electronic state transitions in bound electrons (\textbf{photoabsorption}); the result is substantial attenuation of the beam as it propagates through the material.  Energy in the beam is also lost through \textbf{coherent scattering} of photons off electrons in the material.  These two processes mean that attenuation is always present, but it becomes extremely strong at photon energies immediately above the material's \textbf{absorption edges}.
 
 The complex refractive index $\nu$
 \begin{align}
@@ -871,13 +871,14 @@ while the \textbf{extinction coefficient }$\kappa$ describes the amount of atten
 E \propto \exp(i(kz - \omega t)) = \exp(i \omega(\nu z/c - t)),
 \end{align}
 the sign of $\kappa$ must be positive for absorption.  ($\kappa < 0$ would imply amplification as the light travelled through the material.)
-For almost all materials at X-ray wavelengths, $n$ is smaller than, but very close to one, so the refractive index is often listed as
+For almost all materials at x-ray wavelengths, $n$ is smaller than, but very close to one, so the refractive index is often listed as
 \begin{align}
 \nu = 1 - \delta + i \kappa
 \end{align}
 
 \subsection{Atomic scattering factors and the refractive index}
-At soft X-ray wavelengths, it nearly impossible to measure the refractive index directly.  Instead, scattering theory and absorption measurements can be used together to determine semi-empirical values.  Scattering of electromagnetic waves from single point charges (e.g., electrons) is well described by classical \textbf{Thomson scattering}.  To extend this to multi-electron situations, the \textbf{atomic scattering factor} $f$ describes the amplitude of an electromagnetic wave scattered by a complete atom, compared to what would be scattered by a single electron.
+\label{secHenke}
+At soft x-ray wavelengths, it nearly impossible to measure the refractive index directly.  Instead, scattering theory and absorption measurements can be used together to determine semi-empirical values.  Scattering of electromagnetic waves from single point charges (e.g., electrons) is well described by classical \textbf{Thomson scattering}.  To extend this to multi-electron situations, the \textbf{atomic scattering factor} $f$ describes the amplitude of an electromagnetic wave scattered by a complete atom, compared to what would be scattered by a single electron.
 \begin{align}
 f = f_1 + i f_2
 \end{align}
@@ -900,4 +901,4 @@ Given these effects, is it acceptable to use refractive indexes derived from the
 
 Far away from absorption edges, the semi-empirical nature of the data gives us a high degree of trust in the accuracy of the Henke-based refractive indexes; however, we need to remember that they will not reflect reality in the vicinity of a material's absorption edges.
 
-The Center for X-Ray Optics website \cite{CXR11} offers an online calculator to calculate the refractive index of a compound material using Equation \eq{nFromScatteringFactor} based on its chemical formula and density, subject to the atomic-like assumption.  We used this service to build a database of complex refractive indexes for common grating materials over the 50 eV to 10,000 eV range.  These values were used in all calculations shown later in the text.  In Section TODO, we examine the effect that potential errors in the refractive index would have on the efficiency results.
+The Center for X-ray Optics website \cite{CXR11} offers an online calculator to calculate the refractive index of a compound material using Equation \eq{nFromScatteringFactor} based on its chemical formula and density, subject to the atomic-like assumption.  We used this service to build a database of complex refractive indexes for common grating materials over the 50 eV to 10,000 eV range.  These values were used in all calculations shown later in the text.  In Section TODO, we examine the effect that potential errors in the refractive index would have on the efficiency results.

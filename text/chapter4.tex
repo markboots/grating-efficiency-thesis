@@ -1,6 +1,6 @@
 \chapter{Design: How David and I applied these tools to make the REIXS spectrometer optical design}
 \section{Application to spectrometer design}
-Up to this point, we have covered the theoretical formulation of grating efficiency, introduced a software tool for efficient calculations, and used this tool to understand how various parameters and conditions affect a grating's performance.  We have also validated the calculation results by comparing with efficiency measurements on a set of  real-world gratings.
+Up to this point, we have covered the theoretical formulation of grating efficiency, introduced new software tools for performing grating calculations, and used these tools to understand how various parameters and conditions affect a grating's performance.  We have also validated the calculation results by comparing with efficiency measurements on a set of  real-world gratings.
 
 In this chapter, we describe how we applied these results to the design of the soft x-ray emission spectrometer for the REIXS beamline at the Canadian Light Source.
 
@@ -50,32 +50,34 @@ The first step in the design process was to choose the focussing configuration o
 
 To determine the number of grating choices to offer, we started by assuming one grating optimized for each emission line of interest: Si (92 eV), C (277 eV), N (392 eV), O (525 eV), and the transition metal range (600 - 1100 eV) optimized for Fe (725 eV).  Eventually, after completing the subsequent steps in the design process, we found that we could merge the medium energy gratings (277, 392 eV) and high energy gratings (525, 725 eV), since there was considerable overlap in their performance.  This allowed us to add a fourth grating, intended to cover a large energy range with extremely high efficiency, for studying dilute samples; we called this one the ``impurity'' (IMP) grating.  Later, we added two more gratings, intended to offer impressively high resolution, in the medium energy (HRMEG) and high energy (HRHEG) range; these 3rd order gratings are described in Section \ref{3rdOrderDesign}.
 
+\renewcommand{\arraystretch}{1.3}
 \begin{table}[h]
    \centering
-   \caption{Gratings chosen for the REIXS spectrometer, with their target energies used for optimization, the energy ranges they will be able to cover, and the final optimized grating parameters}
+   \topcaption{Gratings chosen for the REIXS spectrometer, with their target energies used for optimization, the energy ranges they will be able to cover, and the final optimized grating parameters}
    {\footnotesize
- \begin{tabular}{@{} |rcccccc|@{}} % Column formatting, @{} suppresses leading/trailing space
-      \hline
+ \begin{tabular}{@{} llccccc@{}} % Column formatting, @{} suppresses leading/trailing space
+\toprule
         Grating    & Optimization& Energy& Groove Density & Incidence & Coating & Blaze\\
         & Energy (eV) & Range (eV) & (lines/mm) & Angle ($\deg$) & &Angle ($\deg$)\\
-      \hline \hline
-      &&1st order&&&&\\
-      \hline
+\toprule
+      &&$1^\textrm{st}$ order&&&&\\
+\midrule
 Low Energy (LEG) & 92 eV (Si) & 30 - 300&600&86&Au&1.85\\
 Impurity (IMP) & \emph{400 eV (N)} & 75 - 750&900&87&Ni&1.11\\
 Medium Energy (MEG) & 400 eV (N) & 250+&1200&88&Ni&1.48\\
 High Energy (HEG) & 725 eV (Fe) & 400+&2000&88&Pt&1.52\\
 &&&&&&\\
-\hline
- & &3rd order&&&&\\
- \hline
+\toprule
+ & &$3^\textrm{rd}$ order&&&&\\
+\midrule
 High Res Medium Energy (HRMEG) & 280 eV (C) & 280+&1800&88&Ni&4.85\\
 High Res High Energy (HRHEG) & 725 eV (Fe) & 525+&2600&88.25&Pt&4.05\\
-      \hline
+\bottomrule
    \end{tabular}
    }
    \label{gratings-table}
 \end{table}
+\renewcommand{\arraystretch}{1.2}
 
 The next step was to determine the grating parameters (line density, profile) and the optical geometry (incidence angle, distances, grating radii, etc.), subject to the focussing constraints, to reach our target resolution and efficiency.  Table \ref{4b} TODO describes all of the overlapping parameters in a Rowland circle spectrometer that affect resolution, geometric efficiency, and/or grating efficiency; almost universally, increases in one goal result in decreases in the others.
 
@@ -114,7 +116,7 @@ Figure \ref{vlsImage} compares the detector image of three adjacent energy lines
 \end{figure}
 
 \subsubsection{Choice of profile: blazed vs. rectangular / sinusoidal}
-Back in Chapter 3, we saw that optimally blazed gratings have almost double the efficiency of sinusoidal gratings, and even more than that of rectangular gratings (Figure \ref{3c-plot}).  Since the ideal blaze angle is energy-dependent, we saw that this optimization comes at the cost of having an efficiency peak centred on the target energy, and comparably lower efficiency outside the peak.  However, for high groove densities and high optimization energies, the peaks are wide enough to span the entire soft x-ray range.  For low groove densities and low optimization energies -- as would be the situation for the LEG -- the peak bandwidth is smaller, but still easily covers the design energy range of this grating.
+Back in Chapter 4, we saw that optimally blazed gratings have almost double the efficiency of sinusoidal gratings, and even more than that of rectangular gratings (Figure \ref{3c-plot}).  Since the ideal blaze angle is energy-dependent, we saw that this optimization comes at the cost of having an efficiency peak centred on the target energy, and comparably lower efficiency outside the peak.  However, for high groove densities and high optimization energies, the peaks are wide enough to span the entire soft x-ray range.  For low groove densities and low optimization energies -- as would be the situation for the LEG -- the peak bandwidth is smaller, but still easily covers the design energy range of this grating.
 
 For each grating, we selected blaze angles corresponding to the target energies in Table \ref{gratings-table}, according to Eqn. \eq{blazeAngleEqn}.  We then used the efficiency software to further optimize the blaze angle at this energy, using the analytical $\theta_b$ as a starting point.  We then calculated the efficiency curves for these profiles, as well as for optimized sinusoidal and rectangular alternatives, and confirmed that the blazed profile was indeed the clear winner for all the gratings.  (For some of the gratings, we tweaked the blaze angle at the end of the design process, since we were willing to accept a small reduction in efficiency at the target energy, in exchange for higher overall efficiency integrated across the whole energy range.)
         
@@ -148,7 +150,7 @@ So this leaves three related questions for a designer trying to achieve extreme 
 All existing soft x-ray spectrometers seem to be designed for 1st order operation, based on the assumption that diffraction efficiencies in higher orders are too low to be useful.  (We have seen users force some Rowland circle designs into 2nd order, when trying to temporarily tease out higher resolution.)  Although it had never been done before, our survey of efficiency trends hinted that it might actually be more efficient to use gratings in 3rd order, than to triple their groove density or extend the machine size.  Based on these results, we attempted to add ultra-high-resolution capabilities to the REIXS spectrometer, by considering gratings specifically optimized for 3rd order operation.
 
 \subsection{Justification for 3rd order design}
-A combination of grating efficiency calculations and ray tracing simulations showed that this novel 3rd order design would actually be the \emph{only} way to dramatically increase the resolution of our spectrometer, within the mechanical length constraints that existed at design time.  Figure \ref{4e} shows why the 3rd order design makes sense from an efficiency perspective.  From Eqn. \eq{angularDispersionEqn}, we can easily see that switching from 1st order ($n=-1$) to 3rd order ($n=-3$) has the same effect on the angular dispersion (and resolution) as tripling the groove density.  The conventional assumption on higher order operation is that even when properly blazed, higher order efficiencies are extremely low compared to the first order.  However, we found that at certain points along the efficiency curve, the 3rd order grating efficiency would actually be \emph{higher} than for an equivalent-resolution grating with three times the groove density operated in 1st order.  Not only that, but in most cases the hypothetical triple-groove density alternative would be moot: it would be impossible to manufacture such a grating.\footnote{Even if it was possible to rule such an ultra-high density grating, decreases in the groove quality would reduce the real-world efficiency through stray light processes described in Section \ref{realWorldEffects}.  In Chapter 6, we characterize our own manufactured gratings and find a general reduction in real-world efficiency with increasing groove density, as the ruling process struggles to keep the grooves clean and properly formed.}
+A combination of grating efficiency calculations and ray tracing simulations showed that this novel 3rd order design would actually be the \emph{only} way to dramatically increase the resolution of our spectrometer, within the mechanical length constraints that existed at design time.  Figure \ref{4e} shows why the 3rd order design makes sense from an efficiency perspective.  From Eqn. \eq{angularDispersionEqn}, we can easily see that switching from 1st order ($n=-1$) to 3rd order ($n=-3$) has the same effect on the angular dispersion (and resolution) as tripling the groove density.  The conventional assumption on higher order operation is that even when properly blazed, higher order efficiencies are extremely low compared to the first order.  However, we found that at certain points along the efficiency curve, the 3rd order grating efficiency would actually be \emph{higher} than for an equivalent-resolution grating with three times the groove density operated in 1st order.  Not only that, but in most cases the hypothetical triple-groove density alternative would be moot: it would be impossible to manufacture such a grating.\footnote{Even if it was possible to rule such an ultra-high density grating, decreases in the groove quality would reduce the real-world efficiency through stray light processes described in Section \ref{realWorldEffects}.  In Chapter 7, we characterize our own manufactured gratings and find a general reduction in real-world efficiency with increasing groove density, as the ruling process struggles to keep the grooves clean and properly formed.}
 
 Figure \ref{4e} is based on the efficiency curves for the two 3rd order gratings we ended up adding to the design.  For the 1800 line/mm HRMEG grating (a), designed for outstanding resolution near the carbon emission line (280 eV), the efficiency in 3rd order is actually higher than for an equivalent-resolution 5400 line/mm grating optimized for 1st order.  (Even with this advantage, we point out again that it would be impossible or very difficult to rule a 5400 line/mm grating with sufficient quality to achieve this theoretical efficiency.)  One interesting thing to note is that this advantage in 3rd order efficiency persists even for appropriately-optimized sinusoidal gratings, shown in red.
 
@@ -174,24 +176,24 @@ For the 2600 line/mm HRHEG grating (b), the 3rd order efficiency is comparable, 
 \section{Summary of Final Design}
 By combining efficiency and resolution calculations to carefully manage the trade-off between these two goals, we were able to exceed our design targets of 10\% efficiency and 2000 resolving power at all the emission lines of interest, using the LEG, MEG, and HEG gratings.  The addition of the impurity (IMP) grating added extremely high efficiency over a large portion of the soft x-ray energy range, and the two 3rd order gratings added massive resolving powers of 14~000 and 10~000 at the carbon and iron lines.  (Although their efficiency is substantially lower than the other gratings, the novel usage of the 3rd order was the only way to achieve this kind of resolution within our physical size constraints.)
 
-Table \ref{4g} shows the predicted resolving power and grating efficiency of our design for all the edges of interest.  For those interested in resolution, Figure \ref{4y} compares the resolving power of our design to the competitors in Figure \ref{4a}.  The final optimized grating parameters are included in Table \ref{gratings-table}.  In Figures \ref{4h-1} through \ref{4h-3}, we show the theoretical predicted efficiency in 1st, 2nd, and 3rd order for all six gratings.  In Chapter 6, we compare these efficiencies with the real-world diffraction performance of the manufactured gratings.
+Table \ref{4g} shows the predicted resolving power and grating efficiency of our design for all the edges of interest.  For those interested in resolution, Figure \ref{4y} compares the resolving power of our design to the competitors in Figure \ref{4a}.  The final optimized grating parameters are included in Table \ref{gratings-table}.  In Figures \ref{4h-1} through \ref{4h-3}, we show the theoretical predicted efficiency in 1st, 2nd, and 3rd order for all six gratings.  In Chapter 7, we compare these efficiencies with the real-world diffraction performance of the manufactured gratings.
 
 \begin{table}[h]
    \centering
-   \caption[Predicted resolving power (RP, $E/\Delta E$) and grating efficiency (Eff) of the REIXS spectrometer at the emission lines of interest.]{Predicted resolving power (RP, $E/\Delta E$) and grating efficiency (Eff) of the REIXS spectrometer at the emission lines of interest.  Values are listed for all gratings where the emission energy lies within the detector's motion range.  (Resolving power results are taken from (TODO REF david's thesis).)}
+   \topcaption[Predicted resolving power (RP, $E/\Delta E$) and grating efficiency (Eff) of the REIXS spectrometer at the emission lines of interest.]{Predicted resolving power (RP, $E/\Delta E$) and grating efficiency (Eff) of the REIXS spectrometer at the emission lines of interest.  Values are listed for all gratings where the emission energy lies within the detector's motion range.  (Resolving power results are taken from (TODO REF david's thesis).)}
    {\footnotesize
- \begin{tabular}{@{} |c|cc|cc|cc|cc|cc|cc|@{}} % Column formatting, @{} suppresses leading/trailing space
- \hline
- 	&	\multicolumn{8}{|c|}{1st Order Gratings} & \multicolumn{4}{|c|}{3rd Order Gratings} \\
-	\hline
-	&	\multicolumn{2}{|c|}{IMP} &	\multicolumn{2}{|c|}{LEG} &	\multicolumn{2}{|c|}{MEG} &	\multicolumn{2}{|c|}{HEG} &	\multicolumn{2}{|c|}{HRMEG} &	\multicolumn{2}{|c|}{HRHEG} 		\\
+ \begin{tabular}{@{}  c cc cc cc cc cc cc @{}} % Column formatting, @{} suppresses leading/trailing space
+\toprule
+ 	&	\multicolumn{8}{ c }{1st Order Gratings} & \multicolumn{4}{ c }{3rd Order Gratings} \\
+\cmidrule(lr){2-9} \cmidrule(l){10-13}
+	&	\multicolumn{2}{ c }{IMP} &	\multicolumn{2}{ c }{LEG} &	\multicolumn{2}{ c }{MEG} &	\multicolumn{2}{ c }{HEG} &	\multicolumn{2}{ c }{HRMEG} &	\multicolumn{2}{ c }{HRHEG} 		\\
 	&	RP	&	Eff	&	RP	&	Eff	&	RP	&	Eff	&	RP	&	Eff	&	RP	&	Eff	&	RP	&	Eff	\\
-	\hline\hline
+\cmidrule(lr){2-3}   \cmidrule(lr){4-5}  \cmidrule(lr){6-7}  \cmidrule(lr){8-9}  \cmidrule(lr){10-11} \cmidrule(lr){12-13}
 Si (92 eV)	&	4693	&	7.4\%	&	2986	&	38.7\%	&	10146	&	5.3\%	&	15580	&	3.6\%	&		&		&		&		\\
 C (277 eV)	&	1722	&	29.1\%	&	1032	&	3.8\%	&	3646	&	19.6\%	&	5752	&	6.7\%	&	14066	&	4.7\%	&		&		\\
 N (392 eV)	&	1226	&	34.1\%	&		&		&	2528	&	22.8\%	&	4039	&	9.8\%	&	10227	&	3.4\%	&	16510	&	1.5\%	\\
 Fe (725 eV)	&	731	&	23.4\%	&		&		&	1588	&	17.7\%	&	1595	&	12.2\%	&	6238	&	0.9\%	&	9468	&	2.1\%	\\
-      \hline
+\bottomrule
    \end{tabular}
    }
    \label{4g}

@@ -5,19 +5,30 @@
 \usepackage{bbold}
 \usepackage{graphicx}
 \usepackage{multirow}
-\graphicspath{{/Users/mboots/Documents/2011/beamteam/thesis/data/}}
-
+\usepackage{tabularx}
+\usepackage{topcapt}
+\usepackage{booktabs}
+\usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{listings}
+
+\graphicspath{{/Users/mboots/Documents/2011/beamteam/thesis/data/}}
 
 \renewcommand{\deg}{^\circ }
 \newcommand{\dg}{$^\circ$ } 
 \newcommand{\dif}{\mathrm{d}} 
 
+% Hyperlink equation references
 \newcommand{\eq}[1]{\hyperref[#1]{\eqref{#1}}}
+%\renewcommand{\eqref}[1]{\protect \eqref{#1} }
 
+% What kind of vector font/symbol to use?
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
 
-%\renewcommand{\eqref}[1]{\protect \eqref{#1} }
+% More vertical space in table cells
+\renewcommand{\arraystretch}{1.2}
+
+
 
 
 % Documentation for the uofsthesis-cs class is given in uofsthesis-cs.dvi
@@ -135,6 +146,7 @@ blah blah blah
 \input chapter1.tex
 \input chapter2.tex
 \input chapter3.tex
+\input chapter3_5.tex
 \input chapter4.tex
 \input chapter5.tex
 \input chapter6.tex
@@ -184,7 +196,7 @@ blah blah blah
 % Activate thesis appendix mode.
 \uofsappendix
 
-\chapter{Sample Appendix}
+%\chapter{Sample Appendix}
 
 
 \end{document}
