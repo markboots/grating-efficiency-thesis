@@ -886,7 +886,7 @@ It is complex because all of the atom's electrons might not scatter in phase.  I
 \begin{align}
 f = f_1 + i f_2 = f_1(0) - \Delta f_0(\theta) + i f_2(0)
 \end{align}
-The ``Henke Data'' publication \cite{Hen93} tabulates the atomic scattering factors for all elements from Hydrogen to Uranium over the energy range from 50 eV to 30,000 eV.  The authors calculate the scattering factors from a survey of all existing available photoabsorption measurements, using a modified Kramers-Kronig dispersion relation that accounts for relativistic effects.  Across energy regions where photoabsorption measurements were not available, the values were interpolated using theoretical calculations.
+The ``Henke Data'' publication \cite{Hen93} tabulates the atomic scattering factors for all elements from Hydrogen to Uranium over the energy range from 50 eV to 30~000 eV.  The authors calculate the scattering factors from a survey of all existing available photoabsorption measurements.  The measured absorption cross section directly provides the imaginary part of the scattering factor ($f_2$).  Since it is practically impossible to empirically measure the speed of x-ray light in absorbing materials, the Kramers-Kronig dispersion relations are used to determine the real part ($f_1$) from the imaginary part \cite{Kro26}.  (A modified Kramers-Kronig dispersion relation is used to correct for relativistic effects.)  Across energy regions where photoabsorption measurements were not available, the values were interpolated using theoretical calculations.
 
 If the atoms within a material (metal, molecule, or crystal) can be assumed to scatter as dipoles, the complex refractive index can be determined from the scattering factors of all the constituent atoms. This allows us to estimate the refractive index -- even for compound grating materials like SiO$_2$ and MgF$_2$ -- as a function of wavelength:
 \begin{align}
@@ -897,7 +897,20 @@ where there are $Q$ different types of atoms in the material, $n_q$ is the numbe
 
 Using this method to calculate the refractive index assumes that the photoabsorption cross section does not depend on the bonding environment of atoms in the material; i.e., \emph{it assumes that the individual atoms scatter independently}.  In the vicinity of absorption edges, two processes invalidate this assumption: transitions to weakly bound excited states produce fine structure near the absorption edge (NEXAFS), and backscattering of outgoing photoelectrons from the atoms in a crystal causes oscillations above the edge (EXAFS).
 
-Given these effects, is it acceptable to use refractive indexes derived from the Henke data?  Two examples from Reference \cite{Hen93} show the limits of validity.  Figure TODO compares the reflectivity of a pure silicon wafer calculated from atomic scattering factors against measurements of the real crystal; in this case the agreement is good.  In Figure TODO, the near-edge absorption fine structure of CO$_2$ causes deviation in the measured absorption spectrum compared to the vector sum of the atomic photoabsorption.
+Given these effects, is it acceptable to use refractive indexes derived from the Henke data?  Two examples from Reference \cite{Hen93} show the limits of validity.  Figure \ref{henkeValid1} compares the reflectivity of a pure silicon wafer calculated from atomic scattering factors against measurements of the real crystal; in this case the agreement is good.  In Figure \ref{henkeValid2}, the near-edge absorption fine structure of CO$_2$ causes deviation in the measured absorption spectrum compared to the vector sum of the atomic photoabsorption in the vicinity of the Carbon K 1s and Oxygen K 1s absorption edges.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=4in]{Chapter2/2f_henke/siReflectivity.pdf} 
+   \caption[Comparison of a measured reflection curve around the total reflection cutoff region from a silicon(111) wafer under 1487 eV radiation, with that predicted by the Fresnel equations using atomic scattering factors from the Henke tables.]{Comparison of a measured reflection curve around the total reflection cutoff region from a silicon(111) wafer under 1487 eV radiation, with that predicted by the Fresnel equations (\protect \eq{eqnFresnelTE}, \protect \eq{eqnFresnelTM}) using the atomic scattering factors from the Henke tables. (The low-angle cutoff is instrumental.) Reprinted from Reference \protect \cite[Figure 18]{Hen93}.}
+   \label{henkeValid1}
+\end{figure}
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=4in]{Chapter2/2f_henke/CO2.pdf} 
+   \caption[Experimental photoabsorption data for the CO$_2$ molecule, compared with a plot calculated using the vector sum of atomic photoabsorption cross sections from the Henke tables.]{Experimental photoabsorption data for the CO$_2$ molecule, compared with a plot calculated using the vector sum of atomic photoabsorption cross sections from the Henke tables. The near-edge fine structure causes differences in the vicinity of the C K 1s (284 eV) and O K 1s (543 eV) absorption edges.  Reprinted from Reference \protect \cite[Figure 15]{Hen93}.}
+   \label{henkeValid2}
+\end{figure}
 
 Far away from absorption edges, the semi-empirical nature of the data gives us a high degree of trust in the accuracy of the Henke-based refractive indexes; however, we need to remember that they do not reflect reality in the vicinity of a material's absorption edges.
 
