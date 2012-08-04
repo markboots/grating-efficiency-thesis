@@ -145,7 +145,7 @@ The solver and command-line interface support the following features:
 \item \textbf{Incidence scanning modes}: calculation of common efficiency curves with a single command:
 \begin{enumerate}
 \item \texttt{constantIncidence} mode calculates the efficiency over a range of wavelengths (or photon energies) at a constant incidence angle.
-\item \texttt{constantIncludedAngle} mode automatically varies the incidence angle as a function of wavelength, to satisfy a condition of a constant deviation from the incident light to the outgoing order $n$.  (This represents the operating mode of many monochromator designs.)  The incidence angle $\theta_{2}$ is computed from the grating equation \eq{gratingEquation} and the requirement that the included angle $\phi = \theta_{2} + \theta_{2,n}$:
+\item \texttt{constantIncludedAngle} mode automatically varies the incidence angle as a function of wavelength, to satisfy a condition of a constant deviation from the incident light to the outgoing order $n$.  (This is the operating mode for many monochromator designs.)  The incidence angle $\theta_{2}$ is computed from the grating equation \eq{gratingEquation} and the requirement that the included angle $\phi = \theta_{2} + \theta_{2,n}$:
 \begin{eqnarray}
 \theta_{2} &=& \arcsin \left(  \frac{-n\lambda}{2 d \cos(\phi/2)}  \right) + \phi/2
 \end{eqnarray}
@@ -159,7 +159,7 @@ The solver and command-line interface support the following features:
 \end{itemize}
 
 \subsubsection{Limitations}
-The current version has two main limitations; work is ongoing to remove both of these:
+The current version has two main limitations; work is ongoing to address both of these:
 \begin{enumerate}
 \item The solver currently only calculates the efficiency for TE polarization.  Since the TE and TM polarization efficiencies converge at grazing incidence, for soft x-ray optics used in grazing incidence there is very little difference between the TE and TM polarization.  Figure \ref{TEvsTM_88} shows a grating at 88 degrees incidence calculated using the \texttt{\textbf{Gradif}} program; the difference between TE and TM efficiency is generally less than 5\% (relative).  The shape of the TE and TM curves are also identical; therefore, designers currently using the TE results for optimization should not be misled even if their actual incidence configuration includes TM light.  However, implementing the TM solver is necessary for completeness, and accuracy at more normal incidence angles (Figure \ref{TEvsTM_80}).
 \item Interpenetrating coatings are not yet supported for custom (point-wise defined) groove profiles.
