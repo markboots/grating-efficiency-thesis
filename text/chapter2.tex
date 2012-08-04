@@ -21,7 +21,7 @@ Prior to the availability of computers and numerical techniques, great attempts 
 
 The introduction of computer-based numerical methods in the 1960s spawned a renewal of research into general solutions to the problem.  The first ``rigorous'' algorithm\footnote{``Rigorous'' here implies a method that does not introduce approximations into the theoretical equations, other than inevitably in the process of finite-precision numerical calculations.} was invented by several researchers in 1966:
 \begin{description}
-\item[The ``integral'' approach] uses Maxwell's equations in integral form and the Kirchoff integral theorem \cite{Pet66}\cite{Wir69}\cite{Pav70}.  It was generalized from perfectly conducting (i.e.: perfectly reflecting) gratings to finite-conductivity metallic gratings in an important paper in 1972 \cite{May72}.
+\item[The ``integral'' approach] uses Maxwell's equations in integral form and the Kirchhoff integral theorem \cite{Pet66}\cite{Wir69}\cite{Pav70}.  It was generalized from perfectly conducting (i.e.: perfectly reflecting) gratings to finite-conductivity metallic gratings in an important paper in 1972 \cite{May72}.
 \end{description}
 Alongside these ``integral'' methods, two other broad families of algorithms emerged based on Maxwell's equations in differential form:
 \begin{description}
@@ -38,7 +38,7 @@ Reference \cite{Pet80} provides a comprehensive review of all the methods that w
 \label{methodComparison}
 To choose an appropriate method for a particular problem, we need to understand the assumptions and limitations of each one.  As a ``grating method user's guide'', this section presents just enough theory to understand their areas of applicability.  We cover the integral method, the modal method, and two variations of the differential method.  This survey is not exhaustive; additional methods have been developed that are only applicable in specific cases.  For example, for certain particular groove profiles, there exist coordinate transformations and ``conformal mappings'', which simplify the boundary conditions so that the grating problem can either be solved analytically, or reduced in complexity.  We concentrate here on the methods that have been intended for general applications.
 \subsubsection{The Integral Method}
-For perfectly conducting metals, when an electromagnetic field is incident on a surface, it induces a surface current $\mathbf{j}_S(\mathbf{M}')$ at each point $\mathbf{M}'$.  This surface current radiates a field -- the diffracted electric field $E(P)$ at a given point $\mathbf{P}$ above the surface; the field is related to the surface current by the Kirchoff Integral Theorem \cite{Kir83} using the Green's function $G(\mathbf{P}, \mathbf{M}')$:
+For perfectly conducting metals, when an electromagnetic field is incident on a surface, it induces a surface current $\mathbf{j}_S(\mathbf{M}')$ at each point $\mathbf{M}'$.  This surface current radiates a field -- the diffracted electric field $E(P)$ at a given point $\mathbf{P}$ above the surface; the field is related to the surface current by the Kirchhoff Integral Theorem \cite{Kir83} using the Green's function $G(\mathbf{P}, \mathbf{M}')$:
 \begin{align}
 \mathbf{E}(\mathbf{P}) = \int\limits_{\textrm{grating period}} G(\mathbf{P}, \mathbf{M}')\, \phi(\mathbf{M}')\, \dif s'
 \end{align}
