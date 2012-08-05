@@ -335,7 +335,9 @@ totalSteps=5
 \renewcommand{\arraystretch}{1.2}
 
 \subsection{Parallel program design and performance}
-TODO Parallelization introduction.  (This is reflected in the trend over the past 4 years where computer processor clock speeds have essentially stagnated, but the average number of cores per processor has increased from one to four.)
+Over the past forty years, the power and speed of scientific software has increased exponentially.  Part of this has been the result of improved algorithms in numerical analysis, but most of it is due to a similar exponential increase in the processor speed and memory capacity of computer systems.  Recently, however, physical limits have started to encroach on ``Moore's Law'', which originally suggested a doubling in chip performance every 18 months: as transistors approach the atomic scale, quantum effects will set a hard lower limit on their size.  In the future, software will no longer be able to count on perpetually-increasing processor speeds; instead, the only path to higher performance will come from exploiting \emph{parallelism}: the ability to compute parts of the problem simultaneously on multiple processors.  (This is already evident in the trend over the past 4 years, where computer processor clock speeds have nearly stagnated, but the average number of cores per processor has increased from one to four.)
+
+If we assume that \texttt{\textbf{Gradif}} is already implementing the differential method efficiently, then the \emph{only} way to improve its performance is by exploiting parallelism.\footnote{In fact, because our software's variable step size integration method requires more computations of the grating expansion $k_n^2$ in exchange for better stability, we should expect it to be slower than \texttt{\textbf{Gradif}} \emph{unless} we find a way to exploit parallelism.}
 
 Based on analysis of the differential method and the use-cases listed above, we identified the following opportunities for parallel decomposition:
 \subsubsection{Fine-grained Parallelization}
