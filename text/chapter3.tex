@@ -154,7 +154,7 @@ The solver and command-line interface support the following features:
 \item \textbf{Parallel calculations}:
 \begin{itemize}
 \item Fine parallelization of a single calculation
-\item Coarse parallelization of many efficiency points using cluster compute nodes
+\item Coarse parallelization of many efficiency calculations using high-performance computing resources
 \end{itemize}
 \end{itemize}
 
@@ -342,13 +342,13 @@ For the present, parallel processing can provide a solution in two scenarios: wh
 For both of these reasons, we designed the new software to support parallel calculations from the start.
 \subsubsection{Fine-grained Parallelization}
 \label{fineGrained}
-Computing the grating efficiency in all orders $n$ at a single wavelength $\lambda$ can be viewed as a single calculation of the ``efficiency function'':
+Computing the grating efficiency in all orders $n$ at a single wavelength $\lambda$ can be viewed as a single ``calculation'' of the efficiency function:
 \begin{eqnarray}
 e_n = \textrm{eff}(\lambda, p_1, p_2, \ldots),
 \end{eqnarray}
 where the parameters $p_1, p_2, \ldots$ represent the grating parameters.  
 
-Based on our experience with \texttt{\textbf{Gradif}}, we expect that this single calculation can take from two seconds up to several minutes depending on the grating.  \textbf{Fine-grained parallelization} attempts to speed up a single invocation of the differential method, which should benefit desktop users with multi-core processors.  By analyzing the differential method, we identified the following possibilities for decomposing the problem into parallel tasks:
+Based on our experience with \texttt{\textbf{Gradif}}, we expect that this calculation can take from two seconds up to several minutes depending on the grating.  \textbf{Fine-grained parallelization} attempts to speed up a single calculation, which should benefit desktop users with multi-core processors.  By analyzing the differential method, we identified the following possibilities for decomposing the problem into parallel tasks:
 \begin{itemize}
 \item \textbf{Option 1}: In the shooting method, all of the $P=2(2N+1)$ trial solutions need to be numerically integrated from $y_{m-1}$ to $y_m$ in each slice.  All of the trial solutions are independent, allowing parallelization of this process over $p$.  Profiling results (Table \ref{timing}) show that the integration process, including calculation of the permittivity matrix $M(y)$ at each  step, represents 99.99\% of the total calculation time. This suggests that this is the (only) worthwhile candidate for parallelization.  When using the S-matrix method, if there are more processors available than trial solutions $P$, we can also parallelize the independent integrations over each layer $m$.
 \item \textbf{Option 2}: The permittivity matrix $M(y)$ must be calculated based on the grating profile, for each grid value along the $y-$axis.  If the integration routine uses a fixed step size, the computation of all the $M$ matrices could be parallelized over grid points.  This is not directly possible if the integration routine uses a variable step size, in which case $M$ needs to be evaluated at each integration step.
@@ -379,7 +379,7 @@ Fine-grained parallelization is built into the \texttt{pegSerial} program, and e
 
 \begin{table}[htbp]
 \begin{center}
-\topcaption[Run time, speedup, and efficiency attained using the OpenMP fine-grained parallel option, on a single \texttt{bugaboo} node using up to 12 processors. ]{Run time, speedup, and efficiency attained using the OpenMP fine-grained parallel option, on a single \texttt{bugaboo} node using up to 12 processors. Results were based on the minimum run time of five runs.\\~\\ Test format: \texttt{./pegSerial --mode constantIncidence --min 100 --max 131 --increment 1 --incidenceAngle 88 --outputFile timingTestOutput.txt --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --eV --threads} $t$} % requires the n topcapt package
+\topcaption[The run time, speedup, and efficiency attained using OpenMP fine-grained parallelization on a single \texttt{bugaboo} node using up to 12 processors. ]{The run time, speedup, and efficiency attained using OpenMP fine-grained parallelization on a single \texttt{bugaboo} node using up to 12 processors. Reported results are based on the minimum run time of five runs.\\~\\ Test format: \texttt{./pegSerial --mode constantIncidence --min 100 --max 131 --increment 1 --incidenceAngle 88 --outputFile timingTestOutput.txt --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --eV --threads} $t$} % requires the n topcapt package
 \begin{tabular}{@{} lccccccc @{}} % Column formatting, @{} suppresses leading/trailing space
 \toprule
 Threads $t$:	&	1	&	2	&	4	&	6	&	8	&	10	&	12	\\
@@ -390,13 +390,13 @@ Threads $t$:	&	1	&	2	&	4	&	6	&	8	&	10	&	12	\\
 \end{center}
 \end{table}
 
-The coarse-grained parallelization lends itself naturally to a distributed-memory computing paradigm, so we implemented it using the Message Passing Interface (MPI) standard \cite{mpi08}.  In this environment, the same program (\texttt{pegMPI}) is launched simultaneously on multiple processors in a cluster computer.  Each processor determines for itself which wavelengths/energies/incidence angles it should calculate.  After every calculation, each program broadcasts its results over the network to the ``root node'', which is responsible for writing a single output file and progress file.
+The coarse-grained parallelization lends itself naturally to a distributed-memory computing paradigm, so we implemented it using the Message Passing Interface (MPI) standard \cite{mpi08}.  In this environment, the same program (\texttt{pegMPI}) is launched simultaneously on multiple processors in a cluster computer.  Each program determines for itself which wavelengths/energies/incidence angles it should calculate.  After every calculation, each program broadcasts its results over the network to the ``root node'', which is responsible for writing a single output file and progress file.
 
-From Table \ref{tableMPITiming} it appears that the coarse-grained parallelization is extremely efficient; in fact, it seems to run more efficiently than the single-threaded program.  This is of course impossible; the efficiencies over 100\% are simply timing artifacts caused by the fact that some \texttt{bugaboo} nodes are faster than others.  
+Table \ref{tableMPITiming} shows that the coarse-grained parallelization is extremely efficient; in fact, it seems to run more efficiently than the single-threaded program.  This is of course impossible; the efficiencies over 100\% are simply timing artifacts caused by the fact that some \texttt{bugaboo} nodes are faster than others.  
 
 \begin{table}[htbp]
 \begin{center}
-\topcaption{Run time, speedup, and efficiency attained using the MPI coarse-grained parallel option, running on the \texttt{bugaboo} cluster using 1 to 32 processors.  Results were based on the minimum run time of five runs.  The efficiencies larger than 100\% are measurement artifacts, due to some \texttt{bugaboo} nodes being faster than others; there is no way for the \texttt{pegMPI} program to exceed a theoretical efficiency of 100\%.\\~\\ Test format: \texttt{mpiexec -n $P$ ./pegMPI --mode constantIncidence --min 100 --max 131 --increment 1 --incidenceAngle 88 --outputFile timingTestOutput.txt --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --eV}} % requires the n topcapt package
+\topcaption{The run time, speedup, and efficiency attained using MPI coarse-grained parallelization on the \texttt{bugaboo} cluster using 1 to 32 processors.  Reported results are based on the minimum run time of five runs.  The efficiencies larger than 100\% are measurement artifacts, due to some \texttt{bugaboo} nodes being faster than others; there is no way for the \texttt{pegMPI} program to exceed a theoretical efficiency of 100\%.\\~\\ Test format: \texttt{mpiexec -n $P$ ./pegMPI --mode constantIncidence --min 100 --max 131 --increment 1 --incidenceAngle 88 --outputFile timingTestOutput.txt --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --eV}} % requires the n topcapt package
 \begin{tabular}{@{} lccccccc @{}} % Column formatting, @{} suppresses leading/trailing space
 \toprule
 Processors $P$:	&	1	&	2	&	4	&	8	&	16	&	32	\\
@@ -407,10 +407,10 @@ Processors $P$:	&	1	&	2	&	4	&	8	&	16	&	32	\\
 \end{center}
 \end{table}
 
-Modern cluster architectures usually contain many independent computers (``nodes'') connected via a local area network, with every node having four to eight local processor cores.  To take advantage of this architecture, the two parallel modes can be used simultaneously in a hybrid execution model -- using fine-grained distribution over the local processor cores, and coarse distribution over cluster nodes.
+Modern cluster architectures often contain many independent computers (``nodes'') connected via a local area network, with every node having four to eight local processor cores.  To take advantage of this architecture, the two parallel modes can be used simultaneously in a hybrid execution model using fine-grained distribution over the local processor cores, and coarse distribution over cluster nodes.
 
 \subsection{Validation of the new software}
-We tested the new software extensively as it was being developed for logical self-consistency, and for consistency with Gradif.  In this section, we list the tests that give us confidence that its output is at least physically reasonable; in the next chapter, we validate both Gradif and our new software against experimental measurements.
+We tested the new software extensively for logical self-consistency, and for consistency with \texttt{Gradif}.  In this section, we list the tests that give us confidence that its output is at least physically reasonable; in the next chapter, we validate both \texttt{Gradif} and our new software against experimental measurements.
 
 \subsubsection{Physical Principles}
 \begin{itemize}
@@ -422,7 +422,7 @@ We tested the new software extensively as it was being developed for logical sel
 \item With refractive index $\nu_1 = (0.993 + 0i)$, the efficiency sum $\sum e_{r,n} + \sum e_{t,n} = 0.983451 + 0.016549 = 0.999999$.
 \end{itemize}
 \end{itemize}
-For real soft x-ray gratings with absorbing materials, such as Platinum at 410 eV:
+For real gratings with absorbing materials, such as Platinum at 410 eV:
 \begin{itemize}
 \item With refractive index $\nu_1 = (0.993 + 0.00754i)$, the efficiency sum $\sum e_{r,n} + \sum e_{t,n} = 0.45904 + 0.000782219 = 0.459822$.
 \end{itemize}
@@ -430,7 +430,7 @@ For real soft x-ray gratings with absorbing materials, such as Platinum at 410 e
 \end{itemize}
 
 \subsubsection{Logical consistency for coatings}
-When the software was extended to handle coatings, there were several opportunities to check for logical situations where the efficiencies should remain the same.  For example, if we know the efficiency of a bare grating of material X, all of the following coating scenarios represent the same physical grating; they should (and do!) produce the exact same results, despite longer calculation times:
+When the software was extended to handle coatings, there were several opportunities to check for logical situations where the efficiencies should remain the same.  Because the coating amounts to a vertical extension of the grating profile, a coating of material X on top of a substrate of the same material should represent the same physical grating -- despite being calculated differently.  If we know the efficiency of a bare grating of material X, all of the following coating scenarios should (and do!) produce the exact same results, albeit with longer calculation times:
 \begin{itemize}
 \item A 0-thickness coating of any material Y on X
 \item A thin (interpenetrating) coating of material X on X
@@ -442,11 +442,21 @@ When the software was extended to handle coatings, there were several opportunit
 When the software was extended to use the S-matrix algorithm, we expected that:
 \begin{itemize}
 \item For thin gratings that were previously stable, it should reproduce the same results as the basic shooting method (Section \ref{shootingMethodDescription}).
-\item For thick gratings that were previously unstable, it should introduce stable results.
-\item For gratings that previously showed regions of stability and instability, the new results should converge with the previous regions of stability.
+\item For thick gratings that were previously unstable, it should produce stable results.
+\item For gratings that previously showed wavelength regions of stability and instability, the new results should converge with the previous regions of stability.
 \item As long as sufficient layers are used, the results should be invariant to the number of layers.
 \end{itemize}
-All of these criteria are satisfied.  For thin gratings, the results using 1, 2, 5, 10, and 100 layers are identical to more than six significant figures.  Figure \ref{TODO} shows a great example of a grating that showed instability at high energies when using a single layer; the S-matrix approach with just two layers eliminates these instabilities but converges smoothly with the valid parts of the original curve.
+All of these criteria are satisfied.  For thin gratings, the results using 1, 2, 5, 10, and 100 layers are identical to more than six significant figures.  Figure \ref{SMatrixStability} shows a great example of a problem that was unstable at high energies when using a single layer; using just a few layers, the S-matrix approach eliminates these instabilities but converges smoothly with the valid parts of the original curve.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Extended/SMatrixStability/SMatrixStability.pdf} 
+   \caption[The S-Matrix approach is the solution for this problem that became unstable at high energies when using the basic shooting method.]{The S-Matrix approach is the solution for this problem that became unstable at high energies when using the basic shooting method.  The software automatically determines the number of layers required, ranging here from one layer at low energies to three layers at high energies.  The inset in the $3^\textrm{rd}$-order curve shows that the numerical error ``noise'' is also reduced, even for calculations that remain ``stable''.  Grating: 600 lines/mm, 1.85\dg blaze angle, gold substrate, 86\dg incidence.}
+   \label{SMatrixStability}
+\end{figure}
+
+\subsubsection{Logical equivalence for point-wise defined profiles}
+When the software was extended to handle arbitrary groove shapes based on a set of $(x,y)$ points defining the surface function $y_p = g(x)$, we confirmed that although the method for calculating the $k^2_n$ expansion differs, we produced the same results for the basic profiles (rectangular, blazed, and trapezoidal) and their point-wise defined equivalents.
 
 \subsubsection{Comparison to \texttt{Gradif}}
 We compared the new software to previous \texttt{Gradif} calculations of the TE efficiency for a wide range of gratings.  We found that both programs are in agreement, typically to at least three significant figures.  (The exact agreement depends on the number of integration steps chosen for \texttt{Gradif}; increasing the number of steps generally improves the agreement.)  Figure \ref{TODO} shows a set of comparison calculations over a range of coating thicknesses.  We found that for extremely thin coatings ($<5$ nm), the results diverge slightly; this is attributed to a small difference in the way that \texttt{Gradif} computes the coating geometry.  For all practical purposes, the results are identical.  Work is ongoing to examine whether the new software can handle calculations that previously fell outside \texttt{Gradif's} domain of convergence.
