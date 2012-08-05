@@ -416,17 +416,29 @@ We tested the new software extensively for logical self-consistency, and for con
 \begin{itemize}
 \item \textbf{Conservation of Energy} requires that the sum of transmitted and reflected efficiencies must be unity for lossless (non-absorbing gratings), and always less than unity for absorbing gratings.  If we set the imaginary component of the refractive index to 0, we can confirm that the sum of all reflected and transmitted efficiencies is exactly 1.0:
 \begin{itemize}
-\item Example grating: 1000 lines/mm, 2.5 degree blaze angle, 88 degree incidence angle, 410 eV, $N=15$:
+\item Example triangular grating: 1000 lines/mm, 2.5\dg blaze angle, 88\dg incidence angle, 410 eV, $N=15$:
 \begin{itemize}
-\item With refractive index $\nu_1 = (1.4 + 0i)$, the efficiency sum $\sum e_{r,n} + \sum e_{t,n} = 0.703347 + 0.296606 = 0.999953$.
-\item With refractive index $\nu_1 = (0.993 + 0i)$, the efficiency sum $\sum e_{r,n} + \sum e_{t,n} = 0.983451 + 0.016549 = 0.999999$.
+\item With refractive index $\nu_1 = (1.4 + 0i)$, the efficiency sum is $\sum e_{r,n} + \sum e_{t,n} = 0.703347 + 0.296606 =$ \textbf{0.999953}.
+\item With refractive index $\nu_1 = (0.993 + 0i)$, the efficiency sum is $\sum e_{r,n} + \sum e_{t,n} = 0.983451 + 0.016549 =$ \textbf{0.999999}.
 \end{itemize}
 \end{itemize}
-For real gratings with absorbing materials, such as Platinum at 410 eV:
+Real gratings are absorbing materials, such as Platinum at 410 eV:
 \begin{itemize}
-\item With refractive index $\nu_1 = (0.993 + 0.00754i)$, the efficiency sum $\sum e_{r,n} + \sum e_{t,n} = 0.45904 + 0.000782219 = 0.459822$.
+\item With refractive index $\nu_1 = (0.993 + 0.00754i)$, the efficiency sum is $\sum e_{r,n} + \sum e_{t,n} = 0.45904 + 0.000782219 =$ \textbf{0.459822}.
 \end{itemize}
-\item The \textbf{Reciprocity Theorem} requires that the intensity of an electromagnetic signal should not change when swapping the source and the detector. This means that the efficiency of order $n$ at an incidence angle of $\theta_2$ should be the same as the efficiency of order TODO at an incidence angle of $\theta_2' = -\theta_{2,n}$.
+\item The \textbf{Reciprocity Theorem} requires that the intensity of an electromagnetic signal should not change when swapping the source and the detector. For gratings, this would represent an exchange of the incident plane wave and the outgoing diffraction order of interest.  Surprisingly, this means that the efficiency of order $n$ at an incidence angle $\theta_2$ should be the same as the efficiency of the corresponding order at incidence angle $\theta_2' = -\theta_{2,n}$.
+\begin{itemize}
+\item Example triangular grating: 1000 lines/mm, 2.5\dg blaze angle, 30\dg anti-blaze angle, 410 eV, $N=15$:
+\begin{itemize}
+\item At $\theta_2 = 88\deg$ incidence, the calculated $(-1)$ order efficiency is \textbf{8.23519\%}.  The outgoing angle is $\theta_{2,-1}=85.114\deg$.
+\item At $\theta'_2 = -85.114\deg$ incidence, the calculated $(-1)$ order efficiency is \textbf{8.23339\%}.   (The outgoing angle is $-88\deg$ as required.)
+\end{itemize}
+For another test, instead of using a negative incidence angle, we mirrored the grating geometry horizontally and extracted the outside order instead:
+\begin{itemize}
+\item At $\theta''_2 = 85.114\deg$ with a 30\dg blaze angle and 2.5\dg anti-blaze angle, the calculated  $(+1)$ order efficiency is \textbf{8.23339\%}.
+\end{itemize}
+\end{itemize}
+One consequence of the reciprocity theorem is that the $0^\textrm{th}$ order reflection efficiency should not change when rotating a grating around its $y$-axis by 180\dg.  Although this might be obvious for symmetric gratings, it is rather surprising for gratings with asymmetric groove profiles.  For example, the $0^\textrm{th}$ order efficiency for the 2.5\dg blazed grating calculated above was 18.1245\% at 88\dg incidence.  Flipping the grating to get a 30\dg blaze angle and 2.5\dg anti-blaze angle, we calculated an identical $0^\textrm{th}$ order efficiency of 18.1245\%.
 \end{itemize}
 
 \subsubsection{Logical consistency for coatings}
@@ -438,7 +450,7 @@ When the software was extended to handle coatings, there were several opportunit
 \item A very thick coating of material X on any material Y
 \end{itemize}
 
-\subsubsection{Logical consistency for S-Matrix layers}
+\subsubsection{Logical consistency for S-matrix layers}
 When the software was extended to use the S-matrix algorithm, we expected that:
 \begin{itemize}
 \item For thin gratings that were previously stable, it should reproduce the same results as the basic shooting method (Section \ref{shootingMethodDescription}).
@@ -451,7 +463,7 @@ All of these criteria are satisfied.  For thin gratings, the results using 1, 2,
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Extended/SMatrixStability/SMatrixStability.pdf} 
-   \caption[The S-Matrix approach is the solution for this problem that became unstable at high energies when using the basic shooting method.]{The S-Matrix approach is the solution for this problem that became unstable at high energies when using the basic shooting method.  The software automatically determines the number of layers required, ranging here from one layer at low energies to three layers at high energies.  The inset in the $3^\textrm{rd}$-order curve shows that the numerical error ``noise'' is also reduced, even for calculations that remain ``stable''.  Grating: 600 lines/mm, 1.85\dg blaze angle, gold substrate, 86\dg incidence.}
+   \caption[The S-matrix approach is the solution for this problem that becomes unstable at high energies when using the basic shooting method.]{The S-matrix approach is the solution for this problem that became unstable at high energies when using the basic shooting method.  The software automatically determines the number of layers required, ranging here from one layer at low energies to three layers at high energies.  The inset in the $3^\textrm{rd}$-order curve shows that the numerical error ``noise'' is also reduced, even for calculations that remain ``stable''.  (Blazed grating, 600 lines/mm, 1.85\dg blaze angle, gold substrate, 86\dg incidence.)}
    \label{SMatrixStability}
 \end{figure}
 
@@ -459,6 +471,12 @@ All of these criteria are satisfied.  For thin gratings, the results using 1, 2,
 When the software was extended to handle arbitrary groove shapes based on a set of $(x,y)$ points defining the surface function $y_p = g(x)$, we confirmed that although the method for calculating the $k^2_n$ expansion differs, we produced the same results for the basic profiles (rectangular, blazed, and trapezoidal) and their point-wise defined equivalents.
 
 \subsubsection{Comparison to \texttt{Gradif}}
-We compared the new software to previous \texttt{Gradif} calculations of the TE efficiency for a wide range of gratings.  We found that both programs are in agreement, typically to at least three significant figures.  (The exact agreement depends on the number of integration steps chosen for \texttt{Gradif}; increasing the number of steps generally improves the agreement.)  Figure \ref{TODO} shows a set of comparison calculations over a range of coating thicknesses.  We found that for extremely thin coatings ($<5$ nm), the results diverge slightly; this is attributed to a small difference in the way that \texttt{Gradif} computes the coating geometry.  For all practical purposes, the results are identical.  Work is ongoing to examine whether the new software can handle calculations that previously fell outside \texttt{Gradif's} domain of convergence.
+We compared the new software to previous \texttt{Gradif} calculations of the TE efficiency for a wide range of gratings.  We found that both programs are in agreement, typically to at least three significant figures.  (The exact agreement depends on the number of integration steps chosen for \texttt{Gradif}; increasing the number of steps generally improves the agreement.)  Figure \ref{pegVsGradif} shows a set of comparison calculations over a range of coating thicknesses.  We found that for extremely thin coatings ($<5$ nm), the results diverge slightly; this is attributed to a small difference in the way that \texttt{Gradif} computes the coating geometry.  For all practical purposes, the results are identical.  Work is ongoing to examine whether the new software can handle calculations that previously fell outside \texttt{Gradif's} domain of convergence.
 
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Chapter3/3f_coatingThickness/pegVsGradif.pdf} 
+   \caption[Shown over a range of coating thicknesses, the new software agrees with \texttt{Gradif} results to more than three significant figures.]{The new software agrees with \texttt{Gradif} to more than three significant figures.  These calculations show the TE efficiency for a blazed grating on an SiO$_2$ substrate, with a range Pt coating thicknesses.  The red curve is the relative difference between the two programs for the 50 nm calculation, in parts per million.  (Blazed grating, 1200 lines/mm, 1.46\dg blaze angle, 88\dg incidence.)}
+   \label{pegVsGradif}
+\end{figure}
 
