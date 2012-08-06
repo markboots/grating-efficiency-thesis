@@ -100,7 +100,7 @@ The Fortran code was written using a 1970's-era programming approach, including 
 
 \subsection{Online access}
 %Since we released the user interface under an `open-source' license, it can be upgraded or enhanced by anyone with an interest in beamline design and grating efficiency.  Julian Miller, a summer student in the metrology department at the CLS, recently created an updated version of the interface to support multi-threaded calculations and add more options for incidence configurations.  To the original `constant incidence angle' mode, he added a `constant included angle' mode, used in many monochromators, which tilts the grating as a function of photon energy to maintain a constant angle between the incident and outgoing beam in the desired order.  Since every grating efficiency calculation (at a single energy) is independent, they can be run in parallel; this takes advantage of modern multi-core processors, and dramatically speeds up the creation of a user's plot or data set.  In the future, this could be extended even further to spread calculations over a cluster of computers, or on distributed hardware in a `cloud computing' network.
-Because the user interface ran as a web application, it could be (and was) accessed by beamline designers from all over the world.  In one example, it was used by Professors Coryn Hague and Gheorghe Sorin Chiuzbaian to improve the design of a new beamline for the SOLEIL synchrotron (TODO ref).  The calculations could be requested by anyone from anywhere, but they all ran on a single server computer at the University of Saskatchewan.  Unfortunately, the underlying \texttt{\textbf{Gradif}} code is commercial software, and while we were licensed to run it on this machine, recent communication from Professor Neviere indicated that he was unhappy with this unpaid access to results calculated using his code.  As a result, we disabled public access to the original website.
+Because the user interface ran as a web application, it could be (and was) accessed by beamline designers from all over the world.  In one example, it was used by Professors Coryn Hague and Gheorghe Sorin Chiuzbaian to improve the design of a new beamline for the SOLEIL synchrotron (TODO ref).  The calculations could be requested by anyone from anywhere, but they all ran on a single server computer at the University of Saskatchewan.  Unfortunately, the underlying \texttt{\textbf{Gradif}} code is commercial software, and while we were licensed to run it on this machine, recent communication from Professor Neviere indicated that he was unhappy with this level of access to results calculated using his code.  As a result, we disabled public access to the original website.
 
 \section{Improved, open-source grating efficiency software}
 \subsection{Motivation for new grating software}
@@ -362,7 +362,7 @@ Based on our experience with \texttt{\textbf{Gradif}}, we expect that this calcu
       \toprule
 	Solver Operation & Percent of Run time\\
       \midrule
-   Allocate Memory	&	0.0003\%	\\   Look up refractive index	&	0.6803\%	\\   Compute $\alpha_n$, $\beta_n$ values and layers	&	0.0006\%	\\   Numerically integrate trial solutions	&	99.3011\%	\\   Matrix operations	&	0.0174\%	\\   Compute Rayleigh coefficients $B^{(M)}_n$	&	0.0003\%	\\   Compute and package efficiencies	&	0.0001\%	\\
+   Allocate Memory	&	0.0003\%	\\   Look up refractive index	&	0.6803\%	\\   Compute $\alpha_n$, $\beta_n$ values and layers	&	0.0006\%	\\   Numerically integrate trial solutions	&	99.3011\%	\\   S-matrix operations	&	0.0174\%	\\   Compute Rayleigh coefficients $B^{(M)}_n$	&	0.0003\%	\\   Compute and package efficiencies	&	0.0001\%	\\
       \bottomrule
    \end{tabular}
    \label{timing}
@@ -392,11 +392,11 @@ Threads $t$:	&	1	&	2	&	4	&	6	&	8	&	10	&	12	\\
 
 The coarse-grained parallelization lends itself naturally to a distributed-memory computing paradigm, so we implemented it using the Message Passing Interface (MPI) standard \cite{mpi08}.  In this environment, the same program (\texttt{pegMPI}) is launched simultaneously on multiple processors in a cluster computer.  Each program determines for itself which wavelengths/energies/incidence angles it should calculate.  After every calculation, each program broadcasts its results over the network to the ``root node'', which is responsible for writing a single output file and progress file.
 
-Table \ref{tableMPITiming} shows that the coarse-grained parallelization is extremely efficient; in fact, it seems to run more efficiently than the single-threaded program.  This is of course impossible; the efficiencies over 100\% are simply timing artifacts caused by the fact that some \texttt{bugaboo} nodes are faster than others.  
+Table \ref{tableMPITiming} shows that the coarse-grained parallelization is extremely efficient; in fact, it seems to run more efficiently than the single-threaded program.  This is of course impossible; the efficiencies over 100\% are timing artifacts caused by the fact that some \texttt{bugaboo} nodes are faster than others.  
 
 \begin{table}[htbp]
 \begin{center}
-\topcaption{The run time, speedup, and efficiency attained using MPI coarse-grained parallelization on the \texttt{bugaboo} cluster using 1 to 32 processors.  Reported results are based on the minimum run time of five runs.  The efficiencies larger than 100\% are measurement artifacts, due to some \texttt{bugaboo} nodes being faster than others; there is no way for the \texttt{pegMPI} program to exceed a theoretical efficiency of 100\%.\\~\\ Test format: \texttt{mpiexec -n $P$ ./pegMPI --mode constantIncidence --min 100 --max 131 --increment 1 --incidenceAngle 88 --outputFile timingTestOutput.txt --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --eV}} % requires the n topcapt package
+\topcaption[The run time, speedup, and efficiency attained using MPI coarse-grained parallelization on the \texttt{bugaboo} cluster using 1 to 32 processors.]{The run time, speedup, and efficiency attained using MPI coarse-grained parallelization on the \texttt{bugaboo} cluster using 1 to 32 processors.  Reported results are based on the minimum run time of five runs.  The efficiencies larger than 100\% are measurement artifacts, due to some \texttt{bugaboo} nodes being faster than others; there is no way for the \texttt{pegMPI} program to exceed a theoretical efficiency of 100\%.\\~\\ Test format: \texttt{mpiexec -n $P$ ./pegMPI --mode constantIncidence --min 100 --max 131 --increment 1 --incidenceAngle 88 --outputFile timingTestOutput.txt --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --eV}} % requires the n topcapt package
 \begin{tabular}{@{} lccccccc @{}} % Column formatting, @{} suppresses leading/trailing space
 \toprule
 Processors $P$:	&	1	&	2	&	4	&	8	&	16	&	32	\\
@@ -410,7 +410,7 @@ Processors $P$:	&	1	&	2	&	4	&	8	&	16	&	32	\\
 Modern cluster architectures often contain many independent computers (``nodes'') connected via a local area network, with every node having four to eight local processor cores.  To take advantage of this architecture, the two parallel modes can be used simultaneously in a hybrid execution model using fine-grained distribution over the local processor cores, and coarse distribution over cluster nodes.
 
 \subsection{Validation of the new software}
-We tested the new software extensively for logical self-consistency, and for consistency with \texttt{Gradif}.  In this section, we list the tests that give us confidence that its output is at least physically reasonable; in the next chapter, we validate both \texttt{Gradif} and our new software against experimental measurements.
+We tested the new software extensively for logical self-consistency, and for consistency with \texttt{Gradif}.  In this section, we list the tests that gave us confidence that its output is at least physically reasonable; in the next chapter, we validate both \texttt{Gradif} and our new software against experimental measurements.
 
 \subsubsection{Physical Principles}
 \begin{itemize}
@@ -438,7 +438,7 @@ For another test, instead of using a negative incidence angle, we mirrored the g
 \item At $\theta''_2 = 85.114\deg$ with a 30\dg blaze angle and 2.5\dg anti-blaze angle, the calculated  $(+1)$ order efficiency is \textbf{8.23339\%}.
 \end{itemize}
 \end{itemize}
-One consequence of the reciprocity theorem is that the $0^\textrm{th}$ order reflection efficiency should not change when rotating a grating around its $y$-axis by 180\dg.  Although this might be obvious for symmetric gratings, it is rather surprising for gratings with asymmetric groove profiles.  For example, the $0^\textrm{th}$ order efficiency for the 2.5\dg blazed grating calculated above was 18.1245\% at 88\dg incidence.  Flipping the grating to get a 30\dg blaze angle and 2.5\dg anti-blaze angle, we calculated an identical $0^\textrm{th}$ order efficiency of 18.1245\%.
+One consequence of the reciprocity theorem is that the $0^\textrm{th}$ order reflection efficiency should not change when rotating a grating around its $y$-axis by 180\dg.  Although this might be obvious for symmetric gratings, it is rather surprising for gratings with asymmetric groove profiles.  For example, the $0^\textrm{th}$ order efficiency for the 2.5\dg blazed grating calculated above was \textbf{18.1245\%} at 88\dg incidence.  Flipping the grating to obtain a 30\dg blaze angle and 2.5\dg anti-blaze angle, we calculated an identical $0^\textrm{th}$ order efficiency of \textbf{18.1245\%}.
 \end{itemize}
 
 \subsubsection{Logical consistency for coatings}
