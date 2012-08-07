@@ -901,13 +901,13 @@ Given these effects, is it acceptable to use refractive indexes derived from the
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=4in]{Chapter2/2f_henke/siReflectivity.pdf} 
+   \includegraphics[width=3.8in]{Chapter2/2f_henke/siReflectivity.pdf} 
    \caption[Comparison of a measured reflection curve around the total reflection cutoff region from a silicon(111) wafer under 1487 eV radiation, with that predicted by the Fresnel equations using atomic scattering factors from the Henke tables.]{Comparison of a measured reflection curve around the total reflection cutoff region from a silicon(111) wafer under 1487 eV radiation, with that predicted by the Fresnel equations (\protect \eq{eqnFresnelTE}, \protect \eq{eqnFresnelTM}) using the atomic scattering factors from the Henke tables. (The low-angle cutoff is instrumental.) Reprinted from Reference \protect \cite[Figure 18]{Hen93}.}
    \label{henkeValid1}
 \end{figure}
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=4in]{Chapter2/2f_henke/CO2.pdf} 
+   \includegraphics[width=3.8in]{Chapter2/2f_henke/CO2.pdf} 
    \caption[Experimental photoabsorption data for the CO$_2$ molecule, compared with a plot calculated using the vector sum of atomic photoabsorption cross sections from the Henke tables.]{Experimental photoabsorption data for the CO$_2$ molecule, compared with a plot calculated using the vector sum of atomic photoabsorption cross sections from the Henke tables. The near-edge fine structure causes differences in the vicinity of the C K 1s (284 eV) and O K 1s (543 eV) absorption edges.  Reprinted from Reference \protect \cite[Figure 15]{Hen93}.}
    \label{henkeValid2}
 \end{figure}
@@ -916,6 +916,8 @@ Far away from absorption edges, the semi-empirical nature of the data gives us a
 
 The Center for X-ray Optics website \cite{CXR11} offers an online calculator to estimate the refractive index of a compound material using Equation \eq{nFromScatteringFactor} based on its chemical formula and density, subject to the atomic-like assumption.  We used this service to build a database of complex refractive indexes for common grating materials over the 50 eV to 10,000 eV range.  These values were used in all calculations shown later in the text.
 
+\subsection{Sensitivity of efficiency calculations to errors in the refractive index}
+% TODO Move this to a different chapter
 Figure \ref{refractiveIndexTolerance} examines the sensitivity of the efficiency calculations to the refractive index, to determine the effect of any potential inaccuracy introduced by using the Henke data.  For this example, we chose a Nickel grating to include a strong absorption edge near 850 eV.  The heavy curves represent the default grating with a refractive index given by $\nu = 1 - \delta + i\beta$, which obviously varies as a function of wavelength.  The additional curves show the effect of a consistent 10\% overestimation or underestimation in $\delta$ or $\beta$; for example, $\nu' = 1 - 1.1\delta + i \beta$.  We note that a \emph{consistent} error in a component of the refractive index changes the magnitude but not the overall shape of the curves; therefore, an error like this would not mislead us when doing optimizations or comparisons of grating designs.  A more significant problem would occur if the error in the Henke-based refractive index changes over the wavelength range of interest, as it is known to near absorption edges.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
