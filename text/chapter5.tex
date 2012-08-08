@@ -83,7 +83,7 @@ To achieve correct incidence angles and accurate detection angles, the grating h
 	\end{enumerate}
 	
 \subsubsection{Scanning modes}
-All of the efficiency plots we calculated in Chapter 6 to predict the REIXS gratings' performance show efficiency as a function of photon energy.  We wanted to show our real-world measurements in the same format, which required us to scan the monochromator energy while measuring the intensity of the desired order with the photodiode.  Therefore, the detector angle had to change as we changed the monochromator energy, according to the outgoing angle specified by the grating equation (Eqn. \eq{gratingEquation}).  
+All of the efficiency plots we calculated in Chapter 6 to predict the REIXS gratings' performance show efficiency as a function of photon energy.  We wanted to show our real-world measurements in the same format, which required us to scan the monochromator energy while measuring the intensity of the desired order with the photodiode.  Therefore, the detector angle had to change as we changed the monochromator energy, according to the outgoing angle specified by the grating equation \eq{gratingEquation}.  
 
 If we had known the groove density with high accuracy, we could have calculated the correct diffraction angle and positioned the detector simultaneously while scanning the monochromator energy.  However, for brand new gratings, it would be unlikely for the groove density to end up exactly as requested from the manufacturer; in this case we would actually need to conduct a two-dimensional scan: for every photon energy datapoint, we would need to conduct an angular scan of the photodiode to find the diffraction peaks.\footnote{After completing this scan, we could use the angular position of the diffraction peaks to calculate the actual groove density, but only within a precision determined by the angular extent of the 2mm photodiode pinhole.}
 
@@ -145,7 +145,7 @@ Finally, as we identify in the following section, the dominant source of error i
 e^{(r)} = \frac{(I_r - I_{\mathrm{dark}}) / J_{\mathrm{ring},r}}{(I_i - I_{\mathrm{dark}})/ J_{\mathrm{ring},i}}
 \label{effNormalization}
 \end{align}
-We used Eqn. \eq{effNormalization} to normalize all of the efficiency results in Section \ref{gratingResults}.
+We used Equation \eq{effNormalization} to normalize all of the efficiency results in Section \ref{gratingResults}.
 
 \subsection{Sources of error}
 \label{sourcesOfError}
@@ -162,25 +162,25 @@ Table \ref{filterTable} shows the mirror coating, mirror angle, and filter eleme
 
 \begin{table}[htbp]
    \centering
-   \caption[For higher-order suppression, Beamline 6.3.2 has a variable-incidence mirror and a set of transmission filter elements.  The mirror coating, mirror angle, and filter need to be selected based on the energy range of the scan.]{For higher-order suppression, Beamline 6.3.2 has a variable-incidence mirror and a set of transmission filter elements.  The mirror coating, mirror angle, and filter need to be selected based on the energy range of the scan.  (Mirror angles are measured from grazing incidence.)}
-   \begin{tabular}{@{} |c|l|c|l| @{}} % Column formatting, @{} suppresses leading/trailing space
-      \hline
+   \topcaption[For higher-order suppression, Beamline 6.3.2 has a variable-incidence mirror and a set of transmission filter elements.  The mirror coating, mirror angle, and filter need to be selected based on the energy range of the scan.]{For higher-order suppression, Beamline 6.3.2 has a variable-incidence mirror and a set of transmission filter elements.  The mirror coating, mirror angle, and filter need to be selected based on the energy range of the scan.  (Mirror angles are measured from grazing incidence.)}
+   \begin{tabular}{@{} c l c l @{}} % Column formatting, @{} suppresses leading/trailing space
+\toprule
 Energy Range	(eV) &	Mirror	&	Mirror Angle ($\deg$)	&	Filter	\\
-\hline\hline
+\midrule
 62 - 99	&	\multirow{4}{*}{Carbon}	&	\multirow{2}{*}{10}	&	Silicon	\\
 83 - 112	&			&			&	Beryllium	\\
-\cline{3-4}
+\cmidrule(l){3-4}
 103 - 155	&			&	8	&	\multirow{2}{*}{Boron}	\\
 141 - 188	&			&	6.2	&			\\
-\hline
+\midrule
 182 - 276	&	\multirow{2}{*}{Nickel}	&	\multirow{2}{*}{8}	&	Carbon	\\
 275 - 454	&			&			&	[None]	\\
-\hline
+\midrule
 441 - 546	&	\multirow{4}{*}{[None]}	&		&	Chromium	\\
 544 - 775	&			&		&	Cobalt	\\
 751 - 932	&			&		&	Copper	\\
 898 -  1305&			&		&	Magnesium	\\
-      \hline
+\bottomrule
    \end{tabular}
    \label{filterTable}
 \end{table}
@@ -193,7 +193,7 @@ As described in the procedure, we calibrated the wavelength axis of our efficien
 \subsubsection{Photodiode dark current}
 Photodiodes can be operated in a forward-biased (\emph{photovoltaic}) mode, or in a reverse-biased (\emph{photoconductive}) mode.  When used as sensitive detectors of light intensity, the photoconductive mode is almost always used, because it offers faster response times and a linear response to light intensity over many orders of magnitude.  In this mode, a reverse bias is applied and -- in the absence of light -- only a small \emph{dark current} flows through the diode, due to the thermal generation of electron-hole pairs in the $p-n$ junction.  When light strikes the $p-n$ junction, incident photons create electron-hole pairs which are swept across the junction by the reverse bias, and create an intensity-dependent \emph{photocurrent}.  The total current through the photodiode is measured by a sensitive current amplifier.
 
-The dark current depends on temperature, and slightly on the magnitude of the reverse bias voltage.  (In our instrumentation, the reverse bias was affected by the gain setting of the current amplifier.)  To account for this, we measured the dark current at every gain setting with the beam turned off, and then subtracted this in the normalization equation (Eqn. \eq{effNormalization}).  The dark current measurements were conducted after the diode had been operating under reverse bias for some time (and hopefully had reached operating temperature).  Since the dark current increases with temperature, it is possible that exposure to extreme intensity would heat the detector and change the dark current contribution; however, this effect should be negligible for the low intensities observed in our experiment.
+The dark current depends on temperature, and slightly on the magnitude of the reverse bias voltage.  (In our instrumentation, the reverse bias was affected by the gain setting of the current amplifier.)  To account for this, we measured the dark current at every gain setting with the beam turned off, and then subtracted this in the normalization equation \eq{effNormalization}.  The dark current measurements were conducted after the diode had been operating under reverse bias for some time (and hopefully had reached operating temperature).  Since the dark current increases with temperature, it is possible that exposure to extreme intensity would heat the detector and change the dark current contribution; however, this effect should be negligible for the low intensities observed in our experiment.
 
 \subsubsection{Saggital tilt of the grating}
 The reflectometer mechanics enable the intended rotation of the sample (grating) around the $x$-axis in FIgure \ref{reflectometerCoordinates}.  If the grating surface were tilted away from normal incidence around the $y$-axis -- either due to an offset in the grating mount, or due to the curvature of the grating combined with incorrect alignment in the $x$-direction -- light would be reflected out of the $y-z$ plane.  This would create the ``conical mount'' situation we assumed we could avoid modelling in Chapter 3, and would also cause the diffracted beam to partially or completely miss the 2 mm pinhole of the photodiode detector.  Both of these effects would reduce the observed intensity from what we would expect.
@@ -224,7 +224,7 @@ or,
 We dealt with the first possibility in the previous section on sources of error.  Before accepting the second possibility, we take a look at some of the ways manufactured gratings differ from ideal ones.
 
 \subsection{Stray radiant energy}
-For a perfectly periodic surface, the Rayleigh expansion in Chapter 3 showed that all of the light propagating away from a grating leaves as plane waves in discrete orders. Regardless of the groove shape, no light leaves except at the angles given by the grating equation (Eqn. \eq{gratingEquation}).  In real-world gratings, deviations from perfect periodicity lead to \emph{stray radiant energy} (SRE), which is a general term for all radiation that leaves at other angles \cite{RicTN9}. From conservation of energy, the more SRE that exists, the less energy there is in the desired orders, and the lower the grating efficiency.  SRE also affects the resolution of a grating instrument, by increasing the background noise level and contaminating the outgoing angles with light of the wrong wavelength.
+For a perfectly periodic surface, the Rayleigh expansion in Chapter 3 showed that all of the light propagating away from a grating leaves as plane waves in discrete orders. Regardless of the groove shape, no light leaves except at the angles given by the grating equation \eq{gratingEquation}.  In real-world gratings, deviations from perfect periodicity lead to \emph{stray radiant energy} (SRE), which is a general term for all radiation that leaves at other angles \cite{RicTN9}. From conservation of energy, the more SRE that exists, the less energy there is in the desired orders, and the lower the grating efficiency.  SRE also affects the resolution of a grating instrument, by increasing the background noise level and contaminating the outgoing angles with light of the wrong wavelength.
 
 Stray radiant energy can be caused by micro-roughness of the grating surface, variation in the height or spacing from groove to groove, and other imperfections such as dust and scratches.
 \subsubsection{Surface roughness}
