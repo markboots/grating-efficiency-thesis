@@ -184,6 +184,7 @@ Not shown in these plots, silicon also has a very high reflectivity up to its L$
 The energy-dependence (or wavelength-dependence) of grating efficiency is shown in many of the previous plots, where we display the efficiency as a function of photon energy.  However, it is impossible to isolate trends for this relationship on its own, because the photon energy is inherently coupled to the grating efficiency in multiple ways.  For starters, the complex refractive indexes of grating materials always vary as a function of energy.  Additionally, the photon energy also determines the angle of the outgoing diffraction orders, which can be seen in both the Rayleigh expansion for the total field, and in the simplified grating equation \eq{gratingEquation}.  Therefore, optimizations for geometry parameters that depend on outgoing angles -- like the blaze angle and groove depth -- are inherently coupled to the photon energy.  The plots in Figure \ref{3g-2} highlight this by showing the difference between the energy-dependent reflectivity of a plain flat mirror, versus the more complicated diffraction efficiency.
 
 \section{Effect of incidence angle}
+\label{incidenceAngle}
 \label{TER}
 In the soft x-ray regime, the real part of the refractive index for metals is less than unity.  This means that the phase velocity for light in the material is actually \emph{faster} than the speed of light in a vacuum.\footnote{Because the refractive index changes with wavelength, dispersion causes a \emph{group velocity} $v_g < c$, therefore Einstein's speed limit is not violated.}  As mentioned in Section \ref{TER-intro}, we can exploit this phenomenon to increase the reflectivity of gratings and mirrors by using them at grazing incidence, creating what is sometimes referred to non-rigourously as \emph{``total external reflection''} (TER).
 
@@ -248,14 +249,7 @@ R_{TM} &= | r_{TM} | ^2 = r_{TM} \, r_{TM}^\ast
 \end{align}
 These are plotted in Figure \ref{reflectionVsAngle} as a function of incidence angle for a smooth platinum mirror at 410 eV.
 
-Moving from mirrors to gratings, Figure \ref{3i} shows the effect of incidence angle on diffraction efficiency for several different geometry profiles.  Even though TER is a crude approximation, this figure does confirm that the grating efficiencies in the 0th, 1st, and 2nd orders are indeed extremely low below platinum's ``critical incidence angle'' of 83.3$\deg$.    By comparison with the mirror plot in Figure \ref{reflectionVsAngle}, we might expect that as the incidence angle becomes more and more grazing, the efficiency should increase continuously\ldots and that is certainly the case for the $n=0$ order.  However, this turns out to be not true for the remaining orders; \emph{there is actually an optimal incidence angle below $90\deg$ where efficiency is maximized}.  At first glance, it might seem like this is an accidental side-effect of the blazed optimization; since the optimal blaze angle depends on the incidence angle, it might have been possible that all the gratings in Figure \ref{3i} had their geometry optimized for a sub-$90\deg$ incidence angle.  However, by exploring the effect of incidence angle on efficiency over a range of blaze angles, Figure \ref{3i-2} dispels this idea; it shows that for $n\neq 0$ orders, there is indeed an optimal incidence angle, which depends only on the groove density and the energy.
-
-TODO more details.
-
-Figures \ref{3i-2} and TODO contains a take-away message for instrument designers: if an arbitrary incidence angle is required for some external reason, the geometry (blaze angle, depth, etc.) can be adjusted to optimize for that incidence. However, in the absence of constraints, there exists a unique optimal incidence angle (and corresponding groove geometry) where the efficiency reaches an absolute maximum.
-
-TODO: highlight example: max eff using 88 deg.  Achievable at max incidence?  [use 100 eV]
-
+Moving from mirrors to gratings, Figure \ref{3i} shows the effect of incidence angle on diffraction efficiency for several different geometry profiles.  Even though TER is a crude approximation, this figure does confirm that the grating efficiencies in the 0th, 1st, and 2nd orders are indeed extremely low below platinum's ``critical incidence angle'' of 83.3$\deg$.    By comparison with the mirror plot in Figure \ref{reflectionVsAngle}, we might expect that as the incidence angle becomes more and more grazing, the efficiency should increase continuously\ldots and that is certainly the case for the $n=0$ order.  However, this turns out to be not true for the remaining orders; \emph{there is actually an optimal incidence angle below $90\deg$ where efficiency is maximized}.  At first glance, it might seem like this is an accidental side-effect of the blazed optimization; since the optimal blaze angle depends on the incidence angle, it might have been possible that all the gratings in Figure \ref{3i} had their geometry optimized for a sub-$90\deg$ incidence angle.  However, by exploring the effect of incidence angle on efficiency over a range of blaze angles, Figure \ref{3i-2} dispels this idea; it shows that for $n\neq 0$ orders, there is indeed an optimal incidence angle, which depends only on the groove density (period) and the energy.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -263,46 +257,88 @@ TODO: highlight example: max eff using 88 deg.  Achievable at max incidence?  [u
    \caption[The effect of incidence angle on diffraction efficiency for various grating profiles.  While the 0th order efficiency/reflectivity always increases as the incident light becomes more grazing, there is an optimal incidence angle below 90$\deg$ for higher-order light.]{The effect of incidence angle on diffraction efficiency for various grating profiles.  While the 0th order efficiency/reflectivity always increases as the incident light becomes more grazing, there is an optimal incidence angle below 90$\deg$ for higher-order light.  The critical angle for total external reflection in Platinum is 83.3$\deg$; clearly both the 0th-order and 1st-order efficiency drop off significantly below this angle. (Gratings: 1200 lines/mm, platinum coating, 400 eV; blaze angles and profiles as indicated.)}
    \label{3i}
 \end{figure}
-	
+
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter3/3i_incidenceAngle/3i_blazeChanges_solidColors.pdf} 
-   \caption[While the blaze angle can always be used to tune a grating for a required incidence angle, there is still a particular \emph{optimal} incidence angle that -- when combined with a corresponding optimized blaze angle -- would produce the highest achievable efficiency.]{While the blaze angle can always be used to tune a grating for a required incidence angle, there is still a particular \emph{optimal} incidence angle that -- when combined with a corresponding optimized blaze angle -- would produce the highest achievable efficiency.  This optimal angle doesn't seem to depend on the material, but only on the groove density and energy.  (Gratings: all 1200 lines/mm; coatings, blaze angles, and energies as indicated.)}
+   \caption[While the blaze angle can always be used to tune a grating for a required incidence angle, there is still a particular \emph{optimal} incidence angle that -- when combined with a corresponding optimized blaze angle -- would produce the highest achievable efficiency.]{While the blaze angle can always be used to tune a grating for a required incidence angle, there is still a particular \emph{optimal} incidence angle that -- when combined with a corresponding optimized blaze angle -- would produce the highest achievable efficiency.  This optimal angle depends only on the groove density and energy.  (Gratings: all 1200 lines/mm; coatings, blaze angles, and energies as indicated.)}
    \label{3i-2}
 \end{figure}
+
+We found that the same effect happens for rectangular and sinusoidal gratings as well.  In each case, finding the optimal incidence requires a simultaneous optimization of the geometry parameters at each incidence angle tested: the blaze angle for triangular gratings, and the groove depth for rectangular and sinusoidal gratings.  (Because of the coupling between groove geometry and incidence angle, non-optimal geometry can otherwise hide the incidence maximum.)
+
+Figure \ref{3i-2} contains an important take-away message for instrument designers: if an arbitrary incidence angle is required for some external reason, the geometry (blaze angle, depth, etc.) can be adjusted to optimize for that incidence. However, in the absence of constraints, there exists a unique optimal incidence angle (and corresponding groove geometry) where the efficiency reaches an absolute maximum.
+
+Can we predict the optimal incidence analytically?  And does it actually only depend on the period and wavelength?  To answer these questions, we conducted a comprehensive search of the incidence angles that optimize first-order efficiency over a range of wavelengths and grating periods, for both blazed and rectangular gratings.  For every combination of wavelength and period, we needed to perform a global optimization of the incidence angle and groove geometry.\footnote{A global optimization was necessary particularly for the rectangular gratings, which exhibit periodic local maxima over the search space.}  We used the new \texttt{PEG} software, running massively in parallel on one of the Westgrid high-performance cluster computers, to conduct the optimizations.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Extended/OptimalIncidenceGlobalRect/results.pdf} 
+   \caption[Optimizing the incidence angle and groove geometry for a range of wavelengths and grating periods shows a $n=-1$ order maximum at the $n=+1$ order Wood anomaly: $\sin \theta_{max} = 1 - \lambda/d$.]{Optimizing the incidence angle and groove geometry for a range of wavelengths and grating periods shows a $n=-1$ order maximum efficiency at angles described by $\sin \theta_{max} = 1 - \lambda/d$ [smooth curves].  This is the angle where the $n=+1$ order reaches 90\dg: a Wood anomaly.  The optimization was conducted on a grid with an incidence step of 0.1\dg and a groove depth step of 0.002~um, using rectangular platinum gratings.}
+   \label{rectIncidenceOpt}
+\end{figure}
+
+\subsection{Optimal incidence for rectangular gratings}
+Figure \ref{rectIncidenceOpt} shows the optimal incidence angles found for rectangular gratings as a function of period and wavelength.  We discovered that we can accurately predict the optimal incidence angle $\theta_{max}$ according to the formula
+\begin{align}
+\label{rectOptimalIncidence}
+\theta_{max} = \arcsin \left( 1 - \frac{\lambda}{d} \right),
+\end{align}
+plotted in the smooth curves for each period.  (Deviation from this formula and the optimized points is only due to the 0.1\dg precision of our optimization.)
+
+There is a clear physical explanation for this result.  At grazing incidence, most of the outside ($n>0$) orders are evanescent, depending on the incidence angle.  If we assume an incidence angle so that an outside order $n'$ is propagating, and then we increase the incidence just to the point where it becomes evanescent, all of the energy previously carried by that wave will suddenly need to be re-distributed, increasing the efficiency of the remaining propagating orders.  The incidence angle where this happens occurs when the $n'$ outgoing angle reaches 90\dg.  The effect is strongest in the case of the $n'=+1$ outside order; from the grating equation, we find:
+\begin{align}
+\sin \theta_{2,n'} &= \sin \theta_2 + n' \lambda / d \\
+\sin \theta_{2,+1} &= \sin \theta_2 + \lambda / d\\
+\sin (90\deg) &=  \sin \theta_2 + \lambda / d \\
+\sin \theta_2 &= \sin \theta_{max} = 1 - \lambda/d
+\end{align}
+
+Therefore, the incidence angle for maximum inside first-order efficiency is the one that \emph{just} causes \emph{all} of the outside orders to be evanescent.  Historically, this has been referred to as a \emph{Wood anomaly of the Rayleigh type}, and it has been observed experimentally in visible light gratings as early as 1902 \cite{Woo02}.  Here, we show that we can predict it well using rigorous electromagnetic calculations via the differential method.
+
+In visible light applications, Wood anomalies can be very sharp, and constitute a problem rather than an advantage by hiding or masking spectral lines; they can also be sensitive to polarization \cite{Ste62}.  In the grazing incidence soft x-ray domain, 
+% TODO TODO IMPORTANT check this, add a plot?
+ the efficiency increases and decreases smoothly on both sides of the peak; it does not drop off sharply even when the $+1$ order is actually propagating, but still close to 90\dg.  (We also confirmed using \texttt{Gradif} that it is insensitive to polarization.)  Therefore, we actually suggest \emph{exploiting} the $+1$ Wood anomaly as a starting point when designing constant-incidence x-ray instruments.  For photon energies above 100 eV, the peak width should provide a usable instrumental range, but designers should always check the efficiency spectrum over wavelength to ensure that it is wide enough for their range of interest.  At low photon energies, an incidence angle slightly higher than $\theta_{max}$ can widen the range with only a small decrease in the peak efficiency.
+
+\subsection{Optimal incidence for blazed gratings}
+From these results, we would also expect to find the optimal incidence for blazed gratings at the $+1$ Wood anomaly.  However, the actual optimal incidence angle turns out to significantly more grazing than predicted by Equation \eq{rectOptimalIncidence}; the results are shown in Figure \ref{blazedIncidenceOpt}.  The difference is significant: in some cases we have observed a doubling in the efficiency from the angle predicted in Equation \eq{rectOptimalIncidence} and the true optimal incidence.  The explanation for the difference is related to the blazing effect, but we have not yet discovered an analytic formula to predict it. So far, it must be determined via optimization.
+
+TODO: waiting for these calculations to finish.
+% TODO: calculations to highlight how important/effective this is.  Efficiency at non-optimal and optimal incidence, when optimizing geometry.
+% TODO: polarization dependence
+
+\section{Effect of anti-blaze angle for blazed gratings}
+Blazed gratings are reported to be most efficient with a perfect anti-blaze angle of 90\dg \cite{Pal05}.  When ordering gratings from a manufacturer, the tolerance for the anti-blaze angle must be specified.  In Figure \ref{3k}, we calculate the effect of the anti-blaze angle on the efficiency spectrum.  For grazing-incidence optics, it turns out that as long as the anti-blaze angle is greater than approximately eight times the blaze angle, it has almost no effect on the efficiency.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter3/3k_antiBlazeAngle/3k.pdf} 
-   \caption[These calculations over a range of anti-blaze angles show that as long as the anti-blaze angle is greater than $\sim$4 times the blaze angle, it has almost no effect on the efficiency.]{These calculations over a range of anti-blaze angles show that as long as the anti-blaze angle is greater than $\sim$4 times the blaze angle, it has almost no effect on the efficiency.  (Grating: 1200 lines/mm; Nickel coating; 88\dg incidence; 1.48\dg blaze angle.)}
+   \caption[These calculations over a range of anti-blaze angles show that as long as the anti-blaze angle is greater than $\sim$4 times the blaze angle, it has almost no effect on the efficiency.]{These calculations over a range of anti-blaze angles show that as long as the anti-blaze angle is greater than $\sim$8 times the blaze angle, it has almost no effect on the efficiency.  (Grating: 1200~lines/mm; Nickel coating; 88\dg incidence; 1.48\dg blaze angle.)}
    \label{3k}
 \end{figure}
+	
+\section{Applications to beamline and instrument design}
+Beamline designers can use the observations in this chapter to guide the design process.  Starting with the choice of the groove shape, it is clear that blazed profiles will always offer the best performance for constant-incidence applications like the spectrometer in Chapter 6.  For variable-incidence designs like monochromators, a blazed profile optimized for the centre of the instrument's wavelength range will lose efficiency at the extremes, but might still offer better performance than a sinusoidal grating, especially if the total range is being divided across multiple gratings. (This can be verified quickly using the constant-included-angle scan in the \texttt{PEG} software.)
 
-TODO: test with groove density. Does it depend on difffraction eqn?
-	
-\section{TODO Applications to beamline and instrument design}
-	- Observation: blaze angle and groove depth can be used to optimize efficiency for a constrained incidence angle.  However, while 0-order reflectivity increases with grazing incidence, there IS an optimal incidence angle (usually between 87 and 88 degrees), which does not depend on the grating material, and depends somewhat on the incident energy (increases with energy).  
-	
-	Practical application: This optimal incidence angle provided the starting point for the incidence angles used in the REIXS spectrometer, and explains why the lower-energy gratings (LEG, IMP) use lower (more normal) incidence angles than the high-energy gratings.
-	TODO if time: determine way to calculate optimal incidence angle.  Is this just a TE or TM effect? NO... te and tm behave the same.
-	
-	
-Highlighted conclusions:
-	- blazed is idea for narrow energy range and constant incidence angle.  In case of spectrometer, definitely the right choice.  For mono... No constant incidence angle.  Still better than sinusoidal if not?  Find out.
-	
-\begin{itemize}
-\item Optimal incidence angle
-\item always blazed: (show whether better than sinusoidal for CIA monochromator)
-\item consider 3rd order rather than increasing groove density (manuf. limit) --> next chapter.
-\item blazed gratings: when optimizing for low energies (near 100 eV): create narrow efficiency peaks. when optimized for higher energies, the peaks are wider and the gratings can be more general.
-\end{itemize}
+Next, a groove density should be chosen that is as low as possible while still providing the required resolution.  In the next chapter, we explore a novel way of increasing resolution while maintaining a moderate groove density.
+
+For constant-incidence instruments, designers should consider using the optimal angle discovered in Section \ref{incidenceAngle}.  For rectangular gratings Equation \eq{rectOptimalIncidence} can be used. At low photon energies ($<100$ eV), the width of the anomaly's efficiency peak might not be sufficient to cover the desired energy range; using a slightly more grazing incidence angle and re-optimizing the groove geometry tends to widen the peak with an acceptable reduction in the maximum efficiency.
+% TODO: check this with a plot.
+For blazed gratings, the optimal incidence should be found through an optimization at the design wavelength and period.
+%  (As a practical example, we applied this technique in the design of the REIXS spectrometer in Chapter 6; it explains why the incidence angles for the low groove density gratings are more normal than the high groove density gratings.)
+
+When choosing a blaze angle, designers should keep in mind that the bandwidth of the blazed efficiency peak increases both with photon energy and groove density: optimizing for low energies near 100 eV creates narrow efficiency peaks; at higher energies, the peaks become wider and the gratings can be more general.
+% TODO plot to show this?
+Figure \ref{3e-2} shows the same increase in generality as a function of groove density.
+
+Finally, our calculations for the effect of the anti-blaze angle (Figure \ref{3k}) show that the tolerance specified for this parameter can be quite large; instead, grating manufacturers should concentrate on achieving a very accurate blaze angle.
 
 \section{Validation: comparison of theory to experimental results}
-Based on this theoretical survey of the factors affecting grating efficiency, we have provided some recommendations to beamline designers.  For these results to be trustworthy, we need to confirm that the theoretical methods in Chapter 3 -- and the software implementations described in Chapter 4 -- accurately describe gratings in the real world.  (We move on in Chapter 6 to use these tools to design the gratings and optical layout for the REIXS beamline spectrometer; before starting that project, we clearly needed our own confirmation of the software's accuracy.)
+We have provided these recommendations to beamline designers based on a purely theoretical survey of the factors affecting grating efficiency.  For these results to be trustworthy, we need to confirm that the theory in Chapter 3 and the implementations in Chapter 4 are accurate descriptions of the real world.  (We move on in Chapter 6 to use these tools to design the gratings and  layout for the REIXS beamline spectrometer; before starting that project, we needed our own confirmation of the software's accuracy.)
 
-The published literature on soft x-ray gratings does not contain many measurements of real-world diffraction efficiency, partly due to the difficulty of completing these measurements, and partly because -- on receiving brand new gratings -- most beamline builders would rather install them as quickly as possible and start doing their own research, rather than spend time on another beamline characterizing the gratings.  This is unfortunate for two reasons.  Beamline scientists often do not know the efficiency of their machines, or even whether the gratings they have received are optimal. Additionally, grating theorists do not have a large set of experimental results for validating their calculation methods in the soft x-ray regime.
+The published literature on soft x-ray gratings includes only a few measurements of real-world efficiency.  This is partly due to the difficulty of completing these measurements, and partly because, after receiving brand new gratings, most beamline builders would rather install them as quickly as possible and start doing their own research, rather than spend time on another beamline characterizing the gratings.  This is unfortunate for two reasons.  Beamline scientists often do not know the efficiency of their machines, or even whether the gratings they have received are optimal. Additionally, grating theorists do not have a large set of experimental results for validating their calculation methods in the soft x-ray regime.
 
- We found one study by M. Bowler at the SRS light source \cite{Bow01} with a recent set of efficiency measurements for four gratings representing three different types of grating profiles, which turn out to be ideal for comparing with theoretical calculations.  The gratings include one blazed grating with 1440 lines/mm, one rectangular grating with 600 lines/mm, and two attempted-rectangular gratings that ended up with trapezoidal sides of approximately $57\deg$.  All of the gratings were well-characterized by the manufacturer after ruling, allowing for accurate geometry inputs into the theoretical calculations.  (The study also conducted efficiency calculations using the differential method, but we duplicated these calculations as a double-check on our implementation.)
+ We found one study by M. Bowler at the SRS light source \cite{Bow01} with a recent set of efficiency measurements for four gratings representing three different types of grating profiles.  The gratings include one blazed grating with 1440 lines/mm, one rectangular grating with 600 lines/mm, and two attempted-rectangular gratings that ended up with trapezoidal sides of approximately $57\deg$.  The geometry parameters of all of the gratings were well-characterized by the manufacturer after ruling, making them ideal for comparing to theory.  (The study also conducted efficiency calculations using the differential method, but we duplicated these calculations as a double-check on our implementations.)
 
 Figures \ref{3j-1} through \ref{3j-4} show these experimental measurements, combined with our own calculations of the grating efficiency.  Table \ref{3j-table} provides the geometry parameters, derived from the manufacturer's measurements.
 
