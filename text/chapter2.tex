@@ -847,7 +847,7 @@ For a single incident plane wave with normalized intensity, $A_n^{(M)} = \delta_
 \begin{align}
 A_n^{(1)} &= S_{22,n,0}^{(M-1)} e^{-i \beta_0^{(M)}y_{M-1}},
 \end{align}
-and the diffracted Rayleigh coefficients above the grating
+and the reflected Rayleigh coefficients above the grating
 \begin{align}
 B_n^{(M)} &= S_{12,n,0}^{(M-1)} e^{-i (\beta_n^{(M)} + \beta_0^{(M)}) y_{M-1}}.
 \end{align}
@@ -914,7 +914,7 @@ Given these effects, is it acceptable to use refractive indexes derived from the
 
 Far away from absorption edges, the semi-empirical nature of the data gives us a high degree of trust in the accuracy of the Henke-based refractive indexes; however, we need to remember that they do not reflect reality in the vicinity of a material's absorption edges.
 
-The Center for X-ray Optics website \cite{CXR11} offers an online calculator to estimate the refractive index of a compound material using Equation \eq{nFromScatteringFactor} based on its chemical formula and density, subject to the atomic-like assumption.  We used this service to build a database of complex refractive indexes for common grating materials over the 50 eV to 10,000 eV range.  These values were used in all calculations shown later in the text.
+The Center for X-ray Optics website \cite{CXR11} offers an online calculator to estimate the refractive index of a compound material using Equation \eq{nFromScatteringFactor} based on its chemical formula and density, subject to the atomic-like assumption.  We used this service to build a database of complex refractive indexes for common grating materials over the 50 eV to 10~000 eV range.  These values were used in all calculations shown later in the text.
 
 \subsection{Sensitivity of efficiency calculations to errors in the refractive index}
 % TODO Move this to a different chapter
@@ -923,6 +923,6 @@ Figure \ref{refractiveIndexTolerance} examines the sensitivity of the efficiency
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Extended/RefractiveIndexTolerance/refractiveIndexTolerance.pdf} 
-   \caption[Consistent overestimation or underestimation of the refractive index changes the magnitude, but not the overall shape, of the efficiency spectrum.]{Consistent overestimation or underestimation of the refractive index changes the magnitude, but not the overall shape, of the efficiency spectrum.  Here we show the efficiency of a Nickel grating featuring an absorption edge at 853 eV.  The heavy curve represents the efficiency based on refractive indexes calculated from the Henke data, in the form $\nu(\textrm{eV}) = 1 - \delta + i\beta$.  The additional curves show the effect of a consistent relative error in either $\delta$ or $\beta$; for example, $\nu' = 1 - 1.1 \delta + i \beta$, or $\nu' = 1 - \delta + 0.9i\beta$.  (Blazed grating, 1000 lines/mm, 1.11\dg blaze angle, 87\dg incidence angle.)}
+   \caption[Consistent overestimation or underestimation of the refractive index changes the magnitude, but not the overall shape, of the efficiency spectrum.]{Consistent overestimation or underestimation of the refractive index changes the magnitude, but not the overall shape, of the efficiency spectrum.  Here we show the efficiency of a Nickel grating featuring an absorption edge at 853 eV.  The heavy curve represents the efficiency based on refractive indexes calculated from the Henke data, in the form $\nu(\textrm{eV}) = 1 - \delta + i\beta$.  The additional curves show the effect of a consistent relative error in either $\delta$ or $\beta$; for example, $\nu' = 1 - 1.1 \delta + i \beta$, or $\nu' = 1 - \delta + 0.9i\beta$.  (Blazed grating, 1000 lines/mm, 1.11\dg  blaze angle, 87\dg  incidence angle.)}
    \label{refractiveIndexTolerance}
 \end{figure}
