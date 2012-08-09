@@ -323,7 +323,7 @@ The same technique can be applied to profiles other than blazed gratings; the fi
 In both mechanically-ruled and holographic gratings, it is likely for the actual groove shape to differ from the ideal rectangular, blazed, and trapezoidal profiles we showed back in Figure \ref{3c-profile}.  If we can determine the actual shape -- for example, from AFM measurements -- we can still model the grating accurately using the differential theory (as long as the profile is still periodic from groove to groove).  Although the \texttt{Gradif} software only supports theoretical shapes, the arbitrary groove profile mode of the new \texttt{PEG} software can be used to model the exact measured shape.  Figure \ref{hegRealProfile} shows an example of an arbitrary profile extracted from measurements of the HEG.
 
 \subsubsection{Coating oxidation changes the reflectivity}
-An unintended consequence of using nickel coated gratings is the unavoidable formation of a thin oxide layer on the surface.  We chose nickel gratings for the IMP and MEG with the intention of using them up to the nickel absorption edge near 850 eV.  However, as is obvious from the NiO reflectivity spectrum in Figure \ref{5f}, we should have expected the oxygen absorption edge to significantly affect their efficiency after 525 eV.  (Besides reducing the overall efficiency, this causes another problem for spectroscopists: when measuring an oxygen emission spectrum using this grating, the efficiency spectrum of the grating oxide will be superimposed on the actual sample measurement.)
+An unintended consequence of using nickel coated gratings is the unavoidable formation of a thin oxide layer on the surface.  We chose nickel gratings for the IMP and MEG with the intention of using them up to the nickel absorption edge near 850 eV.  However, as is obvious from the NiO reflectivity spectrum in Figure \ref{5f}, we should have expected the oxygen absorption edge to significantly affect their efficiency after 543 eV.  (Besides reducing the overall efficiency, this causes another problem for spectroscopists: when measuring an oxygen emission spectrum using this grating, the efficiency spectrum of the grating oxide will be superimposed on the actual sample measurement.)
 
 While obviously undesirable to have in retrospect, the effect of a surface oxide on the efficiency can be easily modelled using a coating layer on top of a pure metal substrate. In Section \ref{gratingResults} we show how a thin layer of NiO on Ni accounts for the measured efficiency of the IMP and MEG gratings, and we predict the thickness of the oxide layer using fitting.
 
@@ -333,7 +333,7 @@ To protect against the formation of a detrimental oxide, in the future we would 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Chapter5/5f_oxidized/Ni_NiO_reflec.pdf} 
-   \caption{Unprotected nickel quickly forms a surface oxide of NiO, which significantly reduces the reflectivity at the Oxygen edge (525eV) }
+   \caption{Unprotected nickel quickly forms a surface oxide of NiO, which significantly reduces the reflectivity at the Oxygen edge (543 eV) }
    \label{5f}
 \end{figure}
 
@@ -358,7 +358,7 @@ The LEG was one of the easiest gratings to manufacture, due to its low groove de
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.7]{Chapter5/5y_afm/LEG.pdf} 
+   \includegraphics[scale=0.75]{Chapter5/5y_afm/LEG.pdf} 
    \caption{AFM measurements of the Low Energy Grating (LEG) profile, averaged along the grooves (10 um $\times$ 10 um).  The best-fit blaze angle at the centre of the grating is 2.45$^\circ$.}
    \label{5y-leg}
 \end{figure}
@@ -371,64 +371,67 @@ Although only a fraction of a degree, the blaze angle error causes a significant
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.7]{Chapter5/5x_comparison/LEG.pdf} 
+   \includegraphics[scale=0.75]{Chapter5/5x_comparison/LEG.pdf} 
    \caption{Theoretical and measured efficiency of the Low Energy Grating (LEG).}
    \label{5x-leg}
 \end{figure}
 
-
-\subsection{IMP} (nickel): Profile clean, blaze angle off [modelled].  Oxidized… Modelled as NI, layer of NiO.
-
-TEST: NiO on top of Ni? layer thickness
-Caveat: Henke data reflectivities are not correct at/near absorption edges... shouldn't totally match theoretical shape.
-
-          - compare AFM and fitted
-          
-          scattering factor: http://www2.astro.psu.edu/~niel/astro485/xrayschool/schwartz-xray\_optics.pdf --> 1/sin(theta)
+\subsection{Impurity Grating (IMP)}
+The AFM measurements of the impurity grating show clean facets on the blazed side (Figure \ref{5y-imp}), although once again the blaze angle is higher than specified: the best-fit angle at the grating centre is $1.60\deg \pm 0.11\deg$, compared to the nominal 1.11$^\circ$.  So far this is consistent with the LEG, which was also approximately $0.4\deg - 0.5\deg$ too high.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter5/5y_afm/IMP.pdf} 
+   \includegraphics[scale=0.75]{Chapter5/5y_afm/IMP.pdf} 
    \caption{AFM measurements of the Impurity Grating (IMP) profile, averaged along the grooves (10 um $\times$ 10 um).  The best-fit blaze angle at the centre of the grating is 1.60$^\circ$.}
    \label{5y-imp}
 \end{figure}
 
+Originally intended to cover the range from 200 to 800 eV, the IMP suffers a noticeable drop in measured efficiency near 540 eV (Figure \ref{5x-imp}).  It is easy to recognize that this occurs at the onset of the oxygen absorption edge (543 eV), suggesting an oxide layer on the surface.  Fitting suggests that the measured spectrum can be explained by a blaze angle of $1.4\deg$, a scaling factor of 0.9, and a 7 nm coating of NiO on top of the Ni surface.  A better fit to the first and second-order curve shapes can be found using independent scaling factors:
+\begin{itemize}
+\item TODO
+\end{itemize}
+One interesting observation is that we should not expect the Henke data to be accurate near the oxygen and nickel edges; however, the calculated efficiencies actually reproduce the fine structure visible in the measurements from 540 to 560 eV.
+
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter5/5x_comparison/IMP.pdf} 
+   \includegraphics[scale=0.75]{Chapter5/5x_comparison/IMP.pdf} 
    \caption{Theoretical and measured efficiency of the Impurity Grating (IMP).}
    \label{5x-imp}
 \end{figure}
 
-
-\subsection{MEG} (nickel): profile ok, blaze angle off [modelled].  Oxidized… Modelled as combination of NiO and NiO2.
+\subsection{Medium Energy Grating (MEG)}
+The MEG, with an increased groove density of 1200 lines/mm, shows a less regular surface than either the LEG or IMP.  AFM measurements of the profile (Figure \ref{5y-meg}) estimate an average blaze angle of $2.04\deg \pm 0.22\deg$ at the centre of the grating.  Again, this is consistently $0.5\deg$ higher than the nominal specification of $1.48\deg$.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter5/5y_afm/MEG.pdf} 
-   \caption{AFM measurements of the Medium Energy Grating (MEG) profile, averaged along the grooves (TODO um x TODO um).  The best-fit blaze angle is at the centre of the grating.}
+   \includegraphics[scale=0.75]{Chapter5/5y_afm/MEG.pdf} 
+   \caption{AFM measurements of the Medium Energy Grating (MEG) profile, averaged along the grooves (5 um $\times$ 5 um).  The best-fit blaze angle at the centre of the grating is $2.04^\circ$.}
    \label{5y-meg}
 \end{figure}
 
+In efficiency, the nickel MEG suffers the same fate as its oxidized sibling.  The measured efficiency (Figure \ref{5x-meg}) is further affected by the error in the blaze angle.  The best fit calculations predict a blaze angle of $2.0\deg$, an NiO oxide layer of 3 nm, and scaling factors of 0.75 (first order) and 0.375 (second order).  The lower scaling factor is attributed to the significant groove variation visible in the AFM profile, compared to the smoother LEG and IMP.  The fitted blaze angle agrees exactly with the AFM estimation.
+
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter5/5x_comparison/MEG.pdf} 
+   \includegraphics[scale=0.75]{Chapter5/5x_comparison_surfaceRoughness/MEG_nominal+measured+fitted.pdf} 
    \caption{Theoretical and measured efficiency of the Medium Energy Grating (LEG).}
    \label{5x-meg}
 \end{figure}
 
-\subsection{HEG} (Pt): almost no diffraction performance at all. AFM: revealed double-peak structure; not ruled correctly. Sent back to manuf.
+\subsection{High Energy Grating (HEG)}
+
+(Pt): almost no diffraction performance at all. AFM: revealed double-peak structure; not ruled correctly. Sent back to manuf.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter5/5y_afm/HEG.pdf} 
+   \includegraphics[scale=0.75]{Chapter5/5y_afm/HEG.pdf} 
    \caption{AFM measurements of the High Energy Grating (HEG) profile, averaged along the grooves (TODO um x TODO um).  Severe ruling errors were apparent.  The profile wasn't sufficiently triangular to attempt to fit a blaze angle.}
    \label{5y-heg}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter5/5x_comparison/HEG.pdf} 
+   \includegraphics[scale=0.75]{Chapter5/5x_comparison/HEG.pdf} 
    \caption{Theoretical and measured efficiency of the High Energy Grating (LEG).}
    \label{5x-heg}
 \end{figure}
@@ -437,14 +440,14 @@ Caveat: Henke data reflectivities are not correct at/near absorption edges... sh
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter5/5y_afm/HRMEG.pdf} 
+   \includegraphics[scale=0.75]{Chapter5/5y_afm/HRMEG.pdf} 
    \caption{AFM measurements of the HighRes Medium Energy Grating (HRMEG) profile, averaged along the grooves (TODO um x TODO um).  The best-fit blaze angle is at the centre of the grating.}
    \label{5y-hrmeg}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter5/5y_afm/HRHEG.pdf} 
+   \includegraphics[scale=0.75]{Chapter5/5y_afm/HRHEG.pdf} 
    \caption{AFM measurements of the HighRes High Energy Grating (HRHEG) profile, averaged along the grooves (TODO um x TODO um).  The best-fit blaze angle is at the centre of the grating.}
    \label{5y-hrheg}
 \end{figure}
