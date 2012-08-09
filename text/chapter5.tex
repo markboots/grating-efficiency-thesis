@@ -419,22 +419,36 @@ In efficiency, the nickel MEG suffers the same fate as its oxidized sibling.  Th
 \end{figure}
 
 \subsection{High Energy Grating (HEG)}
-
-(Pt): almost no diffraction performance at all. AFM: revealed double-peak structure; not ruled correctly. Sent back to manuf.
+When we measured the diffraction efficiency of the HEG grating, we were surprised to observe almost no diffraction in the first and second order (Figure \ref{5x-heg}); initially we thought we had mistakenly mounted it backwards in the diffractometer.  On closer inspection, the diffraction peaks were found, but the measured efficiency spectrum is unusably low across the whole energy range.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.75]{Chapter5/5y_afm/HEG.pdf} 
-   \caption{AFM measurements of the High Energy Grating (HEG) profile, averaged along the grooves (TODO um x TODO um).  Severe ruling errors were apparent.  The profile wasn't sufficiently triangular to attempt to fit a blaze angle.}
+   \includegraphics[scale=0.75]{Extended/HEGCustomProfile/HEG.pdf} 
+   \caption{Theoretical and measured efficiency of the High Energy Grating (LEG).  The solid theoretical curves were calculated using an arbitrary groove shape based on the AFM measurements (Figure \ref{hegRepresentativeGroove}).  It cannot fully explain the reduction in real-world efficiency; therefore, we attribute the poor performance to groove-to-groove variation and scatter that we cannot model using the differential method.}
+   \label{5x-heg}
+\end{figure}
+
+What could have caused this? It is easy to see from the AFM measurements of the HEG (Figure \ref{5y-heg}) that something went very wrong in the ruling process.  At the centre of the grating, there is a double-peaked structure, and the dimensions differ substantially from groove to groove.  We know that the HEG blank was re-ruled after a previous failed attempt by the manufacturer, and we can hypothesize that some structure was left over from the first ruling.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.7]{Chapter5/5y_afm/HEG.pdf} 
+   \caption{AFM measurements of the High Energy Grating (HEG) profile, averaged along the grooves (5 um x 5 um).  Severe ruling errors were apparent.  The profile wasn't sufficiently triangular to attempt to fit a blaze angle, so we extracted one of the groove shapes to model as an arbitrary profile (Figure \ref{hegRepresentativeGroove}).}
    \label{5y-heg}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.75]{Chapter5/5x_comparison/HEG.pdf} 
-   \caption{Theoretical and measured efficiency of the High Energy Grating (LEG).}
-   \label{5x-heg}
+   \includegraphics[scale=0.7]{Extended/HEGCustomProfile/representativeProfile.pdf} 
+   \caption{Representative profile used to model the real-world HEG, extracted from the AFM measurements in Figure \ref{5y-heg}.}
+   \label{hegRepresentativeGroove}
 \end{figure}
+
+This grating highlights the importance of careful characterization; without efficiency and AFM measurements, we would have accepted and installed this grating in the spectrometer, only to be perplexed at the inability to detect anything other than scattered light.  Instead, we were able to use this data to persuade the manufacturer to re-rule it one more time.\footnote{Coincidently or un-coincidently, the manufacturer also purchased their own AFM after this exchange.  Currently we are still waiting for delivery of the final grating.}
+
+Could the double-peaked shape of the HEG grooves be responsible for the poor efficiency?  This question provided an opportunity to test out the arbitrary profile mode of the new \texttt{PEG} software.  We extracted a representative shape from one of the AFM grooves (plotted in Figure \ref{hegRepresentativeGroove}) and used it to specify the set of $(x,y_p)$ points for the profile function $y_p = g(x)$.
+
+The efficiencies calculated using this groove shape are also shown in Figure \ref{5x-heg}.  While the double-peaked shape does indeed reduce the theoretical efficiency compared to the nominal profile, it cannot explain the near-zero efficiencies that we measured.  Instead, we attribute this to the strong variation from groove to groove, which disrupts the formation of diffracting plane waves.  (In the limit of complete random variation from groove to groove, the grating simply becomes a rough diffuse surface, scattering in all directions.)
 
 \subsection{HRMEG and HRHEG}
 
