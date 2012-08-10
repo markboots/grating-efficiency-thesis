@@ -12,7 +12,7 @@ We lamented back in Chapter 5 the lack of published experimental comparisons of 
 This chapter describes these results, based on atomic force microprobe (AFM) measurements of the groove profile and soft x-ray diffractometer measurements of the actual grating efficiency.  We also compare the calculated and measured grating efficiencies, and offer explanations for the differences.
 
 \section{AFM measurements of the manufactured grating profile}
-When we consider a grating like the HEG, with 2000 lines/mm and a blaze angle of 1.52$\deg$, it is clear that the physical size of the grooves is extremely small -- these are little triangles about 500 nm wide and maybe 13 nm tall.  Measuring the physical geometry is therefore actually impossible with a visible light microscope.
+When we consider a grating like the HEG, with 2000 lines/mm and a blaze angle of 1.52$\deg$, it is clear that the physical size of the grooves is extremely small -- these are tiny triangles about 500 nm wide and 13 nm tall.  Measuring the physical geometry is therefore actually impossible with a visible light microscope.
 
 Instead, we used atomic force microscopy (AFM), an extremely high-resolution technique for measuring the topography of a surface.  It uses very sharp-tipped mechanical probe mounted on a piezo-electrically-controlled cantilever to ``feel'' the surface (Figure \ref{afm}).  The tip can either be dragged across the surface (contact mode) or electronically oscillated near its resonance frequency (\emph{non-contact mode}) while measuring the change in amplitude, phase and frequency caused by the tip-sample atomic interaction forces.  In both cases, the accurate vertical position of the tip is measured with a laser beam reflected off the back of the cantilever -- using either an interferometer or a deflection meter -- and the horizontal position of the tip is scanned using piezo drivers.  The resolution of the best atomic force microscopes is sufficient to image individual atoms on a surface, although for measuring soft x-ray gratings we only need angstrom-level accuracy.
 
@@ -207,10 +207,10 @@ Because the grating needs to be aligned on the centre of rotation, there can onl
 
 It is impossible to overcome this limitation; even if it were possible to fully illuminate the grating, the grating curvature would not be correct to focus the diffracted beam to the same size on the detector as the incident beam would be.  Therefore, a small beam size is a necessary compromise to minimize the focussing effect of the grating.
 
-\subsubsection{Energy dispersion across detector pinhole (finite size of pinhole + finite resolution dE)}
-TODO need to discuss with Eric Gullikson
-\subsubsection{Focussing / Defocussing}
-TODO need to discuss with Eric Gullikson
+%\subsubsection{Energy dispersion across detector pinhole (finite size of pinhole + finite resolution dE)}
+%TODO need to discuss with Eric Gullikson
+%\subsubsection{Focussing / Defocussing}
+%TODO TODO Important (need to discuss with Eric Gullikson?)
 
 \section{Real-world grating effects}
 \label{realWorldEffects}
@@ -349,7 +349,7 @@ In this fitting process, we started with fixed values for the parameters that co
  
 In general, we observed that although the shapes of the measured spectra are similar to the calculated curves, the measurements are always lower than predicted in absolute value.  This is reasonable to expect, according to the number of real-world effects that act to reduce the efficiency: surface roughness, groove variation and irregularities, etc.  Unfortunately, neither the Sinha \eq{roughnessCorrection} nor Beckmann \eq{beckmannFactor} expressions for roughness can describe this well on their own: both of them decrease too rapidly with increasing energy while providing negligible reduction at low energies, and the size of the required parameter $\sigma$ is far outside the valid range for the Sinha approximation ($\sigma \ll \lambda$).
 
-Instead, it seems that a \emph{constant scaling factor} is required to achieve a good fit between the measured and calculated spectra.  (Typical scaling values for our measurements are between 0.5 and 0.8.) Although we have described many factors that could account for the reduction, we currently do not have a rigorous physical derivation for this factor.  If it is due to roughness alone, then neither the Beckmann nor Sinha factors are adequate for describing gratings.  It is also possible that this could be a measurement effect; for example, due to focussing or dispersion of the diffractometer beam by the spherical grating on its way to the photodiode.
+Instead, it seems that a \emph{constant scaling factor} is required to achieve a good fit between the measured and calculated spectra.  (Typical scaling values for our measurements are between 0.5 and 0.8.) Although we have described many factors that could account for the reduction, we currently do not have a rigorous physical derivation for this factor.  If it is due to roughness alone, then neither the Beckmann nor Sinha factors are adequate for describing gratings.  It is also possible that this could be a measurement effect; for example, focussing or dispersion of the diffractometer beam by the spherical grating on its way to the photodiode would change the apparent intensity; saggital tilt of the grating would cause some light to miss the photodiode.
 
 Reasonable fitting results can be found by using the same scaling factor for the first-order and second-order efficiencies.  However, the best agreement in the \emph{shapes of the curves} is found when allowing a separate scaling factor for the first-order and second-order curves.  Whether this is justifiable depends on the explanation for the scaling factor; both roughness and focussing effects could be affected by the outgoing angle and hence the diffraction order.  We present the results for both cases here.
 \subsection{Low Energy Grating (LEG)}
@@ -359,7 +359,7 @@ The LEG was one of the easiest gratings to manufacture, due to its low groove de
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.75]{Chapter5/5y_afm/LEG.pdf} 
-   \caption{AFM measurements of the Low Energy Grating (LEG) profile, averaged along the grooves (10 um $\times$ 10 um).  The best-fit blaze angle at the centre of the grating is 2.45$^\circ$.}
+   \caption{AFM measurements of the Low Energy Grating (LEG) profile, averaged along the grooves (10 um $\times$ 10 um).  The best-fit blaze angle at the centre of the grating is $2.45\deg \pm 0.2\deg$.}
    \label{5y-leg}
 \end{figure}
 The effect of the blaze angle error on the measured efficiency is obvious in Figure \ref{5x-leg}: the locations of the efficiency peaks are shifted compared to the theoretical prediction at 1.85$^\circ$.  A higher blaze angle also increases the second-order peak efficiency at the expense of the first.
@@ -382,7 +382,7 @@ The AFM measurements of the impurity grating show clean facets on the blazed sid
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.75]{Chapter5/5y_afm/IMP.pdf} 
-   \caption{AFM measurements of the Impurity Grating (IMP) profile, averaged along the grooves (10 um $\times$ 10 um).  The best-fit blaze angle at the centre of the grating is 1.60$^\circ$.}
+   \caption{AFM measurements of the Impurity Grating (IMP) profile, averaged along the grooves (10 um $\times$ 10 um).  The best-fit blaze angle at the centre of the grating is $1.60\deg \pm 0.11\deg$.}
    \label{5y-imp}
 \end{figure}
 
@@ -405,11 +405,11 @@ The MEG, with an increased groove density of 1200 lines/mm, shows a less regular
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.75]{Chapter5/5y_afm/MEG.pdf} 
-   \caption{AFM measurements of the Medium Energy Grating (MEG) profile, averaged along the grooves (5 um $\times$ 5 um).  The best-fit blaze angle at the centre of the grating is $2.04^\circ$.}
+   \caption{AFM measurements of the Medium Energy Grating (MEG) profile, averaged along the grooves (5 um $\times$ 5 um).  The best-fit blaze angle at the centre of the grating is $2.04\deg \pm 0.22\deg$.}
    \label{5y-meg}
 \end{figure}
 
-In efficiency, the nickel MEG suffers the same fate as its oxidized sibling.  The measured efficiency (Figure \ref{5x-meg}) is further affected by the error in the blaze angle.  The best fit calculations predict a blaze angle of $2.0\deg$, an NiO oxide layer of 3 nm, and scaling factors of 0.75 (first order) and 0.375 (second order).  The lower scaling factor is attributed to the significant groove variation visible in the AFM profile, compared to the smoother LEG and IMP.  The fitted blaze angle agrees exactly with the AFM estimation.
+In efficiency, the nickel MEG suffers the same fate as its oxidized sibling.  The measured efficiency (Figure \ref{5x-meg}) is further affected by the error in the blaze angle.  The best-fit calculations predict a blaze angle of $2.0\deg$, an NiO oxide layer of 3 nm, and scaling factors of 0.75 (first order) and 0.375 (second order).  The lower scaling factor is attributed to the significant groove variation visible in the AFM profile, compared to the smoother LEG and IMP.  The fitted blaze angle agrees exactly with the AFM estimation.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -444,32 +444,33 @@ What could have caused this? It is easy to see from the AFM measurements of the 
    \label{hegRepresentativeGroove}
 \end{figure}
 
-This grating highlights the importance of careful characterization; without efficiency and AFM measurements, we would have accepted and installed this grating in the spectrometer, only to be perplexed at the inability to detect anything other than scattered light.  Instead, we were able to use this data to persuade the manufacturer to re-rule it one more time.\footnote{Coincidently or un-coincidently, the manufacturer also purchased their own AFM after this exchange.  Currently we are still waiting for delivery of the final grating.}
+This grating highlights the importance of careful characterization.  In this form, the HEG would have been unusable. Without efficiency and AFM measurements, we would have accepted and installed this grating in the spectrometer, only to be perplexed at the inability to detect anything other than scattered light.   Instead, we were able to use this data to persuade the manufacturer to re-rule it one more time.\footnote{Coincidently or un-coincidently, the manufacturer also purchased their own AFM after this exchange.  Currently we are still waiting for delivery of the final grating.}
 
 Could the double-peaked shape of the HEG grooves be responsible for the poor efficiency?  This question provided an opportunity to test out the arbitrary profile mode of the new \texttt{PEG} software.  We extracted a representative shape from one of the AFM grooves (plotted in Figure \ref{hegRepresentativeGroove}) and used it to specify the set of $(x,y_p)$ points for the profile function $y_p = g(x)$.
 
-The efficiencies calculated using this groove shape are also shown in Figure \ref{5x-heg}.  While the double-peaked shape does indeed reduce the theoretical efficiency compared to the nominal profile, it cannot explain the near-zero efficiencies that we measured.  Instead, we attribute this to the strong variation from groove to groove, which disrupts the formation of diffracting plane waves.  (In the limit of complete random variation from groove to groove, the grating simply becomes a rough diffuse surface, scattering in all directions.)
+The efficiencies calculated using this groove shape are also shown in Figure \ref{5x-heg}.  While the double-peaked shape does indeed reduce the theoretical efficiency compared to the nominal profile, it cannot explain the near-zero efficiencies that we measured.  Instead, we attribute this to the strong non-periodic variation from groove to groove, which disrupts the formation of diffracting plane waves.  (In the limit of complete random variation from groove to groove, the grating simply becomes a rough diffuse surface, scattering in all directions.)
 
-\subsection{HRMEG and HRHEG}
+\subsection{High resolution third-order gratings}
+The high-resolution third-order gratings (HRMEG and HRHEG) were also characterized using AFM and diffractometer measurements.  Unfortunately, the diffractometer measurements were affected by an issue in the diffractometer control software that caused errors in the normalization.  It might be possible to correct this problem with post-processing, but at the moment the full efficiency spectra are not ready for publication.  We include summary results from the valid measurement points here.
+
+\subsubsection{HRMEG}
+The nickel-coated HRMEG has a measured third-order efficiency peak of 3.5\%, but unfortunately the peak occurs at 500 eV instead of the 285 eV design energy.  Like the other two nickel gratings, it shows fine structure and a serious decrease in efficiency at the oxygen edge (543 eV).  AFM measurements of the HRMEG profile show a beautiful triangular structure (Figure \ref{5y-hrmeg}); unfortunately the best-fit blaze angle is $4.43\deg \pm 0.30\deg$ at the centre of the grating.  Unlike the other gratings, this is $0.4\deg$ \emph{lower} than the nominal $4.85\deg$ we requested.  Again, the blaze angle error explains why the measured efficiency peak is shifted compared to the nominal calculations, although in this case it shifts to higher instead of lower energies.  The effect on the spectrometer performance is nearly a factor of two: instead of the $>3\%$ third-order efficiency we could get at 285 eV with the proper blaze, we see only 1.5\%.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.75]{Chapter5/5y_afm/HRMEG.pdf} 
-   \caption{AFM measurements of the HighRes Medium Energy Grating (HRMEG) profile, averaged along the grooves (TODO um x TODO um).  The best-fit blaze angle is at the centre of the grating.}
+   \caption{AFM measurements of the HighRes Medium Energy Grating (HRMEG) profile, averaged along the grooves (5 um x 5 um).  The best-fit blaze angle at the centre of the grating is $4.43\deg \pm 0.30\deg$.}
    \label{5y-hrmeg}
 \end{figure}
+
+\subsubsection{HRHEG}
+The HRHEG was the most challenging grating to rule due to its extremely high groove density of 2600 lines/mm.  As a result, we should not expect a very smooth profile.  However, AFM measurements show that this grating is exceptionally far from meeting the blaze angle specification.  Figure \ref{5y-hrheg} reveals an extremely high blaze angle of $6.34 \pm 0.28\deg$ -- more than two degrees higher than the required $4.05\deg$.  Since accurate blazing is essential for exploiting the third-order efficiency peak, it was unfeasible to use this grating in the role we originally designed it for: the third-order efficiency is less than 0.5\% at 400 eV, and decreases to 0.28\% at the design energy of 725 eV.
+
+However, this blaze angle error had an unintended but lucky consequence: it actually makes the HRHEG ideally blazed for \emph{first order} operation from 400 eV to 900 eV.  (Although the efficiencies are low due to the extreme groove density, it was measured to give 2\% efficiency at 400 eV, and $>1\%$ efficiency at 800 eV.)  Simultaneously, the failure of the \emph{HEG} left us lacking a general first-order grating to support experiments above 530 eV.  Therefore, we had the idea to install the HRHEG in the spectrometer as a temporary first-order HEG replacement until the manufacturer was done re-ruling the actual HEG.  Fortunately, the manufacturer also had a spare blank (substrate) for the HRHEG, so they could proceed with ruling another copy of it as well.  This example again highlights the value of careful characterization from an engineering perspective.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.75]{Chapter5/5y_afm/HRHEG.pdf} 
-   \caption{AFM measurements of the HighRes High Energy Grating (HRHEG) profile, averaged along the grooves (TODO um x TODO um).  The best-fit blaze angle is at the centre of the grating.}
+   \caption{AFM measurements of the HighRes High Energy Grating (HRHEG) profile, averaged along the grooves (3 um x 3 um).  The best-fit blaze angle at the centre of the grating is $6.34\deg \pm 0.28\deg$.}
    \label{5y-hrheg}
 \end{figure}
-
-
-
-
- (Pt): blaze angles very off… Unsuitable for actual application in 3rd order.
-          - Temporary plan: Using HRHEG (2600l/mm) in place of HEG (2000l/mm) since blaze angle error makes it suitable for use in 1st order.
-               - DATA 5q: plot expected reduction in efficiency
-               
