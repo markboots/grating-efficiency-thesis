@@ -1,0 +1,507 @@
+Current working directory is /home/mjb865/peg/run
+Node file: /var/spool/torque/aux//8176671.b0 :
+---------------------
+b372
+b373
+b373
+b373
+b373
+b373
+b374
+b374
+b374
+b374
+b375
+b375
+b375
+b375
+b375
+b376
+b376
+b376
+b377
+b377
+b377
+b378
+b378
+b378
+b378
+b379
+b379
+b379
+b380
+b380
+b381
+b381
+b381
+b381
+b381
+b382
+b382
+b382
+b382
+b382
+b382
+b383
+b383
+b383
+b383
+b383
+b383
+b383
+b384
+b384
+b384
+b385
+b385
+b386
+b386
+b387
+b387
+b387
+b387
+b387
+b387
+b388
+b389
+b389
+b389
+b389
+b389
+b389
+b390
+b390
+b391
+b391
+b391
+b392
+b392
+b392
+b393
+b393
+b393
+b393
+b393
+b393
+b393
+b393
+b394
+b394
+b394
+b394
+b394
+b394
+b394
+b394
+b395
+b395
+b395
+b395
+b395
+b395
+b395
+b396
+b396
+b396
+b397
+b397
+b397
+b397
+b397
+b397
+b397
+b398
+b398
+b398
+b398
+b398
+b398
+b398
+b398
+b398
+b398
+b398
+b398
+b399
+b399
+b399
+b399
+b399
+b399
+b399
+b399
+b399
+b399
+b400
+b400
+b400
+b400
+b400
+b400
+b400
+b400
+---------------------
+Running on 139 processors.
+prog started at: Tue Aug  7 04:36:56 PDT 2012
+WL: 0.012 Period: 2.2 OptimalIncidence: 84 Height: 0.026 Eff: 0.366987
+Search time: 151.485
+WL: 0.0115 Period: 2.2 OptimalIncidence: 84.1 Height: 0.026 Eff: 0.360437
+Search time: 150.259
+WL: 0.011 Period: 2.2 OptimalIncidence: 84.2 Height: 0.026 Eff: 0.352347
+Search time: 150.279
+WL: 0.0105 Period: 2.2 OptimalIncidence: 84.4 Height: 0.026 Eff: 0.351194
+Search time: 152.032
+WL: 0.01 Period: 2.2 OptimalIncidence: 84.5 Height: 0.024 Eff: 0.343639
+Search time: 155.846
+WL: 0.0095 Period: 2.2 OptimalIncidence: 84.6 Height: 0.024 Eff: 0.337725
+Search time: 157.507
+WL: 0.009 Period: 2.2 OptimalIncidence: 84.8 Height: 0.024 Eff: 0.333807
+Search time: 166.861
+WL: 0.0085 Period: 2.2 OptimalIncidence: 84.9 Height: 0.024 Eff: 0.322194
+Search time: 169.033
+WL: 0.008 Period: 2.2 OptimalIncidence: 85.1 Height: 0.024 Eff: 0.310606
+Search time: 187.998
+WL: 0.0075 Period: 2.2 OptimalIncidence: 85.2 Height: 0.022 Eff: 0.290697
+Search time: 198.249
+WL: 0.007 Period: 2.2 OptimalIncidence: 85.4 Height: 0.022 Eff: 0.277759
+Search time: 207.702
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+CalculationError: WL: 0.0065 Period: 2.2 Height: 0.004 Incidence: 81.1
+WL: 0.0065 Period: 2.2 OptimalIncidence: 85.6 Height: 0.022 Eff: 0.266124
+Search time: 220.972
+WL: 0.006 Period: 2.2 OptimalIncidence: 85.7 Height: 0.02 Eff: 0.25893
+Search time: 217.402
+WL: 0.0055 Period: 2.2 OptimalIncidence: 85.9 Height: 0.02 Eff: 0.253988
+Search time: 241.892
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+CalculationError: WL: 0.005 Period: 2.2 Height: 0.004 Incidence: 81.1
+WL: 0.005 Period: 2.2 OptimalIncidence: 86.1 Height: 0.018 Eff: 0.258938
+Search time: 281.833
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+CalculationError: WL: 0.0045 Period: 2.2 Height: 0.004 Incidence: 81.1
+WL: 0.0045 Period: 2.2 OptimalIncidence: 86.3 Height: 0.018 Eff: 0.259659
+Search time: 287.442
+WL: 0.004 Period: 2.2 OptimalIncidence: 86.5 Height: 0.016 Eff: 0.260743
+Search time: 315.618
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+CalculationError: WL: 0.0035 Period: 2.2 Height: 0.004 Incidence: 81.1
+WL: 0.0035 Period: 2.2 OptimalIncidence: 86.7 Height: 0.016 Eff: 0.259294
+Search time: 359.747
+WL: 0.003 Period: 2.2 OptimalIncidence: 87 Height: 0.014 Eff: 0.270577
+Search time: 402.835
+WL: 0.0025 Period: 2.2 OptimalIncidence: 87.2 Height: 0.014 Eff: 0.270184
+Search time: 493.388
+WL: 0.002 Period: 2.2 OptimalIncidence: 87.5 Height: 0.012 Eff: 0.279182
+Search time: 607.731
+WL: 0.0015 Period: 2.2 OptimalIncidence: 87.7 Height: 0.01 Eff: 0.2844
+Search time: 840.019
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+ODE: Integration failure: Can't achieve step tolerance required. Try changing the integration tolerance.
+CalculationError: WL: 0.001 Period: 2.2 Height: 0.004 Incidence: 81.1
+WL: 0.001 Period: 2.2 OptimalIncidence: 88.3 Height: 0.01 Eff: 0.308024
+Search time: 1136.88
+prog finished at: Tue Aug  7 06:40:42 PDT 2012
