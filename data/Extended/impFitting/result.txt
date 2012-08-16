@@ -1,0 +1,8 @@
+IR:	1.65	5	2	0.5	0.91	0.62	0.00698664
+Best:	1.65	5	2	0.5	0.00698664
+
+Blaze: 1.65
+Antiblaze: 5
+Thickness: 2nm
+RMS roughness: 0.5
+Scaling: 0.91, 0.62
