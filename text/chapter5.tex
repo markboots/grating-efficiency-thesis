@@ -344,15 +344,15 @@ We know that no grating can ever be manufactured exactly as specified, so we wou
 
 Given that we have (a) real efficiency measurements over a range of energies, (b) real measurements of the grating geometry, and (c) the ability to model arbitrary groove profiles, we wondered if it would be possible to use a fitting process to generate theoretical efficiency curves that match the measurements, and then compare the fitted parameters to the actual grating parameters.
 
-In this fitting process, we started with fixed values for the parameters that could be measured exactly.  The exact groove densities had been previously determined from power spectral density (PSD) measurements, and confirmed in the diffractometer experiments.  We also took the incidence angles as given, since they were accurately known based on the diffractometer encoders.  Because the blaze angles derived from the AFM measurements showed considerable variation from groove to groove and were subject to uncertainty in the $z$-axis calibration, we left these (and the anti-blaze angles) as free parameters in the fitting process.  The oxide layer thickness for the Ni gratings and the surface roughness parameter $\sigma$ were also left as free parameters.
+In this fitting process, we started with fixed values for the parameters that could be measured exactly.  The exact groove densities had been previously determined from power spectral density (PSD) measurements, and confirmed in the diffractometer experiments.  We also took the incidence angles as given, since they were accurately known based on the diffractometer encoders.  Because the blaze angles derived from the AFM measurements showed considerable variation from groove to groove and were subject to uncertainty in the $z$-axis calibration, we left these (and the anti-blaze angles) as free parameters in the fitting process.  The oxide layer thickness for the Ni gratings and the surface roughness parameter $\sigma$ in Equation \eq{} were also left as free parameters.
  
- We note that a single efficiency measurement at a single energy would not be enough to enable this technique; we need an \emph{efficiency spectrum} measured over a range of energies.  The power of the fitting process comes from the fact that each parameter (groove density, incidence, groove geometry, etc.) affects the \emph{shape} of the spectrum in a different way; the spectral shape acts as a ``fingerprint'' or ``hash'' of the grating parameters.
+ We note that a single efficiency measurement at a single energy would not enable this technique; we need an \emph{efficiency spectrum} measured over a range of energies.  The power of the fitting process comes from the fact that each parameter (groove density, incidence, groove geometry, etc.) affects the \emph{shape} of the spectrum in a different way; the spectral shape acts as a ``fingerprint'' or ``hash'' of the grating parameters.
  
-In general, we observed that although the shapes of the measured spectra are similar to the calculated curves, the measurements are always lower than predicted in absolute value.  This is reasonable to expect, according to the number of real-world effects that act to reduce the efficiency: surface roughness, groove variation and irregularities, etc.  Unfortunately, neither the Sinha \eq{roughnessCorrection} nor Beckmann \eq{beckmannFactor} expressions for roughness can describe this well on their own: both of them decrease too rapidly with increasing energy while providing negligible reduction at low energies, and the size of the required parameter $\sigma$ is far outside the valid range for the Sinha approximation ($\sigma \ll \lambda$).
+In general, we observed that although the shapes of the measured spectra are similar to the calculated curves, the measurements are always lower than predicted in absolute value.  This is reasonable to expect, according to the number of real-world effects that act to reduce the efficiency: surface roughness, groove variation and irregularities, etc.  Unfortunately, neither the Sinha \eq{roughnessCorrection} nor Beckmann \eq{beckmannFactor} expressions for roughness can describe this well on their own: both of them decrease too rapidly with increasing energy while providing negligible reduction at low energies, and the size of the required parameter $\sigma$ ends up far outside the valid range for the Sinha approximation ($\sigma \ll \lambda$).
 
 Instead, it seems that a \emph{constant scaling factor} is required to achieve a good fit between the measured and calculated spectra.  (Typical scaling values for our measurements are between 0.5 and 0.8.) Although we have described many factors that could account for the reduction, we currently do not have a rigorous physical derivation for this factor.  If it is due to roughness alone, then neither the Beckmann nor Sinha factors are adequate for describing gratings.  It is also possible that this could be a measurement effect; for example, focussing or dispersion of the diffractometer beam by the spherical grating on its way to the photodiode would change the apparent intensity; saggital tilt of the grating would cause some light to miss the photodiode.
 
-Reasonable fitting results can be found by using the same scaling factor for the first-order and second-order efficiencies.  However, the best agreement in the \emph{shapes of the curves} is found when allowing a separate scaling factor for the first-order and second-order curves.  Whether this is justifiable depends on the explanation for the scaling factor; both roughness and focussing effects could be affected by the outgoing angle and hence the diffraction order.  We present the results for both cases, and summarize them in Table \ref{fittingResultsTable}.
+Reasonable fitting results can be found by using the same scaling factor for the first-order and second-order efficiencies.  However, much better agreement in the \emph{shapes of the curves} is found using independent scaling factors for the first-order and second-order curves.   Whether this is justifiable depends on the explanation for the scaling factor: both roughness and focussing effects could be affected by the outgoing angle and hence the diffraction order.  We present the results for both methods, and summarize them in Table \ref{fittingResultsTable}.  It turns out that the process using independent scaling factors predicts blaze angles that agree very closely within error of the AFM estimates.  For the nickel coated gratings, it also predicts lower oxide thicknesses than using a common scaling factor.
 
 \subsection{Low Energy Grating (LEG)}
 %  (gold): profile clean; as expected; blaze angle off. [modelled]
@@ -366,7 +366,7 @@ The LEG was one of the easiest gratings to manufacture, due to its low groove de
 \end{figure}
 The effect of the blaze angle error on the measured efficiency is obvious in Figure \ref{5x-leg}: the locations of the efficiency peaks are shifted compared to the theoretical prediction for a nominal grating with 1.85$^\circ$ blazing.  A higher blaze angle also increases the second-order peak efficiency at the expense of the first.
 
-When we use a fitting process to match the theoretical curves to the measured efficiency, it predicts a blaze angle of TODO, using scaling factors of TODO and TODO for the first and second orders respectively.   The agreement in the shape of the curves is very good (Figure \ref{5x-leg}), and the predicted blaze angle agrees closely with the AFM estimate ($2.45\deg$).  The high scaling factors compared to the IMP and MEG gratings suggests a high smoothness; it makes sense that the over-coated gratings would be rougher than the bare gold.
+When we use a fitting process to match the theoretical curves to the measured efficiency, it predicts a blaze angle of $2.35\deg$, using scaling factors of 0.93 and 0.84 for the first and second orders respectively.   The agreement in the shape of the curves is very good (Figure \ref{5x-leg}), and the predicted blaze angle agrees closely with the AFM estimate ($2.45\deg$).  The high scaling factors compared to the IMP and MEG gratings suggests a high smoothness; it makes sense that the over-coated gratings would be rougher than the bare gold.
 
 If we insist on a common scaling factor for both first and second order, the fitting process predicts a blaze angle of 2.26\dg and a scaling factor of 0.95.  We can see in Figure \ref{LEGSingleScaling} that this reduces the agreement between the measured and fitted curves; it also provides a less accurate prediction of the blaze angle.
 
@@ -374,21 +374,20 @@ Although only a fraction of a degree, the blaze angle error causes a significant
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   %TODO
-   \includegraphics[scale=0.7]{Chapter5/5x_comparison/LEG.pdf} 
-   \caption{Theoretical and measured efficiency of the Low Energy Grating (LEG).}
+   \includegraphics[scale=0.7]{Extended/legFitting/LEGFittedDoubleScaling.pdf} 
+   \caption{The blaze angle error of the manufactured LEG causes the efficiency peak to shift down in energy, and causes a transfer of energy from the first order to the second order.  The fitting process predicts a blaze angle of $2.35\deg$ and an RMS roughness of 0.025 nm.  (This assumes scaling factors of 0.93 and 0.84 for the first and second order respectively.)  The predicted blaze angle agrees within error with the AFM estimate ($2.45\deg$).}
    \label{5x-leg}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.7]{Chapter5/5x_comparison/LEG.pdf} 
+   \includegraphics[scale=0.7]{Extended/legFitting/LEGFittedSingleScaling.pdf} 
    \caption{When using a common scaling factor for fitting the LEG, we predict a blaze angle of $2.26\deg$ and a scaling factor of 0.95.  However, this method provides less agreement and a less accurate blaze prediction than using independent scaling factors (Figure \ref{5x-leg}).}
    \label{LEGSingleScaling}
 \end{figure}
 
 \subsection{Impurity Grating (IMP)}
-The AFM measurements of the impurity grating show clean facets on the blazed side (Figure \ref{5y-imp}), although once again the blaze angle is higher than specified: the best-fit angle at the grating centre is $1.60\deg \pm 0.11\deg$, compared to the nominal 1.11$^\circ$.  So far this is consistent with the LEG, which was also approximately $0.4\deg - 0.5\deg$ too high.
+The AFM measurements of the impurity grating show clean facets on the blazed side (Figure \ref{5y-imp}), although once again the blaze angle is higher than specified: the best-fit angle at the grating centre is $1.60\deg \pm 0.11\deg$, compared to the nominal 1.11$^\circ$.  This is consistent with the LEG, which also overshot the nominal blaze angle by $0.4\deg - 0.5\deg$.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -426,7 +425,7 @@ The MEG, with an increased groove density of 1200 lines/mm, shows a less regular
    \label{5y-meg}
 \end{figure}
 
-In efficiency, the nickel MEG suffers the same fate as its oxidized sibling.  The measured efficiency (Figure \ref{5x-meg}) is further affected by the error in the blaze angle.  The best-fit calculations predict a blaze angle of $1.95\deg$, an NiO oxide layer of 1 nm, and scaling factors of 0.70 (first order) and 0.37 (second order).  The lower scaling factors are attributed to the significant groove variation visible in the AFM profile compared to the smoother LEG and IMP.  Again, the fitted blaze angle agrees closely with the AFM estimation ($2.04\deg$).  A worse fit is obtained using a single scaling factor of 0.7, giving a $1.7\deg$ blaze angle and 4.5 nm oxide layer.
+In efficiency, the nickel MEG suffers the same fate as its oxidized sibling.  The measured efficiency (Figure \ref{5x-meg}) is further affected by the error in the blaze angle.  The best-fit calculations predict a blaze angle of $1.95\deg$, an NiO oxide layer of 1 nm, and scaling factors of 0.70 (first order) and 0.37 (second order).  The lower scaling factors are attributed to the significant groove variation visible in the AFM profile compared to the smoother LEG and IMP.  Again, the fitted blaze angle agrees closely with the AFM estimate ($2.04\deg$).  A worse fit is obtained using a single scaling factor of 0.7, giving a $1.7\deg$ blaze angle and 4.5 nm oxide layer.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -470,14 +469,14 @@ The efficiencies calculated using this groove shape are also shown in Figure \re
 % Requires the booktabs if the memoir class is not being used
 \begin{table}[htbp]
    \centering
-   \topcaption{Comparison of actual and predicted grating parameters, using fitting to match the calculated efficiency spectra to the measured curves.  The fitting process was done using a common scaling factor (CF) and independent scaling factors (IF) for the first- and second-order curves.  The independent scaling factors provide the best agreement and most accurate blaze angles.} % requires the topcapt package
+   \topcaption{Comparison of actual and predicted grating parameters, using fitting to match the calculated efficiency spectra to the measured curves.  The fitting process was done using a common scaling factor (CF) and independent scaling factors (IF) for the first- and second-order curves, and Equation \protect \eq{roughnessCorrection} for the surface roughness correction.  Using independent scaling factors provides the best agreement with the measurements and very accurate blaze angles compared to the AFM estimates.} % requires the topcapt package
    \begin{tabular}{@{} llllllll @{}} % Column formatting, @{} suppresses leading/trailing space
       \toprule
     &  \multicolumn{3}{l}{Blaze Angle ($\deg$)} & \multicolumn{2}{l}{Roughness (nm RMS)} &  \multicolumn{2}{l}{Oxide Thickness (nm)} \\
       \cmidrule(lr){2-4}    \cmidrule(lr){5-6}    \cmidrule(lr){7-8}  
  &	Fit (CF) & Fit (IF) & AFM Estimate & Fit (CF) & Fit (IF) &  Fit (CF) & Fit (IF)\\
  \cmidrule(lr){2-2}   \cmidrule(lr){3-3} \cmidrule(lr){4-4} \cmidrule(lr){5-5} \cmidrule(lr){6-6}  \cmidrule(lr){7-7}  \cmidrule(lr){8-8}
-LEG & 2.26 & TODO & 2.45 $\pm$ 0.20 & -- & TODO & N/A & N/A \\
+LEG & 2.26 & 2.35 & 2.45 $\pm$ 0.20 & -- & 0.025 & N/A & N/A \\
 IMP & 1.40 & 1.65 & 1.60 $\pm$ 0.11 & -- & 0.5 & 7.0 & 2.0 \\
 MEG & 1.70 & 1.95 & 2.04  $\pm$ 0.22 & -- & 0.1 & 4.5 & 1.0\\
       \bottomrule
