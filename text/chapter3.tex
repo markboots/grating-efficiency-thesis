@@ -100,7 +100,9 @@ The Fortran code was written using a 1970's-era programming approach, including 
 
 \subsection{Online access}
 %Since we released the user interface under an `open-source' license, it can be upgraded or enhanced by anyone with an interest in beamline design and grating efficiency.  Julian Miller, a summer student in the metrology department at the CLS, recently created an updated version of the interface to support multi-threaded calculations and add more options for incidence configurations.  To the original `constant incidence angle' mode, he added a `constant included angle' mode, used in many monochromators, which tilts the grating as a function of photon energy to maintain a constant angle between the incident and outgoing beam in the desired order.  Since every grating efficiency calculation (at a single energy) is independent, they can be run in parallel; this takes advantage of modern multi-core processors, and dramatically speeds up the creation of a user's plot or data set.  In the future, this could be extended even further to spread calculations over a cluster of computers, or on distributed hardware in a `cloud computing' network.
-Because the user interface ran as a web application, it could be (and was) accessed by beamline designers from all over the world.  In one example, it was used by Professors Coryn Hague and Gheorghe Sorin Chiuzbaian to improve the design of a new beamline for the SOLEIL synchrotron (TODO ref).  The calculations could be requested by anyone from anywhere, but they all ran on a single server computer at the University of Saskatchewan.  Unfortunately, the underlying \texttt{\textbf{Gradif}} code is commercial software, and while we were licensed to run it on this machine, recent communication from Professor Neviere indicated that he was unhappy with this level of access to results calculated using his code.  As a result, we disabled public access to the original website.
+Because the user interface ran as a web application, it could be (and was) accessed by beamline designers from all over the world.  In one example, it was used by Professors Coryn Hague and Gheorghe Sorin Chiuzbaian to improve the design of a new beamline for the SOLEIL synchrotron. 
+%(TODO ref).  
+The calculations could be requested by anyone from anywhere, but they all ran on a single server computer at the University of Saskatchewan.  Unfortunately, the underlying \texttt{\textbf{Gradif}} code is commercial software, and while we were licensed to run it on this machine, recent communication from Professor Neviere indicated that he was unhappy with this level of access to results calculated using his code.  As a result, we disabled public access to the original website.
 
 \section{Improved, open-source grating efficiency software}
 \subsection{Motivation for new grating software}
@@ -362,7 +364,13 @@ Based on our experience with \texttt{\textbf{Gradif}}, we expect that this calcu
       \toprule
 	Solver Operation & Percent of Run time\\
       \midrule
-   Allocate Memory	&	0.0003\%	\\   Look up refractive index	&	0.6803\%	\\   Compute $\alpha_n$, $\beta_n$ values and layers	&	0.0006\%	\\   Numerically integrate trial solutions	&	99.3011\%	\\   S-matrix operations	&	0.0174\%	\\   Compute Rayleigh coefficients $B^{(M)}_n$	&	0.0003\%	\\   Compute and package efficiencies	&	0.0001\%	\\
+   Allocate Memory	&	0.0003\%	\\
+   Look up refractive index	&	0.6803\%	\\
+   Compute $\alpha_n$, $\beta_n$ values and layers	&	0.0006\%	\\
+   Numerically integrate trial solutions	&	99.3011\%	\\
+   S-matrix operations	&	0.0174\%	\\
+   Compute Rayleigh coefficients $B^{(M)}_n$	&	0.0003\%	\\
+   Compute and package efficiencies	&	0.0001\%	\\
       \bottomrule
    \end{tabular}
    \label{timing}
@@ -383,7 +391,10 @@ Fine-grained parallelization is built into the \texttt{pegSerial} program, and e
 \begin{tabular}{@{} lccccccc @{}} % Column formatting, @{} suppresses leading/trailing space
 \toprule
 Threads $t$:	&	1	&	2	&	4	&	6	&	8	&	10	&	12	\\
-\midruleRuntime (s):	&	94.55	&	48.50	&	25.27	&	17.80	&	13.35	&	11.33	&	9.71	\\Speedup:	&	1	&	1.95	&	3.74	&	5.31	&	7.08	&	8.35	&	9.73	\\Efficiency:	&	100\%	&	97\%	&	94\%	&	89\%	&	89\%	&	83\%	&	81\%	\\
+\midrule
+Runtime (s):	&	94.55	&	48.50	&	25.27	&	17.80	&	13.35	&	11.33	&	9.71	\\
+Speedup:	&	1	&	1.95	&	3.74	&	5.31	&	7.08	&	8.35	&	9.73	\\
+Efficiency:	&	100\%	&	97\%	&	94\%	&	89\%	&	89\%	&	83\%	&	81\%	\\
 \bottomrule
 \end{tabular}
 \label{tableOpenMPTiming}
@@ -400,7 +411,10 @@ Table \ref{tableMPITiming} shows that the coarse-grained parallelization is extr
 \begin{tabular}{@{} lccccccc @{}} % Column formatting, @{} suppresses leading/trailing space
 \toprule
 Processors $P$:	&	1	&	2	&	4	&	8	&	16	&	32	\\
-\midruleRuntime (s):	&	112.73	&	54.33	&	27.14	&	13.64	&	6.37	&	3.23	\\Speedup:	&	1	&	2.07	&	4.15	&	8.27	&	17.70	&	34.91	\\Efficiency:	&	100\%	&	104\%	&	104\%	&	103\%	&	111\%	&	109\%	\\
+\midrule
+Runtime (s):	&	112.73	&	54.33	&	27.14	&	13.64	&	6.37	&	3.23	\\
+Speedup:	&	1	&	2.07	&	4.15	&	8.27	&	17.70	&	34.91	\\
+Efficiency:	&	100\%	&	104\%	&	104\%	&	103\%	&	111\%	&	109\%	\\
 \bottomrule
 \end{tabular}
 \label{tableMPITiming}

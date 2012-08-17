@@ -274,7 +274,7 @@ Can we predict the optimal incidence analytically?  And does it actually only de
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.8]{Extended/OptimalIncidenceGlobalRect/results.pdf} 
-   \caption[Optimizing the incidence angle and groove geometry for a range of wavelengths and grating periods shows a $n=-1$ order maximum at the $n=+1$ order Wood anomaly: $\sin \theta_{max} = 1 - \lambda/d$.]{Optimizing the incidence angle and groove geometry for a range of wavelengths and grating periods shows a $n=-1$ order maximum efficiency at angles described by $\sin \theta_{max} = 1 - \lambda/d$ [smooth curves].  This is the angle where the $n=+1$ order reaches 90\dg: a Wood anomaly.  The optimization was conducted on a grid with an incidence step of 0.1\dg and a groove depth step of 0.002~um, using rectangular platinum gratings.}
+   \caption[Optimizing the incidence angle and groove geometry for a range of wavelengths and grating periods shows a $n=-1$ order maximum at the $n=+1$ order Wood anomaly: $\sin \theta_{max} = 1 - \lambda/d$.]{Optimizing the incidence angle and groove geometry for a range of wavelengths and grating periods shows a $n=-1$ order maximum efficiency at angles described by $\sin \theta_{max} = 1 - \lambda/d$ [smooth curves].  This is the angle where the $n=+1$ order reaches $90\deg$: a Wood anomaly.  The optimization was conducted on a grid with an incidence step of 0.1\dg and a groove depth step of 0.002~um, using rectangular platinum gratings.}
    \label{rectIncidenceOpt}
 \end{figure}
 
@@ -303,7 +303,14 @@ In visible light applications, Wood anomalies can be very sharp, and constitute 
 \subsection{Optimal incidence for blazed gratings}
 From these results, we would also expect to find the optimal incidence for blazed gratings at the $+1$ Wood anomaly.  However, the actual optimal incidence angle turns out to significantly more grazing than predicted by Equation \eq{rectOptimalIncidence}; the results are shown in Figure \ref{blazedIncidenceOpt}.  The difference is significant: in some cases we have observed a doubling in the efficiency from the angle predicted in Equation \eq{rectOptimalIncidence} and the true optimal incidence.  The explanation for the difference is related to the blazing effect, but we have not yet discovered an analytic formula to predict it. So far, it must be determined via optimization.
 
-TODO: waiting for these calculations to finish.
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[scale=0.8]{Extended/OptimalIncidenceGlobalBlazed/round2/results.pdf} 
+   \caption[Unlike rectangular gratings, the optimal incidence angle for blazed gratings (marked points) does not follow the curve for the +1 order Wood Anomaly (dashed lines).]{Unlike the case of rectangular gratings, the optimal incidence angles for blazed gratings (marked points) do not follow the curves for the +1 order Wood Anomalies (dashed lines).  Instead, the optimal incidence needs to be determined through optimization.}
+   \label{blazedIncidenceOpt}
+\end{figure}
+
+
 % TODO: calculations to highlight how important/effective this is.  Efficiency at non-optimal and optimal incidence, when optimizing geometry.
 % TODO: polarization dependence
 
