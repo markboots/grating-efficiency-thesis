@@ -230,8 +230,8 @@ The program accepts input via command-line arguments, and writes efficiency resu
 \renewcommand{\arraystretch}{1.0}
 \begin{table}[htbp]
    \centering
-   \topcaption{Input Specification (Command-line Arguments) for the \texttt{pegSerial} and \texttt{pegMPI} programs. } % requires the topcapt package
-   {\small
+   \topcaption{Input command line arguments for the \texttt{pegSerial} and \texttt{pegMPI} programs. } % requires the topcapt package
+\fontsize{10}{10}\selectfont
    \begin{tabular}{@{} p{3cm}p{12cm} @{}} % Column formatting, @{} suppresses leading/trailing space
       \toprule
 \multicolumn{2}{c}{\textbf{Required}}\\
@@ -298,14 +298,13 @@ The program accepts input via command-line arguments, and writes efficiency resu
 	If this flag is included, each calculation will print intermediate results to standard output.\\
         \bottomrule
    \end{tabular}
-   }
    \label{pegInput}
 \end{table}
 
 \begin{table}[htbp]
    \centering
    \topcaption[Output file format for the \texttt{pegSerial} and \texttt{pegMPI} programs.]{Output file format for the \texttt{pegSerial} and \texttt{pegMPI} programs.  The Input section restates the program input, the Progress section is updated as the calculation completes, and each row of the Output section lists the independent variable (wavelength, eV, or incidence angle, depending on the mode) followed by the calculated efficiencies for all orders from $-N$ to $N$.\\~\\  {\footnotesize Test executed with: \texttt{./pegSerial --mode constantIncidence --min 100 --max 120 --increment 5 --eV --incidenceAngle 88 --gratingType blazed --gratingPeriod 1 --gratingMaterial Au --N 15 --gratingGeometry 2.5,30 --outputFile testOutput.txt --progressFile testProgress.txt}} } % requires the topcapt package
-\begin{lstlisting}[frame=single,numberstyle=\small]
+\begin{lstlisting}[basicstyle=\footnotesize,frame=single,numberstyle=\small]
 # Input
 mode=constantIncidence
 incidenceAngle=88
@@ -326,11 +325,11 @@ status=succeeded
 completedSteps=5
 totalSteps=5
 # Output
-100	4.86049e-06,5.73524e-06,1.15331e-05,2.26984e-05,3.40043e-05,3.20538e-05,1.09471e-05,2.46656e-05,0.000207617,0.000525489,0.000402885,9.29454e-05,0.00604008,0.0202516,0.193704,0.688149, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-105	5.17974e-06,4.87572e-06,8.75638e-06,1.96591e-05,3.6063e-05,4.48567e-05,2.63319e-05,8.62826e-06,0.000156884,0.000572518,0.000629053,6.95573e-06,0.00581251,0.0252621,0.200502,0.678858, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-110	5.85305e-06,4.91785e-06,6.66783e-06,1.53924e-05,3.35836e-05,5.23866e-05,4.57548e-05,9.18712e-06,9.75067e-05,0.000564861,0.000862771,2.38342e-05,0.00534777,0.0305067,0.205757,0.669051, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-115	6.70782e-06,5.76303e-06,5.81191e-06,1.15465e-05,2.8753e-05,5.44993e-05,6.33855e-05,2.451e-05,4.82133e-05,0.000510943,0.00107579,0.000154448,0.00472995,0.0359483,0.209988,0.658912, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-120	7.51931e-06,7.11245e-06,6.20636e-06,8.89412e-06,2.30516e-05,5.20039e-05,7.60472e-05,4.85705e-05,1.87322e-05,0.000421879,0.00124637,0.000396847,0.00401002,0.0415518,0.213464,0.648892, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+100	4.86049e-06,5.73524e-06,1.15331e-05,2.26984e-05,3.40043e-05,3.20538e-05,1.09471e-05,2.46656e-05, 0.000207617,0.000525489,0.000402885,9.29454e-05,0.00604008,0.0202516,0.193704,0.688149, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+105	5.17974e-06,4.87572e-06,8.75638e-06,1.96591e-05,3.6063e-05,4.48567e-05,2.63319e-05,8.62826e-06, 0.000156884,0.000572518,0.000629053,6.95573e-06,0.00581251,0.0252621,0.200502,0.678858, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+110	5.85305e-06,4.91785e-06,6.66783e-06,1.53924e-05,3.35836e-05,5.23866e-05,4.57548e-05,9.18712e-06, 9.75067e-05,0.000564861,0.000862771,2.38342e-05,0.00534777,0.0305067,0.205757,0.669051, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+115	6.70782e-06,5.76303e-06,5.81191e-06,1.15465e-05,2.8753e-05,5.44993e-05,6.33855e-05,2.451e-05,4.82133e-05, 0.000510943,0.00107579,0.000154448,0.00472995,0.0359483,0.209988,0.658912, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+120	7.51931e-06,7.11245e-06,6.20636e-06,8.89412e-06,2.30516e-05,5.20039e-05,7.60472e-05,4.85705e-05,1.87322e-05, 0.000421879,0.00124637,0.000396847,0.00401002,0.0415518,0.213464,0.648892, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 \end{lstlisting}
    \label{pegOutput}
 \end{table}
@@ -476,7 +475,7 @@ All of these criteria are satisfied.  For thin gratings, the results using 1, 2,
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Extended/SMatrixStability/SMatrixStability.pdf} 
+   \includegraphics[scale=0.77]{Extended/SMatrixStability/SMatrixStability.pdf} 
    \caption[The S-matrix approach is the solution for this problem that becomes unstable at high energies when using the basic shooting method.]{The S-matrix approach is the solution for this problem that became unstable at high energies when using the basic shooting method.  The software automatically determines the number of layers required, ranging here from one layer at low energies to three layers at high energies.  The inset in the $3^\textrm{rd}$-order curve shows that the numerical error ``noise'' is also reduced, even for calculations that remain ``stable''.  (Blazed grating, 600 lines/mm, 1.85\dg blaze angle, gold substrate, 86\dg incidence.)}
    \label{SMatrixStability}
 \end{figure}

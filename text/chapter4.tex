@@ -54,8 +54,8 @@ To determine the number of grating choices to offer, we started by assuming one 
 \begin{table}[h]
    \centering
    \topcaption{Gratings chosen for the REIXS spectrometer, with their target energies used for optimization, the energy ranges they will be able to cover, and the final optimized grating parameters}
-   {\footnotesize
- \begin{tabular}{@{} llccccc@{}} % Column formatting, @{} suppresses leading/trailing space
+   {\scriptsize
+ \begin{tabularx}{\textwidth}{@{} Xlccccc@{}} % Column formatting, @{} suppresses leading/trailing space
 \toprule
         Grating    & Optimization& Energy& Groove Density & Incidence & Coating & Blaze\\
         & Energy (eV) & Range (eV) & (lines/mm) & Angle ($\deg$) & &Angle ($\deg$)\\
@@ -73,7 +73,7 @@ High Energy (HEG) & 725 eV (Fe) & 400+&2000&88&Pt&1.52\\
 High Res Medium Energy (HRMEG) & 280 eV (C) & 280+&1800&88&Ni&4.85\\
 High Res High Energy (HRHEG) & 725 eV (Fe) & 525+&2600&88.25&Pt&4.05\\
 \bottomrule
-   \end{tabular}
+   \end{tabularx}
    }
    \label{gratings-table}
 \end{table}
@@ -86,7 +86,7 @@ Because of the inherent tension between resolution and efficiency, attempts to e
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.6]{Chapter4/4c_process/4c_mine.pdf} 
+   \includegraphics[scale=0.7]{Chapter4/4c_process/4c_mine.pdf} 
    \caption{Approximation of the process used to design the optics of the REIXS spectrometer.}
    \label{4c}
 \end{figure}
@@ -127,7 +127,7 @@ Section \ref{gratingManufacturing} gave an overview of mechanical ruling and hol
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter4/4d_rulingFlaws/4d.pdf} 
+   \includegraphics[scale=0.78]{Chapter4/4d_rulingFlaws/4d.pdf} 
    \caption[Common errors in the manufacture of ruled and holographic gratings.]{Common errors in the manufacture of ruled and holographic gratings.  Holographic exposure creates a sinusoidal profile; subsequent ion-etching (b) can only approximate a triangular profile.  Ruled gratings can suffer from blaze angle errors (c), or errors due to the shape and/or depth of the diamond tip (e).  If the ruling engine introduces periodic errors in the groove position, this additional structure (d) superimposes additional diffraction patterns (ghosts).}
    \label{4d}
 \end{figure}
@@ -160,7 +160,7 @@ For the 2600 line/mm HRHEG grating (b), the 3rd order efficiency is comparable b
           
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter4/4j_justificationFor3rdOrder/4j.pdf} 
+   \includegraphics[scale=0.78]{Chapter4/4j_justificationFor3rdOrder/4j.pdf} 
    \caption[Justification for third-order design: At some points along the efficiency curve, the grating efficiency is actually higher in 3rd order than it would be in 1st order for an equivalent-resolution grating with three times the groove density.]{At some points along the efficiency curve, the grating efficiency is actually higher in 3rd order than it would be in 1st order for an equivalent-resolution grating with three times the groove density\ldots assuming you could even manufacture such a grating.  HRMEG and alternatives: nickel coating, geometry as indicated.  HRHEG and alternative: platinum coating, blaze angle of 4.05$\deg$.}
    \label{4e}
 \end{figure}
@@ -210,21 +210,21 @@ Fe (725 eV)	&	731	&	23.4\%	&		&		&	1588	&	17.7\%	&	1595	&	12.2\%	&	6238	&	0.9\%	
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter4/4h_gratings/LEG_IMP.pdf} 
+   \includegraphics[scale=0.78]{Chapter4/4h_gratings/LEG_IMP.pdf} 
    \caption{Theoretical diffraction efficiency for the Low Energy Grating and Impurity Grating.}
    \label{4h-1}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter4/4h_gratings/MEG_HEG.pdf} 
+   \includegraphics[scale=0.78]{Chapter4/4h_gratings/MEG_HEG.pdf} 
    \caption{Theoretical diffraction efficiency for the Medium Energy and High Energy Gratings.}
    \label{4h-2}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter4/4h_gratings/HRMEG_HRHEG.pdf} 
+   \includegraphics[scale=0.78]{Chapter4/4h_gratings/HRMEG_HRHEG.pdf} 
    \caption{Theoretical diffraction efficiency for the High Resolution Gratings, optimized to be used in 3rd order.}
    \label{4h-3}
 \end{figure}

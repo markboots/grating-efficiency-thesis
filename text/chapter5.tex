@@ -280,14 +280,14 @@ Figure \ref{sinhaReflectivity} shows the reduction in efficiency caused by diffe
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Extended/RoughnessPlots/sinha.pdf} 
+   \includegraphics[scale=0.78]{Extended/RoughnessPlots/sinha.pdf} 
    \caption{The reflectivity factor calculated according to the Sinha expression \protect \eq{roughnessCorrection} as a function of incidence angle and photon energy, assuming a refractive index of platinum.}
    \label{sinhaReflectivity}
 \end{figure}
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Extended/RoughnessPlots/beckmannAndSinha.pdf} 
+   \includegraphics[scale=0.78]{Extended/RoughnessPlots/beckmannAndSinha.pdf} 
    \caption[A comparison of the Beckmann (solid) and Sinha (dashed) expressions for rough surface reflectivity shows the limitations of both approximations.]{A comparison of the Beckmann (solid) and Sinha (dashed) expressions for rough surface reflectivity shows the limitations of both approximations.  (The RMS roughness $\sigma$ is indicated in the legend; the calculations are for 87\dg incidence assuming a refractive index for platinum.)  The Sinha curves incorrectly decrease quickly at high energies (low wavelengths) due to the assumption that $\sigma << \lambda$.  The Beckmann curves show very little reduction even for substantial roughness because the $\cos(\theta)$ term in the Beckmann Equation is only valid near normal, not grazing incidence.}
    \label{beckmannAndSinha}
 \end{figure}
@@ -344,7 +344,7 @@ We know that no grating can ever be manufactured exactly as specified, so we wou
 
 Given that we have (a) real efficiency measurements over a range of energies, (b) real measurements of the grating geometry, and (c) the ability to model arbitrary groove profiles, we wondered if it would be possible to use a fitting process to generate theoretical efficiency curves that match the measurements, and then compare the fitted parameters to the actual grating parameters.
 
-In this fitting process, we started with fixed values for the parameters that could be measured exactly.  The exact groove densities had been previously determined from power spectral density (PSD) measurements, and confirmed in the diffractometer experiments.  We also took the incidence angles as given, since they were accurately known based on the diffractometer encoders.  Because the blaze angles derived from the AFM measurements showed considerable variation from groove to groove and were subject to uncertainty in the $z$-axis calibration, we left these (and the anti-blaze angles) as free parameters in the fitting process.  The oxide layer thickness for the Ni gratings and the surface roughness parameter $\sigma$ in Equation \eq{} were also left as free parameters.
+In this fitting process, we started with fixed values for the parameters that could be measured exactly.  The exact groove densities had been previously determined from power spectral density (PSD) measurements, and confirmed in the diffractometer experiments.  We also took the incidence angles as given, since they were accurately known based on the diffractometer encoders.  Because the blaze angles derived from the AFM measurements showed considerable variation from groove to groove and were subject to uncertainty in the $z$-axis calibration, we left these (and the anti-blaze angles) as free parameters in the fitting process.  The oxide layer thickness for the Ni gratings and the surface roughness parameter $\sigma$ in Equation \eq{roughnessCorrection} were also left as free parameters.
  
  We note that a single efficiency measurement at a single energy would not enable this technique; we need an \emph{efficiency spectrum} measured over a range of energies.  The power of the fitting process comes from the fact that each parameter (groove density, incidence, groove geometry, etc.) affects the \emph{shape} of the spectrum in a different way; the spectral shape acts as a ``fingerprint'' or ``hash'' of the grating parameters.
  
@@ -469,7 +469,7 @@ The efficiencies calculated using this groove shape are also shown in Figure \re
 % Requires the booktabs if the memoir class is not being used
 \begin{table}[htbp]
    \centering
-   \topcaption{Comparison of actual and predicted grating parameters, using fitting to match the calculated efficiency spectra to the measured curves.  The fitting process was done using a common scaling factor (CF) and independent scaling factors (IF) for the first- and second-order curves, and Equation \protect \eq{roughnessCorrection} for the surface roughness correction.  Using independent scaling factors provides the best agreement with the measurements and very accurate blaze angles compared to the AFM estimates.} % requires the topcapt package
+   \topcaption[Comparison of actual and predicted grating parameters, using fitting to match the calculated efficiency spectra to the measured curves.]{Comparison of actual and predicted grating parameters, using fitting to match the calculated efficiency spectra to the measured curves.  The fitting process was done using a common scaling factor (CF) and independent scaling factors (IF) for the first- and second-order curves, and Equation \protect \eq{roughnessCorrection} for the surface roughness correction.  Using independent scaling factors provides the best agreement with the measurements and very accurate blaze angles compared to the AFM estimates.} % requires the topcapt package
    \begin{tabular}{@{} llllllll @{}} % Column formatting, @{} suppresses leading/trailing space
       \toprule
     &  \multicolumn{3}{l}{Blaze Angle ($\deg$)} & \multicolumn{2}{l}{Roughness (nm RMS)} &  \multicolumn{2}{l}{Oxide Thickness (nm)} \\
