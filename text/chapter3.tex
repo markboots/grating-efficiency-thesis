@@ -1,26 +1,45 @@
 \chapter{Implementation of theory: How we calculated efficiency using computers}
 
-In the initial stages of the spectrometer design project, we used \texttt{\textbf{Gradif}} -- a program written by one of the original authors of the differential theory -- for all of our calculations and optimizations.  We also built a user interface for this program, to speed up the process of entering input and running multiple calculations.  More recently, we implemented a new, open-source grating efficiency calculator from scratch to address some shortcomings of the \texttt{\textbf{Gradif}} code: performance, stability, and the ability to handle arbitrary grating shapes.  A secondary benefit of this last project is the opportunity to share it freely with the grating/beamline design community, and to extend it in conjunction with other researchers.
+In the initial stages of the spectrometer design project, we used \texttt{\textbf{Gradif}} -- a program written by Michel Neviere, one of the original authors of the differential theory -- for all of our calculations and optimizations.  We also built a user interface for this program, to speed up the process of entering input and running multiple calculations.  More recently, we implemented a new, open-source grating efficiency calculator from scratch to address some shortcomings of the \texttt{\textbf{Gradif}} code: performance, stability, and the ability to handle arbitrary grating shapes.  A secondary benefit of this last project is the opportunity to share it freely with the grating/beamline design community, and to extend it in conjunction with other researchers.
 
 In this chapter, we examine the existing grating software options, describe our experience using the \texttt{\textbf{Gradif}} code, and review the development and validation of new grating efficiency software.
 
 \section{Pre-existing grating efficiency software}
 Currently there are four commercial or closed-source programs available for calculating diffraction grating efficiencies (Table \ref{commercialComparison}).  \texttt{\textbf{PCGrate}} implements the modified integral method \cite{Gor02} and is the most general, although also the slowest and most expensive.  \texttt{\textbf{GSolver}} uses the Rigorous Coupled Wave approximation \cite{Moh82}\cite{Moh86} and can therefore handle any grating shape, subject to the previously noted issues with the staircase approximation in TM polarization.  Two implementations of the differential method are available: Professor Neviere sells an implementation called \texttt{\textbf{Gradif}}, and the \texttt{\textbf{REFLEC}} program is used internally at the BESSY synchrotron.  Although the differential method is general, both of these implementations are limited to predefined grating profiles (rectangular, blazed, trapezoidal, and sinusoidal).
 
-Table \ref{commercialComparison} compares the features, cost, and performance of these programs.
+% TODO put run time back in
+%Table \ref{commercialComparison} compares the features, cost, and performance of these programs.
+Table \ref{commercialComparison} compares the methods, features, and cost of these programs.
 
 \renewcommand{\arraystretch}{1.8}
+% TODO: fill run time column
+%\begin{table}
+%\topcaption{Comparison of commercially-available grating efficiency software}
+%{\footnotesize
+%\begin{tabularx}{\textwidth}{@{} p{1.7in}p{1in}p{0.8in}XXX @{}}
+%\toprule
+%        Name and Organization                                                        & Method                         & Price (USD)                                            & Graphical User Interface & Arbitrary Shapes        & Comparative Run Time \\ \midrule
+%        \texttt{\textbf{PCGrate-SX 6.5}}\newline IIG, Inc.\newline http://www.pcgrate.com & Modified Integral Method (MIM) & GUI: 15749\newline Console: 11249\newline Both: 22499 & Available                & Yes                     & ~                    \\ 
+%
+%        \texttt{\textbf{GSolver 5.2}} \newline Grating Solver Development Co. \newline http://www.gsolver.com            & Rigorous Coupled Wave (RCW)    & 795                                                    & Yes                      & Yes & ~                    \\  
+%        \texttt{\textbf{Gradif}}\newline Dr. Michel Neviere \newline m.neviere@free.fr                                                    & Differential Method            & 6090                                                   & No                       & No                      & ~                    \\ 
+%        \texttt{\textbf{REFLEC}}\newline Dr. Michael Krumrey\newline Michael.Krumrey@ptb.de                 & Differential Method            & 0                                                      & No                       & No                      & ~    \\
+%\bottomrule
+%   \end{tabularx}
+%}
+%\label{commercialComparison}
+%\end{table}
 \begin{table}
 \topcaption{Comparison of commercially-available grating efficiency software}
 {\footnotesize
-\begin{tabularx}{\textwidth}{@{} p{1.7in}p{1in}p{0.8in}XXX @{}}
+\begin{tabularx}{\textwidth}{@{} p{1.7in}p{1.3in}p{1.0in}XX @{}}
 \toprule
-        Name and Organization                                                        & Method                         & Price (USD)                                            & Graphical User Interface & Arbitrary Shapes        & Comparative Run Time \\ \midrule
-        \texttt{\textbf{PCGrate-SX 6.5}}\newline IIG, Inc.\newline http://www.pcgrate.com & Modified Integral Method (MIM) & GUI: 15749\newline Console: 11249\newline Both: 22499 & Available                & Yes                     & ~                    \\ 
+        Name and Organization                                                        & Method                         & Price (USD)                                            & Graphical User Interface & Arbitrary Shapes        \\ \midrule
+        \texttt{\textbf{PCGrate-SX 6.5}}\newline IIG, Inc.\newline http://www.pcgrate.com & Modified Integral Method (MIM) & GUI: 15749\newline Console: 11249\newline Both: 22499 & Available                & Yes                                        \\ 
 
-        \texttt{\textbf{GSolver 5.2}} \newline Grating Solver Development Co. \newline http://www.gsolver.com            & Rigorous Coupled Wave (RCW)    & 795                                                    & Yes                      & Yes & ~                    \\  
-        \texttt{\textbf{Gradif}}\newline Dr. Michel Neviere \newline m.neviere@free.fr                                                    & Differential Method            & 6090                                                   & No                       & No                      & ~                    \\ 
-        \texttt{\textbf{REFLEC}}\newline Dr. Michael Krumrey\newline Michael.Krumrey@ptb.de                 & Differential Method            & 0                                                      & No                       & No                      & ~    \\
+        \texttt{\textbf{GSolver 5.2}} \newline Grating Solver Development Co. \newline http://www.gsolver.com            & Rigorous Coupled Wave (RCW)    & 795                                                    & Yes                      & Yes                     \\  
+        \texttt{\textbf{Gradif}}\newline Dr. Michel Neviere \newline m.neviere@free.fr                                                    & Differential Method            & 6090                                                   & No                       & No                                         \\ 
+        \texttt{\textbf{REFLEC}}\newline Dr. Michael Krumrey\newline Michael.Krumrey@ptb.de                 & Differential Method            & 0                                                      & No                       & No                        \\
 \bottomrule
    \end{tabularx}
 }
@@ -110,7 +129,7 @@ The \texttt{\textbf{Gradif}} code allowed us to complete the design and optimiza
 \begin{enumerate}
 \item \textbf{Unpredictable instability}: For some rare but reasonable grating inputs, the numerical integration process becomes unexpectedly unstable. We expect this to happen for deep gratings outside of \texttt{\textbf{Gradif}}'s convergence range, but in other cases the failed calculations are surrounded by successful calculations. The random failures can usually be avoided by tweaking the number of integration steps or the number of Fourier coefficients, but not in a consistent or predictable way.
 \item \textbf{Performance}: The run time of a single calculation depends on the grating depth, number of Fourier coefficients, and number of integration steps required for convergence; it can range from two seconds for shallow gratings to well over 30 seconds.  At this speed, it is feasible to calculate the efficiency of a single grating over a range of wavelengths; however, if we want to do global optimization or fitting (Chapter 7), faster run times are desired.  The \texttt{\textbf{Gradif}} code is inherently single-threaded, although independent calculations can be run simultaneously by invoking the program multiple times.
-\item \textbf{Arbitrary groove profiles}: As we will see in Chapter 7, grating manufacturing rarely produces the perfect, intended groove profile.  To model real-world gratings, we need the ability to represent profiles of arbitrary shape; for example, point-wise defined curves derived from atomic force microscopy (AFM) measurements.
+\item \textbf{Arbitrary groove profiles}: As we will see in Chapter 7, grating manufacturing rarely produces the perfect, intended groove profile.  To model real-world gratings, we need the ability to represent profiles of arbitrary shape; for example, point-wise defined curves derived from atomic force microprobe (AFM) measurements.
 \item \textbf{Open online access}: Finally, since grating efficiency has rarely been considered during many past beamline designs, we believe the soft x-ray instrument design community would benefit from having access to an easy-to-use, easy-to-access grating efficiency calculator.  It became obvious after taking down the original web interface to \texttt{\textbf{Gradif}} that there was a strong demand for this service.
 \end{enumerate}
 
@@ -139,10 +158,7 @@ The solver and command-line interface support the following features:
 \begin{itemize}
 \item \textbf{Standard grating shape profiles}: rectangular, triangular, trapezoidal, and sinusoidal.
 \item \textbf{Custom grating shape profiles}: any point-wise defined profile.
-\item \textbf{Coatings}: an optional coating layer of a different material on top of the grating, generated by translating the grating profile vertically.  The coating can be thicker than the groove depth, leaving a homogeneous layer between the coating grooves and the grating grooves, or it can interpenetrate the grating grooves.
-\begin{itemize}
-\item Note: Coatings are not yet supported on custom profiles.
-\end{itemize}
+\item \textbf{Coatings}: an optional coating layer of a different material on top of the grating, generated by translating the grating profile vertically.  The coating can be thicker than the groove depth, leaving a homogeneous layer between the coating grooves and the grating grooves, or it can interpenetrate the grating grooves. (Note: Coatings are not yet supported on custom profiles.)
 \item \textbf{Material Database}: automatic lookup of complex refractive indexes for common materials based on the Henke tables.
 \item \textbf{Incidence scanning modes}: calculation of common efficiency curves with a single command:
 \begin{enumerate}
