@@ -252,7 +252,7 @@ Even for the simpler (non-grating) case of roughness on flat surfaces, a substan
 
 Even though they only deal with nominally flat surfaces, all of these methods are based on the assumption that a random rough surface can be decomposed into a superposition of sinusoidal gratings\footnote{Obviously, in our case, of much higher groove density than the actual gratings!}, and that scattering can be explained as a diffraction effect from the phase changes created by the ``microtopography'' of the surface \cite{Rag07}.  There are two fundamental approaches: the Rayleigh-Rice theory \cite{Ray07} \cite{Ric51}, which is a perturbation approximation for solving the electromagnetic vector wave equation near periodic interfaces, and the Beckmann-Kirchhoff theory, which uses a scalar wave equation and applies the Kirchhoff diffraction formula \cite[Chapters 4 and 5]{Bec87}.  Both contain approximations; the Rayleigh-Rice methods are only applicable to ``smooth'' surfaces, where the perturbation from a flat surface is small -- i.e., where the RMS roughness is small compared to the wavelength ($\sigma \ll \lambda$).  The Beckmann-Kirchhoff methods are appropriate for ``rougher'' surfaces up to $(\sigma \cos \theta \leq \lambda)$, but they contain a small-angle approximation that restricts them to near-normal incidence and scattering angles \cite{Rag07}.  (In the extreme case where the roughness is much larger than the wavelength, it becomes more appropriate to handle it using a geometric optics approach, rather than a diffraction approach.  In this situation, we can imagine a surface made up of many ``microfacets'' all reflecting light at different angles; the BESSY raytracing software suite actually uses this approach to model roughness by randomly varying the direction of a mirror's normal vector (slightly) for each reflecting ray, according to the statistical description of the surface \cite{Sch}.)
 
-Since grating theories are already being used to describe diffuse scattering from rough \emph{flat} surfaces, applying these methods to \emph{actual} gratings is even more difficult; this amounts to creating a superposition of (very high density) gratings, \emph{on the surface of a grating}(!)
+Since grating theories are already being used to describe diffuse scattering from rough \emph{flat} surfaces, applying these methods to \emph{actual} gratings is even more difficult; this amounts to creating a superposition of (very high density) gratings, \emph{on the surface of another grating}.
  
  It would be theoretically difficult to analyze ``gratings structured on top of gratings'', so instead, we apply some of the results for rough mirrors to come up with an approximate correction for our grating efficiencies.  Many texts and computer programs use a simple expression called the ``Beckmann factor''
 \begin{align}
@@ -308,7 +308,7 @@ If the shape changes slowly across the grating, it might be appropriate to model
 \subsubsection{Irregularities along the groove: out-of-plane reflection}
 Another assumption from Chapter 3 was that the grating was invariant along the $z$ direction of the grooves.  The same elasticity changes can cause variation in the shape of the profile as the tip travels along the grooves.  (This also occurs with holographic gratings, due to variation in the mean intensity of the interference pattern during exposure.)  The $z$-variation can reflect light out of the plane of incidence, and the effect can be diffuse or specular \cite{Pal05}.
 
-\subsection{Manufacturing errors the \emph{can} be modelled}
+\subsection{Manufacturing errors that \emph{can} be modelled}
 All of the previous real-world grating flaws -- surface roughness, dust and scratches, periodic and non-periodic groove irregularities -- represent deviation from the theoretical profile in Chapter 3 in ways that cannot be incorporated into the model without breaking our initial assumptions (Section \ref{s_assumptions}).  It is also possible for manufacturing errors to create deviation that we \emph{can} actually model; the best example of this would be the difference between the requested and manufactured groove geometry.
 \subsubsection{Blaze angle errors shift the efficiency peak}
 Figure \ref{3i-2} showed how small changes in the blaze angle can significantly shift the efficiency peak.  For mechanically-ruled gratings, the accuracy of the blaze angle depends on the persistence and perfectionism of the ruling engine operator, who must adjust the diamond tip angle during setup through tedious trial-and-error.  If, after manufacturing, the real blaze angle turns out to be different than what the customer specified, we can measure the true blaze angle using a calibrated AFM and re-calculate the theoretical efficiencies using a better approximation of the profile.
@@ -328,7 +328,7 @@ An unintended consequence of using nickel coated gratings is the unavoidable for
 
 While obviously undesirable to have in retrospect, the effect of a surface oxide on the efficiency can be easily modelled using a coating layer on top of a pure metal substrate. In Section \ref{gratingResults} we show how a thin layer of NiO on Ni accounts for the measured efficiency of the IMP and MEG gratings, and we predict the thickness of the oxide layer using fitting.
 
-To protect against the formation of a detrimental oxide, in the future we would request that the grating manufacture evaporate a layer of MgF$_2$ immediately after applying the primary coating, before exposing the grating to air.  In this case, the effect of the MgF$_2$ layer could also be modelled in the same way.
+To protect against the formation of a detrimental oxide, in the future we would request that the grating manufacturer evaporate a layer of MgF$_2$ immediately after applying the primary coating, before exposing the grating to air.  In this case, the effect of the MgF$_2$ layer could also be modelled in the same way.
 
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
@@ -409,8 +409,8 @@ Another interesting observation is that we should not expect the Henke data to b
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=0.49\textwidth]{Extended/impFitting/IMPFittedSingleScaling.pdf} 
-     \includegraphics[width=0.49\textwidth]{Extended/megFitting/MEGFittedSingleScaling.pdf} 
+   \includegraphics[width=0.49\textwidth]{Extended/impFitting/IMPFittedSingleScaling_small.pdf} 
+     \includegraphics[width=0.49\textwidth]{Extended/megFitting/MEGFittedSingleScaling_small.pdf} 
    \caption{Using a common scaling factor for the first-order and second-order efficiency curves reduces the fitting accuracy and reduces the agreement between the predicted and AFM estimated blaze angles.  For the impurity grating (left), this process predicts a $1.40\deg$ blaze angle, a 7 nm NiO surface layer, and a scaling factor of 0.9.  For the MEG (right), it predicts a $1.7\deg$ blaze angle, a 4.5 nm NiO layer, and a scaling factor of 0.7.}
    \label{singleScalingFit}
 \end{figure}
@@ -460,7 +460,9 @@ What could have caused this? It is easy to see from the AFM measurements of the 
    \label{hegRepresentativeGroove}
 \end{figure}
 
-This grating highlights the importance of careful characterization.  In this form, the HEG would have been unusable. Without efficiency and AFM measurements, we would have accepted and installed this grating in the spectrometer, only to be perplexed at the inability to detect anything other than scattered light.   Instead, we were able to use this data to persuade the manufacturer to re-rule it one more time.\footnote{Coincidently or un-coincidently, the manufacturer also purchased their own AFM after this exchange.  Currently we are still waiting for delivery of the final grating.}
+This grating highlights the importance of careful characterization.  In this form, the HEG would have been unusable.
+
+Without efficiency and AFM measurements, we would have accepted and installed this grating in the spectrometer, only to be perplexed at the inability to detect anything other than scattered light.   Instead, we were able to use this data to persuade the manufacturer to re-rule it one more time.\footnote{Coincidently or un-coincidently, the manufacturer also purchased their own AFM after this exchange.  Currently we are still waiting for delivery of the final grating.}
 
 Could the double-peaked shape of the HEG grooves be responsible for the poor efficiency?  This question provided an opportunity to test out the arbitrary profile mode of the new \texttt{PEG} software.  We extracted a representative shape from one of the AFM grooves (plotted in Figure \ref{hegRepresentativeGroove}) and used it to specify the set of $(x,y_p)$ points for the profile function $y_p = g(x)$.
 

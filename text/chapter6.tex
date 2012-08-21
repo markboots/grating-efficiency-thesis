@@ -23,12 +23,12 @@ We also spent a substantial amount of time determining how to align the optical 
 \item compute the scale for the spectrum energy axis based on the spectrometer geometry.
 \end{itemize}
 
-Refining these processes is an ongoing effort.  However, in the spring of 2012 all of this work culminated in forming the first useful emission spectra from the REIXS beamline.  In Figure \ref{impXES}, we show an example of the nitrogen K$\alpha$ emission line of hexagonal boron nitride (hBN), taken with the IMP grating.  From the observed count rate, we calculated that the spectrometer has an end-to-end throughput approximately four to six times higher than the Beamline 8.0.1 spectrometer\footnote{Unfortunately, the upstream beamline produces substantially less flux than Beamline 8.0.1, so the efficiency difference is practically negated for users.}, with comparable resolution.  This spectrum was developed in 20 minutes for 1892380 total counts.
+Refining these processes is an ongoing effort.  However, in the spring of 2012, all of this work culminated in forming the first useful emission spectra from the REIXS beamline.  In Figure \ref{impXES}, we show an example of the nitrogen K$\alpha$ emission line of hexagonal boron nitride (hBN), taken with the IMP grating.  From the observed count rate, we calculated that the spectrometer has an end-to-end throughput approximately four to six times higher than the Beamline 8.0.1 spectrometer\footnote{Unfortunately, the upstream beamline produces substantially less flux than Beamline 8.0.1, so the efficiency difference is practically negated for users.}, with comparable resolution.  This spectrum was developed in 20 minutes, producing 1892380 total counts.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.71]{Chapter6/IMP.pdf} 
-   \caption{Nitrogen K$\alpha$ emission line of hexagonal boron nitride (hBN), taken using the IMP grating in 20 minutes.}
+   \caption{Nitrogen K$\alpha$ emission line of hexagonal boron nitride (hBN), taken using the IMP grating in 20 minutes.  Total counts: 1892380.}
    \label{impXES}
 \end{figure}
 
@@ -37,7 +37,7 @@ Figure \ref{megXES} shows the same spectrum measured using the medium energy gra
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.71]{Chapter6/MEG.pdf} 
-   \caption{Nitrogen K$\alpha$ emission line of hexagonal boron nitride (hBN), taken using the MEG.  It offers the possibility for higher resolution than the IMP (Figure \ref{impXES}) at the expense of efficiency.  (The energy axis for this plot is not calibrated.)}
+   \caption{Nitrogen K$\alpha$ emission line of hexagonal boron nitride (hBN), taken using the MEG.  It offers the possibility for higher resolution than the IMP (Figure \ref{impXES}) at the expense of efficiency.  (The energy axis for this plot is not calibrated.)  Total counts: 288792.}
    \label{megXES}
 \end{figure}
 
@@ -46,7 +46,7 @@ Using the HRMEG in third order should offer even higher resolution.  However, th
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[scale=0.71]{Chapter6/HRMEG.pdf} 
-   \caption{Nitrogen K$\alpha$ emission line of hexagonal boron nitride (hBN), taken using the HRMEG in third order.  The low count rate requires long count times; however, temperature shifts in the room cause the central detector energy to shift over this time, reducing the resolution.  Work is still ongoing to focus the spectrometer for operation with the HRMEG, as well as stabilize the room temperature.}
+   \caption{Nitrogen K$\alpha$ emission line of hexagonal boron nitride (hBN), taken using the HRMEG in third order.  The low count rate requires long count times; however, temperature shifts in the room cause the central detector energy to shift over this time, reducing the resolution.  Work is still ongoing to focus the spectrometer for operation with the HRMEG, as well as stabilize the room temperature.    Total counts: 112973.}
    \label{hrmegXES}
 \end{figure}
 
@@ -58,7 +58,7 @@ We were surprised by the close agreement between the fitted and measured efficie
 \item Without any prior knowledge of the nominal groove shape, could we predict the exact groove profile?
 \end{enumerate}
 
-Finally, we recognized in Chapter 7 that neither the Sinha nor Beckmann expressions provide a satisfactory description of surface roughness on gratings.  Both assume that the scattering due to roughness is independent of the diffraction order.  Additionally, the Beckmann expression is only valid near normal incidence, and the Sinha expression is only valid for roughness parameters much smaller than the wavelength.  We are still searching for a rigorous and general method to incorporate this into the calculated diffraction efficiencies.
+Finally, we recognized in Chapter 7 that neither the Sinha nor Beckmann expressions provide a satisfactory description of surface roughness on gratings.  Both assume that the scattering due to roughness is independent of the diffraction order.  Additionally, the Beckmann expression is only valid near normal incidence, and the Sinha expression is only valid for roughness parameters much smaller than the wavelength.  It would be desirable to continue searching for a rigorous and general method to incorporate roughness into the calculated diffraction efficiencies.
 
 \section{Future work: Efficiency calculation improvements and software-as-a-service}
 One of our secondary goals was to encourage beamline designers to consider the grating efficiency at design time.  To support this goal, we would like to make grating calculation and optimization tools as complete and accessible as possible.
