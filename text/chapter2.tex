@@ -32,7 +32,7 @@ The modal methods are not actually general because in their application of the b
 The other two approaches are general in representation, although the stability and accuracy of the integral approach is highly contingent on the groove geometry.
 
 By 1980, grating theorists had devised a wide variety of implementations for each family.  % -- after all, it is one matter to express the problem as a complete set of algebraic or differential equations; it is another matter to actually solve that set!
-Reference \cite{Pet80} provides a comprehensive review of all the methods that were available by this date.\footnote{The same author provides a follow-up paper, written ten years later on new methods that differ completely from the fundamentals used in 1980 \cite{Pet90}.}  Of the three families, the differential approach had proven to be the most general way of setting up the problem, but it ran into two numerical issues -- particularly when used to describe TM-polarized light on highly-conducting metallic gratings.  One issue was strictly computational: round-off errors when doing finite-precision computer arithmetic would lead to growing contamination during the numerical integration of exponential functions.  This problem was solved by the introduction of the ``S-matrix'' propagation algorithm in 1996 \cite{Li96}\cite{Mon98}.  The second problem was related to the mathematical implications of truncating an infinite Fourier series -- unfortunately but obviously necessary for numerical calculations.  This challenge was also finally resolved by the breakthrough work of Li \cite{Li96b} in 1996 on the factorization of truncated Fourier series; his method has been applied extensively by Neviere and Popov both to the simple cases of one-dimensional gratings like those shown in Figure \ref{2a} \cite{Pop01}, and to complex three-dimensional periodic structures of anisotropic materials \cite{Pop00}\cite{Nev02}.
+Reference \cite{Pet80} provides a comprehensive review of all the methods that were available by this date.\footnote{The same author provided a follow-up paper, written ten years later on new methods that differ completely from the fundamentals used in 1980 \cite{Pet90}.}  Of the three families, the differential approach had proven to be the most general way of setting up the problem, but it ran into two numerical issues -- particularly when used to describe TM-polarized light on highly-conducting metallic gratings.  One issue was strictly computational: round-off errors when doing finite-precision computer arithmetic would lead to growing contamination during the numerical integration of exponential functions.  This problem was solved by the introduction of the ``S-matrix'' propagation algorithm in 1996 \cite{Li96}\cite{Mon98}.  The second problem was related to the mathematical implications of truncating an infinite Fourier series -- unfortunately but obviously necessary for numerical calculations.  This challenge was also finally resolved by the breakthrough work of Li \cite{Li96b} in 1996 on the factorization of truncated Fourier series; his method has been applied extensively by Neviere and Popov both to the simple cases of one-dimensional gratings like those shown in Figure \ref{2a} \cite{Pop01}, and to complex three-dimensional periodic structures of anisotropic materials \cite{Pop00}\cite{Nev02}.
 
 \subsection{Comparison and applicability of grating theory families}
 \label{methodComparison}
@@ -830,7 +830,7 @@ S^{(q+1)}_{12} &= \left(T^{(q+1)}_{21} + T^{(q+1)}_{22}S^{(q)}_{12} \right) Z^{(
 S^{(q+1)}_{21} &= S^{(q)}_{21} - S^{(q+1)}_{22} T^{(q+1)}_{12} S^{(q)}_{11} \\
 S^{(q+1)}_{11} &= - S^{(q+1)}_{12} T^{(q+1)}_{12} S^{(q)}_{11} + T^{(q+1)}_{22}S^{(q)}_{11}
 \end{align}
-Equation \eq{SmatZ}, \eq{Smat22}, and \eq{Smat12} give us exactly what we need to iterate vertically through a stack of grating layers.  The calculation of the $S$ matrix for a full grating begins at layer 1, where no reflection occurs and the transmission is unity for all incoming waves:
+Equations \eq{SmatZ}, \eq{Smat22}, and \eq{Smat12} give us exactly what we need to iterate vertically through a stack of grating layers.  The calculation of the $S$ matrix for a full grating begins at layer 1, where no reflection occurs and the transmission is unity for all incoming waves:
 \begin{align}
 S^{(1)}_{12} &= 0,\\
 S^{(1)}_{22} &= \mathbb{1}.
@@ -841,7 +841,7 @@ Z^{(1)} &= \left(T^{(2)}_{11}  \right)^{-1} ,\\
 S^{(2)}_{12} &= T^{(2)}_{21}  \left(T^{(2)}_{11}  \right)^{-1} ,\\
 S^{(2)}_{22} &= \left(T^{(2)}_{11}  \right)^{-1}.
 \end{align}
-The rest of the stack is solved inductively by computing the $T^{(q+1)}$ matrix at each layer $q+1$, and then using Equation \eq{SmatZ}, \eq{Smat22}, and \eq{Smat12} to determine $S^{(q+1)}$, until we reach the top layer.
+The rest of the stack is solved inductively by computing the $T^{(q+1)}$ matrix at each layer $q+1$, and then using Equations \eq{SmatZ}, \eq{Smat22}, and \eq{Smat12} to determine $S^{(q+1)}$, until we reach the top layer.
 
 Finally, we can use the blocks of the final $S^{(M-1)}$ matrix to relate the incident waves at the top of the grating to the diffracted and transmitted waves, using Equation \eq{sMatrixDef}. Since there are no up-going waves incident from below the substrate $(B_n^{(1)} = 0)$:
 \begin{equation}
@@ -907,7 +907,7 @@ Given these effects, is it acceptable to use refractive indexes derived from the
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=3.8in]{Chapter2/2f_henke/siReflectivity.pdf} 
-   \caption[Comparison of a measured reflection curve around the total reflection cutoff region from a silicon(111) wafer under 1487 eV radiation, with that predicted by the Fresnel equations using atomic scattering factors from the Henke tables.]{Comparison of a measured reflection curve around the total reflection cutoff region from a silicon(111) wafer under 1487 eV radiation, with that predicted by the Fresnel equations (\protect \eq{eqnFresnelTE}, \protect \eq{eqnFresnelTM}) using the atomic scattering factors from the Henke tables. (The low-angle cutoff is instrumental.) Reprinted from Reference \protect \cite[Figure 18]{Hen93}.}
+   \caption[Comparison of a measured reflection curve around the total reflection cutoff region from a silicon(111) wafer under 1487 eV radiation, with that predicted by the Fresnel equations using atomic scattering factors from the Henke tables.]{Comparison of a measured reflection curve around the total reflection cutoff region from a silicon(111) wafer under 1487 eV radiation, with that predicted by the Fresnel equations (\protect \eq{eqnFresnelTE}, \protect \eq{eqnFresnelTM}) using the atomic scattering factors from the Henke tables.  The low-angle cutoff is instrumental. Reprinted from Reference \protect \cite[Figure 18]{Hen93}.}
    \label{henkeValid1}
 \end{figure}
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
