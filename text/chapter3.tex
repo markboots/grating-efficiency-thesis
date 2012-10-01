@@ -60,9 +60,9 @@ Figure \ref{3b} shows a screenshot of the graphical user interface (GUI) that we
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_1.pdf} \\
+   \includegraphics[scale=0.58]{Chapter3/3b_nephiere/3b_1.pdf} \\
 %\vspace*{0.25in}
-   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_2.pdf}
+   \includegraphics[scale=0.58]{Chapter3/3b_nephiere/3b_2.pdf}
    \caption{This web application provides a graphical user interface for calculating grating efficiencies. Forms prompt users for the grating parameters.}
    \label{3b}
 \end{figure}
@@ -86,9 +86,9 @@ In the simplest mode, the system generated a plot of the efficiency in the desir
 \begin{figure}[p] %  figure placement: here, top, bottom, or page
    \centering
    \vspace*{-.5in}
-   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_3.pdf} \\
+   \includegraphics[scale=0.58]{Chapter3/3b_nephiere/3b_3.pdf} \\
 %\vspace*{0.25in}
-   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_4.pdf}
+   \includegraphics[scale=0.58]{Chapter3/3b_nephiere/3b_4.pdf}
    \caption{This web application provides a graphical user interface for calculating grating efficiencies. The results are plotted, and users can download a text-based table for further analysis.}
    \label{3b_3}
 \end{figure}
@@ -108,7 +108,7 @@ An `Options' page (Figure \ref{3b_5}) allowed users to configure the numerical p
 
 \begin{figure}[p] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.6]{Chapter3/3b_nephiere/3b_5.pdf}
+   \includegraphics[scale=0.58]{Chapter3/3b_nephiere/3b_5.pdf}
    \caption{This Options page configures the numerical precision of the calculations, the diffraction orders of interest, and the polarization of the incident light.}
    \label{3b_5}
 \end{figure}
@@ -184,13 +184,13 @@ The current version has two main limitations; work is ongoing to address both of
 \end{enumerate}
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Extended/Polarization/TEvsTM_88.pdf} 
+   \includegraphics[width=\textwidth]{Extended/Polarization/TEvsTM_88.pdf} 
    \caption[The difference in efficiency between TE and TM polarization is very small for grazing-incidence optics.]{The difference in efficiency between TE and TM polarization is very small for grazing-incidence optics.  For this grating at 88 degrees incidence, the difference is less than relative 5\%.  Grating: 1200 lines/mm, 1.48\dg blaze angle, Nickel coating. }
    \label{TEvsTM_88}
 \end{figure}
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Extended/Polarization/TEvsTM_80.pdf} 
+   \includegraphics[width=\textwidth]{Extended/Polarization/TEvsTM_80.pdf} 
    \caption[At more normal incidence, the efficiency is different for TE and TM polarization.]{At more normal incidence, the efficiency is different for TE and TM polarization.  This is the same grating as Figure \ref{TEvsTM_88} but at 80 degrees incidence; the difference becomes up to relative 20\%.  However, because the shapes of the curves are identical, optimization of the TE efficiency provides the same results as optimization of the TM efficiency.  Grating: 1200 lines/mm, 1.48\dg blaze angle, Nickel coating.}
    \label{TEvsTM_80}
 \end{figure}
@@ -231,6 +231,7 @@ The two stability controls -- the integration error tolerance and the layer thic
 \subsection{Obtaining and running the new software}
 Work is still ongoing on a new web-based graphical user interface.  However, the command-line version of the program is ready for use, and can be downloaded and run following the instructions on the project repository:
 \begin{center}
+{\footnotesize
 \begin{tabular}{rl}
 \toprule
 \textbf{Instructions and introduction:} & \url{https://github.com/markboots/peg}\\
@@ -239,6 +240,7 @@ Work is still ongoing on a new web-based graphical user interface.  However, the
 \textbf{Revision history:}& \url{https://github.com/markboots/peg/commits/master}\\
 \bottomrule
 \end{tabular}
+}
 \end{center}
 
 The program accepts input via command-line arguments, and writes efficiency results to an output file. It can optionally update a progress file while the calculations are running; this allows other processes (such as a graphical front-end or web interface) to monitor the status of the run, check for failures, and see what fraction of the total calculations are finished. Table \ref{pegInput} documents the command-line arguments for specifying the grating and incidence configuration.  An example of the output file format is shown in Figure \ref{pegOutput}.
@@ -326,7 +328,7 @@ mode=constantIncidence
 incidenceAngle=88
 units=eV
 min=100
-max=120
+max=115
 increment=5
 gratingType=blazed
 gratingPeriod=1
@@ -338,14 +340,13 @@ N=15
 integrationTolerance=1e-05
 # Progress
 status=succeeded
-completedSteps=5
-totalSteps=5
+completedSteps=4
+totalSteps=4
 # Output
 100	4.86049e-06,5.73524e-06,1.15331e-05,2.26984e-05,3.40043e-05,3.20538e-05,1.09471e-05,2.46656e-05, 0.000207617,0.000525489,0.000402885,9.29454e-05,0.00604008,0.0202516,0.193704,0.688149, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 105	5.17974e-06,4.87572e-06,8.75638e-06,1.96591e-05,3.6063e-05,4.48567e-05,2.63319e-05,8.62826e-06, 0.000156884,0.000572518,0.000629053,6.95573e-06,0.00581251,0.0252621,0.200502,0.678858, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 110	5.85305e-06,4.91785e-06,6.66783e-06,1.53924e-05,3.35836e-05,5.23866e-05,4.57548e-05,9.18712e-06, 9.75067e-05,0.000564861,0.000862771,2.38342e-05,0.00534777,0.0305067,0.205757,0.669051, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-115	6.70782e-06,5.76303e-06,5.81191e-06,1.15465e-05,2.8753e-05,5.44993e-05,6.33855e-05,2.451e-05,4.82133e-05, 0.000510943,0.00107579,0.000154448,0.00472995,0.0359483,0.209988,0.658912, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-120	7.51931e-06,7.11245e-06,6.20636e-06,8.89412e-06,2.30516e-05,5.20039e-05,7.60472e-05,4.85705e-05,1.87322e-05, 0.000421879,0.00124637,0.000396847,0.00401002,0.0415518,0.213464,0.648892, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+115	6.70782e-06,5.76303e-06,5.81191e-06,1.15465e-05,2.8753e-05,5.44993e-05,6.33855e-05,2.451e-05, 4.82133e-05, 0.000510943,0.00107579,0.000154448,0.00472995,0.0359483,0.209988, 0.658912,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 \end{lstlisting}
    \label{pegOutput}
 \end{table}
@@ -467,7 +468,7 @@ For another test, instead of using a negative incidence angle, we mirrored the g
 \item At $\theta''_2 = 85.114\deg$ with a 30\dg blaze angle and 2.5\dg anti-blaze angle, the calculated  $(+1)$ order efficiency is \textbf{8.23339\%}.
 \end{itemize}
 \end{itemize}
-One consequence of the reciprocity theorem is that the $0^\textrm{th}$ order reflection efficiency should not change when rotating a grating around its $y$-axis by 180\dg.  Although this might be obvious for symmetric gratings, it is rather surprising for gratings with asymmetric groove profiles.  For example, the $0^\textrm{th}$ order efficiency for the 2.5\dg blazed grating calculated above was \textbf{18.1245\%} at 88\dg incidence.  Flipping the grating to obtain a 30\dg blaze angle and 2.5\dg anti-blaze angle, we calculated an identical $0^\textrm{th}$ order efficiency of \textbf{18.1245\%}.
+One consequence of the reciprocity theorem is that the $0^\textrm{th}$ order reflection efficiency should not change when rotating a grating around its $y$-axis by $180\deg$.  Although this might be obvious for symmetric gratings, it is rather surprising for gratings with asymmetric groove profiles.  For example, the $0^\textrm{th}$ order efficiency for the $2.5\deg$ blazed grating calculated above was \textbf{18.1245\%} at $88\deg$ incidence.  Flipping the grating to obtain a $30\deg$ blaze angle and $2.5\deg$ anti-blaze angle, we calculated an identical $0^\textrm{th}$ order efficiency of \textbf{18.1245\%}.
 \end{itemize}
 
 \subsubsection{Logical consistency for coatings}
@@ -491,7 +492,7 @@ All of these criteria are satisfied.  For thin gratings, the results using 1, 2,
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.77]{Extended/SMatrixStability/SMatrixStability.pdf} 
+   \includegraphics[width=\textwidth]{Extended/SMatrixStability/SMatrixStability.pdf} 
    \caption[The S-matrix approach is the solution for this problem that becomes unstable at high energies when using the basic shooting method.]{The S-matrix approach is the solution for this problem that became unstable at high energies when using the basic shooting method.  The software automatically determines the number of layers required, ranging here from one layer at low energies to three layers at high energies.  The inset in the $3^\textrm{rd}$-order curve shows that the numerical error ``noise'' is also reduced, even for calculations that remain ``stable''.  (Blazed grating, 600 lines/mm, 1.85\dg blaze angle, gold substrate, 86\dg incidence.)}
    \label{SMatrixStability}
 \end{figure}
@@ -504,7 +505,7 @@ We compared the new software to previous \texttt{Gradif} calculations of the TE 
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.8]{Chapter3/3f_coatingThickness/pegVsGradif.pdf} 
+   \includegraphics[width=\textwidth]{Chapter3/3f_coatingThickness/pegVsGradif.pdf} 
    \caption[Shown over a range of coating thicknesses, the new software agrees with \texttt{Gradif} results to more than three significant figures.]{The new software agrees with \texttt{Gradif} to more than three significant figures.  These calculations show the TE efficiency for a blazed grating on an SiO$_2$ substrate, with a range Pt coating thicknesses.  The red curve is the relative difference between the two programs for the 50 nm calculation, in parts per million.  (Blazed grating, 1200 lines/mm, 1.46\dg blaze angle, 88\dg incidence.)}
    \label{pegVsGradif}
 \end{figure}
