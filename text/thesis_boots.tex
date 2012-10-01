@@ -1,4 +1,4 @@
-\documentclass[12pt,bound,twoside,openright]{uofsthesis-cs}
+\documentclass[12pt,bound,twoside,openright,final]{uofsthesis-cs}
 %\documentclass[12pt]{uofsthesis-cs}
 \usepackage{mathtools}
 \mathtoolsset{showonlyrefs}
@@ -100,7 +100,7 @@
 \abstract{
 The \emph{diffraction efficiency} is critical to the speed and sensitivity of grating-based spectroscopy instruments.  This becomes particularly important for soft x-ray instruments, used on material science beamlines at synchrotrons around the world, where the low reflectivity of materials makes it challenging to create efficient optics.
 
-The efficiency of soft x-ray gratings is examined from a rigorous electromagnetic approach, using the differential method of Neviere et. al. \cite{Nev74}, adapted for deep gratings using the S-matrix propagation algorithm devised by Li \cite{Li96,Nev96}.  New software is written to provide an open-source implementation with fast performance on cluster computing resources.  Trends in diffraction efficiency are examined as a function of grating materials, coatings, groove geometry, and incidence conditions; these trends are used to provide recommendations for instrument design, including the identification of a new principle of optimal incidence angle.
+The efficiency of soft x-ray gratings is examined from a rigorous electromagnetic approach using the differential method, adapted for deep gratings using the S-matrix propagation algorithm.  New software is written to provide an open-source implementation with fast performance on cluster computing resources.  Trends in diffraction efficiency are examined as a function of grating materials, coatings, groove geometry, and incidence conditions; these trends are used to provide recommendations for instrument design, including the identification of a new principle of optimal incidence angle.
 
 Efficiency calculations and optimizations are applied to the design of a high-performance soft x-ray emission spectrometer for the REIXS beamline at the Canadian Light Source.  The process produces an innovative design that exploits an efficiency peak in the third diffraction order to offer higher resolution than would otherwise be possible given the space constraints of the machine.  Finally, the spectrometer's actual gratings are measured for diffraction efficiency as a function of wavelength.  Although the real-world efficiencies differ substantially from the nominal calculations, the differences are explained by incorporating real-world effects: geometry errors, groove variation, oxidation, and surface roughness.  A fitting process is proposed to match the calculated to the measured efficiency spectra. The geometry parameters predicted by the fitting process are found to agree exactly with atomic force microscopy (AFM) measurements for all the gratings studied.  Because each grating parameter affects the shape of the efficiency spectrum in a different way, the spectrum can be considered as a unique ``fingerprint'' or ``hash''; we conclude that this might be extended to use efficiency measurements and fitting calculations to characterize grating parameters that are difficult or impossible to measure directly.}
 
@@ -129,7 +129,7 @@ On a personal level, I am extremely grateful to Kelly Paton for inspiration, mat
 \abbrev{CEM}{Channel Electron Multiplier}
 %\abbrev{CF}{Common Scaling Factor}
 \abbrev{CIA}{Constant Included Angle}
-\abbrev{EC2}{Elastic Cloud Compute}
+%\abbrev{EC2}{Elastic Cloud Compute}
 \abbrev{EELS}{Electron Energy Loss Spectroscopy}
 \abbrev{EUV}{Extreme Ultra-violet}
 \abbrev{EXAFS}{Extended Xray Absorption Fine Structure}
